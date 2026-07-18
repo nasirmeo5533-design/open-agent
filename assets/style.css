@@ -218,3 +218,15 @@ p{color:#3a3a40}
   section{padding:70px 0}
   .hero{padding:120px 0 90px}
 }
+
+/* ---------- ebook hero highlight ---------- */
+.ebook-hero{display:inline-block;margin-top:22px;padding:12px 20px;background:var(--orange);color:#fff;border-radius:10px;font-weight:600;font-size:.95rem;text-decoration:none;box-shadow:0 6px 18px rgba(204,120,92,.35);transition:.18s var(--ease)}
+.ebook-hero:hover{transform:translateY(-2px);background:#b9694e}
+/* ---------- faq accordion ---------- */
+.faq-acc{max-width:760px;margin:10px auto 0}
+.faq-acc details{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:12px;background:#fff}
+.faq-acc summary{cursor:pointer;font-weight:600;font-size:1.02rem;list-style:none}
+.faq-acc summary::-webkit-details-marker{display:none}
+.faq-acc summary::after{content:"+";float:right;color:var(--orange);font-weight:700}
+.faq-acc details[open] summary::after{content:"–"}
+.faq-acc p{margin:10px 0 2px;color:#444}
