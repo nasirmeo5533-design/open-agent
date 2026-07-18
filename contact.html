@@ -4,89 +4,66 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — Open Agent</title>
-<meta name="description" content="Get in touch with Open Agent. Start your AI-powered marketing project with Abeer Nasir.">
+<meta name="description" content="Contact Abeer Nasir / Open Agent via WhatsApp or the contact form. Meta Ads, Shopify, AI automation and web development.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Open Agent",
-  "url": "https://nasirmeo5533-design.github.io/open-agent/",
-  "logo": "https://nasirmeo5533-design.github.io/open-agent/images/portfolio13.png",
-  "founder": {"@type": "Person", "name": "Abeer Nasir", "jobTitle": "Founder", "address": {"@type": "PostalAddress", "addressLocality": "Karachi", "addressCountry": "Pakistan"}},
-  "description": "AI-powered digital marketing agency by Abeer Nasir. Meta Ads, Shopify development, website development, AI automation, lead generation and social media management.",
-  "areaServed": ["United States", "United Kingdom", "Canada", "Pakistan"],
-  "sameAs": [
-    "https://x.com/Abeergrowth",
-    "https://www.facebook.com/profile.php?id=61572143246804",
-    "https://www.instagram.com/growthbot_02/",
-    "https://www.linkedin.com/in/abeer-nasir-3052b628a/"
-  ],
-  "contactPoint": {"@type": "ContactPoint", "email": "abeerinfo5566@gmail.com", "contactType": "customer service", "areaServed": ["US","UK","CA","PK"]}
-}
-</script>
 </head>
 <body>
 <header class="topbar">
   <div class="wrap">
     <a href="index.html" class="brand">Open<span>Agent</span></a>
     <nav class="nav" id="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="blog.html">Blog</a>
-      <a href="faq.html">FAQ</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a><a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a><a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a>
+      <a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
       <a href="contact.html" class="btn">Get a Quote</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
   </div>
 </header>
 
-<section class="hero" style="padding:150px 0 80px;">
+<section class="hero" style="padding:140px 0 100px;">
   <div class="wrap">
     <span class="eyebrow">Contact</span>
-    <h1>Let's build your <em>growth system</em>.</h1>
-    <p>Tell us about your business and goals. We'll get back to you within 24 hours.</p>
+    <h1>Let's talk about <em>your</em> growth.</h1>
+    <p>Fastest way: message me on WhatsApp. Or fill the form and I'll get back to you.</p>
   </div>
 </section>
 
-<section class="section">
-  <div class="wrap">
-    <div class="contact-grid">
-      <div class="reveal">
-        <form id="contactForm">
-          <div class="form-row">
-            <label for="name">Your name</label>
-            <input type="text" id="name" name="name" required placeholder="Jane Founder">
-          </div>
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="you@brand.com">
-          </div>
-          <div class="form-row">
-            <label for="budget">Monthly budget (optional)</label>
-            <input type="text" id="budget" name="budget" placeholder="$500 – $2000">
-          </div>
-          <div class="form-row">
-            <label for="msg">What do you need?</label>
-            <textarea id="msg" name="message" required placeholder="Tell us about your business and goals..."></textarea>
-          </div>
-          <button type="submit" class="btn">Send message →</button>
-          <p class="form-note">We reply within 24 hours. No spam, ever.</p>
-          <div class="form-ok" id="formOk">✅ Thanks! Your message has been recorded. We'll get back to you soon.</div>
-        </form>
+<section>
+  <div class="wrap cgrid">
+    <div class="reveal">
+      <span class="eyebrow">Send a message</span>
+      <h2>Contact form</h2>
+      <p style="color:var(--muted);margin-bottom:22px;">Tell me your name, email and what you need. I'll reply personally.</p>
+      <form id="contactForm">
+        <div class="field"><label for="name">Your name</label><input id="name" name="name" required placeholder="Jane Founder"></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="you@brand.com"></div>
+        <div class="field"><label for="msg">What do you need?</label><textarea id="msg" name="msg" rows="5" required placeholder="Meta Ads for my perfume store..."></textarea></div>
+        <button type="submit" class="btn">Send message →</button>
+        <p id="formMsg" style="display:none;color:var(--orange);margin-top:14px;font-weight:500;"></p>
+      </form>
+    </div>
+    <div class="reveal">
+      <div class="whatsapp-card">
+        <h3>Prefer WhatsApp?</h3>
+        <p>Tap below to open a chat with me directly. Best for quick questions and fast replies.</p>
+        <a href="https://wa.me/923703159642" class="wa-btn" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 32 32" fill="#fff"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.3 31.7l8-2.1c2.3 1.3 4.9 1.9 7.7 1.9 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.4c-2.4 0-4.7-.7-6.7-1.9l-.5-.3-4.7 1.2 1.3-4.6-.3-.5C3.3 20.3 2.6 18.2 2.6 16 2.6 8.2 8.2 2.6 16 2.6S29.4 8.2 29.4 16 23.8 28.8 16 28.8zm8.2-11.4c-.4-.2-2.5-1.2-2.9-1.4-.4-.1-.7-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.4.3-.8.1-2.3-1.1-3.8-2-5-4.7-.4-.7.4-.7.9-1.2.4-.4.9-1 .9-1.2l-.3-.9c-.1-.4-.3-.7-.3-.9 0-.2-.9-2.2-1.3-3-.3-.8-.7-.7-1-.7h-.9c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.4s1.5 3.9 1.7 4.2c.2.3 2.4 3.7 5.8 5.2 3.4 1.5 3.4 1 4 1 .6 0 2-.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.2-.4-.3-.8-.5z"/></svg>
+          Chat on WhatsApp
+        </a>
+        <p style="margin-top:18px;font-size:.85rem;color:#9a9894;">+92 370 3159642 · replies within a few hours</p>
       </div>
-      <div class="contact-info reveal">
-        <h3>Direct lines</h3>
-        <p>Prefer to reach out yourself? Use any of these.</p>
-        <div class="ci-item"><div class="d">✉</div><a href="mailto:abeerinfo5566@gmail.com">abeerinfo5566@gmail.com</a></div>
-        <div class="ci-item"><div class="d">📱</div><a href="https://wa.me/923703159642">WhatsApp: +92 370 3159642</a></div>
-        <div class="ci-item"><div class="d">𝕏</div><a href="https://x.com/Abeergrowth">@Abeergrowth</a></div>
-        <div class="ci-item"><div class="d">in</div><a href="https://www.linkedin.com/in/abeer-nasir-3052b628a/">LinkedIn: Abeer Nasir</a></div>
-        <div class="ci-item"><div class="d">f</div><a href="https://www.facebook.com/profile.php?id=61572143246804">Facebook</a></div>
-        <div class="ci-item"><div class="d">◎</div><a href="https://www.instagram.com/growthbot_02/">Instagram: @growthbot_02</a></div>
+      <div style="margin-top:20px;">
+        <h4 style="font-family:'Poppins';font-weight:600;margin-bottom:10px;">Other ways</h4>
+        <ul style="list-style:none;line-height:2.1;font-size:.94rem;">
+          <li>📧 <a href="mailto:abeerinfo5566@gmail.com">abeerinfo5566@gmail.com</a></li>
+          <li>𝕏 <a href="https://x.com/Abeergrowth">@Abeergrowth</a></li>
+          <li>📍 Karachi, Pakistan</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -97,7 +74,7 @@
     <div class="top">
       <div>
         <div class="brand">Open<span>Agent</span></div>
-        <p class="desc">AI-powered digital marketing & business-growth agency founded by Abeer Nasir.</p>
+        <p class="desc">AI-powered digital marketing &amp; business-growth agency founded by Abeer Nasir, Karachi.</p>
         <div class="socials">
           <a href="https://x.com/Abeergrowth" aria-label="X">𝕏</a>
           <a href="https://www.facebook.com/profile.php?id=61572143246804" aria-label="Facebook">f</a>
@@ -105,27 +82,18 @@
           <a href="https://www.linkedin.com/in/abeer-nasir-3052b628a/" aria-label="LinkedIn">in</a>
         </div>
       </div>
-      <div>
-        <h4>Pages</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="mailto:abeerinfo5566@gmail.com">abeerinfo5566@gmail.com</a></li>
-          <li><a href="https://wa.me/923703159642">WhatsApp: +92 370 3159642</a></li>
-          <li><a href="https://x.com/Abeergrowth">@Abeergrowth</a></li>
-        </ul>
-      </div>
+      <div><h4>Pages</h4><ul>
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li><li><a href="services.html">Services</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li><li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul></div>
+      <div><h4>Contact</h4><ul>
+        <li><a href="mailto:abeerinfo5566@gmail.com">abeerinfo5566@gmail.com</a></li>
+        <li><a href="https://wa.me/923703159642">WhatsApp: +92 370 3159642</a></li>
+        <li><a href="https://x.com/Abeergrowth">@Abeergrowth</a></li>
+      </ul></div>
     </div>
     <div class="bottom">
       <p>© 2026 Open Agent. All rights reserved.</p>
@@ -136,6 +104,30 @@
     </div>
   </div>
 </footer>
+
+<a href="https://wa.me/923703159642" class="fwa" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 32 32"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.3 31.7l8-2.1c2.3 1.3 4.9 1.9 7.7 1.9 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.4c-2.4 0-4.7-.7-6.7-1.9l-.5-.3-4.7 1.2 1.3-4.6-.3-.5C3.3 20.3 2.6 18.2 2.6 16 2.6 8.2 8.2 2.6 16 2.6S29.4 8.2 29.4 16 23.8 28.8 16 28.8zm8.2-11.4c-.4-.2-2.5-1.2-2.9-1.4-.4-.1-.7-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.4.3-.8.1-2.3-1.1-3.8-2-5-4.7-.4-.7.4-.7.9-1.2.4-.4.9-1 .9-1.2l-.3-.9c-.1-.4-.3-.7-.3-.9 0-.2-.9-2.2-1.3-3-.3-.8-.7-.7-1-.7h-.9c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.4s1.5 3.9 1.7 4.2c.2.3 2.4 3.7 5.8 5.2 3.4 1.5 3.4 1 4 1 .6 0 2-.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.2-.4-.3-.8-.5z"/></svg>
+</a>
 <script src="assets/main.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Open Agent",
+  "url": "https://open-agent.agency/",
+  "logo": "https://open-agent.agency/images/portfolio13.png",
+  "founder": {"@type": "Person", "name": "Abeer Nasir"},
+  "description": "AI-powered digital marketing & business-growth agency: Meta Ads, Shopify, AI automation, AI agents, AI content and web development.",
+  "email": "abeerinfo5566@gmail.com",
+  "address": {"@type": "PostalAddress", "addressLocality": "Karachi", "addressCountry": "PK"},
+  "sameAs": [
+    "https://x.com/Abeergrowth",
+    "https://www.facebook.com/profile.php?id=61572143246804",
+    "https://www.instagram.com/growthbot_02/",
+    "https://www.linkedin.com/in/abeer-nasir-3052b628a/"
+  ]
+}
+</script>
+
 </body>
 </html>
