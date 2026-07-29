@@ -4,41 +4,30 @@ AI Automation & Performance Marketing agency website — built by **Abeer Nasir*
 
 ## Stack
 
-- **React 19** + **Vite 8** (static SPA, dynamic feel)
-- **Framer Motion** — smooth animations (JS-heavy, 50%+)
-- **Minimal CSS** — ~2 KB, ~30% of codebase
-- **React Router** — client-side routing
-- **Data** — pure JS objects, no backend, no database
+- **HTML5 + CSS3 + JavaScript** (vanilla, no frameworks)
+- **Static site** — no build step, no backend, no database
+- **JS-heavy** (~50%) for animations, hero slider, dark mode, lightbox, FAQ accordion
+- **Minimal CSS** (~2 KB, ~30%)
 
 ## Features
 
-- Hero slider with auto-play (Unsplash images)
-- Dark/Light mode toggle
-- Portfolio with lightbox gallery
+- Hero slider with auto-play (3 slides, 6s interval)
+- Dark/Light mode toggle (persisted in localStorage)
+- Portfolio grid with lightbox gallery
 - Case studies, pricing cards, FAQ accordion
 - Services grid with hover effects
-- Contact form (local confirmation, no API)
-- WhatsApp floating button
-- Fully responsive, scroll animations
+- Contact form (local confirmation)
+- WhatsApp floating button + AI chatbot embed
+- Scroll reveal animations
+- Fully responsive
 
 ## Sections
 
 Home | Services | Portfolio | Case Studies | Pricing | Testimonials | FAQ | Contact | Privacy | Terms | Refund
 
-## Run Locally
+## Deploy
 
-```bash
-npm install
-npm run dev
-```
-
-## Build
-
-```bash
-npm run build
-```
-
-Deploy `dist/` to any static host (Vercel, Netlify, GitHub Pages).
+Deploy to any static host (Vercel, Netlify, GitHub Pages). No build required.
 
 ## Live
 

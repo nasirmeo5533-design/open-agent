@@ -1,44 +1,145 @@
-/* OPEN AGENT — main.js (no backend, no external services) */
 (function(){
-  "use strict";
+'use strict'
 
-  /* mobile menu */
-  var btn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
-  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');});
-    nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');});});}
+/* --- data --- */
+const site={name:'OpenAgent',email:'nasirmeo5533@gmail.com',wa:'https://wa.me/923703159642'}
+const slides=[
+  {img:'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1400&q=80',eyebrow:'AI-Powered Growth',title:'Meta Ads, Shopify & AI automation that help D2C brands grow.',text:"I'm Abeer Nasir. I help e-commerce and D2C brands grow with Meta Ads, Shopify, AI automation and content that actually converts — not vanity metrics.",cta:'Start a project'},
+  {img:'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1400&q=80',eyebrow:'Data-Driven Marketing',title:'Small budgets, measured outcomes — every time.',text:'Real campaigns with real numbers. No fluff, no fake metrics. Just clear ROAS reporting and weekly optimization.',cta:'See my work'},
+  {img:'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1400&q=80',eyebrow:'AI Automation',title:'Custom AI agents & workflows that save hours daily.',text:'No-code automation for lead capture, follow-ups, reporting and customer support. Built with ChatGPT, Claude, Gemini.',cta:'Explore services'}
+]
+const portfolio=[
+  {img:'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80',name:'E-commerce Ad Creative',role:'Meta Ads'},
+  {img:'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80',name:'Campaign Results',role:'Meta Ads'},
+  {img:'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80',name:'Brand Identity',role:'Design'},
+  {img:'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80',name:'AI Social Post',role:'AI Content'},
+  {img:'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80',name:'Shopify Layout',role:'Shopify'},
+  {img:'https://images.unsplash.com/photo-1432889821006-3149407af8c2?w=600&q=80',name:'Ad Variant',role:'Meta Ads'},
+  {img:'https://images.unsplash.com/photo-1557838923-2985c318be48?w=600&q=80',name:'Marketing Graphic',role:'Design'},
+  {img:'https://images.unsplash.com/photo-1560393464-5c69a73c5770?w=600&q=80',name:'Perfume Brand Work',role:'Beauty / D2C'},
+  {img:'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80',name:'Creative Set',role:'Meta Ads'}
+]
 
-  /* scroll reveal */
-  var els=document.querySelectorAll('.reveal');
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
-    els.forEach(function(el){io.observe(el);});
-  } else {els.forEach(function(el){el.classList.add('in');});}
-
-  /* portfolio lightbox */
-  var lb=document.getElementById('lb');
-  if(lb){
-    var limg=lb.querySelector('img'),lname=lb.querySelector('.meta b'),lrole=lb.querySelector('.meta span');
-    document.querySelectorAll('.pf').forEach(function(p){
-      p.addEventListener('click',function(){
-        var im=p.querySelector('img');
-        limg.src=im.src;limg.alt=im.alt;
-        lname.textContent=im.dataset.name||'';
-        lrole.textContent=im.dataset.role||'';
-        lb.classList.add('open');document.body.style.overflow='hidden';
-      });
-    });
-    lb.addEventListener('click',function(){lb.classList.remove('open');document.body.style.overflow='';});
-    document.addEventListener('keydown',function(e){if(e.key==='Escape'){lb.classList.remove('open');document.body.style.overflow='';}});
+/* --- hero slider --- */
+function initSlider(){
+  const wrap=document.getElementById('heroSlides')
+  if(!wrap)return
+  const dots=document.getElementById('heroDots')
+  const bar=document.getElementById('heroBar')
+  let idx=0,timer
+  slides.forEach((s,i)=>{
+    const div=document.createElement('div')
+    div.className='hero-slide'+(i===0?' active':'')
+    div.style.backgroundImage='url('+s.img+')'
+    wrap.appendChild(div)
+    const btn=document.createElement('button')
+    btn.className=i===0?'active':''
+    btn.addEventListener('click',()=>go(i))
+    dots.appendChild(btn)
+  })
+  function go(i){
+    wrap.querySelectorAll('.hero-slide').forEach((e,j)=>e.classList.toggle('active',j===i))
+    dots.querySelectorAll('button').forEach((e,j)=>e.classList.toggle('active',j===i))
+    idx=i
+    resetBar()
+    updateText(i)
   }
-
-  /* contact form — local confirmation only */
-  var form=document.getElementById('contactForm');
-  if(form){
-    form.addEventListener('submit',function(e){
-      e.preventDefault();
-      var msg=document.getElementById('formMsg');
-      if(msg){msg.textContent='✅ Thanks! Your message has been recorded. We will reach out via WhatsApp or email soon.';msg.style.display='block';}
-      form.reset();
-    });
+  function resetBar(){
+    bar.style.transition='none';bar.style.width='0'
+    requestAnimationFrame(()=>{bar.style.transition='width 5s linear';bar.style.width='100%'})
   }
-})();
+  function updateText(i){
+    const s=slides[i]
+    const el=document.getElementById('heroText')
+    if(el){
+      el.innerHTML='<span class="eyebrow">'+s.eyebrow+'</span><h1>'+s.title+'</h1><p>'+s.text+'</p><div class="cta-row"><a href="contact.html" class="btn">'+s.cta+' →</a></div>'
+    }
+  }
+  function next(){go((idx+1)%slides.length)}
+  function start(){timer=setInterval(next,6000);resetBar()}
+  function stop(){clearInterval(timer)}
+  start()
+  wrap.addEventListener('mouseenter',stop)
+  wrap.addEventListener('mouseleave',start)
+  updateText(0)
+}
+
+/* --- dark mode --- */
+function initTheme(){
+  const btn=document.getElementById('themeBtn')
+  if(!btn)return
+  const stored=localStorage.getItem('theme')
+  const dark=stored?stored==='dark':window.matchMedia('(prefers-color-scheme:dark)').matches
+  apply(dark)
+  btn.addEventListener('click',function(){apply(document.documentElement.getAttribute('data-theme')!=='dark')})
+  function apply(d){
+    document.documentElement.setAttribute('data-theme',d?'dark':'light')
+    localStorage.setItem('theme',d?'dark':'light')
+    btn.textContent=d?'☀️':'🌙'
+  }
+}
+
+/* --- mobile menu --- */
+function initMenu(){
+  const btn=document.getElementById('menuBtn'),nav=document.getElementById('nav')
+  if(!btn||!nav)return
+  btn.addEventListener('click',()=>nav.classList.toggle('open'))
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')))
+}
+
+/* --- scroll reveal --- */
+function initReveal(){
+  const els=document.querySelectorAll('.reveal')
+  if(!('IntersectionObserver'in window)){els.forEach(e=>e.classList.add('in'));return}
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1})
+  els.forEach(el=>io.observe(el))
+}
+
+/* --- portfolio grid + lightbox --- */
+function initPortfolio(){
+  const grid=document.getElementById('pfGrid')
+  if(!grid)return
+  portfolio.forEach((p,i)=>{
+    const div=document.createElement('div')
+    div.className='pf reveal'
+    div.innerHTML='<img src="'+p.img+'" alt="'+p.name+'" loading="lazy"><div class="cap"><b>'+p.name+'</b><span>'+p.role+'</span></div>'
+    grid.appendChild(div)
+  })
+  const lb=document.getElementById('lb'),img=lb?.querySelector('img'),name=lb?.querySelector('.meta b'),role=lb?.querySelector('.meta span')
+  if(!lb)return
+  grid.addEventListener('click',(e)=>{
+    const pf=e.target.closest('.pf')
+    if(!pf)return
+    const i=Array.from(grid.children).indexOf(pf)
+    const d=portfolio[i];if(!d)return
+    img.src=d.img;img.alt=d.name
+    name.textContent=d.name;role.textContent=d.role
+    lb.classList.add('open');document.body.style.overflow='hidden'
+  })
+  lb.addEventListener('click',()=>{lb.classList.remove('open');document.body.style.overflow=''})
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){lb.classList.remove('open');document.body.style.overflow=''}})
+}
+
+/* --- contact form --- */
+function initForm(){
+  const form=document.getElementById('contactForm')
+  if(!form)return
+  form.addEventListener('submit',function(e){
+    e.preventDefault()
+    const msg=document.getElementById('formMsg')
+    if(msg){msg.textContent='✅ Thanks! We will reach out via WhatsApp or email soon.';msg.style.display='block'}
+    form.reset()
+  })
+}
+
+/* --- init --- */
+document.addEventListener('DOMContentLoaded',function(){
+  initSlider()
+  initTheme()
+  initMenu()
+  initReveal()
+  initPortfolio()
+  initForm()
+})
+
+})()
