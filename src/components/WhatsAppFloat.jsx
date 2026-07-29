@@ -3,7 +3,7 @@ import { site } from '../data/content'
 
 const containerStyle = {
   position: 'fixed',
-  bottom: 24,
+  bottom: 96,
   right: 24,
   zIndex: 9999,
 }
