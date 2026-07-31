@@ -33,3 +33,19 @@
 - **CTA & anchor audit**: all targets verified live — `#top #about #services #experience #resources #metrics #contact` present in build; Nav/Hero/Footer anchors resolve; Resources bit.ly links carry `target="_blank" rel="noopener noreferrer"`; Contact mailto (`nasirmeo5533@gmail.com`) / `tel:+923703159642` / LinkedIn valid; CTABanner defaults to mailto. No dead links found.
 - **Font flag**: confirmed `TODO(font)` notes in `src/app/layout.tsx` and `tailwind.config.ts` (Space Grotesk fallback for licensed "Copy" typeface) are present and accurate — left as-is per contract.
 - **Verification**: `npm run lint` (0 warnings/errors) and `npm run build` (static prerender, / = 145 kB first-load JS) both pass.
+
+# CHANGELOG — OPEN AGENT AGENCY (v2)
+
+> New build: the repo now ships the **Open Agent agency website** — a six-person
+> growth team that automates e-commerce/D2C brands with AI. The previous
+> personal portfolio lives on in git history.
+
+## Phase 0 — Agency scaffold + MDX blog pipeline (orchestrator)
+
+- Repositioned the build: `layout.tsx` metadata/OG now describes the agency ("Open Agent — AI-Powered Growth Team for E-Commerce"), keeping the Playfair Display + Space Grotesk fonts, `TODO(font)` flag, and `#060606` themeColor.
+- Removed the three portfolio-only sections (`Experience.tsx`, `Resources.tsx`, `Metrics.tsx`); `page.tsx` reduced to a temporary `<Nav /> + <Hero />` placeholder for Phase 1 subagent A to own.
+- Installed MDX tooling: `next-mdx-remote@5` + `gray-matter@4`.
+- `src/lib/posts.ts`: frontmatter loader with `getPosts()` (sorted newest-first, safe on missing dir) and `getPost()`; exported `BLOG_CATEGORIES` = SEO | AI | Ads | Automation | Content | Video.
+- `src/components/ui/BlogCard.tsx`: reusable hex-cut post card (category eyebrow, `font-display` title, gray excerpt, `Clock` read-time chip, `glow-sweep` link).
+- `src/content/posts/`: 6 seed posts (one per category, short-sentence copy rules) — `meta-ads-ai`, `seo-for-d2c`, `automate-busywork`, `ai-agents`, `content-that-converts`, `video-hooks`.
+- `src/app/blog` page tree comes in Phase 2 (subagent G).

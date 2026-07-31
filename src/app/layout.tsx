@@ -21,15 +21,15 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL("https://open-agent.agency"),
   title: {
-    default: "Abeer Nasir — Generative AI Specialist & AI Agent Developer",
-    template: "%s — Abeer Nasir",
+    default: "Open Agent — AI-Powered Growth Team for E-Commerce",
+    template: "%s — Open Agent",
   },
   description:
-    "Generative AI specialist, AI agent developer, digital marketing specialist and Meta Ads expert in Karachi, Pakistan. AI automation, Shopify and ad campaigns that show numbers.",
+    "A six-person growth team that automates e-commerce brands with AI. Digital marketing, SEO, content, AI automation, AI agents and video that show numbers.",
   openGraph: {
-    title: "Abeer Nasir — Generative AI Specialist & AI Agent Developer",
+    title: "Open Agent — AI-Powered Growth Team for E-Commerce",
     description:
-      "Generative AI specialist, AI agent developer, digital marketing specialist and Meta Ads expert in Karachi, Pakistan.",
+      "We don't just market your store. We automate it. A six-person team using AI to grow e-commerce brands.",
     type: "website",
   },
 };
