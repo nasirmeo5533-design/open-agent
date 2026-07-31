@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion, MotionConfig } from "framer-motion";
 import type { Variants } from "framer-motion";
 import {
@@ -171,13 +172,16 @@ export function Portfolio() {
                       <p className="mt-2 text-sm text-slate-600">
                         {project.result}
                       </p>
-                      <span className="mt-auto inline-flex items-center gap-1.5 pt-4 text-sm font-bold text-orange-core">
+                      <Link
+                        href="#contact"
+                        className="mt-auto inline-flex items-center gap-1.5 pt-4 text-sm font-bold text-orange-core transition-colors duration-300 hover:text-navy-900"
+                      >
                         View Full
                         <ArrowRight
                           aria-hidden="true"
                           className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
                         />
-                      </span>
+                      </Link>
                     </div>
                   </article>
                 </motion.li>
