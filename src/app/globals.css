@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-primary font-sans text-gray-body antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(255, 106, 0, 0.85);
+  color: #060606;
+}
+
+@layer base {
+  :where(a, button, input, textarea, select, [role="button"]):focus-visible {
+    outline: 2px solid #ff6a00;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  /* ---- Signature 45° hex/bracket-cut corners (top-left + bottom-right) ---- */
+  .clip-hex {
+    clip-path: polygon(
+      24px 0,
+      100% 0,
+      100% calc(100% - 24px),
+      calc(100% - 24px) 100%,
+      0 100%,
+      0 24px
+    );
+  }
+  .clip-hex-sm {
+    clip-path: polygon(
+      16px 0,
+      100% 0,
+      100% calc(100% - 16px),
+      calc(100% - 16px) 100%,
+      0 100%,
+      0 16px
+    );
+  }
+  .clip-hex-lg {
+    clip-path: polygon(
+      40px 0,
+      100% 0,
+      100% calc(100% - 40px),
+      calc(100% - 40px) 100%,
+      0 100%,
+      0 40px
+    );
+  }
+
+  /* ---- Micro-label: all-caps, letter-spacing 0.08em ---- */
+  .eyebrow {
+    @apply text-[11px] font-semibold uppercase tracking-[0.08em] text-gray-body;
+  }
+
+  /* ---- Blurred radial orange glow vignette behind visual anchors ---- */
+  .bg-vignette {
+    background: radial-gradient(
+      closest-side,
+      rgba(255, 106, 0, 0.18),
+      transparent 72%
+    );
+  }
+
+  /* ---- Glow-sweep underline for nav links ---- */
+  .glow-sweep {
+    position: relative;
+  }
+  .glow-sweep::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--glow-sweep, #ff6a00),
+      transparent
+    );
+    box-shadow: 0 0 12px rgba(255, 106, 0, 0.6);
+    transition: transform 0.3s ease;
+  }
+  .glow-sweep:hover::after,
+  .glow-sweep:focus-visible::after {
+    transform: scaleX(1);
+  }
+}
