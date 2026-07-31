@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { BLOG_CATEGORIES } from "./blog-categories";
 
 export type PostMeta = {
   slug: string;
@@ -13,21 +14,16 @@ export type PostMeta = {
 
 const postsDir = path.join(process.cwd(), "src", "content", "posts");
 
-export const BLOG_CATEGORIES = [
-  "SEO",
-  "AI",
-  "Ads",
-  "Automation",
-  "Content",
-  "Video",
-] as const;
+export { BLOG_CATEGORIES };
 
 export function getPosts(): PostMeta[] {
   if (!fs.existsSync(postsDir)) return [];
-  const files = fs.readdirSync(postsDir).filter((f) => f.endsWith(".mdx"));
+  const files = fs
+    .readdirSync(postsDir)
+    .filter((f) => f.endsWith(".mdx") || f.endsWith(".md"));
   return files
     .map((file) => {
-      const slug = file.replace(/\.mdx$/, "");
+      const slug = file.replace(/\.mdx?$/, "");
       const raw = fs.readFileSync(path.join(postsDir, file), "utf8");
       const { data } = matter(raw);
       return {
@@ -43,7 +39,9 @@ export function getPosts(): PostMeta[] {
 }
 
 export function getPost(slug: string) {
-  const file = path.join(postsDir, `${slug}.mdx`);
+  const mdxPath = path.join(postsDir, `${slug}.mdx`);
+  const mdPath = path.join(postsDir, `${slug}.md`);
+  const file = fs.existsSync(mdxPath) ? mdxPath : mdPath;
   const raw = fs.readFileSync(file, "utf8");
   const { data, content } = matter(raw);
   return {
