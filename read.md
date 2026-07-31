@@ -29,7 +29,7 @@ form) → Footer (availability badge).
 
 ## Deploy
 
-- **Live site (GitHub Pages):** https://nasirmeo5533-design.github.io/open-agent
+- **Live site:** https://open-agent.agency
 - **GitHub:** https://github.com/nasirmeo5533-design/open-agent (branch `main`)
 - Push to `main` → GitHub Actions auto-builds and deploys to Pages.
 

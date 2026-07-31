@@ -13,7 +13,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nasirmeo5533-design.github.io/open-agent"),
+  metadataBase: new URL("https://open-agent.agency"),
   title: {
     default: "Open Agent — AI-Powered Growth Team for E-Commerce",
     template: "%s — Open Agent",

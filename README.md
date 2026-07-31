@@ -5,7 +5,7 @@ e-commerce brands with AI. Digital marketing, SEO, content, AI automation,
 AI agents and video. Built with Next.js 14 (App Router) + TypeScript + Tailwind
 CSS + Framer Motion + lucide-react.
 
-Live site (GitHub Pages): https://nasirmeo5533-design.github.io/open-agent
+Live site: https://open-agent.agency
 
 ## Stack
 
@@ -66,18 +66,17 @@ Clients → Testimonials → Portfolio → Faq → Blog → Contact → Footer.
 ### GitHub Pages (automatic, free)
 
 A GitHub Actions workflow (`.github/workflows/deploy.yml`) builds and deploys
-`out/` to Pages on every push to `main`. The workflow sets
-`NEXT_PUBLIC_BASE_PATH=/open-agent` so assets resolve under the `/open-agent/`
-subpath. In repo Settings → Pages, set **Source: GitHub Actions**.
+`out/` to Pages on every push to `main`. In repo Settings → Pages, set
+**Source: GitHub Actions** and **Custom domain: `open-agent.agency`** (this
+domain is also pinned in `public/CNAME`, which is copied into `out/`).
 
 ### Custom domain
 
-To use your own domain: repo **Settings → Pages → Custom domain**, then point
-DNS at GitHub (4 `A` records to `185.199.108.153` / `185.199.109.153` /
-`185.199.110.153` / `185.199.111.153`, or a `CNAME` to
-`nasirmeo5533-design.github.io` for `www`). `metadataBase` in
-`src/app/layout.tsx` is currently the Pages URL — switch it to your domain once
-DNS is live.
+The site serves at `https://open-agent.agency`. DNS points at GitHub: 4 `A`
+records on the apex to `185.199.108.153` / `185.199.109.153` /
+`185.199.110.153` / `185.199.111.153`, plus a `CNAME` for `www` →
+`nasirmeo5533-design.github.io`. `metadataBase` in `src/app/layout.tsx` is set
+to the custom domain.
 
 ## Content
 
