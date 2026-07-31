@@ -23,83 +23,85 @@ type Project = {
   image: string;
 };
 
+const assetPrefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const projects: Project[] = [
   {
     name: "Aura Perfumes",
     tag: "D2C Fragrance",
     result: "30 sales from a PKR 1,000 Meta budget.",
     icon: Sparkles,
-    image: "/portfolio/portfolio-1.png",
+    image: `${assetPrefix}/portfolio/portfolio-1.png`,
   },
   {
     name: "GlowSkin Cosmetics",
     tag: "Beauty E-commerce",
     result: "Revenue doubled in one quarter.",
     icon: ShoppingBag,
-    image: "/portfolio/portfolio-2.png",
+    image: `${assetPrefix}/portfolio/portfolio-2.png`,
   },
   {
     name: "TechStart SaaS",
     tag: "Lead Generation",
     result: "60% more qualified leads in 3 months.",
     icon: BarChart3,
-    image: "/portfolio/portfolio-3.png",
+    image: `${assetPrefix}/portfolio/portfolio-3.png`,
   },
   {
     name: "Urban Threads",
     tag: "Fashion Store",
     result: "Full funnel automation live.",
     icon: Bot,
-    image: "/portfolio/portfolio-4.png",
+    image: `${assetPrefix}/portfolio/portfolio-4.png`,
   },
   {
     name: "BioCare Wellness",
     tag: "Health Products",
     result: "Content engine + SEO ranking.",
     icon: Dumbbell,
-    image: "/portfolio/portfolio-5.png",
+    image: `${assetPrefix}/portfolio/portfolio-5.png`,
   },
   {
     name: "Royal Furniture",
     tag: "Home Goods",
     result: "AI agents answering 90% of support tickets.",
     icon: Home,
-    image: "/portfolio/portfolio-6.png",
+    image: `${assetPrefix}/portfolio/portfolio-6.png`,
   },
   {
     name: "Luxe Home Decor",
     tag: "Home & Living",
     result: "B2C campaigns scaled 3x month over month.",
     icon: Home,
-    image: "/portfolio/portfolio-7.png",
+    image: `${assetPrefix}/portfolio/portfolio-7.png`,
   },
   {
     name: "FitnessFirst Store",
     tag: "Sports Retail",
     result: "Automated re-engagement flows live.",
     icon: Dumbbell,
-    image: "/portfolio/portfolio-8.png",
+    image: `${assetPrefix}/portfolio/portfolio-8.png`,
   },
   {
     name: "GadgetHub",
     tag: "Electronics Store",
     result: "Full-funnel tracking + AI chatbots.",
     icon: Bot,
-    image: "/portfolio/portfolio-9.png",
+    image: `${assetPrefix}/portfolio/portfolio-9.png`,
   },
   {
     name: "Elite Watches",
     tag: "Luxury Accessories",
     result: "Premium content engine driving ROAS up.",
     icon: Sparkles,
-    image: "/portfolio/portfolio-10.png",
+    image: `${assetPrefix}/portfolio/portfolio-10.png`,
   },
   {
     name: "PetCare Store",
     tag: "Pet Supplies",
     result: "SEO + catalog automation end to end.",
     icon: ShoppingBag,
-    image: "/portfolio/portfolio-11.png",
+    image: `${assetPrefix}/portfolio/portfolio-11.png`,
   },
 ];
 
