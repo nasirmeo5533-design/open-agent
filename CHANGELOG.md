@@ -79,3 +79,8 @@
 - **No-JS verification**: framer-motion SSR-renders initial states as inline `opacity:0;transform:translateY(24px)` (confirmed on the Hero h1). The layout `<noscript>` block `[style*="opacity"]{opacity:1!important}[style*="translateY"]{transform:none!important}` is present in the compiled HTML (rendered entity-encoded as `&quot;`) and force-visibles every inline-hidden element, including the above-the-fold Hero h1 — no extra fix needed.
 - **A11y spot-check (no regressions)**: mobile menu button keeps `aria-expanded`/`aria-controls` + `aria-label`; 106 `aria-hidden="true"` on decorative/icon-only elements; native `<label htmlFor>` on Contact form fields intact.
 - **Verification**: `npm run lint` — 0 warnings/errors; `npx tsc --noEmit` — clean; `npm run build` — pass. Prerendered routes: `/` (static, 145 kB first-load JS), `/_not-found`, `/blog` (static), `/blog/[slug]` (SSG × 6: `meta-ads-ai`, `seo-for-d2c`, `automate-busywork`, `ai-agents`, `content-that-converts`, `video-hooks`). Spot-checks: `/blog` and `/blog/meta-ads-ai` render Nav + Footer + post content (h2/p/ul present).
+
+## Deploy
+
+- Pushed all agency commits to `main` on `https://github.com/nasirmeo5533-design/open-agent` (HEAD `c5ee6e1`, then this changelog update).
+- Deployed the static export (`out/`, `netlify.toml` build/publish) to the existing Netlify site via `netlify-cli deploy --no-build`. Live: https://abeer-nasir-portfolio.netlify.app — verified production HTTP 200 for `/`, `/blog`, and `/blog/meta-ads-ai` (1 h1 each, 7 h2 on home, payoff line present).
