@@ -5,8 +5,7 @@ e-commerce brands with AI. Digital marketing, SEO, content, AI automation,
 AI agents and video. Built with Next.js 14 (App Router) + TypeScript + Tailwind
 CSS + Framer Motion + lucide-react.
 
-Live site: https://abeer-nasir-portfolio.netlify.app
-GitHub Pages: https://nasirmeo5533-design.github.io/open-agent
+Live site (GitHub Pages): https://nasirmeo5533-design.github.io/open-agent
 
 ## Stack
 
@@ -71,20 +70,14 @@ A GitHub Actions workflow (`.github/workflows/deploy.yml`) builds and deploys
 `NEXT_PUBLIC_BASE_PATH=/open-agent` so assets resolve under the `/open-agent/`
 subpath. In repo Settings → Pages, set **Source: GitHub Actions**.
 
-### Netlify
-
-`netlify.toml` is configured (build `npm run build`, publish `out/`).
-
-1. Push the repo to GitHub, then https://app.netlify.com → **Add new site → Import an existing project → GitHub**
-2. Select the repo — Netlify reads `netlify.toml` automatically
-3. Click **Deploy site** — every `git push` auto-deploys
-
-Via CLI: `netlify deploy --prod` (build + publish `out/`).
-
 ### Custom domain
 
-`metadataBase` in `src/app/layout.tsx` is set to `https://open-agent.agency` —
-update it if you deploy elsewhere.
+To use your own domain: repo **Settings → Pages → Custom domain**, then point
+DNS at GitHub (4 `A` records to `185.199.108.153` / `185.199.109.153` /
+`185.199.110.153` / `185.199.111.153`, or a `CNAME` to
+`nasirmeo5533-design.github.io` for `www`). `metadataBase` in
+`src/app/layout.tsx` is currently the Pages URL — switch it to your domain once
+DNS is live.
 
 ## Content
 

@@ -29,9 +29,8 @@ form) → Footer (availability badge).
 
 ## Deploy
 
-- **Live site:** https://abeer-nasir-portfolio.netlify.app
+- **Live site (GitHub Pages):** https://nasirmeo5533-design.github.io/open-agent
 - **GitHub:** https://github.com/nasirmeo5533-design/open-agent (branch `main`)
-- **Netlify:** `netlify.toml` configured (build `npm run build`, publish `out/`)
-- **Vercel:** import the repo at https://vercel.com/new — auto-detects Next.js
+- Push to `main` → GitHub Actions auto-builds and deploys to Pages.
 
 Full details: see `README.md` in this repo.
