@@ -24,7 +24,11 @@ export function BlogFilter({ posts }: Props) {
   return (
     <MotionConfig reducedMotion="user">
       <div>
-        <div className="flex flex-wrap gap-3" role="group" aria-label="Filter posts by category">
+        <div
+          className="flex flex-wrap justify-center gap-3"
+          role="group"
+          aria-label="Filter posts by category"
+        >
           {[ALL, ...BLOG_CATEGORIES].map((category) => {
             const active = activeCategory === category;
             return (
@@ -34,10 +38,10 @@ export function BlogFilter({ posts }: Props) {
                 aria-pressed={active}
                 onClick={() => setActiveCategory(category)}
                 className={cn(
-                  "clip-hex-sm inline-flex items-center border px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.08em] transition-colors duration-300",
+                  "inline-flex items-center rounded-full border px-5 py-2 text-xs font-bold uppercase tracking-[0.08em] transition-colors duration-300",
                   active
-                    ? "border-orange-core bg-orange-core/10 text-orange-bright"
-                    : "border-gray-line text-gray-body hover:border-orange-dim hover:text-paper"
+                    ? "border-orange-core bg-orange-core text-white"
+                    : "border-line bg-white text-slate-600 hover:border-orange-core"
                 )}
               >
                 {category}

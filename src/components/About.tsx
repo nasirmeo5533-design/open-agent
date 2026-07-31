@@ -1,141 +1,147 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
-import { Coins, Cpu, ShoppingBag, Users, type LucideIcon } from "lucide-react";
-import { ConnectorLine } from "@/components/ui/ConnectorLine";
-import { Eyebrow } from "@/components/ui/Eyebrow";
-import { GlowCard } from "@/components/ui/GlowCard";
-import { PulseNode } from "@/components/ui/PulseNode";
-import { SectionWrapper } from "@/components/ui/SectionWrapper";
+import { motion, MotionConfig } from "framer-motion";
+import type { Variants } from "framer-motion";
+import { Code2, Gem, LineChart, type LucideIcon } from "lucide-react";
 
-type Fact = {
-  title: string;
-  description: string;
-  icon: LucideIcon;
-};
+const stats = [
+  { value: "$100K", suffix: "+", label: "in client ad spend managed" },
+  { value: "40", suffix: "+", label: "campaigns shipped" },
+  { value: "8", suffix: "+", label: "brands on the system" },
+];
 
-const facts: Fact[] = [
+const points: { icon: LucideIcon; title: string; description: string }[] = [
   {
-    title: "AI-integrated",
-    description: "Every service runs on AI under the hood.",
-    icon: Cpu,
+    icon: Gem,
+    title: "Personalized packages",
+    description: "plans for every budget",
   },
   {
-    title: "Small budgets",
-    description: "We prove results before you scale.",
-    icon: Coins,
+    icon: Code2,
+    title: "Customized approach",
+    description: "React, Shopify, WooCommerce, and more",
   },
   {
-    title: "No handoffs",
-    description: "One team owns your growth.",
-    icon: Users,
-  },
-  {
-    title: "Built for D2C",
-    description: "E-commerce is all we do.",
-    icon: ShoppingBag,
+    icon: LineChart,
+    title: "Results-driven",
+    description: "data you can see every week",
   },
 ];
 
+const container: Variants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.12 } },
+};
+
+const item: Variants = {
+  hidden: { opacity: 0, y: 24 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
 export function About() {
-  const reduceMotion = useReducedMotion();
-
   return (
-    <SectionWrapper
-      id="about"
-      className="relative overflow-hidden bg-primary py-24 md:py-32"
-    >
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -left-32 top-28 h-80 w-80 bg-vignette opacity-70"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-24 bottom-10 h-72 w-72 bg-vignette opacity-50"
-      />
+    <MotionConfig reducedMotion="user">
+      <section id="about" className="band-cloud py-20 md:py-28">
+        <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-2 lg:gap-16">
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <motion.p variants={item} className="eyebrow">
+              Who We Are
+            </motion.p>
 
-      <div className="relative mx-auto w-full max-w-[1280px] px-6 md:px-10 xl:px-16">
-        <header className="max-w-2xl">
-          <Eyebrow>WHY US</Eyebrow>
-          <h2 className="mt-4 font-display text-3xl leading-tight text-paper md:text-5xl">
-            Six people. One growth system.
-          </h2>
-        </header>
-
-        <div className="mt-14 grid gap-12 lg:grid-cols-2 lg:gap-16">
-          <blockquote className="relative font-display text-2xl leading-snug text-paper md:text-4xl">
-            <span
-              aria-hidden="true"
-              className="absolute -left-2 -top-10 select-none text-7xl leading-none text-orange-core/60"
+            <motion.h2
+              variants={item}
+              className="mt-4 max-w-xl font-extrabold text-3xl leading-tight text-navy-900 md:text-4xl lg:text-5xl"
             >
-              “
-            </span>
-            <p className="relative font-normal">
-              We don’t just{" "}
-              <em className="italic text-orange-core">market your store</em>.{" "}
-              We <em className="italic text-orange-core">automate it</em>.
-            </p>
-          </blockquote>
+              Leading AI-Powered Digital Marketing Agency in Pakistan
+            </motion.h2>
 
-          <div className="max-w-xl">
-            <p className="text-sm leading-relaxed text-gray-body md:text-base">
-              Most agencies hand you off to one account manager. We give you a
-              full team — marketing, SEO, content, AI, and video — working on
-              one connected system.
-            </p>
-            <p className="mt-4 text-sm leading-relaxed text-gray-body md:text-base">
-              Everything talks to everything. Nothing gets lost.
-            </p>
-          </div>
-        </div>
+            <motion.p
+              variants={item}
+              className="mt-6 max-w-xl text-base leading-relaxed text-slate-600"
+            >
+              We turn small e-commerce stores into market leaders with AI. Six
+              specialists. One connected system.
+            </motion.p>
+            <motion.p
+              variants={item}
+              className="mt-4 max-w-xl text-base leading-relaxed text-slate-600"
+            >
+              Since 2022 we&apos;ve run Meta and Google campaigns, built AI
+              agents, and automated stores for D2C brands.
+            </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: reduceMotion ? 0 : 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <ConnectorLine className="mt-14 max-w-[216px]" />
-          <p className="mt-4 flex flex-wrap items-center gap-2 text-sm text-gray-body">
-            <PulseNode size="sm" />
-            <span>Karachi.</span>
-            <PulseNode size="sm" />
-            <span>Remote worldwide.</span>
-          </p>
-        </motion.div>
+            <motion.dl
+              variants={item}
+              className="mt-10 grid max-w-xl grid-cols-3 gap-6"
+            >
+              {stats.map((stat) => (
+                <div key={stat.label}>
+                  <dt className="sr-only">{stat.label}</dt>
+                  <dd className="text-3xl font-extrabold tracking-tight text-navy-900 md:text-4xl">
+                    {stat.value}
+                    <sup
+                      aria-hidden="true"
+                      className="font-extrabold text-orange-core"
+                    >
+                      {stat.suffix}
+                    </sup>
+                  </dd>
+                  <dd className="mt-1 text-xs leading-snug text-slate-600 md:text-sm">
+                    {stat.label}
+                  </dd>
+                </div>
+              ))}
+            </motion.dl>
+          </motion.div>
 
-        <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {facts.map(({ title, description, icon: Icon }, i) => (
-            <li key={title}>
-              <motion.div
-                initial={{ opacity: 0, y: reduceMotion ? 0 : 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{
-                  duration: 0.5,
-                  delay: i * 0.07,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-              >
-                <GlowCard className="h-full">
-                  <span
-                    aria-hidden="true"
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-orange-dim bg-panel text-orange-core"
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            className="flex flex-col items-start gap-6"
+          >
+            <motion.div variants={item}>
+              <a href="#contact" className="btn-primary">
+                Contact Now
+              </a>
+            </motion.div>
+
+            <ul className="grid w-full gap-4">
+              {points.map(({ icon: Icon, title, description }) => (
+                <li key={title}>
+                  <motion.div
+                    variants={item}
+                    className="card card-hover flex items-start gap-4 p-5"
                   >
-                    <Icon strokeWidth={1.5} className="h-5 w-5" />
-                  </span>
-                  <h3 className="mt-4 font-display text-lg text-paper">
-                    {title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-gray-body">
-                    {description}
-                  </p>
-                </GlowCard>
-              </motion.div>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </SectionWrapper>
+                    <span
+                      aria-hidden="true"
+                      className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-core/10 text-orange-core"
+                    >
+                      <Icon className="h-5 w-5" strokeWidth={1.75} />
+                    </span>
+                    <div>
+                      <h3 className="font-bold text-navy-900">{title}</h3>
+                      <p className="mt-0.5 text-sm text-slate-600">
+                        {description}
+                      </p>
+                    </div>
+                  </motion.div>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </div>
+      </section>
+    </MotionConfig>
   );
 }

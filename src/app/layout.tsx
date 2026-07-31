@@ -1,19 +1,13 @@
 import type { Metadata, Viewport } from "next";
-import { Playfair_Display, Space_Grotesk } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
+// Digital Minds-style typography: Poppins (bold modern sans) for both
+// display and body. The old Playfair/Space Grotesk pair was retired with
+// the dark premium theme.
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-});
-
-// TODO(font): The brand typeface "Copy" (bold condensed grotesk) is not
-// available via next/font/google. Space Grotesk is the sanctioned fallback
-// per the design contract — if a licensed "Copy" webfont file becomes
-// available, self-host it with @fontsource and swap the variable below.
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-sans",
   display: "swap",
 });
@@ -35,7 +29,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#060606",
+  themeColor: "#0B1B3A",
 };
 
 export default function RootLayout({
@@ -44,8 +38,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${spaceGrotesk.variable}`}>
-      <body className="bg-primary font-sans text-gray-body">
+    <html lang="en" className={poppins.variable}>
+      <body className="bg-white font-sans text-ink">
         {children}
         <noscript>
           <style>{`[style*="opacity"]{opacity:1!important}[style*="translateY"]{transform:none!important}`}</style>

@@ -1,26 +1,24 @@
+import Link from "next/link";
 import { BlogCard } from "@/components/ui/BlogCard";
-import { ButtonLink } from "@/components/ui/Button";
-import { ConnectorLine } from "@/components/ui/ConnectorLine";
-import { Eyebrow } from "@/components/ui/Eyebrow";
-import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { getPosts } from "@/lib/posts";
 
 export function Blog() {
   const posts = getPosts().slice(0, 3);
 
   return (
-    <SectionWrapper id="blog" className="relative">
-      <div className="mx-auto max-w-[1280px] px-4 py-24 sm:px-8 lg:px-16">
-        <Eyebrow>Blog</Eyebrow>
-        <h2 className="mt-4 max-w-2xl font-display text-3xl leading-[1.05] tracking-tight text-paper sm:text-4xl md:text-5xl">
-          Ideas that grow stores.
-        </h2>
-        <p className="mt-4 max-w-xl text-sm leading-relaxed text-gray-body sm:text-base">
-          Simple strategies. Real numbers. No hype.
-        </p>
-        <ConnectorLine className="mt-8" />
+    <section id="blog" className="bg-white">
+      <div className="mx-auto max-w-7xl px-6 py-24">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="eyebrow">Blog</p>
+          <h2 className="mt-4 text-3xl font-extrabold text-navy-900 md:text-4xl lg:text-5xl">
+            Ideas that grow stores.
+          </h2>
+          <p className="mt-4 text-slate-600">
+            Simple strategies. Real numbers. No hype.
+          </p>
+        </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
             <BlogCard
               key={post.slug}
@@ -33,12 +31,12 @@ export function Blog() {
           ))}
         </div>
 
-        <div className="mt-12">
-          <ButtonLink href="/blog" variant="outline">
-            Read all posts
-          </ButtonLink>
+        <div className="mt-12 text-center">
+          <Link href="/blog" className="btn-outline">
+            Read All Posts
+          </Link>
         </div>
       </div>
-    </SectionWrapper>
+    </section>
   );
 }

@@ -1,15 +1,22 @@
 import Link from "next/link";
-import { Github, Linkedin, Mail } from "lucide-react";
-import { ConnectorLine } from "./ui/ConnectorLine";
-import { PulseNode } from "./ui/PulseNode";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  MapPin,
+  Mail,
+  Phone,
+  Sparkles,
+  Twitter,
+} from "lucide-react";
 
 const quickLinks = [
   { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
-  { label: "Team", href: "#team" },
-  { label: "Impact", href: "#impact" },
+  { label: "Why Us", href: "#why" },
+  { label: "Portfolio", href: "#portfolio" },
+  { label: "Testimonials", href: "#testimonials" },
+  { label: "FAQ", href: "#faq" },
   { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "#contact" },
 ];
 
 const serviceLinks = [
@@ -21,33 +28,48 @@ const serviceLinks = [
   "Video Editing",
 ];
 
+const locations = [
+  { label: "Pakistan", value: "Karachi" },
+  { label: "Global", value: "Remote" },
+  { label: "Response", value: "Within 24 hours" },
+];
+
+const socials = [
+  { label: "Facebook", href: "https://facebook.com", Icon: Facebook },
+  { label: "Instagram", href: "https://instagram.com", Icon: Instagram },
+  { label: "LinkedIn", href: "https://linkedin.com", Icon: Linkedin },
+  { label: "Twitter", href: "https://twitter.com", Icon: Twitter },
+];
+
 export function Footer() {
   return (
-    <footer className="bg-elevated">
-      <ConnectorLine />
-      <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-8 md:py-20">
+    <footer className="band-navy bg-navy-950">
+      <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <p className="font-display text-2xl text-orange-core">Open Agent</p>
-            <p className="mt-3 max-w-xs text-sm leading-relaxed text-gray-body">
+            <Link href="#top" className="inline-flex items-center gap-2.5">
+              <Sparkles
+                aria-hidden="true"
+                strokeWidth={2}
+                className="h-7 w-7 text-orange-core"
+              />
+              <span className="text-2xl font-bold text-white">Open Agent</span>
+            </Link>
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
               We don&apos;t just market your store. We automate it.
             </p>
-            <div className="mt-6 flex items-center gap-3">
-              <PulseNode size="sm" />
-              <p className="text-xs text-gray-body">
-                Accepting a few new clients
-              </p>
-            </div>
           </div>
 
-          <nav aria-label="Quick links" className="lg:justify-self-center">
-            <p className="eyebrow">Quick links</p>
+          <nav aria-label="Quick links">
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-white">
+              Quick Links
+            </p>
             <ul className="mt-5 grid gap-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="glow-sweep text-sm text-gray-body transition-colors duration-300 hover:text-orange-bright"
+                    className="text-sm text-white/70 transition-colors duration-300 hover:text-orange-bright"
                   >
                     {link.label}
                   </Link>
@@ -56,14 +78,16 @@ export function Footer() {
             </ul>
           </nav>
 
-          <nav aria-label="Services" className="lg:justify-self-center">
-            <p className="eyebrow">Services</p>
+          <nav aria-label="Services">
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-white">
+              Services
+            </p>
             <ul className="mt-5 grid gap-3">
               {serviceLinks.map((service) => (
                 <li key={service}>
                   <Link
                     href="#services"
-                    className="glow-sweep text-sm text-gray-body transition-colors duration-300 hover:text-orange-bright"
+                    className="text-sm text-white/70 transition-colors duration-300 hover:text-orange-bright"
                   >
                     {service}
                   </Link>
@@ -73,62 +97,69 @@ export function Footer() {
           </nav>
 
           <div>
-            <p className="eyebrow">Connect</p>
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-white">
+              Contact
+            </p>
             <ul className="mt-5 grid gap-3">
               <li>
                 <a
                   href="mailto:nasirmeo5533@gmail.com"
-                  className="group inline-flex items-center gap-3 text-sm text-gray-body transition-colors duration-300 hover:text-orange-bright"
+                  className="inline-flex items-center gap-2.5 text-sm text-white/70 transition-colors duration-300 hover:text-orange-bright"
                 >
-                  <Mail
-                    aria-hidden="true"
-                    strokeWidth={1.5}
-                    className="h-4 w-4"
-                  />
-                  Email
+                  <Mail aria-hidden="true" className="h-4 w-4" />
+                  nasirmeo5533@gmail.com
                 </a>
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-3 text-sm text-gray-body transition-colors duration-300 hover:text-orange-bright"
+                  href="tel:+923303159642"
+                  className="inline-flex items-center gap-2.5 text-sm text-white/70 transition-colors duration-300 hover:text-orange-bright"
                 >
-                  <Linkedin
-                    aria-hidden="true"
-                    strokeWidth={1.5}
-                    className="h-4 w-4"
-                  />
-                  LinkedIn
+                  <Phone aria-hidden="true" className="h-4 w-4" />
+                  0330 3159642
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://github.com/nasirmeo5533-design"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-3 text-sm text-gray-body transition-colors duration-300 hover:text-orange-bright"
-                >
-                  <Github
-                    aria-hidden="true"
-                    strokeWidth={1.5}
-                    className="h-4 w-4"
-                  />
-                  GitHub
-                </a>
+              <li className="inline-flex items-center gap-2.5 text-sm text-white/70">
+                <MapPin aria-hidden="true" className="h-4 w-4" />
+                Karachi &bull; Remote Worldwide
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-4 border-t border-gray-line pt-8 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-xs text-gray-body">
-            © 2026 Open Agent. All rights reserved.
+        <div className="mt-14 grid gap-4 rounded-2xl border border-white/10 bg-navy-900/60 px-6 py-5 sm:grid-cols-3">
+          {locations.map((location) => (
+            <div key={location.label} className="flex items-center gap-2.5">
+              <MapPin aria-hidden="true" className="h-4 w-4 text-orange-core" />
+              <p className="text-sm text-white/70">
+                <span className="font-bold text-white">{location.label}</span>
+                <span aria-hidden="true" className="mx-2 text-white/40">
+                  —
+                </span>
+                {location.value}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 flex flex-wrap items-center justify-between gap-6 border-t border-white/10 pt-6">
+          <p className="text-sm text-white/70">
+            &copy; 2026 Open Agent. All rights reserved.
           </p>
-          <p className="text-xs text-gray-body">
-            Built with AI. Proof in the numbers.
-          </p>
+          <div className="flex items-center gap-3">
+            {socials.map(({ label, href, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white/70 transition-colors duration-300 hover:border-orange-core hover:bg-orange-core hover:text-white"
+              >
+                <Icon aria-hidden="true" className="h-4 w-4" />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </footer>

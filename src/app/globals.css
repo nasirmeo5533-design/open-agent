@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html {
@@ -11,25 +11,65 @@ html {
 }
 
 body {
-  @apply bg-primary font-sans text-gray-body antialiased;
+  @apply bg-white font-sans text-ink antialiased;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: rgba(255, 106, 0, 0.85);
-  color: #060606;
+  background: #ff6a00;
+  color: #ffffff;
 }
 
 @layer base {
   :where(a, button, input, textarea, select, [role="button"]):focus-visible {
     outline: 2px solid #ff6a00;
     outline-offset: 3px;
-    border-radius: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* ---- Digital Minds-style buttons: orange pill / outline pills ---- */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-core to-orange-bright px-7 py-3.5 text-sm font-bold text-white shadow-btn transition-all duration-300 hover:-translate-y-0.5 hover:shadow-btn-lg hover:brightness-110;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-navy-900 bg-transparent px-7 py-3.5 text-sm font-bold text-navy-900 transition-colors duration-300 hover:bg-navy-900 hover:text-white;
+  }
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/70 bg-transparent px-7 py-3.5 text-sm font-bold text-white transition-colors duration-300 hover:bg-white hover:text-navy-900;
+  }
+  .btn-white {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-navy-900 shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:shadow-card-lg;
+  }
+
+  /* ---- Cards ---- */
+  .card {
+    @apply rounded-2xl border border-line bg-white shadow-card transition-all duration-300;
+  }
+  .card-hover:hover {
+    @apply -translate-y-1 border-orange-core/40 shadow-card-lg;
+  }
+  .card-dark {
+    @apply rounded-2xl border border-navy-700/60 bg-navy-800 shadow-card;
+  }
+
+  /* ---- Section band helpers ---- */
+  .band-navy {
+    @apply bg-navy-900 text-white;
+  }
+  .band-cloud {
+    @apply bg-cloud;
+  }
+
+  /* ---- Micro-label: orange, all-caps, letterspaced ---- */
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.14em] text-orange-core;
   }
 }
 
 @layer utilities {
-  /* ---- Signature 45° hex/bracket-cut corners (top-left + bottom-right) ---- */
+  /* ---- legacy dark-theme utilities (kept for git history parity) ---- */
   .clip-hex {
     clip-path: polygon(
       24px 0,
@@ -40,33 +80,6 @@ body {
       0 24px
     );
   }
-  .clip-hex-sm {
-    clip-path: polygon(
-      16px 0,
-      100% 0,
-      100% calc(100% - 16px),
-      calc(100% - 16px) 100%,
-      0 100%,
-      0 16px
-    );
-  }
-  .clip-hex-lg {
-    clip-path: polygon(
-      40px 0,
-      100% 0,
-      100% calc(100% - 40px),
-      calc(100% - 40px) 100%,
-      0 100%,
-      0 40px
-    );
-  }
-
-  /* ---- Micro-label: all-caps, letter-spacing 0.08em ---- */
-  .eyebrow {
-    @apply text-[11px] font-semibold uppercase tracking-[0.08em] text-gray-body;
-  }
-
-  /* ---- Blurred radial orange glow vignette behind visual anchors ---- */
   .bg-vignette {
     background: radial-gradient(
       closest-side,
@@ -74,8 +87,6 @@ body {
       transparent 72%
     );
   }
-
-  /* ---- Glow-sweep underline for nav links ---- */
   .glow-sweep {
     position: relative;
   }

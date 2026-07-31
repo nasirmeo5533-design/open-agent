@@ -84,3 +84,31 @@
 
 - Pushed all agency commits to `main` on `https://github.com/nasirmeo5533-design/open-agent` (HEAD `c5ee6e1`, then this changelog update).
 - Deployed the static export (`out/`, `netlify.toml` build/publish) to the existing Netlify site via `netlify-cli deploy --no-build`. Live: https://abeer-nasir-portfolio.netlify.app — verified production HTTP 200 for `/`, `/blog`, and `/blog/meta-ads-ai` (1 h1 each, 7 h2 on home, payoff line present).
+
+# CHANGELOG — DIGITAL MINDS STYLE REDESIGN (v3)
+
+> Full visual redesign requested by the client: "colors, style, font and layout same as
+> digitalminds.pk". The dark premium theme (Playfair/Space Grotesk, hex cuts, hub-and-spoke)
+> was retired in favour of Digital Minds' deep-navy + orange + white-cards agency look.
+
+## R0 — Design system swap (orchestrator)
+
+- `tailwind.config.ts`: new Digital Minds palette — navy-950/900/800/700/600 (#07122C→#2A54AD), orange core #FF6A00 / bright #FF8C1A, white, ink #0F172A (body text), cloud #F4F7FB (light bands), line #E2E8F0; soft shadows (`card`, `card-lg`, `btn`, `btn-lg`); legacy dark aliases kept for git-history parity.
+- `globals.css`: light theme default (`bg-white text-ink`, `color-scheme: light`); new component classes — `.btn-primary` (orange gradient pill), `.btn-outline`, `.btn-outline-light`, `.btn-white`, `.card`, `.card-hover`, `.card-dark`, `.band-navy`, `.band-cloud`, `.eyebrow` (orange caps). Legacy clip-hex/vignette/glow-sweep utilities retained (unused).
+- `layout.tsx`: fonts swapped to **Poppins** (400–800, single `--font-sans` var; display = sans). themeColor → #0B1B3A.
+- `BlogCard.tsx`: restyled to white rounded card + orange category pill + arrow link.
+
+## R1 — All sections (parallel agents A–F)
+
+- **A (Top bar + Nav + Hero + About)**: `Nav.tsx` — navy top bar (phone 0330 3159642 + "Schedule a Call"), white sticky nav with Services mega-dropdown (6 services), mobile panel (aria + Escape). `Hero.tsx` — `band-navy`, extrabold h1 "We don't just market your store. We **automate** it.", `.btn-primary`/`.btn-outline-light` CTAs, 4.8/5 stars social proof, 3 proof chips, CSS-only dashboard card. `About.tsx` — `band-cloud` "Who We Are", proof numbers ($100K+ / 40+ / 8+), 3 mini cards.
+- **B (Services + Why Us)**: `ServicesHub.tsx` — white grid of 6 orange-icon service cards with hooks + chips (still **default export**). New `WhyUs.tsx` — 3 feature cards (Personalized packages / Customized approach / Results-driven).
+- **C (Stats + Clients)**: `Impact.tsx` — `band-navy` counter grid 8+ / 50+ / 6 / 3+ (hydration-safe count-up, reduced-motion skip). New `Clients.tsx` — grayscale text-logo wall (8 brand wordmarks).
+- **D (Testimonials + Portfolio)**: New `Testimonials.tsx` — navy band, page-based carousel (1/3 per page via matchMedia, auto-advance, reduced-motion → static), 5 client cards with orange stars. New `Portfolio.tsx` — 6 project cards with CSS-gradient covers + result lines (30 sales / revenue doubled / etc.).
+- **E (FAQ + Contact)**: New `Faq.tsx` — accordion (aria-expanded, height animation), 6 Q&A. `Contact.tsx` — `band-navy` two-col: availability badge + contact list + `card-dark` form (Full Name/Phone/Email/Store URL/Budget/Message), native labels, mailto fallback, aria-live confirmation.
+- **F (Footer + Blog)**: `Footer.tsx` — `bg-navy-950` 4-col footer (brand, quick links, services, contact) + locations row + social buttons + © 2026. `Blog.tsx` — home preview (3 latest `BlogCard`s). `/blog` index + `BlogFilter` pill tabs + `/blog/[slug]` post pages all restyled to light theme (navy Poppins headings, slate body, orange accents). Build prerenders `/`, `/blog`, 6 slug pages.
+
+## Assembly & QA (orchestrator)
+
+- `page.tsx` order: `Nav → Hero → About → ServicesHub → WhyUs → Impact → Clients → Testimonials → Portfolio → Faq → Blog → Contact → Footer`. Team/Process sections dropped to match the Digital Minds layout (components remain unused in repo).
+- Compiled-output QA: exactly **1 h1**, **10 h2**, all ids `#top #about #services #why #impact #clients #testimonials #portfolio #faq #blog #contact` present; Poppins embedded (15 woff2, `--font-sans` in CSS bundle); theme-color #0B1B3A.
+- Verification: lint 0 errors, `tsc --noEmit` clean, `npm run build` pass; local static serve 200 on `/`, `/blog`, `/blog/seo-for-d2c`.
