@@ -3,9 +3,7 @@ import {
   Facebook,
   Instagram,
   Linkedin,
-  MapPin,
   Mail,
-  Phone,
   Sparkles,
   Twitter,
 } from "lucide-react";
@@ -26,12 +24,6 @@ const serviceLinks = [
   "AI Automation",
   "AI Agent Development",
   "Video Editing",
-];
-
-const locations = [
-  { label: "Pakistan", value: "Karachi" },
-  { label: "Global", value: "Remote" },
-  { label: "Response", value: "Within 24 hours" },
 ];
 
 const socials = [
@@ -110,39 +102,11 @@ export function Footer() {
                   nasirmeo5533@gmail.com
                 </a>
               </li>
-              <li>
-                <a
-                  href="tel:+923303159642"
-                  className="inline-flex items-center gap-2.5 text-sm text-white/70 transition-colors duration-300 hover:text-orange-bright"
-                >
-                  <Phone aria-hidden="true" className="h-4 w-4" />
-                  0330 3159642
-                </a>
-              </li>
-              <li className="inline-flex items-center gap-2.5 text-sm text-white/70">
-                <MapPin aria-hidden="true" className="h-4 w-4" />
-                Karachi &bull; Remote Worldwide
-              </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-14 grid gap-4 rounded-2xl border border-white/10 bg-navy-900/60 px-6 py-5 sm:grid-cols-3">
-          {locations.map((location) => (
-            <div key={location.label} className="flex items-center gap-2.5">
-              <MapPin aria-hidden="true" className="h-4 w-4 text-orange-core" />
-              <p className="text-sm text-white/70">
-                <span className="font-bold text-white">{location.label}</span>
-                <span aria-hidden="true" className="mx-2 text-white/40">
-                  —
-                </span>
-                {location.value}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-10 flex flex-wrap items-center justify-between gap-6 border-t border-white/10 pt-6">
+        <div className="mt-14 flex flex-wrap items-center justify-between gap-6 border-t border-white/10 pt-6">
           <p className="text-sm text-white/70">
             &copy; 2026 Open Agent. All rights reserved.
           </p>

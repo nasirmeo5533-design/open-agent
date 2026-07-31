@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, MotionConfig } from "framer-motion";
 import type { Variants } from "framer-motion";
 import {
@@ -18,7 +19,7 @@ type Project = {
   tag: string;
   result: string;
   icon: LucideIcon;
-  cover: string;
+  image: string;
 };
 
 const projects: Project[] = [
@@ -27,42 +28,77 @@ const projects: Project[] = [
     tag: "D2C Fragrance",
     result: "30 sales from a PKR 1,000 Meta budget.",
     icon: Sparkles,
-    cover: "bg-gradient-to-br from-navy-900 via-navy-800 to-navy-600",
+    image: "/portfolio/portfolio-1.png",
   },
   {
     name: "GlowSkin Cosmetics",
     tag: "Beauty E-commerce",
     result: "Revenue doubled in one quarter.",
     icon: ShoppingBag,
-    cover: "bg-gradient-to-br from-orange-core to-orange-bright",
+    image: "/portfolio/portfolio-2.png",
   },
   {
     name: "TechStart SaaS",
     tag: "Lead Generation",
     result: "60% more qualified leads in 3 months.",
     icon: BarChart3,
-    cover: "bg-gradient-to-br from-navy-800 to-navy-500",
+    image: "/portfolio/portfolio-3.png",
   },
   {
     name: "Urban Threads",
     tag: "Fashion Store",
     result: "Full funnel automation live.",
     icon: Bot,
-    cover: "bg-gradient-to-br from-orange-bright via-orange-core to-navy-700",
+    image: "/portfolio/portfolio-4.png",
   },
   {
     name: "BioCare Wellness",
     tag: "Health Products",
     result: "Content engine + SEO ranking.",
     icon: Dumbbell,
-    cover: "bg-gradient-to-br from-navy-700 to-navy-500",
+    image: "/portfolio/portfolio-5.png",
   },
   {
     name: "Royal Furniture",
     tag: "Home Goods",
     result: "AI agents answering 90% of support tickets.",
     icon: Home,
-    cover: "bg-gradient-to-br from-navy-950 to-navy-800",
+    image: "/portfolio/portfolio-6.png",
+  },
+  {
+    name: "Luxe Home Decor",
+    tag: "Home & Living",
+    result: "B2C campaigns scaled 3x month over month.",
+    icon: Home,
+    image: "/portfolio/portfolio-7.png",
+  },
+  {
+    name: "FitnessFirst Store",
+    tag: "Sports Retail",
+    result: "Automated re-engagement flows live.",
+    icon: Dumbbell,
+    image: "/portfolio/portfolio-8.png",
+  },
+  {
+    name: "GadgetHub",
+    tag: "Electronics Store",
+    result: "Full-funnel tracking + AI chatbots.",
+    icon: Bot,
+    image: "/portfolio/portfolio-9.png",
+  },
+  {
+    name: "Elite Watches",
+    tag: "Luxury Accessories",
+    result: "Premium content engine driving ROAS up.",
+    icon: Sparkles,
+    image: "/portfolio/portfolio-10.png",
+  },
+  {
+    name: "PetCare Store",
+    tag: "Pet Supplies",
+    result: "SEO + catalog automation end to end.",
+    icon: ShoppingBag,
+    image: "/portfolio/portfolio-11.png",
   },
 ];
 
@@ -103,26 +139,27 @@ export function Portfolio() {
             className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
           >
             {projects.map((project) => {
-              const Icon = project.icon;
               return (
                 <motion.li key={project.name} variants={itemRise} className="h-full">
                   <article className="card card-hover group flex h-full flex-col overflow-hidden">
                     <div
                       aria-hidden="true"
-                      className={`relative flex h-44 items-center justify-center overflow-hidden ${project.cover}`}
+                      className="relative flex h-44 items-center justify-center overflow-hidden bg-navy-900"
                     >
-                      <div className="absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10" />
+                      <Image
+                        src={project.image}
+                        alt={project.name}
+                        fill
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent" />
                       <span
                         aria-hidden="true"
                         className="pointer-events-none absolute -right-3 top-2 select-none font-display text-[7rem] font-extrabold leading-none text-white/15"
                       >
                         {project.name.charAt(0)}
                       </span>
-                      <Icon
-                        aria-hidden="true"
-                        strokeWidth={1.5}
-                        className="relative h-16 w-16 text-white drop-shadow-lg transition-transform duration-300 group-hover:scale-110"
-                      />
                     </div>
                     <div className="flex flex-1 flex-col p-5">
                       <h3 className="text-lg font-bold text-navy-900">

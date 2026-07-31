@@ -2,11 +2,9 @@
 
 import { useState } from "react";
 import type { FormEvent } from "react";
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 
 const CONTACT_EMAIL = "nasirmeo5533@gmail.com";
-const CONTACT_PHONE_DISPLAY = "0330 3159642";
-const CONTACT_PHONE_TEL = "tel:+923303159642";
 
 const fieldClasses =
   "w-full rounded-xl border border-navy-600/50 bg-navy-900/70 px-4 py-3 text-sm text-white transition-colors duration-300 hover:border-navy-500 focus:border-orange-core focus:outline-none [&>option]:text-slate-900";
@@ -87,47 +85,6 @@ export function Contact() {
                     </span>
                   </span>
                 </a>
-              </li>
-              <li>
-                <a href={CONTACT_PHONE_TEL} className={detailRowClasses}>
-                  <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-navy-700 bg-navy-800 text-orange-core">
-                    <Phone aria-hidden="true" className="h-4 w-4" />
-                  </span>
-                  <span className="grid gap-0.5">
-                    <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-slate-400">
-                      Phone
-                    </span>
-                    <span className="text-sm font-medium text-white">
-                      {CONTACT_PHONE_DISPLAY}
-                    </span>
-                  </span>
-                </a>
-              </li>
-              <li className={detailRowClasses}>
-                <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-navy-700 bg-navy-800 text-orange-core">
-                  <MapPin aria-hidden="true" className="h-4 w-4" />
-                </span>
-                <span className="grid gap-0.5">
-                  <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-slate-400">
-                    Location
-                  </span>
-                  <span className="text-sm font-medium text-white">
-                    Karachi • Remote Worldwide
-                  </span>
-                </span>
-              </li>
-              <li className={detailRowClasses}>
-                <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-navy-700 bg-navy-800 text-orange-core">
-                  <Clock aria-hidden="true" className="h-4 w-4" />
-                </span>
-                <span className="grid gap-0.5">
-                  <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-slate-400">
-                    Response
-                  </span>
-                  <span className="text-sm font-medium text-white">
-                    Within 24 hours
-                  </span>
-                </span>
               </li>
             </ul>
           </div>
