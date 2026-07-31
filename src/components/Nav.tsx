@@ -7,10 +7,10 @@ import { Menu, X } from "lucide-react";
 import { ButtonLink } from "@/components/ui/Button";
 
 const links = [
-  { href: "#about", label: "About" },
   { href: "#services", label: "Services" },
-  { href: "#experience", label: "Experience" },
-  { href: "#resources", label: "Resources" },
+  { href: "#about", label: "About" },
+  { href: "#team", label: "Team" },
+  { href: "/blog", label: "Blog" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -35,19 +35,19 @@ export function Nav() {
         <Link
           href="#top"
           className="group flex items-center gap-3"
-          aria-label="Abeer Nasir — back to top"
+          aria-label="Open Agent — back to top"
         >
           <span
             aria-hidden="true"
             className="clip-hex-sm flex h-9 w-9 items-center justify-center bg-orange-core font-display text-sm font-bold text-primary transition-colors duration-300 group-hover:bg-orange-bright"
           >
-            AN
+            OA
           </span>
-          <span className="font-display text-lg leading-none text-paper">
-            Abeer Nasir
+          <span className="font-display text-lg leading-none text-orange-core">
+            Open Agent
             <span
               aria-hidden="true"
-              className="ml-1 inline-block h-1.5 w-1.5 rounded-full bg-orange-core align-middle"
+              className="ml-1 inline-block h-1.5 w-1.5 rounded-full bg-orange-bright align-middle"
             />
           </span>
         </Link>
@@ -67,7 +67,7 @@ export function Nav() {
 
         <div className="hidden lg:block">
           <ButtonLink href="#contact" variant="primary">
-            Let&apos;s talk
+            Book a call
           </ButtonLink>
         </div>
 
@@ -116,7 +116,7 @@ export function Nav() {
                   className="w-full"
                   onClick={() => setOpen(false)}
                 >
-                  Let&apos;s talk
+                  Book a call
                 </ButtonLink>
               </li>
             </ul>

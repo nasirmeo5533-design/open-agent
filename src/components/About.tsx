@@ -1,48 +1,49 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
-import { ShoppingBag, Sparkles, Target } from "lucide-react";
-import { Eyebrow } from "@/components/ui/Eyebrow";
-import { SectionWrapper } from "@/components/ui/SectionWrapper";
+import { motion, useReducedMotion } from "framer-motion";
+import { Coins, Cpu, ShoppingBag, Users, type LucideIcon } from "lucide-react";
 import { ConnectorLine } from "@/components/ui/ConnectorLine";
+import { Eyebrow } from "@/components/ui/Eyebrow";
+import { GlowCard } from "@/components/ui/GlowCard";
 import { PulseNode } from "@/components/ui/PulseNode";
+import { SectionWrapper } from "@/components/ui/SectionWrapper";
 
-const topSkills: Array<{ label: string; icon: typeof Target }> = [
-  { label: "Meta Ads", icon: Target },
-  { label: "Shopify", icon: ShoppingBag },
-  { label: "AI-Driven Content", icon: Sparkles },
+type Fact = {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+};
+
+const facts: Fact[] = [
+  {
+    title: "AI-integrated",
+    description: "Every service runs on AI under the hood.",
+    icon: Cpu,
+  },
+  {
+    title: "Small budgets",
+    description: "We prove results before you scale.",
+    icon: Coins,
+  },
+  {
+    title: "No handoffs",
+    description: "One team owns your growth.",
+    icon: Users,
+  },
+  {
+    title: "Built for D2C",
+    description: "E-commerce is all we do.",
+    icon: ShoppingBag,
+  },
 ];
 
-const secondarySkills = ["Generative AI", "AI Agents", "No-Code Automation"];
-
-const rise: Variants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
-  },
-};
-
-const listRise: Variants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
-};
-
-const chipRise: Variants = {
-  hidden: { opacity: 0, y: 12 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
-  },
-};
-
 export function About() {
+  const reduceMotion = useReducedMotion();
+
   return (
     <SectionWrapper
       id="about"
-      className="relative overflow-hidden bg-primary py-24 md:py-32 lg:py-40"
+      className="relative overflow-hidden bg-primary py-24 md:py-32"
     >
       <div
         aria-hidden="true"
@@ -53,110 +54,87 @@ export function About() {
         className="pointer-events-none absolute -right-24 bottom-10 h-72 w-72 bg-vignette opacity-50"
       />
 
-      <div className="relative mx-auto w-full max-w-7xl px-6 md:px-10 lg:px-16">
-        <motion.div
-          variants={rise}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.4 }}
-        >
-          <Eyebrow>About</Eyebrow>
-          <h2 className="mt-4 font-display text-4xl leading-[1.05] md:text-5xl xl:text-6xl">
-            <span className="block text-paper">Self-taught,</span>
-            <span className="block italic text-orange-core">
-              client-proofed.
-            </span>
+      <div className="relative mx-auto w-full max-w-[1280px] px-6 md:px-10 xl:px-16">
+        <header className="max-w-2xl">
+          <Eyebrow>WHY US</Eyebrow>
+          <h2 className="mt-4 font-display text-3xl leading-tight text-paper md:text-5xl">
+            Six people. One growth system.
           </h2>
+        </header>
+
+        <div className="mt-14 grid gap-12 lg:grid-cols-2 lg:gap-16">
+          <blockquote className="relative font-display text-2xl leading-snug text-paper md:text-4xl">
+            <span
+              aria-hidden="true"
+              className="absolute -left-2 -top-10 select-none text-7xl leading-none text-orange-core/60"
+            >
+              “
+            </span>
+            <p className="relative font-normal">
+              We don’t just{" "}
+              <em className="italic text-orange-core">market your store</em>.{" "}
+              We <em className="italic text-orange-core">automate it</em>.
+            </p>
+          </blockquote>
+
+          <div className="max-w-xl">
+            <p className="text-sm leading-relaxed text-gray-body md:text-base">
+              Most agencies hand you off to one account manager. We give you a
+              full team — marketing, SEO, content, AI, and video — working on
+              one connected system.
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-gray-body md:text-base">
+              Everything talks to everything. Nothing gets lost.
+            </p>
+          </div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: reduceMotion ? 0 : 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <ConnectorLine className="mt-14 max-w-[216px]" />
+          <p className="mt-4 flex flex-wrap items-center gap-2 text-sm text-gray-body">
+            <PulseNode size="sm" />
+            <span>Karachi.</span>
+            <PulseNode size="sm" />
+            <span>Remote worldwide.</span>
+          </p>
         </motion.div>
 
-        <div className="mt-14 grid gap-14 md:mt-16 lg:mt-20 lg:grid-cols-2 lg:gap-20">
-          <motion.div
-            variants={rise}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-          >
-            <blockquote className="relative font-display text-2xl leading-snug text-paper md:text-3xl">
-              <span
-                aria-hidden="true"
-                className="absolute -left-2 -top-10 select-none text-7xl leading-none text-orange-core/60"
+        <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {facts.map(({ title, description, icon: Icon }, i) => (
+            <li key={title}>
+              <motion.div
+                initial={{ opacity: 0, y: reduceMotion ? 0 : 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{
+                  duration: 0.5,
+                  delay: i * 0.07,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
               >
-                “
-              </span>
-              <p className="relative font-normal">
-                I started learning{" "}
-                <em className="italic text-orange-core">Generative AI</em> in
-                2023 — self-taught through{" "}
-                <em className="italic text-orange-core">
-                  real client projects
-                </em>
-                , not a fixed roadmap. I help businesses use AI and digital
-                marketing to improve workflows, online presence, and how they
-                use technology.
-              </p>
-            </blockquote>
-            <ConnectorLine className="mt-10 max-w-[216px]" />
-          </motion.div>
-
-          <motion.div
-            variants={rise}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-          >
-            <div className="max-w-xl">
-              <p className="text-base leading-relaxed text-gray-body md:text-lg">
-                I work with e-commerce and D2C brands — mostly perfume and
-                beauty — on Shopify setup and optimization, Meta Ads,
-                AI-assisted content, and business process automation built with
-                no-code AI tools.
-              </p>
-              <p className="mt-5 text-base leading-relaxed text-gray-body md:text-lg">
-                My focus is simple: build AI-powered systems for marketing and
-                operations that show numbers, not guesswork.
-              </p>
-            </div>
-
-            <motion.ul
-              variants={listRise}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              aria-label="Skills"
-              className="mt-10 flex flex-wrap items-center gap-2"
-            >
-              {topSkills.map(({ label, icon: Icon }) => (
-                <motion.li
-                  key={label}
-                  variants={chipRise}
-                  className="group inline-flex items-center gap-2 rounded-full border border-orange-dim bg-elevated px-4 py-2 text-sm font-medium text-orange-bright transition-colors duration-300 hover:border-orange-core hover:bg-panel hover:shadow-glow"
-                >
-                  <Icon
-                    strokeWidth={1.5}
+                <GlowCard className="h-full">
+                  <span
                     aria-hidden="true"
-                    className="h-4 w-4 shrink-0 text-orange-bright transition-colors duration-300 group-hover:text-orange-core"
-                  />
-                  {label}
-                </motion.li>
-              ))}
-              {secondarySkills.map((label) => (
-                <motion.li
-                  key={label}
-                  variants={chipRise}
-                  className="inline-flex items-center rounded-full border border-orange-dim/40 bg-elevated px-4 py-2 text-xs font-medium text-orange-bright/85 transition-colors duration-300 hover:border-orange-dim hover:text-orange-bright"
-                >
-                  {label}
-                </motion.li>
-              ))}
-            </motion.ul>
-
-            <p className="mt-10 flex flex-wrap items-center gap-2 text-sm text-gray-body">
-              <span>3+ years hands-on</span>
-              <PulseNode size="sm" />
-              <span>8+ services delivered</span>
-            </p>
-          </motion.div>
-        </div>
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-orange-dim bg-panel text-orange-core"
+                  >
+                    <Icon strokeWidth={1.5} className="h-5 w-5" />
+                  </span>
+                  <h3 className="mt-4 font-display text-lg text-paper">
+                    {title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-gray-body">
+                    {description}
+                  </p>
+                </GlowCard>
+              </motion.div>
+            </li>
+          ))}
+        </ul>
       </div>
     </SectionWrapper>
   );

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import type { FormEvent } from "react";
-import { Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
+import { Clock, Mail, MapPin, Send } from "lucide-react";
 import { Button } from "./ui/Button";
 import { CTABanner } from "./ui/CTABanner";
 import { Eyebrow } from "./ui/Eyebrow";
@@ -11,13 +11,12 @@ import { PulseNode } from "./ui/PulseNode";
 import { SectionWrapper } from "./ui/SectionWrapper";
 
 const CONTACT_EMAIL = "nasirmeo5533@gmail.com";
-const PHONE_DISPLAY = "+92 370 3159642";
-const PHONE_TEL = "tel:+923703159642";
-const LINKEDIN_URL = "https://www.linkedin.com/in/abeernasir-3052b628a";
-const LINKEDIN_DISPLAY = "linkedin.com/in/abeernasir-3052b628a";
+const BOOK_MAILTO = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+  "Booking a call with Open Agent"
+)}`;
 
 const fieldClasses =
-  "w-full border border-gray-line bg-panel p-4 text-sm text-paper transition-colors duration-300 placeholder:text-gray-body/60 hover:border-orange-dim focus:border-orange-core";
+  "w-full border border-gray-line bg-panel p-4 text-sm text-paper transition-colors duration-300 hover:border-orange-dim focus:border-orange-core";
 
 export function Contact() {
   const [sent, setSent] = useState(false);
@@ -27,9 +26,13 @@ export function Contact() {
     const data = new FormData(event.currentTarget);
     const name = String(data.get("name") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
+    const storeUrl = String(data.get("storeUrl") ?? "").trim();
+    const budget = String(data.get("budget") ?? "").trim();
     const message = String(data.get("message") ?? "").trim();
-    const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
-    const body = encodeURIComponent(`${message}\n\n— ${name}\n${email}`);
+    const subject = encodeURIComponent(`New client inquiry from ${name}`);
+    const body = encodeURIComponent(
+      `${message}\n\n— ${name}\n${email}\nStore: ${storeUrl}\nBudget: ${budget}`
+    );
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
     setSent(true);
   }
@@ -38,14 +41,15 @@ export function Contact() {
     <SectionWrapper id="contact" className="bg-primary">
       <div className="mx-auto w-full max-w-7xl px-6 py-24 md:px-8 md:py-32">
         <div className="max-w-3xl">
-          <Eyebrow>Contact</Eyebrow>
-          <h2 className="mt-4 font-display text-4xl leading-tight text-paper md:text-6xl">
-            Let&apos;s build something{" "}
-            <span className="block text-orange-core">that converts.</span>
+          <Eyebrow>CONTACT</Eyebrow>
+          <h2 className="mt-4 font-display text-3xl leading-tight text-paper md:text-5xl">
+            Booking new clients.{" "}
+            <span className="block text-orange-core">
+              Tell us what you sell. We&apos;ll show you the system.
+            </span>
           </h2>
           <p className="mt-6 max-w-xl text-sm text-gray-body md:text-base">
-            Open to freelance, remote, collaborations, and full-time roles in
-            Generative AI, AI Automation, and Digital Marketing.
+            Small budgets welcome. We prove results before you scale.
           </p>
         </div>
 
@@ -63,7 +67,6 @@ export function Contact() {
                     type="text"
                     required
                     autoComplete="name"
-                    placeholder="Your name"
                     className={fieldClasses}
                   />
                 </div>
@@ -77,9 +80,42 @@ export function Contact() {
                     type="email"
                     required
                     autoComplete="email"
-                    placeholder="you@example.com"
                     className={fieldClasses}
                   />
+                </div>
+              </div>
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="grid gap-2">
+                  <label htmlFor="contact-store" className="eyebrow">
+                    Store URL
+                  </label>
+                  <input
+                    id="contact-store"
+                    name="storeUrl"
+                    type="url"
+                    autoComplete="url"
+                    className={fieldClasses}
+                  />
+                </div>
+                <div className="grid gap-2">
+                  <label htmlFor="contact-budget" className="eyebrow">
+                    Budget
+                  </label>
+                  <select
+                    id="contact-budget"
+                    name="budget"
+                    required
+                    defaultValue=""
+                    className={fieldClasses}
+                  >
+                    <option value="" disabled>
+                      Select a budget range
+                    </option>
+                    <option value="Under PKR 50k">Under PKR 50k</option>
+                    <option value="PKR 50k–150k">PKR 50k–150k</option>
+                    <option value="PKR 150k+">PKR 150k+</option>
+                    <option value="Not sure yet">Not sure yet</option>
+                  </select>
                 </div>
               </div>
               <div className="grid gap-2">
@@ -91,7 +127,6 @@ export function Contact() {
                   name="message"
                   required
                   rows={6}
-                  placeholder="Tell me about your project"
                   className={`${fieldClasses} resize-y`}
                 />
               </div>
@@ -117,7 +152,7 @@ export function Contact() {
             <div className="flex items-center gap-3">
               <PulseNode />
               <p className="text-sm font-medium text-paper">
-                Open to freelance & full-time
+                Accepting a few new clients
               </p>
             </div>
             <HexCard>
@@ -143,45 +178,6 @@ export function Contact() {
                   </a>
                 </li>
                 <li>
-                  <a href={PHONE_TEL} className="group flex items-start gap-4">
-                    <span className="mt-0.5 shrink-0 text-gray-body transition-colors duration-300 group-hover:text-orange-bright">
-                      <Phone
-                        aria-hidden="true"
-                        strokeWidth={1.5}
-                        className="h-5 w-5"
-                      />
-                    </span>
-                    <span className="grid gap-1">
-                      <span className="eyebrow">Phone</span>
-                      <span className="text-sm text-gray-body transition-colors duration-300 group-hover:text-paper">
-                        {PHONE_DISPLAY}
-                      </span>
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={LINKEDIN_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-start gap-4"
-                  >
-                    <span className="mt-0.5 shrink-0 text-gray-body transition-colors duration-300 group-hover:text-orange-bright">
-                      <Linkedin
-                        aria-hidden="true"
-                        strokeWidth={1.5}
-                        className="h-5 w-5"
-                      />
-                    </span>
-                    <span className="grid gap-1">
-                      <span className="eyebrow">LinkedIn</span>
-                      <span className="text-sm text-gray-body transition-colors duration-300 group-hover:text-paper">
-                        {LINKEDIN_DISPLAY}
-                      </span>
-                    </span>
-                  </a>
-                </li>
-                <li>
                   <div className="flex items-start gap-4">
                     <span className="mt-0.5 shrink-0 text-gray-body">
                       <MapPin
@@ -193,7 +189,24 @@ export function Contact() {
                     <span className="grid gap-1">
                       <span className="eyebrow">Location</span>
                       <span className="text-sm text-gray-body">
-                        Karachi, Sindh, Pakistan
+                        Karachi — remote worldwide
+                      </span>
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <div className="flex items-start gap-4">
+                    <span className="mt-0.5 shrink-0 text-gray-body">
+                      <Clock
+                        aria-hidden="true"
+                        strokeWidth={1.5}
+                        className="h-5 w-5"
+                      />
+                    </span>
+                    <span className="grid gap-1">
+                      <span className="eyebrow">Response</span>
+                      <span className="text-sm text-gray-body">
+                        Within 24 hours
                       </span>
                     </span>
                   </div>
@@ -204,10 +217,10 @@ export function Contact() {
         </div>
 
         <CTABanner
-          claim="Have a project in mind?"
-          punch="Let's make it convert."
-          subtext="Open to freelance, remote, collaborations, and full-time roles."
-          ctaLabel="Get in touch"
+          claim="Ready to automate your growth?"
+          punch="One system. Six specialists. Your store, scaled."
+          ctaLabel="Book a call"
+          ctaHref={BOOK_MAILTO}
           className="mt-24 md:mt-32"
         />
       </div>
