@@ -6,14 +6,13 @@
    01. Reduced-motion guard
    02. Scroll reveal (IntersectionObserver)
    03. Animated counters + progress bars
-   04. Sticky navbar shrink/blur + mobile menu
+   04. Mobile menu toggle
    05. Smooth anchor scrolling
    06. FAQ accordion
-   07. Clients marquee (infinite loop)
-   08. Blog category filter
-   09. Testimonial slider
-   10. Contact form (validation + mailto + success)
-   11. Init
+   07. Testimonial slider
+   08. Image fallback (stock photo → local SVG)
+   09. Contact form (validation + mailto + success)
+   10. Init
    ========================================================================== */
 
 (function () {
@@ -141,50 +140,45 @@
   }
 
   /* ------------------------------------------------------------------
-     04. STICKY NAVBAR SHRINK/BLUR + MOBILE MENU
+     04. MOBILE MENU TOGGLE
      ------------------------------------------------------------------ */
   function initNav() {
-    var nav = document.querySelector(".nav");
-    var toggle = document.querySelector(".nav__toggle");
-    var menu = document.querySelector(".nav__menu");
+    var burger = document.querySelector(".nav-burger");
+    var menu = document.querySelector(".mobile-menu");
+    if (!burger || !menu) return;
 
-    function onScroll() {
-      if (!nav) return;
-      if (window.scrollY > 24) {
-        nav.classList.add("nav--scrolled");
+    function close() {
+      menu.classList.remove("open");
+      burger.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+    }
+
+    function open() {
+      menu.classList.add("open");
+      burger.setAttribute("aria-expanded", "true");
+      document.body.style.overflow = "hidden";
+    }
+
+    burger.addEventListener("click", function () {
+      var isOpen = menu.classList.contains("open");
+      if (isOpen) {
+        close();
       } else {
-        nav.classList.remove("nav--scrolled");
+        open();
       }
-    }
+    });
 
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
+    // Close menu when a link inside it is clicked
+    menu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", close);
+    });
 
-    if (toggle && menu) {
-      toggle.addEventListener("click", function () {
-        var open = menu.classList.toggle("nav__menu--open");
-        toggle.setAttribute("aria-expanded", open ? "true" : "false");
-        document.body.style.overflow = open ? "hidden" : "";
-      });
-
-      // Close menu when a link inside it is clicked
-      menu.querySelectorAll("a").forEach(function (link) {
-        link.addEventListener("click", function () {
-          menu.classList.remove("nav__menu--open");
-          toggle.setAttribute("aria-expanded", "false");
-          document.body.style.overflow = "";
-        });
-      });
-
-      // Close on Escape
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape" && menu.classList.contains("nav__menu--open")) {
-          menu.classList.remove("nav__menu--open");
-          toggle.setAttribute("aria-expanded", "false");
-          document.body.style.overflow = "";
-        }
-      });
-    }
+    // Close on Escape
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && menu.classList.contains("open")) {
+        close();
+      }
+    });
   }
 
   /* ------------------------------------------------------------------
@@ -215,8 +209,21 @@
 
     items.forEach(function (item) {
       var question = item.querySelector(".faq-question");
-      question.setAttribute("aria-expanded", "false");
-      item.querySelector(".faq-answer").setAttribute("aria-hidden", "true");
+      var answer = item.querySelector(".faq-answer");
+      if (!question || !answer) return;
+
+      var open =
+        item.classList.contains("faq-item--open") ||
+        question.getAttribute("aria-expanded") === "true";
+
+      if (open) {
+        item.classList.add("faq-item--open");
+        question.setAttribute("aria-expanded", "true");
+        answer.setAttribute("aria-hidden", "false");
+      } else {
+        question.setAttribute("aria-expanded", "false");
+        answer.setAttribute("aria-hidden", "true");
+      }
 
       question.addEventListener("click", function () {
         var isOpen = item.classList.contains("faq-item--open");
@@ -229,20 +236,114 @@
         if (!isOpen) {
           item.classList.add("faq-item--open");
           question.setAttribute("aria-expanded", "true");
-          item.querySelector(".faq-answer").setAttribute("aria-hidden", "false");
+          answer.setAttribute("aria-hidden", "false");
         }
       });
     });
   }
 
   /* ------------------------------------------------------------------
-     07. CLIENTS MARQUEE (INFINITE LOOP)
+     07. TESTIMONIAL SLIDER (responsive pager)
+     1 card per page on mobile, 3 on desktop (matches lg:grid-cols-3).
      ------------------------------------------------------------------ */
-  function initMarquee() {
-    var track = document.querySelector(".marquee__track");
-    if (!track) return;
-    // Duplicate content once so translateX(-50%) loops seamlessly
-    track.innerHTML += track.innerHTML;
+  function initSlider() {
+    var track = document.getElementById("testi-track");
+    var prevBtn = document.getElementById("testi-prev");
+    var nextBtn = document.getElementById("testi-next");
+    var dotsWrap = document.getElementById("testi-dots");
+    if (!track || !prevBtn || !nextBtn || !dotsWrap) return;
+
+    var cards = Array.prototype.slice.call(track.children);
+    if (!cards.length) return;
+
+    var index = 0;
+    var pages = [];
+    var dots = [];
+
+    function perPage() {
+      return window.innerWidth >= 1024 ? 3 : 1;
+    }
+
+    function buildPages() {
+      var n = perPage();
+      pages = [];
+      for (var i = 0; i < cards.length; i += n) {
+        pages.push(cards.slice(i, i + n));
+      }
+      if (index >= pages.length) index = pages.length - 1;
+      if (index < 0) index = 0;
+      renderDots();
+      render();
+    }
+
+    function renderDots() {
+      dotsWrap.innerHTML = "";
+      dots = [];
+      pages.forEach(function (_, i) {
+        var dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "testi-dot";
+        dot.setAttribute("aria-label", "Go to testimonial page " + (i + 1));
+        dot.addEventListener("click", function () {
+          goTo(i);
+        });
+        dotsWrap.appendChild(dot);
+        dots.push(dot);
+      });
+      if (pages.length <= 1) {
+        dotsWrap.style.display = "none";
+      } else {
+        dotsWrap.style.display = "";
+      }
+    }
+
+    function render() {
+      cards.forEach(function (card, i) {
+        var active = false;
+        pages.forEach(function (page) {
+          if (page.indexOf(card) !== -1 && page === pages[index]) {
+            active = true;
+          }
+        });
+        card.style.display = active ? "" : "none";
+      });
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle("active", i === index);
+        if (i === index) {
+          dot.setAttribute("aria-current", "true");
+        } else {
+          dot.removeAttribute("aria-current");
+        }
+      });
+      if (prevBtn) prevBtn.disabled = pages.length <= 1;
+      if (nextBtn) nextBtn.disabled = pages.length <= 1;
+    }
+
+    function goTo(i) {
+      if (i < 0) i = pages.length - 1;
+      if (i > pages.length - 1) i = 0;
+      index = i;
+      render();
+    }
+
+    prevBtn.addEventListener("click", function () {
+      goTo(index - 1);
+    });
+    nextBtn.addEventListener("click", function () {
+      goTo(index + 1);
+    });
+
+    var resizeTimer = null;
+    window.addEventListener(
+      "resize",
+      function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(buildPages, 150);
+      },
+      { passive: true }
+    );
+
+    buildPages();
   }
 
   /* ------------------------------------------------------------------
@@ -284,58 +385,7 @@
   }
 
   /* ------------------------------------------------------------------
-     09. TESTIMONIAL SLIDER
-     ------------------------------------------------------------------ */
-  function initSlider() {
-    var viewport = document.querySelector(".slider__viewport");
-    if (!viewport) return;
-
-    var track = viewport.querySelector(".slider__track");
-    var slides = Array.prototype.slice.call(track.children);
-    var dotsWrap = document.querySelector(".slider__dots");
-    var dots = [];
-
-    if (slides.length <= 1) return; // single slide — nothing to slide
-
-    var index = 0;
-    var timer = null;
-
-    slides.forEach(function (_, i) {
-      var dot = document.createElement("button");
-      dot.className = "slider__dot";
-      dot.setAttribute("aria-label", "Go to testimonial " + (i + 1));
-      dot.addEventListener("click", function () {
-        goTo(i);
-        restart();
-      });
-      dotsWrap.appendChild(dot);
-      dots.push(dot);
-    });
-
-    function goTo(i) {
-      index = i;
-      track.style.transform = "translateX(-" + index * 100 + "%)";
-      dots.forEach(function (d, di) {
-        d.classList.toggle("slider__dot--active", di === index);
-      });
-    }
-
-    function next() {
-      goTo((index + 1) % slides.length);
-    }
-
-    function restart() {
-      if (prefersReducedMotion) return;
-      clearInterval(timer);
-      timer = setInterval(next, 6000);
-    }
-
-    if (!prefersReducedMotion) restart();
-    goTo(0);
-  }
-
-  /* ------------------------------------------------------------------
-     09b. IMAGE FALLBACK (stock photo → local SVG if it fails to load)
+     08b. IMAGE FALLBACK (stock photo → local SVG if it fails to load)
      ------------------------------------------------------------------ */
   function initImageFallback() {
     document.querySelectorAll("img[data-fallback]").forEach(function (img) {
@@ -358,13 +408,12 @@
   }
 
   /* ------------------------------------------------------------------
-     10. CONTACT FORM (VALIDATION + MAILTO + SUCCESS)
+     09. CONTACT FORM (VALIDATION + MAILTO + SUCCESS)
      ------------------------------------------------------------------ */
   function initContactForm() {
     var form = document.querySelector("[data-contact-form]");
     if (!form) return;
 
-    var card = form.closest(".form-card");
     var submitBtn = form.querySelector("[type='submit']");
     var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
     var phoneRe = /^[+]?[\d\s\-()]{7,20}$/;
@@ -408,11 +457,11 @@
       var allValid = inputs.every(validateField);
 
       if (!allValid) {
-        card.classList.remove("form-card--shake");
+        form.classList.remove("form-card--shake");
         // force reflow to restart animation
-        void card.offsetWidth;
-        card.classList.add("form-card--shake");
-        var firstInvalid = form.querySelector(".form-field--invalid .form-input");
+        void form.offsetWidth;
+        form.classList.add("form-card--shake");
+        var firstInvalid = form.querySelector(".form-field--invalid");
         if (firstInvalid) firstInvalid.focus();
         return;
       }
@@ -446,14 +495,14 @@
         window.location.href = mailto;
         submitBtn.classList.remove("form-submit--loading");
         submitBtn.disabled = false;
-        card.classList.add("form-card--sent");
+        form.classList.add("form-card--sent");
         form.reset();
       }, 700);
     });
   }
 
   /* ------------------------------------------------------------------
-     11. INIT
+     10. INIT
      ------------------------------------------------------------------ */
   document.addEventListener("DOMContentLoaded", function () {
     initReveal();
@@ -462,9 +511,8 @@
     initNav();
     initSmoothScroll();
     initFaq();
-    initMarquee();
-    initBlogFilter();
     initSlider();
+    initBlogFilter();
     initImageFallback();
     initContactForm();
   });
