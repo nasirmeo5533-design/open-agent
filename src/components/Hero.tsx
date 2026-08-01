@@ -28,16 +28,16 @@ const proofChips = [
 const assetPrefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const heroImages = [
-  `${assetPrefix}/portfolio/portfolio-1.png`,
-  `${assetPrefix}/portfolio/portfolio-2.png`,
-  `${assetPrefix}/portfolio/portfolio-3.png`,
-  `${assetPrefix}/portfolio/portfolio-4.png`,
-  `${assetPrefix}/portfolio/portfolio-6.png`,
-  `${assetPrefix}/portfolio/portfolio-7.png`,
-  `${assetPrefix}/portfolio/portfolio-8.png`,
-  `${assetPrefix}/portfolio/portfolio-9.png`,
-  `${assetPrefix}/portfolio/portfolio-10.png`,
-  `${assetPrefix}/portfolio/portfolio-11.png`,
+  `${assetPrefix}/portfolio/abeer-founder.jpg`,
+  `${assetPrefix}/portfolio/portfolio_12.png`,
+  `${assetPrefix}/portfolio/portfolio_14.png`,
+  `${assetPrefix}/portfolio/portfolio13.png`,
+  `${assetPrefix}/portfolio/portfolio16.png`,
+  `${assetPrefix}/portfolio/portfolio17.png`,
+  `${assetPrefix}/portfolio/portfolio18.png`,
+  `${assetPrefix}/portfolio/portfolio19.png`,
+  `${assetPrefix}/portfolio/portfolio20.png`,
+  `${assetPrefix}/portfolio/portfolio21.png`,
 ];
 
 const imageContainer: Variants = {

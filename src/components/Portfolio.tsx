@@ -55,6 +55,13 @@ const projects: Project[] = [
     image: `${assetPrefix}/portfolio/portfolio-4.png`,
   },
   {
+    name: "BioCare Wellness",
+    tag: "Health Products",
+    result: "Content engine + SEO ranking.",
+    icon: Dumbbell,
+    image: `${assetPrefix}/portfolio/portfolio-5.png`,
+  },
+  {
     name: "Royal Furniture",
     tag: "Home Goods",
     result: "AI agents answering 90% of support tickets.",
