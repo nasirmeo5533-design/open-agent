@@ -1,8 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { motion, MotionConfig } from "framer-motion";
 import type { Variants } from "framer-motion";
-import { ArrowRight, Bot, ShoppingCart, Star, TrendingUp } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 
 const container: Variants = {
   hidden: {},
@@ -23,6 +24,36 @@ const proofChips = [
   "Meta & Google Ads",
   "AI Agents & Automation",
 ];
+
+const assetPrefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+const heroImages = [
+  `${assetPrefix}/portfolio/portfolio-1.png`,
+  `${assetPrefix}/portfolio/portfolio-2.png`,
+  `${assetPrefix}/portfolio/portfolio-3.png`,
+  `${assetPrefix}/portfolio/portfolio-4.png`,
+  `${assetPrefix}/portfolio/portfolio-6.png`,
+  `${assetPrefix}/portfolio/portfolio-7.png`,
+  `${assetPrefix}/portfolio/portfolio-8.png`,
+  `${assetPrefix}/portfolio/portfolio-9.png`,
+  `${assetPrefix}/portfolio/portfolio-10.png`,
+  `${assetPrefix}/portfolio/portfolio-11.png`,
+];
+
+const imageContainer: Variants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.08, delayChildren: 0.2 } },
+};
+
+const imageItem: Variants = {
+  hidden: { opacity: 0, scale: 0.92, y: 20 },
+  show: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+  },
+};
 
 export function Hero() {
   return (
@@ -116,7 +147,7 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Mini dashboard visual */}
+          {/* Work showcase collage */}
           <motion.div
             initial={{ opacity: 0, y: 32 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -128,65 +159,39 @@ export function Hero() {
               aria-hidden="true"
               className="pointer-events-none absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-orange-core/25 via-transparent to-navy-500/25 blur-2xl"
             />
-            <div className="card-dark relative p-5 md:p-6">
-              <div className="flex items-center justify-between">
-                <p className="text-sm font-bold text-white">
-                  Live Store Snapshot
-                </p>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-400/15 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-emerald-300">
-                  <span
-                    aria-hidden="true"
-                    className="h-1.5 w-1.5 rounded-full bg-emerald-400"
-                  />
-                  Live
-                </span>
-              </div>
-
-              <div className="mt-5 grid grid-cols-3 gap-3">
-                <div className="rounded-xl bg-navy-900/70 p-3.5">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-core/15 text-orange-core">
-                    <TrendingUp aria-hidden="true" className="h-4 w-4" />
-                  </span>
-                  <p className="mt-3 text-[10px] font-semibold uppercase tracking-wide text-white/50">
-                    Revenue
-                  </p>
-                  <p className="text-lg font-extrabold text-white">+312%</p>
-                </div>
-                <div className="rounded-xl bg-navy-900/70 p-3.5">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-core/15 text-orange-core">
-                    <ShoppingCart aria-hidden="true" className="h-4 w-4" />
-                  </span>
-                  <p className="mt-3 text-[10px] font-semibold uppercase tracking-wide text-white/50">
-                    Orders
-                  </p>
-                  <p className="text-lg font-extrabold text-white">47</p>
-                </div>
-                <div className="rounded-xl bg-navy-900/70 p-3.5">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-core/15 text-orange-core">
-                    <Bot aria-hidden="true" className="h-4 w-4" />
-                  </span>
-                  <p className="mt-3 text-[10px] font-semibold uppercase tracking-wide text-white/50">
-                    AI Agent
-                  </p>
-                  <p className="text-lg font-extrabold text-white">Active</p>
-                </div>
-              </div>
-
-              <div className="mt-5">
-                <div className="flex items-center justify-between text-xs">
-                  <span className="font-semibold text-white/70">
-                    Ad spend used this week
-                  </span>
-                  <span className="font-extrabold text-orange-core">68%</span>
-                </div>
-                <div className="mt-2 h-2 overflow-hidden rounded-full bg-navy-900/80">
-                  <div
-                    aria-hidden="true"
-                    className="h-full w-[68%] rounded-full bg-gradient-to-r from-orange-core to-orange-bright"
-                  />
-                </div>
-              </div>
-            </div>
+            <motion.div
+              variants={imageContainer}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
+              className="relative grid auto-rows-[90px] grid-flow-dense grid-cols-3 gap-3"
+            >
+              {heroImages.map((src, i) => {
+                const featured = i === 0;
+                return (
+                  <motion.div
+                    key={src}
+                    variants={imageItem}
+                    className={[
+                      "group relative overflow-hidden rounded-2xl border border-white/10 shadow-card",
+                      featured ? "col-span-2 row-span-2" : "",
+                      i === 5 ? "col-span-2" : "",
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
+                  >
+                    <Image
+                      src={src}
+                      alt={`Open Agent work ${i + 1}`}
+                      fill
+                      sizes="(min-width: 1024px) 30vw, 50vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-950/40 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  </motion.div>
+                );
+              })}
+            </motion.div>
           </motion.div>
         </div>
       </section>
