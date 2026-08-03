@@ -520,6 +520,7 @@
 
     var messages = [
       "Free first call. Tell me your problem, I'll show you the fix.",
+      "Every package comes with a 3-day money-back guarantee.",
       "Plain English only. No confusing tech talk.",
       "Small budgets welcome. Prices start at PKR 15,000.",
       "Pick your services in the pricing section — the total adds up by itself."
