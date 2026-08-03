@@ -490,6 +490,12 @@
       submitBtn.disabled = true;
 
       setTimeout(function () {
+        if (typeof gtag === "function") {
+          gtag("event", "generate_lead", {
+            event_category: "contact",
+            event_label: data.service || "general",
+          });
+        }
         window.location.href = waLink;
         submitBtn.classList.remove("form-submit--loading");
         submitBtn.disabled = false;
@@ -713,6 +719,18 @@
           if (check) check.checked = false;
         });
         update();
+      });
+    }
+
+    if (waLink) {
+      waLink.addEventListener("click", function () {
+        if (typeof gtag === "function") {
+          gtag("event", "generate_lead", {
+            event_category: "pricing",
+            event_label: "pricing_whatsapp",
+            value: selectedServices().length,
+          });
+        }
       });
     }
 
