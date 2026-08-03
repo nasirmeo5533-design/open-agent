@@ -491,7 +491,7 @@
 
       setTimeout(function () {
         if (typeof gtag === "function") {
-          gtag("event", "generate_lead", {
+          gtag("event", "qualify_lead", {
             event_category: "contact",
             event_label: data.service || "general",
           });
@@ -725,7 +725,7 @@
     if (waLink) {
       waLink.addEventListener("click", function () {
         if (typeof gtag === "function") {
-          gtag("event", "generate_lead", {
+          gtag("event", "qualify_lead", {
             event_category: "pricing",
             event_label: "pricing_whatsapp",
             value: selectedServices().length,
