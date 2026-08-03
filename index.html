@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Open Agent — Digital Marketing &amp; AI Automation</title>
-  <meta name="description" content="Open Agent is an AI-powered digital marketing & automation studio in Karachi. I automate your marketing, content, and ads — so your store grows while you sleep. Small budgets welcome.">
-  <meta name="author" content="Open Agent">
-  <meta property="og:title" content="Open Agent — Digital Marketing &amp; AI Automation">
-  <meta property="og:description" content="I don't just market your store. I automate it. One specialist. One connected system.">
+  <title>Open Agent — AI, Ads &amp; Social Media for Small Businesses</title>
+  <meta name="description" content="I'm Abeer Nasir (Open Agent). I run your ads, manage your social media, and build AI tools that save you time. Simple prices, plain English, small budgets welcome. Prices start at PKR 15,000.">
+  <meta name="author" content="Abeer Nasir">
+  <meta property="og:title" content="Open Agent — AI, Ads &amp; Social Media for Small Businesses">
+  <meta property="og:description" content="Tell me your problem. I'll find a solution with end-to-end AI. Simple prices, plain English, no jargon.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://open-agent.agency/">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -17,6 +17,22 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="top">
+
+  <!-- ================= ANNOUNCEMENT BAR ================= -->
+  <div class="announce" id="announce-bar" role="region" aria-label="Announcements">
+    <div class="container announce__inner">
+      <span class="announce__icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path></svg>
+      </span>
+      <p class="announce__msg-wrap">
+        <span class="announce__msg" id="announce-msg">Free first call. Tell me your problem, I'll show you the fix.</span>
+      </p>
+      <a href="#pricing" class="announce__cta">See Prices</a>
+      <button type="button" class="announce__close" aria-label="Dismiss announcement">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+    </div>
+  </div>
 
   <!-- ================= NAVBAR ================= -->
   <header class="site-header">
@@ -38,13 +54,13 @@
         <ul class="nav-links">
           <li><a href="#top" class="is-active">Home</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#why">Why Us</a></li>
+          <li><a href="#pricing">Pricing</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
 
-        <a href="#contact" class="btn-primary nav-cta">Contact Us</a>
+        <a href="#pricing" class="btn-primary nav-cta">See Prices</a>
 
         <button type="button" class="nav-burger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -60,12 +76,12 @@
       <nav class="container mobile-menu-inner" aria-label="Mobile">
         <a href="#top" class="mobile-link">Home</a>
         <a href="#services" class="mobile-link">Services</a>
-        <a href="#why" class="mobile-link">Why Us</a>
+        <a href="#pricing" class="mobile-link">Pricing</a>
         <a href="#faq" class="mobile-link">FAQ</a>
         <a href="blog.html" class="mobile-link">Blog</a>
         <a href="#contact" class="mobile-link">Contact</a>
         <div class="mobile-cta">
-          <a href="#contact" class="btn-primary">Contact Us</a>
+          <a href="#pricing" class="btn-primary">See Prices</a>
         </div>
       </nav>
     </div>
@@ -79,91 +95,88 @@
       <div aria-hidden="true" class="bg-vignette hero-vignette hero-vignette--left"></div>
 
       <div class="container hero-inner">
-        <div>
-          <p class="eyebrow" data-reveal>AI-Powered Digital Marketing &amp; Automation</p>
-          <h1 data-reveal>I don't just market your store. <span class="text-orange-core">I automate it.</span></h1>
-          <p class="hero-sub" data-reveal>I run your marketing, content, and ads with AI — so your store grows while you sleep. Small budgets welcome.</p>
+        <div class="hero-copy">
+          <p class="eyebrow" data-reveal>Hi, I'm Abeer Nasir · Founder of Open Agent</p>
+          <h1 data-reveal>I help small businesses grow — with&nbsp;<span class="hero-type" aria-live="polite"><span id="hero-type-word">more sales</span><span class="hero-type__caret" aria-hidden="true"></span></span></h1>
+          <p class="hero-sub" data-reveal>I run your ads, manage your social media, and build AI tools that save you time. Everything in plain English — no tech talk, no jargon. Tell me your problem, and I'll find the solution.</p>
 
           <div class="hero-actions" data-reveal>
-            <a href="#contact" class="btn-primary">
-              Get Your Growth Plan
+            <a href="#pricing" class="btn-primary">
+              See My Prices
               <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
             </a>
-            <a href="#services" class="btn-outline-light">See Our Services</a>
+            <a href="#contact" class="btn-outline-light">Get a Free Growth Plan</a>
           </div>
 
-          <div class="hero-trust" data-reveal>
-            <ul class="hero-bullets">
-              <li>Meta &amp; Google Ads</li>
-              <li>AI Agents &amp; Automation</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= ABOUT ME ================= -->
-    <section id="about" class="band-cloud py-20">
-      <div class="container about-grid">
-        <div>
-          <p class="eyebrow" data-reveal>About Me</p>
-          <h2 class="section-title" data-reveal>Digital marketing &amp; AI automation for growing stores</h2>
-          <div class="about-copy">
-            <p data-reveal>I turn small e-commerce stores into market leaders with AI — combining strategy, ads, content, and automation into one connected system.</p>
-            <p data-reveal>Over the past two years I've run Meta and Google campaigns, built AI agents, and automated stores for D2C brands.</p>
-          </div>
-        </div>
-
-        <div class="about-side">
-          <div data-reveal>
-            <a href="#contact" class="btn-primary">Contact Now</a>
-          </div>
-          <ul class="about-cards">
-            <li data-reveal>
-              <div class="card card-hover about-card">
-                <span aria-hidden="true" class="about-card__icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9Z"></path><path d="M11 3 8 9l4 13 4-13-3-6"></path><path d="M2 9h20"></path></svg>
-                </span>
-                <div>
-                  <h3>Personalized packages</h3>
-                  <p>plans for every budget</p>
-                </div>
-              </div>
-            </li>
-            <li data-reveal>
-              <div class="card card-hover about-card">
-                <span aria-hidden="true" class="about-card__icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
-                </span>
-                <div>
-                  <h3>Customized approach</h3>
-                  <p>React, Shopify, WooCommerce, and more</p>
-                </div>
-              </div>
-            </li>
-            <li data-reveal>
-              <div class="card card-hover about-card">
-                <span aria-hidden="true" class="about-card__icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
-                </span>
-                <div>
-                  <h3>Results-driven</h3>
-                  <p>data you can see every week</p>
-                </div>
-              </div>
-            </li>
+          <ul class="hero-bullets" data-reveal>
+            <li>Free first call</li>
+            <li>No long contracts</li>
+            <li>Small budgets welcome</li>
           </ul>
         </div>
+
+        <div class="hero-media" data-reveal>
+          <div class="hero-media__frame">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=60" alt="A laptop showing marketing charts, ready to grow your business" data-fallback="assets/images/blog-meta-ads.svg">
+          </div>
+          <div class="hero-float hero-float--top">
+            <span class="hero-float__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+            </span>
+            <span>
+              <strong>Free first call</strong>
+              <small>No cost, no pressure</small>
+            </span>
+          </div>
+          <div class="hero-float hero-float--bottom">
+            <span class="hero-float__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+            </span>
+            <span>
+              <strong>Reply within a day</strong>
+              <small>Usually much faster</small>
+            </span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ================= SERVICES ================= -->
-    <section id="services" class="scroll-mt-24 bg-white py-20">
+    <!-- ================= TRUST STRIP ================= -->
+    <section class="trust-strip" aria-label="Reasons to trust me">
+      <div class="container trust-strip__inner">
+        <span class="trust-strip__label">Why small businesses trust me</span>
+        <ul class="trust-badges">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+            Free first call
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+            Plain English, always
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+            Small budgets welcome
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+            Clear weekly reports
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+            No long contracts
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES (OVERVIEW) ================= -->
+    <section id="services" class="bg-white scroll-mt-24 py-20">
       <div class="container">
         <div class="section-head--center">
-          <p class="eyebrow" data-reveal>Our Services</p>
-          <h2 class="section-title" data-reveal>Everything your store needs to grow. <span class="text-orange-core">Under one roof.</span></h2>
-          <p class="section-sub" data-reveal>One connected system. Pick one service or hand me the whole store.</p>
+          <p class="eyebrow" data-reveal>My Services</p>
+          <h2 class="section-title" data-reveal>Six ways I can help you grow. <span class="text-orange-core">Plus one more.</span></h2>
+          <p class="section-sub" data-reveal>Pick one service, or hand me everything. Every one is explained below in plain English — no jargon, I promise.</p>
         </div>
 
         <ul class="services-grid">
@@ -172,47 +185,23 @@
               <span aria-hidden="true" class="service-card__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg>
               </span>
-              <h3>Digital Marketing</h3>
-              <p class="service-card__tagline">Traffic that pays for itself.</p>
-              <p>Buying clicks that convert, not vanity traffic.</p>
-              <ul class="service-card__tags">
-                <li><span>Meta Ads</span></li>
-                <li><span>Google Ads</span></li>
-                <li><span>Funnel Building</span></li>
-                <li><span>Landing Pages</span></li>
-              </ul>
+              <h3>Social Media Management</h3>
+              <p class="service-card__tagline">You stay visible. I do the work.</p>
+              <p>I plan, write, and post your content — and reply to your customers.</p>
+              <span class="service-card__price">PKR 15,000</span>
+              <a class="service-card__link" href="#pricing" data-preselect="social">See price &amp; details</a>
             </article>
           </li>
           <li data-reveal>
             <article class="card card-hover service-card">
               <span aria-hidden="true" class="service-card__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
               </span>
-              <h3>SEO</h3>
-              <p class="service-card__tagline">Get found before your competitors.</p>
-              <p>Ranking for the searches your buyers actually type.</p>
-              <ul class="service-card__tags">
-                <li><span>Technical SEO</span></li>
-                <li><span>On-Page SEO</span></li>
-                <li><span>Local SEO</span></li>
-                <li><span>Content Strategy</span></li>
-              </ul>
-            </article>
-          </li>
-          <li data-reveal>
-            <article class="card card-hover service-card">
-              <span aria-hidden="true" class="service-card__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"></path><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"></path><path d="m2.3 2.3 7.286 7.286"></path><circle cx="11" cy="11" r="2"></circle></svg>
-              </span>
-              <h3>Content Creation</h3>
-              <p class="service-card__tagline">Content that sounds human.</p>
-              <p>Copy and emails that read like a person and sell like a machine.</p>
-              <ul class="service-card__tags">
-                <li><span>Copywriting</span></li>
-                <li><span>Email Campaigns</span></li>
-                <li><span>Social Posts</span></li>
-                <li><span>Product Descriptions</span></li>
-              </ul>
+              <h3>Meta &amp; Google Ads</h3>
+              <p class="service-card__tagline">Ads that bring real buyers.</p>
+              <p>I set up your ads, test what works, and move your budget to the winners.</p>
+              <span class="service-card__price">From PKR 30,000</span>
+              <a class="service-card__link" href="#pricing" data-preselect="ads">See price &amp; details</a>
             </article>
           </li>
           <li data-reveal>
@@ -220,102 +209,431 @@
               <span aria-hidden="true" class="service-card__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="8" x="3" y="3" rx="2"></rect><path d="M7 11v4a2 2 0 0 0 2 2h4"></path><rect width="8" height="8" x="13" y="13" rx="2"></rect></svg>
               </span>
-              <h3>AI Automation</h3>
-              <p class="service-card__tagline">Your store works while you sleep.</p>
-              <p>Automations that move data, answer customers, and build reports.</p>
-              <ul class="service-card__tags">
-                <li><span>Workflow Automation</span></li>
-                <li><span>Chatbots</span></li>
-                <li><span>Data Pipelines</span></li>
-                <li><span>Reporting</span></li>
-              </ul>
+              <h3>AI Agent</h3>
+              <p class="service-card__tagline">Answers customers, day and night.</p>
+              <p>A ready-made AI assistant for WhatsApp, Facebook, or your website.</p>
+              <span class="service-card__price">From PKR 30,000</span>
+              <a class="service-card__link" href="#pricing" data-preselect="ai-agent">See price &amp; details</a>
             </article>
           </li>
           <li data-reveal>
             <article class="card card-hover service-card">
               <span aria-hidden="true" class="service-card__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"></rect><rect width="6" height="6" x="9" y="9" rx="1"></rect><path d="M15 2v2"></path><path d="M9 2v2"></path><path d="M15 20v2"></path><path d="M9 20v2"></path></svg>
               </span>
               <h3>AI Agent Development</h3>
-              <p class="service-card__tagline">Hire a team that never sleeps.</p>
-              <p>Custom AI agents for support, sales, and admin.</p>
-              <ul class="service-card__tags">
-                <li><span>Custom Agents</span></li>
-                <li><span>Support Agents</span></li>
-                <li><span>Sales Agents</span></li>
-                <li><span>Admin Agents</span></li>
-              </ul>
+              <p class="service-card__tagline">A custom brain for your business.</p>
+              <p>I build AI agents that do your repetitive work — reports, follow-ups, data.</p>
+              <span class="service-card__price">From PKR 30,000</span>
+              <a class="service-card__link" href="#pricing" data-preselect="ai-dev">See price &amp; details</a>
             </article>
           </li>
           <li data-reveal>
             <article class="card card-hover service-card">
               <span aria-hidden="true" class="service-card__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z"></path><path d="m6.2 5.3 3.1 3.9"></path><path d="m12.4 3.4 3.1 4"></path><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
               </span>
-              <h3>Video Editing</h3>
-              <p class="service-card__tagline">Editing that stops the scroll.</p>
-              <p>Ads and content edited to hold attention for five seconds.</p>
-              <ul class="service-card__tags">
-                <li><span>Short-Form Ads</span></li>
-                <li><span>UGC Style</span></li>
-                <li><span>Brand Videos</span></li>
-                <li><span>Post-Production</span></li>
-              </ul>
+              <h3>Digital Marketing</h3>
+              <p class="service-card__tagline">The whole plan, in one place.</p>
+              <p>Strategy, ads, social media, and AI — all working together under one plan.</p>
+              <span class="service-card__price">From PKR 30,000</span>
+              <a class="service-card__link" href="#pricing" data-preselect="digital">See price &amp; details</a>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card card-hover service-card">
+              <span aria-hidden="true" class="service-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path></svg>
+              </span>
+              <h3>Generative AI Specialist</h3>
+              <p class="service-card__tagline">Content made fast and cheap.</p>
+              <p>I use AI to write your ads, product pages, and posts — fast and affordable.</p>
+              <span class="service-card__price">From PKR 30,000</span>
+              <a class="service-card__link" href="#pricing" data-preselect="genai">See price &amp; details</a>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card card-hover service-card service-card--new">
+              <span aria-hidden="true" class="service-card__badge">New</span>
+              <span aria-hidden="true" class="service-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"></rect><path d="M12 9v6"></path><path d="M9 12h6"></path></svg>
+              </span>
+              <h3>AI Website Development</h3>
+              <p class="service-card__tagline">Built with AI &amp; vibe coding.</p>
+              <p>I design and build your website using AI software and modern coding tools.</p>
+              <span class="service-card__price">From PKR 30,000</span>
+              <a class="service-card__link" href="#pricing" data-preselect="webdev">See price &amp; details</a>
             </article>
           </li>
         </ul>
 
         <div class="section-cta" data-reveal>
-          <a href="#contact" class="btn-outline">Book a call</a>
+          <a href="#pricing" class="btn-outline">Jump to Prices</a>
         </div>
       </div>
     </section>
 
-    <!-- ================= WHY US ================= -->
-    <section id="why" class="band-cloud scroll-mt-24 py-20">
+    <!-- ================= PRICING (CALCULATOR) ================= -->
+    <section id="pricing" class="pricing band-cloud scroll-mt-24 py-20">
       <div class="container">
         <div class="section-head--center">
-          <p class="eyebrow" data-reveal>Why Open Agent</p>
-          <h2 class="section-title" data-reveal>Why Open Agent? Our expertise and commitment to your success.</h2>
-          <p class="section-sub" data-reveal>The right specialist behind your store means the difference between guesswork and growth you can measure.</p>
+          <p class="eyebrow" data-reveal>Pricing</p>
+          <h2 class="section-title" data-reveal>Simple prices. You pick, <span class="text-orange-core">you see.</span></h2>
+          <p class="section-sub" data-reveal>Tap the services you need. The total updates by itself — no waiting, no asking. When you're ready, send your plan to me on WhatsApp.</p>
         </div>
 
-        <ul class="why-grid">
-          <li data-reveal>
-            <article class="card card-hover why-card">
-              <span aria-hidden="true" class="why-card__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path><path d="M12 22V12"></path><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"></path><path d="m7.5 4.27 9 5.15"></path></svg>
+        <div class="price-grid">
+          <article class="price-card" data-service="social" data-price="15000" data-reveal>
+            <input type="checkbox" id="price-social" class="price-card__check">
+            <label for="price-social" class="price-card__body">
+              <span aria-hidden="true" class="price-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg>
               </span>
-              <h3>Personalized Business Packages</h3>
-              <span aria-hidden="true" class="why-card__bar"></span>
-              <p>Plans built around your budget and goals. Startups and small stores welcome. I prove results before you scale.</p>
-            </article>
-          </li>
-          <li data-reveal>
-            <article class="card card-hover why-card">
-              <span aria-hidden="true" class="why-card__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+              <span class="price-card__name">Social Media Management</span>
+              <span class="price-card__price">PKR 15,000</span>
+              <span class="price-card__tick" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
               </span>
-              <h3>Customized Approach</h3>
-              <span aria-hidden="true" class="why-card__bar"></span>
-              <p>One connected system across SEO, ads, content, and AI. I work with Shopify, WooCommerce, WordPress, and custom builds.</p>
-            </article>
-          </li>
-          <li data-reveal>
-            <article class="card card-hover why-card">
-              <span aria-hidden="true" class="why-card__icon">
+            </label>
+          </article>
+          <article class="price-card" data-service="ads" data-price="30000" data-reveal>
+            <input type="checkbox" id="price-ads" class="price-card__check">
+            <label for="price-ads" class="price-card__body">
+              <span aria-hidden="true" class="price-card__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
               </span>
-              <h3>Results-Driven Solutions</h3>
-              <span aria-hidden="true" class="why-card__bar"></span>
-              <p>Data you can see every week. Campaigns optimized for performance and ROI — not inflated screenshots.</p>
+              <span class="price-card__name">Meta &amp; Google Ads</span>
+              <span class="price-card__price">From PKR 30,000</span>
+              <span class="price-card__tick" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+              </span>
+            </label>
+          </article>
+          <article class="price-card" data-service="ai-agent" data-price="30000" data-reveal>
+            <input type="checkbox" id="price-ai-agent" class="price-card__check">
+            <label for="price-ai-agent" class="price-card__body">
+              <span aria-hidden="true" class="price-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="8" x="3" y="3" rx="2"></rect><path d="M7 11v4a2 2 0 0 0 2 2h4"></path><rect width="8" height="8" x="13" y="13" rx="2"></rect></svg>
+              </span>
+              <span class="price-card__name">AI Agent</span>
+              <span class="price-card__price">From PKR 30,000</span>
+              <span class="price-card__tick" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+              </span>
+            </label>
+          </article>
+          <article class="price-card" data-service="ai-dev" data-price="30000" data-reveal>
+            <input type="checkbox" id="price-ai-dev" class="price-card__check">
+            <label for="price-ai-dev" class="price-card__body">
+              <span aria-hidden="true" class="price-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"></rect><rect width="6" height="6" x="9" y="9" rx="1"></rect><path d="M15 2v2"></path><path d="M9 2v2"></path><path d="M15 20v2"></path><path d="M9 20v2"></path></svg>
+              </span>
+              <span class="price-card__name">AI Agent Development</span>
+              <span class="price-card__price">From PKR 30,000</span>
+              <span class="price-card__tick" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+              </span>
+            </label>
+          </article>
+          <article class="price-card" data-service="digital" data-price="30000" data-reveal>
+            <input type="checkbox" id="price-digital" class="price-card__check">
+            <label for="price-digital" class="price-card__body">
+              <span aria-hidden="true" class="price-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+              </span>
+              <span class="price-card__name">Digital Marketing</span>
+              <span class="price-card__price">From PKR 30,000</span>
+              <span class="price-card__tick" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+              </span>
+            </label>
+          </article>
+          <article class="price-card" data-service="genai" data-price="30000" data-reveal>
+            <input type="checkbox" id="price-genai" class="price-card__check">
+            <label for="price-genai" class="price-card__body">
+              <span aria-hidden="true" class="price-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path></svg>
+              </span>
+              <span class="price-card__name">Generative AI Specialist</span>
+              <span class="price-card__price">From PKR 30,000</span>
+              <span class="price-card__tick" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+              </span>
+            </label>
+          </article>
+          <article class="price-card" data-service="webdev" data-price="30000" data-reveal>
+            <input type="checkbox" id="price-webdev" class="price-card__check">
+            <label for="price-webdev" class="price-card__body">
+              <span aria-hidden="true" class="price-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"></rect><path d="M12 9v6"></path><path d="M9 12h6"></path></svg>
+              </span>
+              <span class="price-card__name">AI Website Development</span>
+              <span class="price-card__price">From PKR 30,000</span>
+              <span class="price-card__tick" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+              </span>
+            </label>
+          </article>
+        </div>
+
+        <div class="pricing-summary" id="pricing-summary">
+          <div class="pricing-summary__total">
+            <p class="pricing-summary__label">Your total</p>
+            <p class="pricing-total" id="pricing-total">PKR 0</p>
+            <p class="pricing-summary__count" id="pricing-count">0 of 7 services selected</p>
+          </div>
+          <div class="pricing-summary__actions">
+            <button type="button" class="btn-outline" id="pricing-clear">Clear</button>
+            <a href="https://wa.me/923303159642" target="_blank" rel="noopener noreferrer" class="btn-primary" id="pricing-wa">
+              Get This Plan on WhatsApp
+              <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <p class="pricing-note" data-reveal>Prices are starting prices. I'll confirm the final amount on a free call — so you never pay more than you expect. Pick two services and the total simply adds up: e.g. 2 services × PKR 30,000 = PKR 60,000.</p>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES (DETAILS) ================= -->
+    <section id="service-details" class="bg-white py-20">
+      <div class="container svc-stack">
+        <div class="section-head--center" data-reveal>
+          <p class="eyebrow">What each service means</p>
+          <h2 class="section-title">Every service, <span class="text-orange-core">explained simply.</span></h2>
+          <p class="section-sub">No fine print, no confusion. Here is exactly what you get.</p>
+        </div>
+
+        <article id="service-social" class="svc" data-reveal>
+          <div class="svc-media">
+            <span class="svc-media__num" aria-hidden="true">01</span>
+            <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=1200&q=60" alt="Social media apps on a phone" loading="lazy" data-fallback="assets/images/blog-seo-d2c.svg">
+          </div>
+          <div class="svc-content">
+            <p class="eyebrow">Service 01</p>
+            <h3>Social Media Management</h3>
+            <p class="svc-lead">Your customers spend their day on Facebook, Instagram, and TikTok. I keep your page alive — so your business stays in their mind.</p>
+            <ul class="svc-list">
+              <li>A monthly content plan made for your business</li>
+              <li>Posts written in your voice — no robotic captions</li>
+              <li>Designs and images for every post</li>
+              <li>Comments and messages replied to, fast</li>
+            </ul>
+            <div class="svc-cta">
+              <a href="#pricing" class="btn-primary" data-preselect="social">PKR 15,000 — See Price</a>
+              <a href="#contact" class="btn-outline">Book a Free Call</a>
+            </div>
+          </div>
+        </article>
+
+        <article id="service-ads" class="svc svc--reverse" data-reveal>
+          <div class="svc-media">
+            <span class="svc-media__num" aria-hidden="true">02</span>
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=60" alt="Ad dashboard showing rising results" loading="lazy" data-fallback="assets/images/blog-meta-ads.svg">
+          </div>
+          <div class="svc-content">
+            <p class="eyebrow">Service 02</p>
+            <h3>Meta &amp; Google Ads</h3>
+            <p class="svc-lead">Ads are the fastest way to get in front of buyers. I set up your ads on Facebook, Instagram, and Google, test what works, and move your money to the winners.</p>
+            <ul class="svc-list">
+              <li>Ads that reach people who actually want your product</li>
+              <li>Daily checks and tweaks — not weekly guesswork</li>
+              <li>Clear reports: money spent, sales made</li>
+              <li>Landing pages that turn clicks into customers</li>
+            </ul>
+            <div class="svc-cta">
+              <a href="#pricing" class="btn-primary" data-preselect="ads">From PKR 30,000 — See Price</a>
+              <a href="#contact" class="btn-outline">Book a Free Call</a>
+            </div>
+          </div>
+        </article>
+
+        <article id="service-ai-agent" class="svc" data-reveal>
+          <div class="svc-media">
+            <span class="svc-media__num" aria-hidden="true">03</span>
+            <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=1200&q=60" alt="A friendly robot representing an AI assistant" loading="lazy" data-fallback="assets/images/blog-automation.svg">
+          </div>
+          <div class="svc-content">
+            <p class="eyebrow">Service 03</p>
+            <h3>AI Agent</h3>
+            <p class="svc-lead">An AI assistant you can plug in quickly. It answers your customers' questions on WhatsApp, Facebook, or your website — day and night. It replies in seconds and hands over to you when needed.</p>
+            <ul class="svc-list">
+              <li>Trained on your business, your products, your prices</li>
+              <li>Works on WhatsApp, Facebook, or your website</li>
+              <li>Answers instantly, 24/7</li>
+              <li>Hands over to you only when it can't help</li>
+            </ul>
+            <div class="svc-cta">
+              <a href="#pricing" class="btn-primary" data-preselect="ai-agent">From PKR 30,000 — See Price</a>
+              <a href="#contact" class="btn-outline">Book a Free Call</a>
+            </div>
+          </div>
+        </article>
+
+        <article id="service-ai-dev" class="svc svc--reverse" data-reveal>
+          <div class="svc-media">
+            <span class="svc-media__num" aria-hidden="true">04</span>
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=60" alt="Code on a laptop screen representing custom AI work" loading="lazy" data-fallback="assets/images/blog-automation.svg">
+          </div>
+          <div class="svc-content">
+            <p class="eyebrow">Service 04</p>
+            <h3>AI Agent Development</h3>
+            <p class="svc-lead">Some businesses need a custom brain. I design and build AI agents that do real work — reading orders, updating spreadsheets, sending reports, following up with leads — all on their own.</p>
+            <ul class="svc-list">
+              <li>A custom agent built around your exact workflow</li>
+              <li>Connects to your tools: spreadsheets, store, email, WhatsApp</li>
+              <li>Automation that saves hours every week</li>
+              <li>Tested and working before you pay</li>
+            </ul>
+            <div class="svc-cta">
+              <a href="#pricing" class="btn-primary" data-preselect="ai-dev">From PKR 30,000 — See Price</a>
+              <a href="#contact" class="btn-outline">Book a Free Call</a>
+            </div>
+          </div>
+        </article>
+
+        <article id="service-digital" class="svc" data-reveal>
+          <div class="svc-media">
+            <span class="svc-media__num" aria-hidden="true">05</span>
+            <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=1200&q=60" alt="Marketing tools arranged on a desk" loading="lazy" data-fallback="assets/images/blog-meta-ads.svg">
+          </div>
+          <div class="svc-content">
+            <p class="eyebrow">Service 05</p>
+            <h3>Digital Marketing</h3>
+            <p class="svc-lead">This is the complete package. I plan your whole marketing — ads, social media, and AI — so every piece works together. One person, one plan, one report.</p>
+            <ul class="svc-list">
+              <li>One strategy that connects ads, content, and AI</li>
+              <li>One weekly report that's easy to read</li>
+              <li>Everything handled for you</li>
+              <li>A plan built around your budget, not the other way around</li>
+            </ul>
+            <div class="svc-cta">
+              <a href="#pricing" class="btn-primary" data-preselect="digital">From PKR 30,000 — See Price</a>
+              <a href="#contact" class="btn-outline">Book a Free Call</a>
+            </div>
+          </div>
+        </article>
+
+        <article id="service-genai" class="svc svc--reverse" data-reveal>
+          <div class="svc-media">
+            <span class="svc-media__num" aria-hidden="true">06</span>
+            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=60" alt="Abstract AI artwork representing generative AI" loading="lazy" data-fallback="assets/images/blog-automation.svg">
+          </div>
+          <div class="svc-content">
+            <p class="eyebrow">Service 06</p>
+            <h3>Generative AI Specialist</h3>
+            <p class="svc-lead">AI can make content, images, and ideas in seconds. I use it to create your ads, product descriptions, and social posts — faster and for less money than traditional content.</p>
+            <ul class="svc-list">
+              <li>Product descriptions and ad copy that sound human</li>
+              <li>Images and designs made with AI</li>
+              <li>Ideas and campaigns created quickly</li>
+              <li>Content that matches your brand voice</li>
+            </ul>
+            <div class="svc-cta">
+              <a href="#pricing" class="btn-primary" data-preselect="genai">From PKR 30,000 — See Price</a>
+              <a href="#contact" class="btn-outline">Book a Free Call</a>
+            </div>
+          </div>
+        </article>
+
+        <article id="service-webdev" class="svc" data-reveal>
+          <div class="svc-media">
+            <span class="svc-media__num" aria-hidden="true">07</span>
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=60" alt="A laptop with code, showing website development" loading="lazy" data-fallback="assets/images/blog-seo-d2c.svg">
+          </div>
+          <div class="svc-content">
+            <p class="eyebrow">Service 07</p>
+            <h3>AI Website Development</h3>
+            <p class="svc-lead">Your website is your shop window. I design and build it using AI software and vibe coding tools — so you get a fast, clean, professional site in days, not months.</p>
+            <ul class="svc-list">
+              <li>A modern website made for your business</li>
+              <li>Fast, clean, and works on phones</li>
+              <li>Built with AI tools and modern coding</li>
+              <li>Easy to update after launch</li>
+            </ul>
+            <div class="svc-cta">
+              <a href="#pricing" class="btn-primary" data-preselect="webdev">From PKR 30,000 — See Price</a>
+              <a href="#contact" class="btn-outline">Book a Free Call</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section id="how" class="band-navy scroll-mt-24 py-20">
+      <div class="container">
+        <div class="section-head--center">
+          <p class="eyebrow" data-reveal>How It Works</p>
+          <h2 class="section-title" data-reveal>Got a problem? <span class="text-orange-core">Let's solve it together.</span></h2>
+          <p class="section-sub" data-reveal>Three simple steps. No forms that go nowhere, no waiting weeks for an answer.</p>
+        </div>
+
+        <ul class="how-grid">
+          <li data-reveal>
+            <article class="card card-dark how-card">
+              <span class="how-card__num" aria-hidden="true">1</span>
+              <h3>Tell me your problem</h3>
+              <p>Message me on WhatsApp or email. Tell me what's stuck: not enough sales, too much manual work, no time for social media.</p>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card card-dark how-card">
+              <span class="how-card__num" aria-hidden="true">2</span>
+              <h3>I build the fix</h3>
+              <p>I look at your business, pick the right tools — ads, AI, content, or all three — and build the solution. You'll see it working, not just hear about it.</p>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card card-dark how-card">
+              <span class="how-card__num" aria-hidden="true">3</span>
+              <h3>You see results</h3>
+              <p>I set it up, test it, and keep improving it. You get simple reports you can actually read — every single week.</p>
             </article>
           </li>
         </ul>
 
-        <div class="why-cta" data-reveal>
-          <span aria-hidden="true" class="why-cta__bar"></span>
-          <a href="#contact" class="btn-primary">Contact Now</a>
+        <div class="problem-box" data-reveal>
+          <span aria-hidden="true" class="problem-box__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path></svg>
+          </span>
+          <h3>Tell me about any problem you have — I'll find a solution through end-to-end AI.</h3>
+          <p>That's the whole promise: one person, one plan, from start to finish. Sales, time, content, website — whatever is stuck, I'll fix it.</p>
+          <div class="problem-box__actions">
+            <a href="https://wa.me/923303159642" target="_blank" rel="noopener noreferrer" class="btn-primary">
+              Chat on WhatsApp
+              <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+            </a>
+            <a href="mailto:nasirmeo5533@gmail.com" class="btn-outline-light">Email Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="bg-white scroll-mt-24 py-20">
+      <div class="container about-me-grid">
+        <div class="about-me-media" data-reveal>
+          <div class="about-me-media__frame">
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=60" alt="A desk with a laptop, showing where the work happens" loading="lazy" data-fallback="assets/images/blog-seo-d2c.svg">
+          </div>
+          <p class="about-me-media__caption">Based in Karachi, Pakistan · Working with clients worldwide</p>
+        </div>
+
+        <div class="about-me-content">
+          <p class="eyebrow" data-reveal>About Me</p>
+          <h2 class="section-title" data-reveal>Hi, I'm Abeer Nasir — the person behind <span class="text-orange-core">Open Agent.</span></h2>
+          <div class="about-me-copy">
+            <p data-reveal>I started learning about AI in 2023 with one simple question: how can AI help a real business work better? So I learned by building projects and working with real clients — solving real problems, not reading theory.</p>
+            <p data-reveal>Today I help stores and small businesses get more customers, save time, and grow. I keep everything simple: you tell me the problem, I fix it, and I explain it in plain English.</p>
+            <p data-reveal class="about-me-proof">Small budgets, real results. I helped an e-commerce brand get <strong>30 qualified sales</strong> from a <strong>PKR 1,000</strong> Meta Ads budget, and <strong>6 qualified leads</strong> from a <strong>PKR 2,000</strong> budget.</p>
+          </div>
+          <ul class="about-me-skills" data-reveal>
+            <li>Generative AI &amp; AI agents</li>
+            <li>Meta &amp; Google Ads</li>
+            <li>Social media &amp; content</li>
+            <li>Shopify &amp; online stores</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -326,74 +644,74 @@
         <div class="text-center">
           <p class="eyebrow" data-reveal>FAQ</p>
           <h2 class="section-title" data-reveal>Clear answers to quick questions.</h2>
-          <p class="section-sub" data-reveal>Everything you need to know before getting started.</p>
+          <p class="section-sub" data-reveal>Everything you need to know before we start.</p>
         </div>
 
         <div class="faq-wrap">
           <div class="card faq-item">
             <h3>
               <button type="button" class="faq-question" aria-expanded="true">
-                <span>What is AI-powered digital marketing, and why does my business need it?</span>
+                <span>What exactly do you do?</span>
                 <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
               </button>
             </h3>
             <div class="faq-answer">
-              <p>It promotes your store on search, social, and ads — with AI doing the heavy lifting. You reach the right people and grow faster.</p>
+              <p>I help small businesses and stores grow. I run their ads, manage their social media, and use AI to save them time. Think of me as one person doing the work of a whole marketing team — without the confusing tech talk.</p>
             </div>
           </div>
           <div class="card faq-item">
             <h3>
               <button type="button" class="faq-question" aria-expanded="false">
-                <span>How can Open Agent help my store grow?</span>
+                <span>How much does it cost?</span>
                 <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
               </button>
             </h3>
             <div class="faq-answer">
-              <p>I run the whole connected system: Meta and Google ads, SEO, content, funnels, and AI agents — one strategy. Instead of juggling five freelancers, you get a single system where every piece talks to the others. I start with a free growth plan that maps your current numbers to where they can be.</p>
+              <p>Social Media Management starts at PKR 15,000. Every other service starts at PKR 30,000. Pick the services you need in the pricing section above and the total adds up by itself. I confirm the final amount on a free call — so there are no surprises.</p>
             </div>
           </div>
           <div class="card faq-item">
             <h3>
               <button type="button" class="faq-question" aria-expanded="false">
-                <span>Will your services increase my sales?</span>
+                <span>I don't know anything about marketing or AI. Is that okay?</span>
                 <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
               </button>
             </h3>
             <div class="faq-answer">
-              <p>That is the only metric I care about. I report revenue, orders, and ROAS — not likes. If a campaign isn't moving your numbers, we change it before the next week's spend.</p>
+              <p>That's completely fine — it's my job to handle all of it. You never have to learn any of it. I explain everything in plain English and show you simple reports every week.</p>
             </div>
           </div>
           <div class="card faq-item">
             <h3>
               <button type="button" class="faq-question" aria-expanded="false">
-                <span>Do you offer lead generation?</span>
+                <span>Will you work with a small budget?</span>
                 <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
               </button>
             </h3>
             <div class="faq-answer">
-              <p>Yes. I build targeted Meta and Google campaigns with landing pages designed to capture buyers actively searching for your product. For B2B and services clients, I pair those with AI lead scoring and WhatsApp follow-ups so your team only talks to qualified prospects.</p>
+              <p>Yes — small budgets are exactly who I built this for. I start small, prove the work, and scale up only when you're ready. My packages are built around your budget, not the other way around.</p>
             </div>
           </div>
           <div class="card faq-item">
             <h3>
               <button type="button" class="faq-question" aria-expanded="false">
-                <span>Can you work with a small budget?</span>
+                <span>How fast will I see results?</span>
                 <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
               </button>
             </h3>
             <div class="faq-answer">
-              <p>Small budgets are exactly who I built this for. I've launched stores on small Meta budgets and scaled from there. Because AI does the testing and optimization, I can find what works without burning through cash — and my packages are built around your budget, not the other way around.</p>
+              <p>Ads can bring visitors within days, and sales usually follow within weeks. The important thing is that I report every week, so you always know exactly what's happening — no guessing, no surprises.</p>
             </div>
           </div>
           <div class="card faq-item">
             <h3>
               <button type="button" class="faq-question" aria-expanded="false">
-                <span>What results can I expect?</span>
+                <span>Do you work with businesses outside Pakistan?</span>
                 <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
               </button>
             </h3>
             <div class="faq-answer">
-              <p>Expect clear, weekly numbers: spend, sales, cost per sale, and ROAS — with the reasoning behind every change. Most stores see their first optimized, profitable campaigns within weeks and a full automated system shortly after. Growth compounds from there as the system learns your audience.</p>
+              <p>Yes. I work fully online with clients anywhere in the world. All you need is WhatsApp or email.</p>
             </div>
           </div>
         </div>
@@ -405,11 +723,25 @@
       <div class="container py-24">
         <div class="section-head--center">
           <p class="eyebrow" data-reveal>Blog</p>
-          <h2 class="section-title" data-reveal>Ideas that grow stores.</h2>
-          <p class="section-sub" data-reveal>Simple strategies. No hype.</p>
+          <h2 class="section-title" data-reveal>Simple ideas. <span class="text-orange-core">Plain English.</span></h2>
+          <p class="section-sub" data-reveal>Short guides that help small businesses grow. No hype.</p>
         </div>
 
         <div class="blog-grid">
+          <article class="card card-hover group blog-card" data-reveal>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span class="tag">AI</span>
+                <span class="blog-card__readtime">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  4 min read
+                </span>
+              </div>
+              <h3 class="blog-card__title">What Is an AI Agent? (And Do You Even Need One?)</h3>
+              <p class="blog-card__excerpt">You keep hearing about AI agents. Here is what they actually do — and how to know if your business needs one.</p>
+              <a class="blog-card__link" href="blog-post.html?post=ai-agent">Read Post<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+            </div>
+          </article>
           <article class="card card-hover group blog-card" data-reveal>
             <div class="blog-card__body">
               <div class="blog-card__meta">
@@ -419,37 +751,23 @@
                   4 min read
                 </span>
               </div>
-              <h3 class="blog-card__title">Why Your Meta Ads Are Burning Budget (And How AI Fixes It)</h3>
-              <p class="blog-card__excerpt">Most stores waste ad money on the wrong audience. Here is how AI finds the right buyer faster — and cuts your cost per sale.</p>
-              <a class="blog-card__link" href="blog-post.html?post=meta-ads">Read Post<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+              <h3 class="blog-card__title">Small-Budget Ads: Get Sales Without Burning Cash</h3>
+              <p class="blog-card__excerpt">You don't need a big ad budget to see results. You need the right setup. Here is how to start small and win.</p>
+              <a class="blog-card__link" href="blog-post.html?post=small-budget-ads">Read Post<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
             </div>
           </article>
           <article class="card card-hover group blog-card" data-reveal>
             <div class="blog-card__body">
               <div class="blog-card__meta">
-                <span class="tag">SEO</span>
+                <span class="tag">Social</span>
                 <span class="blog-card__readtime">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                   4 min read
                 </span>
               </div>
-              <h3 class="blog-card__title">SEO for D2C: Get Found Before Your Competitors Do</h3>
-              <p class="blog-card__excerpt">Your customers are searching right now. If your store is not on page one, a competitor takes the sale.</p>
-              <a class="blog-card__link" href="blog-post.html?post=seo-d2c">Read Post<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
-            </div>
-          </article>
-          <article class="card card-hover group blog-card" data-reveal>
-            <div class="blog-card__body">
-              <div class="blog-card__meta">
-                <span class="tag">Automation</span>
-                <span class="blog-card__readtime">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                  5 min read
-                </span>
-              </div>
-              <h3 class="blog-card__title">How to Automate Your Store's Busywork</h3>
-              <p class="blog-card__excerpt">Order updates. Support replies. Daily reports. Your team does these by hand — and loses hours every week. Here is the fix.</p>
-              <a class="blog-card__link" href="blog-post.html?post=automation">Read Post<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+              <h3 class="blog-card__title">Social Media Made Simple for Small Businesses</h3>
+              <p class="blog-card__excerpt">No need to post every day or be everywhere. A simple plan on two platforms is enough. Here's the easy way.</p>
+              <a class="blog-card__link" href="blog-post.html?post=social-media">Read Post<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
             </div>
           </article>
         </div>
@@ -467,13 +785,13 @@
           <div class="contact-left">
             <div data-reveal>
               <p class="eyebrow">Contact</p>
-              <h2>Booking new clients.</h2>
-              <p class="contact-sub">Tell me what you sell. I'll show you the system.</p>
+              <h2>Got a problem? Tell me about it.</h2>
+              <p class="contact-sub">Send me a message and I'll reply within one business day — usually much faster. Your first call is free.</p>
             </div>
 
             <div class="ping-row" data-reveal>
               <span class="ping-dot"><i></i><span></span></span>
-              <span class="text-sm">Accepting a few new clients</span>
+              <span class="text-sm">Accepting new clients</span>
             </div>
 
             <ul class="contact-channels" data-reveal>
@@ -520,11 +838,7 @@
               </div>
               <div class="form-row md:grid-cols-2">
                 <div class="field">
-                  <label for="contact-store">Store URL</label>
-                  <input id="contact-store" type="url" autocomplete="url" name="storeUrl" class="form-input">
-                </div>
-                <div class="field">
-                  <label for="contact-budget">Budget</label>
+                  <label for="contact-budget">Monthly Budget</label>
                   <select id="contact-budget" name="budget" required class="form-input">
                     <option value="Under PKR 50k">Under PKR 50k</option>
                     <option value="PKR 50k–150k">PKR 50k–150k</option>
@@ -532,17 +846,32 @@
                     <option value="Not sure yet">Not sure yet</option>
                   </select>
                 </div>
+                <div class="field">
+                  <label for="contact-message">What do you need help with?</label>
+                  <textarea id="contact-message" name="message" required rows="4" class="form-input"></textarea>
+                </div>
               </div>
-              <div class="field">
-                <label for="contact-message">Message</label>
-                <textarea id="contact-message" name="message" required rows="5" class="form-input"></textarea>
-              </div>
-              <button type="submit" class="btn-primary w-full">Get More Details</button>
+              <button type="submit" class="btn-primary w-full">Send Message</button>
             </div>
           </form>
         </div>
 
         <p class="contact-note" data-reveal>Prefer email? <a href="mailto:nasirmeo5533@gmail.com">Send me a note anytime.</a></p>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER CTA ================= -->
+    <section class="footer-cta band-navy bg-navy-950">
+      <div class="container footer-cta__inner">
+        <h2 data-reveal>Tell me your problem. I'll find the fix.</h2>
+        <p data-reveal>First call is free. No jargon, no pressure — just a clear plan.</p>
+        <div class="footer-cta__actions" data-reveal>
+          <a href="https://wa.me/923303159642" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            Chat on WhatsApp
+            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+          </a>
+          <a href="mailto:nasirmeo5533@gmail.com" class="btn-outline-light">Email Me</a>
+        </div>
       </div>
     </section>
   </main>
@@ -564,56 +893,51 @@
             </span>
             <span class="text-xl font-extrabold tracking-tight text-white">Open Agent</span>
           </a>
-          <p>I don't just market your store. I automate it. I help startups and local businesses grow in their niche through AI-powered marketing.</p>
+          <p>One person, one plan. I help small businesses grow with AI, ads, and social media — explained in plain English.</p>
           <a href="mailto:nasirmeo5533@gmail.com" class="footer-email">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
             nasirmeo5533@gmail.com
           </a>
+          <a href="https://wa.me/923303159642" target="_blank" rel="noopener noreferrer" class="footer-email footer-email--wa">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+            +92 330 3159642
+          </a>
         </div>
 
-        <nav class="footer-col" aria-label="Quick links">
-          <h4>Open Agent</h4>
-          <ul>
-            <li><a href="blog.html">Blogs</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms &amp; Condition</a></li>
-          </ul>
-        </nav>
-
-        <nav class="footer-col" aria-label="Marketing services">
-          <h4>Digital Marketing Services</h4>
-          <ul>
-            <li><a href="#services">Digital Marketing</a></li>
-            <li><a href="#services">SEO Services</a></li>
-            <li><a href="#services">Google Ads (PPC) Services</a></li>
-            <li><a href="#services">Social Media Marketing Services</a></li>
-            <li><a href="#services">eCommerce Optimization</a></li>
-            <li><a href="#services">Content Creation</a></li>
-          </ul>
-        </nav>
-
-        <nav class="footer-col" aria-label="More services">
+        <nav class="footer-col" aria-label="Services">
           <h4>Services</h4>
           <ul>
-            <li><a href="#services">AI Automation</a></li>
-            <li><a href="#services">AI Agent Development</a></li>
-            <li><a href="#services">Video Editing</a></li>
-            <li><a href="#services">WhatsApp Automation</a></li>
-            <li><a href="#services">Email Marketing</a></li>
-            <li><a href="#services">Lead Generation</a></li>
+            <li><a href="#service-social">Social Media Management</a></li>
+            <li><a href="#service-ads">Meta &amp; Google Ads</a></li>
+            <li><a href="#service-ai-agent">AI Agent</a></li>
+            <li><a href="#service-ai-dev">AI Agent Development</a></li>
+            <li><a href="#service-digital">Digital Marketing</a></li>
+            <li><a href="#service-genai">Generative AI Specialist</a></li>
+            <li><a href="#service-webdev">AI Website Development</a></li>
           </ul>
         </nav>
 
-        <div>
-          <div class="footer-loc-head">
-            <h4>Location</h4>
-            <span class="ping-dot--sm"><i></i><span></span></span>
-          </div>
-          <ul class="footer-locs">
-            <li><strong>Pakistan</strong><span>Address: Karachi</span></li>
-            <li><strong>Global</strong><span>Address: Remote Worldwide</span></li>
+        <nav class="footer-col" aria-label="Quick links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#top">Home</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#how">How It Works</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col footer-trust">
+          <h4>Why You Can Trust Me</h4>
+          <ul class="footer-trust__list">
+            <li>Free first call, no pressure</li>
+            <li>Plain English, always</li>
+            <li>Small budgets welcome</li>
+            <li>No long contracts</li>
+            <li>Clear weekly reports</li>
+            <li>Your data stays private</li>
           </ul>
         </div>
       </div>
@@ -638,7 +962,7 @@
             </a>
           </div>
           <p class="footer-legal">Copyright Open Agent 2026. All rights reserved.</p>
-          <p class="footer-legal">Initiative by <em>Open Agent</em></p>
+          <p class="footer-legal">Founder: <em>Abeer Nasir</em> · Open Agent</p>
         </div>
       </div>
     </div>

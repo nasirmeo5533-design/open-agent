@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog — Open Agent</title>
-  <meta name="description" content="Practical growth playbooks for e-commerce and D2C stores: Meta ads, SEO, and AI automation.">
-  <meta name="author" content="Open Agent">
-  <meta property="og:title" content="Open Agent — Digital Marketing &amp; AI Automation">
-  <meta property="og:description" content="I don't just market your store. I automate it. One specialist. One connected system.">
+  <meta name="description" content="Practical guides in plain English for small businesses: social media, ads, AI agents, digital marketing, and more.">
+  <meta name="author" content="Abeer Nasir">
+  <meta property="og:title" content="Blog — Open Agent">
+  <meta property="og:description" content="Simple ideas, plain English. Short guides that help small businesses grow. No hype.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://open-agent.agency/">
+  <meta property="og:url" content="https://open-agent.agency/blog.html">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,22 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- ================= ANNOUNCEMENT BAR ================= -->
+  <div class="announce" id="announce-bar" role="region" aria-label="Announcements">
+    <div class="container announce__inner">
+      <span class="announce__icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path></svg>
+      </span>
+      <p class="announce__msg-wrap">
+        <span class="announce__msg" id="announce-msg">Free first call. Tell me your problem, I'll show you the fix.</span>
+      </p>
+      <a href="index.html#pricing" class="announce__cta">See Prices</a>
+      <button type="button" class="announce__close" aria-label="Dismiss announcement">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+    </div>
+  </div>
 
   <!-- ================= NAVBAR ================= -->
   <header class="site-header">
@@ -38,13 +54,13 @@
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#why">Why Us</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
           <li><a href="index.html#faq">FAQ</a></li>
           <li><a href="blog.html" class="is-active" aria-current="page">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <a href="contact.html" class="btn-primary nav-cta">Contact Us</a>
+        <a href="index.html#pricing" class="btn-primary nav-cta">See Prices</a>
 
         <button type="button" class="nav-burger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -60,12 +76,12 @@
       <nav class="container mobile-menu-inner" aria-label="Mobile">
         <a href="index.html" class="mobile-link">Home</a>
         <a href="index.html#services" class="mobile-link">Services</a>
-        <a href="index.html#why" class="mobile-link">Why Us</a>
+        <a href="index.html#pricing" class="mobile-link">Pricing</a>
         <a href="index.html#faq" class="mobile-link">FAQ</a>
         <a href="blog.html" class="mobile-link">Blog</a>
         <a href="contact.html" class="mobile-link">Contact</a>
         <div class="mobile-cta">
-          <a href="contact.html" class="btn-primary">Contact Us</a>
+          <a href="index.html#pricing" class="btn-primary">See Prices</a>
         </div>
       </nav>
     </div>
@@ -76,8 +92,8 @@
     <section class="page-hero">
       <div class="container">
         <span class="eyebrow" data-reveal>Blog</span>
-        <h1 class="section-title" data-reveal>Ideas that <span class="text-orange-core">grow stores.</span></h1>
-        <p class="section-sub" data-reveal>Simple strategies. No hype.</p>
+        <h1 class="section-title" data-reveal>Simple ideas. <span class="text-orange-core">Plain English.</span></h1>
+        <p class="section-sub" data-reveal>Short guides that help small businesses grow. No hype.</p>
       </div>
     </section>
 
@@ -88,9 +104,126 @@
           <button class="filter-btn filter-btn--active" data-filter="all" aria-pressed="true">All</button>
           <button class="filter-btn" data-filter="ads" aria-pressed="false">Ads</button>
           <button class="filter-btn" data-filter="seo" aria-pressed="false">SEO</button>
+          <button class="filter-btn" data-filter="social" aria-pressed="false">Social</button>
+          <button class="filter-btn" data-filter="ai" aria-pressed="false">AI</button>
           <button class="filter-btn" data-filter="automation" aria-pressed="false">Automation</button>
+          <button class="filter-btn" data-filter="marketing" aria-pressed="false">Marketing</button>
         </div>
         <div class="blog-grid">
+          <article class="card card-hover group blog-card" data-category="social" data-reveal>
+            <a href="blog-post.html?post=social-media" class="blog-card__link-wrap">
+              <div class="blog-card__img">
+                <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=1200&q=60" alt="Social media apps on a phone" loading="lazy" data-fallback="assets/images/blog-seo-d2c.svg">
+              </div>
+              <div class="blog-card__body">
+                <div class="blog-card__meta">
+                  <span class="tag">Social</span>
+                  <span class="blog-card__readtime">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    4 min read
+                  </span>
+                </div>
+                <h2 class="blog-card__title">Social Media Made Simple for Small Businesses</h2>
+                <p class="blog-card__excerpt">You don't need to post every day or be on every app. A simple plan on two platforms is enough. Here is the easy way.</p>
+                <span class="blog-card__link">Read Post<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+              </div>
+            </a>
+          </article>
+          <article class="card card-hover group blog-card" data-category="ads" data-reveal>
+            <a href="blog-post.html?post=small-budget-ads" class="blog-card__link-wrap">
+              <div class="blog-card__img">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=60" alt="A laptop showing marketing charts" loading="lazy" data-fallback="assets/images/blog-meta-ads.svg">
+              </div>
+              <div class="blog-card__body">
+                <div class="blog-card__meta">
+                  <span class="tag">Ads</span>
+                  <span class="blog-card__readtime">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    4 min read
+                  </span>
+                </div>
+                <h2 class="blog-card__title">Small-Budget Ads: Get Sales Without Burning Cash</h2>
+                <p class="blog-card__excerpt">You don't need a big ad budget to see results. You need the right setup. Here is how to start small and win.</p>
+                <span class="blog-card__link">Read Post<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+              </div>
+            </a>
+          </article>
+          <article class="card card-hover group blog-card" data-category="ai" data-reveal>
+            <a href="blog-post.html?post=ai-agent" class="blog-card__link-wrap">
+              <div class="blog-card__img">
+                <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=1200&q=60" alt="A friendly robot representing an AI assistant" loading="lazy" data-fallback="assets/images/blog-automation.svg">
+              </div>
+              <div class="blog-card__body">
+                <div class="blog-card__meta">
+                  <span class="tag">AI</span>
+                  <span class="blog-card__readtime">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    4 min read
+                  </span>
+                </div>
+                <h2 class="blog-card__title">What Is an AI Agent? (And Do You Even Need One?)</h2>
+                <p class="blog-card__excerpt">You keep hearing about AI agents. Here is what they actually do — and how to know if your business needs one.</p>
+                <span class="blog-card__link">Read Post<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+              </div>
+            </a>
+          </article>
+          <article class="card card-hover group blog-card" data-category="ai" data-reveal>
+            <a href="blog-post.html?post=ai-agent-development" class="blog-card__link-wrap">
+              <div class="blog-card__img">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=60" alt="Code on a laptop screen representing custom AI work" loading="lazy" data-fallback="assets/images/blog-automation.svg">
+              </div>
+              <div class="blog-card__body">
+                <div class="blog-card__meta">
+                  <span class="tag">AI</span>
+                  <span class="blog-card__readtime">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    5 min read
+                  </span>
+                </div>
+                <h2 class="blog-card__title">Custom AI Agents: Your Business on Autopilot</h2>
+                <p class="blog-card__excerpt">A ready-made agent answers your customers. A custom agent does your work. Here is what happens behind the scenes.</p>
+                <span class="blog-card__link">Read Post<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+              </div>
+            </a>
+          </article>
+          <article class="card card-hover group blog-card" data-category="marketing" data-reveal>
+            <a href="blog-post.html?post=digital-marketing" class="blog-card__link-wrap">
+              <div class="blog-card__img">
+                <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=1200&q=60" alt="Marketing tools arranged on a desk" loading="lazy" data-fallback="assets/images/blog-meta-ads.svg">
+              </div>
+              <div class="blog-card__body">
+                <div class="blog-card__meta">
+                  <span class="tag">Marketing</span>
+                  <span class="blog-card__readtime">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    4 min read
+                  </span>
+                </div>
+                <h2 class="blog-card__title">Digital Marketing in Plain English: A Beginner's Guide</h2>
+                <p class="blog-card__excerpt">Digital marketing sounds big and scary. It isn't. It's just four simple pieces — and you don't need to learn any of them.</p>
+                <span class="blog-card__link">Read Post<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+              </div>
+            </a>
+          </article>
+          <article class="card card-hover group blog-card" data-category="ai" data-reveal>
+            <a href="blog-post.html?post=generative-ai" class="blog-card__link-wrap">
+              <div class="blog-card__img">
+                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=60" alt="Abstract AI artwork representing generative AI" loading="lazy" data-fallback="assets/images/blog-automation.svg">
+              </div>
+              <div class="blog-card__body">
+                <div class="blog-card__meta">
+                  <span class="tag">AI</span>
+                  <span class="blog-card__readtime">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    5 min read
+                  </span>
+                </div>
+                <h2 class="blog-card__title">What Can Generative AI Really Do for Your Business?</h2>
+                <p class="blog-card__excerpt">Generative AI can write, make pictures, and create ideas in seconds. Here is where it genuinely helps a small business.</p>
+                <span class="blog-card__link">Read Post<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+              </div>
+            </a>
+          </article>
           <article class="card card-hover group blog-card" data-category="ads" data-reveal>
             <a href="blog-post.html?post=meta-ads" class="blog-card__link-wrap">
               <div class="blog-card__img">
@@ -153,6 +286,21 @@
     </section>
   </main>
 
+  <!-- ================= FOOTER CTA ================= -->
+  <section class="footer-cta band-navy bg-navy-950">
+    <div class="container footer-cta__inner">
+      <h2 data-reveal>Tell me your problem. I'll find the fix.</h2>
+      <p data-reveal>First call is free. No jargon, no pressure — just a clear plan.</p>
+      <div class="footer-cta__actions" data-reveal>
+        <a href="https://wa.me/923303159642" target="_blank" rel="noopener noreferrer" class="btn-primary">
+          Chat on WhatsApp
+          <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+        </a>
+        <a href="mailto:nasirmeo5533@gmail.com" class="btn-outline-light">Email Me</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= FOOTER ================= -->
   <footer class="site-footer band-navy bg-navy-950">
     <div class="container">
@@ -170,56 +318,51 @@
             </span>
             <span class="text-xl font-extrabold tracking-tight text-white">Open Agent</span>
           </a>
-          <p>I don't just market your store. I automate it. I help startups and local businesses grow in their niche through AI-powered marketing.</p>
+          <p>One person, one plan. I help small businesses grow with AI, ads, and social media — explained in plain English.</p>
           <a href="mailto:nasirmeo5533@gmail.com" class="footer-email">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
             nasirmeo5533@gmail.com
           </a>
+          <a href="https://wa.me/923303159642" target="_blank" rel="noopener noreferrer" class="footer-email footer-email--wa">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+            +92 330 3159642
+          </a>
         </div>
 
-        <nav class="footer-col" aria-label="Quick links">
-          <h4>Open Agent</h4>
-          <ul>
-            <li><a href="blog.html">Blogs</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms &amp; Condition</a></li>
-          </ul>
-        </nav>
-
-        <nav class="footer-col" aria-label="Marketing services">
-          <h4>Digital Marketing Services</h4>
-          <ul>
-            <li><a href="index.html#services">Digital Marketing</a></li>
-            <li><a href="index.html#services">SEO Services</a></li>
-            <li><a href="index.html#services">Google Ads (PPC) Services</a></li>
-            <li><a href="index.html#services">Social Media Marketing Services</a></li>
-            <li><a href="index.html#services">eCommerce Optimization</a></li>
-            <li><a href="index.html#services">Content Creation</a></li>
-          </ul>
-        </nav>
-
-        <nav class="footer-col" aria-label="More services">
+        <nav class="footer-col" aria-label="Services">
           <h4>Services</h4>
           <ul>
-            <li><a href="index.html#services">AI Automation</a></li>
-            <li><a href="index.html#services">AI Agent Development</a></li>
-            <li><a href="index.html#services">Video Editing</a></li>
-            <li><a href="index.html#services">WhatsApp Automation</a></li>
-            <li><a href="index.html#services">Email Marketing</a></li>
-            <li><a href="index.html#services">Lead Generation</a></li>
+            <li><a href="index.html#service-social">Social Media Management</a></li>
+            <li><a href="index.html#service-ads">Meta &amp; Google Ads</a></li>
+            <li><a href="index.html#service-ai-agent">AI Agent</a></li>
+            <li><a href="index.html#service-ai-dev">AI Agent Development</a></li>
+            <li><a href="index.html#service-digital">Digital Marketing</a></li>
+            <li><a href="index.html#service-genai">Generative AI Specialist</a></li>
+            <li><a href="index.html#service-webdev">AI Website Development</a></li>
           </ul>
         </nav>
 
-        <div>
-          <div class="footer-loc-head">
-            <h4>Location</h4>
-            <span class="ping-dot--sm"><i></i><span></span></span>
-          </div>
-          <ul class="footer-locs">
-            <li><strong>Pakistan</strong><span>Address: Karachi</span></li>
-            <li><strong>Global</strong><span>Address: Remote Worldwide</span></li>
+        <nav class="footer-col" aria-label="Quick links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="index.html#how">How It Works</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col footer-trust">
+          <h4>Why You Can Trust Me</h4>
+          <ul class="footer-trust__list">
+            <li>Free first call, no pressure</li>
+            <li>Plain English, always</li>
+            <li>Small budgets welcome</li>
+            <li>No long contracts</li>
+            <li>Clear weekly reports</li>
+            <li>Your data stays private</li>
           </ul>
         </div>
       </div>
@@ -244,7 +387,7 @@
             </a>
           </div>
           <p class="footer-legal">Copyright Open Agent 2026. All rights reserved.</p>
-          <p class="footer-legal">Initiative by <em>Open Agent</em></p>
+          <p class="footer-legal">Founder: <em>Abeer Nasir</em> · Open Agent</p>
         </div>
       </div>
     </div>

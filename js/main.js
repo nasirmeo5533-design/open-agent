@@ -502,6 +502,249 @@
   }
 
   /* ------------------------------------------------------------------
+     09b. ANNOUNCEMENT BAR (rotating messages + dismiss)
+     ------------------------------------------------------------------ */
+  function initAnnounce() {
+    var bar = document.getElementById("announce-bar");
+    var msgEl = document.getElementById("announce-msg");
+    if (!bar || !msgEl) return;
+
+    if (sessionStorage.getItem("openagent.announce") === "hidden") {
+      bar.style.display = "none";
+      return;
+    }
+
+    var messages = [
+      "Free first call. Tell me your problem, I'll show you the fix.",
+      "Plain English only. No confusing tech talk.",
+      "Small budgets welcome. Prices start at PKR 15,000.",
+      "Pick your services in the pricing section — the total adds up by itself."
+    ];
+    var index = 0;
+
+    var closeBtn = bar.querySelector(".announce__close");
+    if (closeBtn) {
+      closeBtn.addEventListener("click", function () {
+        bar.style.display = "none";
+        sessionStorage.setItem("openagent.announce", "hidden");
+      });
+    }
+
+    function show(i) {
+      msgEl.textContent = messages[i];
+      msgEl.classList.remove("is-active");
+      void msgEl.offsetWidth;
+      msgEl.classList.add("is-active");
+    }
+
+    if (prefersReducedMotion) {
+      msgEl.textContent = messages[0];
+      msgEl.classList.add("is-active");
+      return;
+    }
+
+    show(0);
+    setInterval(function () {
+      index = (index + 1) % messages.length;
+      msgEl.classList.remove("is-active");
+      setTimeout(function () {
+        show(index);
+      }, 450);
+    }, 4800);
+  }
+
+  /* ------------------------------------------------------------------
+     09c. HERO TYPEWRITER
+     ------------------------------------------------------------------ */
+  function initHeroType() {
+    var wordEl = document.getElementById("hero-type-word");
+    if (!wordEl) return;
+
+    var words = ["more sales", "more customers", "less busywork", "the right ads"];
+    var wi = 0;
+    var ci = 0;
+    var deleting = false;
+
+    if (prefersReducedMotion) {
+      wordEl.textContent = words[0];
+      return;
+    }
+
+    function tick() {
+      var word = words[wi];
+      if (!deleting) {
+        ci += 1;
+        wordEl.textContent = word.slice(0, ci);
+        if (ci === word.length) {
+          deleting = true;
+          setTimeout(tick, 1600);
+          return;
+        }
+        setTimeout(tick, 65);
+      } else {
+        ci -= 1;
+        wordEl.textContent = word.slice(0, ci);
+        if (ci === 0) {
+          deleting = false;
+          wi = (wi + 1) % words.length;
+        }
+        setTimeout(tick, 35);
+      }
+    }
+
+    setTimeout(tick, 700);
+  }
+
+  /* ------------------------------------------------------------------
+     09d. BUTTON RIPPLE (fun to click)
+     ------------------------------------------------------------------ */
+  function initRipple() {
+    document
+      .querySelectorAll(".btn-primary, .btn-outline, .btn-outline-light")
+      .forEach(function (btn) {
+        btn.addEventListener("pointerdown", function (e) {
+          var rect = btn.getBoundingClientRect();
+          var d = Math.max(rect.width, rect.height);
+          var ripple = document.createElement("span");
+          ripple.className = "btn-ripple";
+          ripple.style.width = d + "px";
+          ripple.style.height = d + "px";
+          ripple.style.left = e.clientX - rect.left - d / 2 + "px";
+          ripple.style.top = e.clientY - rect.top - d / 2 + "px";
+          btn.appendChild(ripple);
+          setTimeout(function () {
+            ripple.remove();
+          }, 600);
+        });
+      });
+  }
+
+  /* ------------------------------------------------------------------
+     09e. PRICING CALCULATOR
+     The client ticks the services they want; the total adds itself up
+     and the WhatsApp button carries the exact list + total. No backend
+     needed, no asking the owner.
+     ------------------------------------------------------------------ */
+  function initPricing() {
+    var cards = document.querySelectorAll(".price-card");
+    var totalEl = document.getElementById("pricing-total");
+    var countEl = document.getElementById("pricing-count");
+    var clearBtn = document.getElementById("pricing-clear");
+    var waLink = document.getElementById("pricing-wa");
+    if (!cards.length || !totalEl) return;
+
+    function fmt(n) {
+      return n.toLocaleString("en-US");
+    }
+
+    function selectedServices() {
+      var list = [];
+      cards.forEach(function (card) {
+        var check = card.querySelector(".price-card__check");
+        if (check && check.checked) {
+          list.push({
+            id: card.getAttribute("data-service"),
+            name: card.querySelector(".price-card__name").textContent,
+            price: parseInt(card.getAttribute("data-price"), 10)
+          });
+        }
+      });
+      return list;
+    }
+
+    function update() {
+      var list = selectedServices();
+      var total = 0;
+      list.forEach(function (s) {
+        total += s.price;
+      });
+      totalEl.textContent = "PKR " + fmt(total);
+      totalEl.classList.remove("pricing-total--pop");
+      void totalEl.offsetWidth;
+      totalEl.classList.add("pricing-total--pop");
+      countEl.textContent =
+        list.length + " of " + cards.length + " services selected";
+
+      if (list.length === 0) {
+        waLink.href = "https://wa.me/923303159642";
+        waLink.removeAttribute("data-has-selection");
+      } else {
+        var lines = list.map(function (s, i) {
+          return (i + 1) + ") " + s.name;
+        });
+        var text =
+          "Hi Abeer! I'd like these services:\n" +
+          lines.join("\n") +
+          "\n\nTotal: PKR " +
+          fmt(total) +
+          ". Can we talk?";
+        waLink.href = "https://wa.me/923303159642?text=" + encodeURIComponent(text);
+        waLink.setAttribute("data-has-selection", "true");
+      }
+
+      try {
+        localStorage.setItem(
+          "openagent.pricing",
+          JSON.stringify(list.map(function (s) { return s.id; }))
+        );
+      } catch (e) {
+        // storage unavailable — ignore
+      }
+    }
+
+    function setSelected(ids) {
+      cards.forEach(function (card) {
+        var check = card.querySelector(".price-card__check");
+        if (check) {
+          check.checked = ids.indexOf(card.getAttribute("data-service")) !== -1;
+        }
+      });
+      update();
+    }
+
+    cards.forEach(function (card) {
+      var check = card.querySelector(".price-card__check");
+      if (!check) return;
+      check.addEventListener("change", update);
+    });
+
+    if (clearBtn) {
+      clearBtn.addEventListener("click", function () {
+        cards.forEach(function (card) {
+          var check = card.querySelector(".price-card__check");
+          if (check) check.checked = false;
+        });
+        update();
+      });
+    }
+
+    // Service cards & detail blocks: "See price" adds that service and jumps to pricing
+    document.querySelectorAll("[data-preselect]").forEach(function (link) {
+      link.addEventListener("click", function () {
+        var id = link.getAttribute("data-preselect");
+        var ids = selectedServices().map(function (s) {
+          return s.id;
+        });
+        if (ids.indexOf(id) === -1) ids.push(id);
+        setSelected(ids);
+      });
+    });
+
+    // Restore the visitor's last selection so nothing is lost on refresh
+    try {
+      var saved = JSON.parse(localStorage.getItem("openagent.pricing"));
+      if (Array.isArray(saved) && saved.length) {
+        setSelected(saved);
+        return;
+      }
+    } catch (e) {
+      // ignore
+    }
+
+    update();
+  }
+
+  /* ------------------------------------------------------------------
      10. INIT
      ------------------------------------------------------------------ */
   document.addEventListener("DOMContentLoaded", function () {
@@ -515,5 +758,9 @@
     initBlogFilter();
     initImageFallback();
     initContactForm();
+    initAnnounce();
+    initHeroType();
+    initRipple();
+    initPricing();
   });
 })();
