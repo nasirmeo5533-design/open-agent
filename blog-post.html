@@ -6,10 +6,19 @@
   <title>Blog — Open Agent</title>
   <meta name="description" content="Simple ideas, plain English. Practical guides for small businesses — ads, social media, AI agents, and more.">
   <meta name="author" content="Abeer Nasir">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://open-agent.agency/blog-post.html">
   <meta property="og:title" content="Blog — Open Agent">
   <meta property="og:description" content="Simple ideas, plain English. Short guides that help small businesses grow.">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://open-agent.agency/blog.html">
+  <meta property="og:url" content="https://open-agent.agency/blog-post.html">
+  <meta property="og:site_name" content="Open Agent">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=60">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog — Open Agent">
+  <meta name="twitter:description" content="Simple ideas, plain English. Short guides that help small businesses grow.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=60">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -257,7 +266,56 @@
         body.appendChild(el);
       });
 
+      // --- SEO: title, canonical, meta, Open Graph, Twitter, schema ---
+      var url = "https://open-agent.agency/blog-post.html?post=" + slug;
+      var img = post.hero;
+
       document.title = post.title + " — Open Agent";
+
+      function setMeta(attr, key, value) {
+        var el = document.querySelector("meta[" + attr + '="' + key + '"]');
+        if (el) el.setAttribute("content", value);
+      }
+      function setLink(rel, href) {
+        var el = document.querySelector('link[rel="' + rel + '"]');
+        if (el) el.setAttribute("href", href);
+      }
+
+      setLink("canonical", url);
+      setMeta("name", "description", post.excerpt);
+      setMeta("property", "og:title", post.title + " — Open Agent");
+      setMeta("property", "og:description", post.excerpt);
+      setMeta("property", "og:url", url);
+      setMeta("property", "og:image", img);
+      setMeta("name", "twitter:title", post.title + " — Open Agent");
+      setMeta("name", "twitter:description", post.excerpt);
+      setMeta("name", "twitter:image", img);
+
+      var schema = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": post.title,
+        "description": post.excerpt,
+        "image": img,
+        "url": url,
+        "mainEntityOfPage": { "@type": "WebPage", "@id": url },
+        "author": {
+          "@type": "Person",
+          "name": "Abeer Nasir",
+          "url": "https://open-agent.agency/"
+        },
+        "publisher": {
+          "@type": "ProfessionalService",
+          "name": "Open Agent",
+          "logo": { "@type": "ImageObject", "url": "https://open-agent.agency/assets/favicon.svg" }
+        },
+        "inLanguage": "en",
+        "keywords": post.categoryLabel
+      };
+      var ld = document.createElement("script");
+      ld.type = "application/ld+json";
+      ld.textContent = JSON.stringify(schema);
+      document.head.appendChild(ld);
     })();
   </script>
 </body>
