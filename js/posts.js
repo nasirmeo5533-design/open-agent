@@ -60,7 +60,7 @@
         { t: "h2", v: "What it is not" },
         { t: "p", v: "An AI agent is not magic, and it won't fix a bad product or a rude attitude. It can't have deep conversations about feelings. But for the everyday stuff — 'Is this in stock?', 'How long is delivery?', 'What sizes do you have?' — it's faster and cheaper than hiring someone to sit and answer the phone all day." },
         { t: "h2", v: "The bottom line" },
-        { t: "p", v: "If your business gets the same questions over and over, an AI agent saves you time and catches sales you'd otherwise miss at night. I set these up starting at PKR 80,000 — ready to plug into WhatsApp, Facebook, or your website." }
+        { t: "p", v: "If your business gets the same questions over and over, an AI agent saves you time and catches sales you'd otherwise miss at night. I set these up starting at PKR 40,000 — ready to plug into WhatsApp, Facebook, or your website." }
       ]
     },
     "ai-agent-development": {
@@ -81,7 +81,7 @@
         { t: "h2", v: "It connects to the tools you already use" },
         { t: "p", v: "You don't need to change anything about how you work. Your agent can work with your spreadsheets, your online store, your email, and your WhatsApp. It does the same steps a good employee would do — it just never sleeps, never takes a day off, and never makes a typo at 1am." },
         { t: "h2", v: "The bottom line" },
-        { t: "p", v: "If you're tired of doing the same tasks every single week, a custom AI agent is the fix. I build these starting at PKR 30,000, test them until they work properly, and hand you a helper that makes your week shorter." }
+        { t: "p", v: "If you're tired of doing the same tasks every single week, a custom AI agent is the fix. I build these starting at PKR 80,000, test them until they work properly, and hand you a helper that makes your week shorter." }
       ]
     },
     "digital-marketing": {

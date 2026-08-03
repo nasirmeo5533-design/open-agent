@@ -541,13 +541,35 @@
     }
 
     var messages = [
-      "Free first call. Tell me your problem, I'll show you the fix.",
+      "25% OFF all services until Aug 14. First call is free.",
       "Every package comes with a 3-day money-back guarantee.",
       "Plain English only. No confusing tech talk.",
       "Small budgets welcome. Prices start at PKR 15,000.",
       "Pick your services in the pricing section — the total adds up by itself."
     ];
     var index = 0;
+
+    var timerEl = document.getElementById("announce-timer");
+    var digitsEl = timerEl ? document.getElementById("announce-timer-digits") : null;
+    if (timerEl && digitsEl) {
+      var deadline = new Date("2026-08-14T23:59:59");
+      function pad2(n) { return n < 10 ? "0" + n : "" + n; }
+      function tick() {
+        var diff = deadline.getTime() - Date.now();
+        if (diff <= 0) {
+          digitsEl.textContent = "00:00:00";
+          timerEl.classList.add("is-expired");
+          return;
+        }
+        var d = Math.floor(diff / 86400000);
+        var h = Math.floor((diff % 86400000) / 3600000);
+        var m = Math.floor((diff % 3600000) / 60000);
+        var s = Math.floor((diff % 60000) / 1000);
+        digitsEl.textContent = (d > 0 ? d + "d " : "") + pad2(h) + ":" + pad2(m) + ":" + pad2(s);
+      }
+      tick();
+      setInterval(tick, 1000);
+    }
 
     var closeBtn = bar.querySelector(".announce__close");
     if (closeBtn) {
