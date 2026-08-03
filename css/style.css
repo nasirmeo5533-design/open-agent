@@ -2802,3 +2802,48 @@ body {
     justify-content: center;
   }
 }
+
+/* ---------- Contact page (light section variant) ----------
+   The default contact styles assume a navy section. On the contact
+   page the section is light, so these scoped overrides keep the text
+   readable without touching the navy section on the homepage. */
+.contact-section-light .contact-left h2 {
+  color: var(--navy-900);
+}
+.contact-section-light .contact-left .contact-sub {
+  color: var(--slate-600);
+}
+.contact-section-light .contact-channel__icon {
+  border-color: var(--line);
+  background-color: #fff;
+  color: var(--orange-core);
+}
+.contact-section-light .contact-channel__label {
+  color: var(--slate-500);
+}
+.contact-section-light .contact-channel__value {
+  color: var(--navy-800);
+}
+.contact-section-light .group:hover .contact-channel__value {
+  color: var(--orange-core);
+}
+.contact-section-light .contact-note {
+  color: var(--slate-600);
+}
+.contact-section-light .contact-note a {
+  color: var(--navy-900);
+}
+.contact-section-light .contact-note a:hover {
+  color: var(--orange-core);
+}
+.contact-form .field-hint {
+  margin-top: -4px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--slate-400);
+}
+.field input::placeholder,
+.field textarea::placeholder,
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}

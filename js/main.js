@@ -472,27 +472,25 @@
         data[input.name] = input.value.trim();
       });
 
-      var subject =
-        "New project inquiry from " + (data.name || "a store owner");
       var body =
+        "Hi Abeer! I'd like to talk about growing my business.\n\n" +
         "Name: " + data.name + "\n" +
         "Phone: " + data.phone + "\n" +
         "Email: " + data.email + "\n" +
-        "Store URL: " + (data.storeUrl || "-") + "\n" +
-        "Budget: " + (data.budget || "-") + "\n\n" +
+        "Service: " + (data.service || "Not sure yet — need advice") + "\n" +
+        "Budget: " + (data.budget || "-") + "\n" +
+        "Store/Website: " + (data.storeUrl || "-") + "\n\n" +
         "Message:\n" + (data.message || "-");
 
-      var mailto =
-        "mailto:nasirmeo5533@gmail.com" +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
+      var waLink =
+        "https://wa.me/923303159642?text=" + encodeURIComponent(body);
 
-      // Simulate a short "sending" state, then open mail client + show success
+      // Simulate a short "sending" state, then open WhatsApp + show success
       submitBtn.classList.add("form-submit--loading");
       submitBtn.disabled = true;
 
       setTimeout(function () {
-        window.location.href = mailto;
+        window.location.href = waLink;
         submitBtn.classList.remove("form-submit--loading");
         submitBtn.disabled = false;
         form.classList.add("form-card--sent");
