@@ -18,7 +18,7 @@
         { t: "h2", v: "Three fixes you can make this week" },
         { t: "p", v: "One: install the Meta pixel and track one clear event — purchases, not page views. Two: stop layering interests and let the Advantage+ audience learn from your customer list. Three: commit to three creative tests a week and let the numbers pick a winner. On a small budget, run one focused ad set at PKR 1,000 a day instead of spreading PKR 1,000 across five. One campaign with a signal always beats five without one." },
         { t: "h2", v: "The bottom line" },
-        { t: "p", v: "Burning budget is a signal, not a sentence. If your ads are expensive, the fix is almost always structure and signals — not more money. That is the system we run for stores in Karachi and across Pakistan: AI doing the testing, you watching the cost per sale drop. Book a call and we will show you what your account looks like through that lens." }
+        { t: "p", v: "Burning budget is a signal, not a sentence. If your ads are expensive, the fix is almost always structure and signals — not more money. That is the system I run for stores in Karachi and across Pakistan: AI doing the testing, you watching the cost per sale drop. Book a call and I will show you what your account looks like through that lens." }
       ]
     },
     "seo-d2c": {
@@ -39,7 +39,7 @@
         { t: "h2", v: "What to do in the next 30 days" },
         { t: "p", v: "Fix the basics first: fast hosting, clean URLs, one H1 per page, and a title tag that puts your keyword and city in front. Then write product descriptions that answer real questions — size, material, delivery, warranty — instead of 'premium quality, best price.' Publish two category pages and one buying guide. Set up Google Search Console, which is free and tells you exactly which searches your store already appears for and where you rank." },
         { t: "h2", v: "The bottom line" },
-        { t: "p", v: "You do not need to outspend your competitors — you need to show up where they are not. Start with the pages that match what buyers actually type, and the traffic compounds while your ad spend stays flat. We help stores in Karachi build exactly this, one page at a time." }
+        { t: "p", v: "You do not need to outspend your competitors — you need to show up where they are not. Start with the pages that match what buyers actually type, and the traffic compounds while your ad spend stays flat. I help stores in Karachi build exactly this, one page at a time." }
       ]
     },
     "automation": {
@@ -54,10 +54,10 @@
       body: [
         { t: "p", v: "Every week your team answers the same WhatsApp messages — 'Where is my order?' — retypes the same tracking numbers, and copies the same figures into a report. For a store doing thirty orders a day, that adds up to fifteen to twenty hours a week of work a machine can finish in seconds. That is not small stuff. That is a part-time salary disappearing into copy-paste." },
         { t: "h2", v: "Where your hours actually go" },
-        { t: "p", v: "Three tasks eat most store teams alive: order updates and tracking numbers, support replies about status and returns, and daily reports for the owner or investor. None of them need a human judgment call. Each one is a repeatable sequence — exactly what automation is built for. When we audit a store, these three usually account for sixty to seventy percent of all manual work." },
+        { t: "p", v: "Three tasks eat most store teams alive: order updates and tracking numbers, support replies about status and returns, and daily reports for the owner or investor. None of them need a human judgment call. Each one is a repeatable sequence — exactly what automation is built for. When I audit a store, these three usually account for most of the manual work." },
         { t: "h2", v: "The three automations to start with" },
         { t: "p", v: "Order updates: connect your store's order feed to WhatsApp or email, and send the tracking number automatically the moment an order is fulfilled. Support replies: give a small AI agent your ten most common questions — order status, size guide, return policy — and let it answer in seconds, escalating only when it cannot. Daily reports: have the system pull orders, revenue, and cost per acquisition into one WhatsApp message every morning at 9am, before you even ask." },
-        { t: "p", v: "We ran this exact setup for a fashion store in Karachi. Order-status messages dropped to zero manual sends. The AI agent answered ninety percent of support tickets on its own. The owner stopped asking how the previous day went because the answer arrived before he did. Weekly manual work fell from about eighteen hours to under two." },
+        { t: "p", v: "I ran this exact setup for a fashion store in Karachi. Order-status messages dropped to zero manual sends. The AI agent answered most support tickets on its own. The owner stopped asking how the previous day went because the answer arrived before he did. Weekly manual work fell to a fraction of what it was." },
         { t: "h2", v: "What automation cannot replace" },
         { t: "p", v: "Judgment calls: refunds with a story, an angry VIP customer, a pricing decision. Automate the repetitive ninety percent, and your team finally gets time for the ten percent that actually needs a person — which is also the part that builds the brand. The busywork was never your business. It was just the tax you paid for not having a system." }
       ]

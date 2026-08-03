@@ -1930,11 +1930,16 @@ button {
   .nav-cta { display: inline-flex; padding: 10px 20px; }
   .nav-burger { display: none; }
   .hero-inner {
-    grid-template-columns: 1.1fr 0.9fr;
-    align-items: center;
-    gap: 64px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    max-width: 860px;
+    margin-inline: auto;
+    gap: 32px;
     padding-block: 112px;
   }
+  .hero-sub { margin-inline: auto; }
+  .hero-bullets { justify-content: center; }
   .hero h1 { font-size: 3rem; line-height: 1.08; }
   .hero h1 { font-size: 3.75rem; }
   .hero-sub { font-size: 1.125rem; }
