@@ -60,7 +60,7 @@
         { t: "h2", v: "What it is not" },
         { t: "p", v: "An AI agent is not magic, and it won't fix a bad product or a rude attitude. It can't have deep conversations about feelings. But for the everyday stuff — 'Is this in stock?', 'How long is delivery?', 'What sizes do you have?' — it's faster and cheaper than hiring someone to sit and answer the phone all day." },
         { t: "h2", v: "The bottom line" },
-        { t: "p", v: "If your business gets the same questions over and over, an AI agent saves you time and catches sales you'd otherwise miss at night. I set these up starting at PKR 30,000 — ready to plug into WhatsApp, Facebook, or your website." }
+        { t: "p", v: "If your business gets the same questions over and over, an AI agent saves you time and catches sales you'd otherwise miss at night. I set these up starting at PKR 80,000 — ready to plug into WhatsApp, Facebook, or your website." }
       ]
     },
     "ai-agent-development": {
@@ -102,7 +102,7 @@
         { t: "h2", v: "You don't need to learn it all" },
         { t: "p", v: "This is the part most people miss. You don't need to become an expert. You need one person who knows what they're doing, and a plan you can understand. If I explain my strategy and it sounds like a different language, that's a bad sign. You should always understand what's happening with your money." },
         { t: "h2", v: "The bottom line" },
-        { t: "p", v: "Digital marketing is ads, social media, content, and a website — done together, with a plan, over time. If you'd rather run your business than learn marketing, I can run the whole thing for you, starting at PKR 30,000." }
+        { t: "p", v: "Digital marketing is ads, social media, content, and a website — done together, with a plan, over time. If you'd rather run your business than learn marketing, I can run the whole thing for you, starting at PKR 50,000." }
       ]
     },
     "generative-ai": {
@@ -125,7 +125,7 @@
         { t: "h2", v: "The honest part" },
         { t: "p", v: "Generative AI is a tool, not a person. It doesn't know your customers like you do. That's why it works best with a human guiding it — that's me. I use AI to make content faster and cheaper for you, but I check every word and image so it still feels like your brand." },
         { t: "h2", v: "The bottom line" },
-        { t: "p", v: "Generative AI makes good content fast and cheap — the right words, the right pictures, the right ideas. That's my job as your generative AI specialist, starting at PKR 30,000." }
+        { t: "p", v: "Generative AI makes good content fast and cheap — the right words, the right pictures, the right ideas. That's my job as your generative AI specialist, starting at PKR 65,000." }
       ]
     },
     "meta-ads": {

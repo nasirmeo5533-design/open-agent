@@ -1714,6 +1714,14 @@ button {
   font-weight: 600;
   color: var(--orange-bright);
 }
+.footer-legal a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.footer-legal a:hover {
+  color: #fff;
+}
 .footer-bottom-inner {
   display: flex;
   flex-wrap: wrap;
@@ -2839,6 +2847,11 @@ body {
 .contact-form .field-hint {
   margin-top: -4px;
   text-align: center;
+  font-size: 0.75rem;
+  color: var(--slate-400);
+}
+.contact-form .field-note {
+  margin-top: 6px;
   font-size: 0.75rem;
   color: var(--slate-400);
 }

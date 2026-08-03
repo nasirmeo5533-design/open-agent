@@ -414,9 +414,22 @@
     var form = document.querySelector("[data-contact-form]");
     if (!form) return;
 
-    var submitBtn = form.querySelector("[type='submit']");
+    var submitBtns = Array.prototype.slice.call(
+      form.querySelectorAll("[type='submit']")
+    );
     var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
     var phoneRe = /^[+]?[\d\s\-()]{7,20}$/;
+    var channel = "whatsapp";
+    var activeBtn = submitBtns[0];
+
+    if (submitBtns.length) {
+      submitBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          channel = btn.getAttribute("data-send") || "whatsapp";
+          activeBtn = btn;
+        });
+      });
+    }
 
     function setError(input, valid) {
       input.classList.toggle("form-field--invalid", !valid);
@@ -484,10 +497,17 @@
 
       var waLink =
         "https://wa.me/923303159642?text=" + encodeURIComponent(body);
+      var mailLink =
+        "mailto:nasirmeo5533@gmail.com?subject=" +
+        encodeURIComponent("New project inquiry — " + (data.service || "General")) +
+        "&body=" +
+        encodeURIComponent(body);
 
-      // Simulate a short "sending" state, then open WhatsApp + show success
-      submitBtn.classList.add("form-submit--loading");
-      submitBtn.disabled = true;
+      // Simulate a short "sending" state, then open the chosen channel
+      if (activeBtn) {
+        activeBtn.classList.add("form-submit--loading");
+        activeBtn.disabled = true;
+      }
 
       setTimeout(function () {
         if (typeof gtag === "function") {
@@ -496,9 +516,11 @@
             event_label: data.service || "general",
           });
         }
-        window.location.href = waLink;
-        submitBtn.classList.remove("form-submit--loading");
-        submitBtn.disabled = false;
+        window.location.href = channel === "email" ? mailLink : waLink;
+        if (activeBtn) {
+          activeBtn.classList.remove("form-submit--loading");
+          activeBtn.disabled = false;
+        }
         form.classList.add("form-card--sent");
         form.reset();
       }, 700);

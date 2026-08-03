@@ -127,6 +127,11 @@
               <p class="contact-sub">Skip the form and reach me on email or WhatsApp. Tell me what's stuck — sales, time, content — and I'll show you how I'd fix it.</p>
             </div>
 
+            <div class="ping-row" data-reveal>
+              <span class="ping-dot"><i></i><span></span></span>
+              <span class="text-sm">Fast replies — usually same day</span>
+            </div>
+
             <ul class="contact-channels" data-reveal>
               <li>
                 <a href="mailto:nasirmeo5533@gmail.com" class="contact-channel group" aria-label="Email Open Agent at nasirmeo5533@gmail.com">
@@ -206,16 +211,20 @@
                   </select>
                 </div>
                 <div class="field">
-                  <label for="contact-store">Website or Store Link</label>
-                  <input id="contact-store" type="url" autocomplete="url" name="storeUrl" class="form-input" placeholder="https://... (optional)">
+                  <label for="contact-store">Website or Store Link (optional)</label>
+                  <input id="contact-store" type="url" autocomplete="url" name="storeUrl" class="form-input" placeholder="https://...">
+                  <p class="field-note">No website yet? No problem — that's exactly what I help you build.</p>
                 </div>
               </div>
               <div class="field">
                 <label for="contact-message">What do you need help with?</label>
                 <textarea id="contact-message" name="message" required rows="4" class="form-input" placeholder="Tell me what's stuck — sales, time, content..."></textarea>
               </div>
-              <button type="submit" class="btn-primary w-full">Send Message on WhatsApp</button>
-              <p class="field-hint">Message goes straight to my WhatsApp — I reply within one business day.</p>
+              <div class="form-row md:grid-cols-2">
+                <button type="submit" class="btn-primary w-full" data-send="whatsapp">Send via WhatsApp</button>
+                <button type="submit" class="btn-outline-light w-full" data-send="email">Send via Email</button>
+              </div>
+              <p class="field-hint">Send on WhatsApp or by email — either way I reply within one business day.</p>
             </div>
           </form>
         </div>
@@ -291,6 +300,7 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
           </ul>
         </nav>
 
