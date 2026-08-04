@@ -528,17 +528,12 @@
   }
 
   /* ------------------------------------------------------------------
-     09b. ANNOUNCEMENT BAR (rotating messages + dismiss)
+     09b. ANNOUNCEMENT BAR (rotating messages + offer countdown)
      ------------------------------------------------------------------ */
   function initAnnounce() {
     var bar = document.getElementById("announce-bar");
     var msgEl = document.getElementById("announce-msg");
     if (!bar || !msgEl) return;
-
-    if (sessionStorage.getItem("openagent.announce") === "hidden") {
-      bar.style.display = "none";
-      return;
-    }
 
     var messages = [
       "25% OFF all services until Aug 14. First call is free.",
@@ -569,14 +564,6 @@
       }
       tick();
       setInterval(tick, 1000);
-    }
-
-    var closeBtn = bar.querySelector(".announce__close");
-    if (closeBtn) {
-      closeBtn.addEventListener("click", function () {
-        bar.style.display = "none";
-        sessionStorage.setItem("openagent.announce", "hidden");
-      });
     }
 
     function show(i) {
