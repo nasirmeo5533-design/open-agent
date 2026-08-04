@@ -496,9 +496,9 @@
         "Message:\n" + (data.message || "-");
 
       var waLink =
-        "https://wa.me/923303159642?text=" + encodeURIComponent(body);
+        "https://wa.me/923703159642?text=" + encodeURIComponent(body);
       var mailLink =
-        "mailto:nasirmeo5533@gmail.com?subject=" +
+        "mailto:abeerinfo5566@gmail.com?subject=" +
         encodeURIComponent("New project inquiry — " + (data.service || "General")) +
         "&body=" +
         encodeURIComponent(body);
@@ -702,7 +702,7 @@
         list.length + " of " + cards.length + " services selected";
 
       if (list.length === 0) {
-        waLink.href = "https://wa.me/923303159642";
+        waLink.href = "https://wa.me/923703159642";
         waLink.removeAttribute("data-has-selection");
       } else {
         var lines = list.map(function (s, i) {
@@ -714,7 +714,7 @@
           "\n\nTotal: PKR " +
           fmt(total) +
           ". Can we talk?";
-        waLink.href = "https://wa.me/923303159642?text=" + encodeURIComponent(text);
+        waLink.href = "https://wa.me/923703159642?text=" + encodeURIComponent(text);
         waLink.setAttribute("data-has-selection", "true");
       }
 
