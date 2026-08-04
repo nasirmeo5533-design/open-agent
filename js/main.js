@@ -766,17 +766,8 @@
       });
     }
 
-    // Service cards & detail blocks: "See price" adds that service and jumps to pricing
-    document.querySelectorAll("[data-preselect]").forEach(function (link) {
-      link.addEventListener("click", function () {
-        var id = link.getAttribute("data-preselect");
-        var ids = selectedServices().map(function (s) {
-          return s.id;
-        });
-        if (ids.indexOf(id) === -1) ids.push(id);
-        setSelected(ids);
-      });
-    });
+    // Expose the live setter so cross-page "See price" links can pre-fill the plan
+    window.__openAgentPricingSet = setSelected;
 
     // Restore the visitor's last selection so nothing is lost on refresh
     try {
@@ -790,6 +781,36 @@
     }
 
     update();
+  }
+
+  /* ------------------------------------------------------------------
+     09f. CROSS-PAGE PRESELECT
+     "See price" links (e.g. on the services page) add their service to
+     the saved plan, then the browser navigates to /pricing/ where the
+     saved plan is restored. Works even on pages without a calculator.
+     ------------------------------------------------------------------ */
+  function initPreselect() {
+    document.querySelectorAll("[data-preselect]").forEach(function (link) {
+      link.addEventListener("click", function () {
+        var id = link.getAttribute("data-preselect");
+        var saved = [];
+        try {
+          saved = JSON.parse(localStorage.getItem("openagent.pricing")) || [];
+        } catch (e) {
+          // ignore
+        }
+        if (!Array.isArray(saved)) saved = [];
+        if (saved.indexOf(id) === -1) saved.push(id);
+        try {
+          localStorage.setItem("openagent.pricing", JSON.stringify(saved));
+        } catch (e) {
+          // storage unavailable — ignore
+        }
+        if (typeof window.__openAgentPricingSet === "function") {
+          window.__openAgentPricingSet(saved);
+        }
+      });
+    });
   }
 
   /* ------------------------------------------------------------------
@@ -810,5 +831,6 @@
     initHeroType();
     initRipple();
     initPricing();
+    initPreselect();
   });
 })();

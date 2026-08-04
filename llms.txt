@@ -26,11 +26,11 @@ Open Agent helps small businesses grow with Meta & Google Ads, social media mana
 ## Main pages
 
 - Home: [https://open-agent.agency/](https://open-agent.agency/)
-- Pricing: [https://open-agent.agency/#pricing](https://open-agent.agency/#pricing)
-- Services: [https://open-agent.agency/#services](https://open-agent.agency/#services)
+- Services: [https://open-agent.agency/services/](https://open-agent.agency/services/)
+- Pricing: [https://open-agent.agency/pricing/](https://open-agent.agency/pricing/)
+- FAQ: [https://open-agent.agency/faq/](https://open-agent.agency/faq/)
 - Blog: [https://open-agent.agency/blog/](https://open-agent.agency/blog/)
 - Contact: [https://open-agent.agency/contact/](https://open-agent.agency/contact/)
-- FAQ: [https://open-agent.agency/#faq](https://open-agent.agency/#faq)
 - Privacy policy: [https://open-agent.agency/privacy/](https://open-agent.agency/privacy/)
 - Terms of service: [https://open-agent.agency/terms/](https://open-agent.agency/terms/)
 
