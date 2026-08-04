@@ -1299,9 +1299,10 @@ button {
 }
 .blog-card__meta {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 8px 16px;
 }
 .tag {
   display: inline-flex;
@@ -1324,6 +1325,13 @@ button {
 .blog-card__readtime svg {
   width: 14px;
   height: 14px;
+}
+.blog-card__date {
+  order: 3;
+  width: 100%;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--slate-500);
 }
 .blog-card__title {
   margin-top: 20px;
@@ -2064,8 +2072,8 @@ button {
   gap: 8px;
   border-radius: 9999px;
   background-color: #fff;
-  padding: 4px 8px 4px 14px;
-  font-size: 0.8125rem;
+  padding: 5px 10px 5px 16px;
+  font-size: 0.875rem;
   font-weight: 800;
   color: var(--orange-core);
   white-space: nowrap;
@@ -2073,7 +2081,7 @@ button {
   animation: announce-pulse 2.4s ease-in-out infinite;
 }
 .announce__timer-label {
-  opacity: 0.9;
+  opacity: 0.95;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   font-size: 0.6875rem;
@@ -2084,7 +2092,8 @@ button {
   background-color: var(--orange-core);
   color: #fff;
   border-radius: 9999px;
-  padding: 3px 10px;
+  padding: 4px 12px;
+  font-size: 0.9375rem;
 }
 .announce__timer.is-expired {
   opacity: 0.6;
@@ -2831,6 +2840,9 @@ body {
     flex-wrap: wrap;
     gap: 4px 10px;
   }
+  .announce__icon {
+    display: none;
+  }
   .announce__msg-wrap {
     order: 3;
     flex: 1 1 100%;
@@ -2839,6 +2851,10 @@ body {
   .announce__msg {
     white-space: normal;
     line-height: 1.4;
+  }
+  .announce__timer {
+    order: 2;
+    margin-inline: auto;
   }
   .hero-actions .btn-primary,
   .hero-actions .btn-outline-light {

@@ -123,7 +123,7 @@
     <section class="bg-white pb-24">
       <div class="container post-wrap">
         <div class="post-hero" data-reveal>
-          <img id="post-hero" src="" alt="" data-fallback="" loading="lazy">
+          <img id="post-hero" src="" alt="" data-fallback="" loading="lazy" width="1200" height="630">
         </div>
         <div class="post-body" id="post-body" data-reveal></div>
 
@@ -254,9 +254,23 @@
   <script src="/js/main.js"></script>
   <script>
     (function () {
+      // Guard: if posts.js failed to load, or the slug is missing/invalid,
+      // send the visitor to the blog listing instead of rendering a broken page.
+      if (
+        !window.POSTS ||
+        !window.URLSearchParams ||
+        !window.location.search
+      ) {
+        window.location.replace("/blog/");
+        return;
+      }
       var params = new URLSearchParams(window.location.search);
       var slug = params.get("post");
-      var post = window.POSTS[slug] || window.POSTS["social-media"];
+      var post = slug && window.POSTS[slug] ? window.POSTS[slug] : null;
+      if (!post) {
+        window.location.replace("/blog/");
+        return;
+      }
 
       document.getElementById("post-title").textContent = post.title;
       document.getElementById("post-excerpt").textContent = post.excerpt;
@@ -266,15 +280,32 @@
       hero.alt = post.title;
       hero.setAttribute("data-fallback", post.heroFallback);
 
+      function formatDate(iso) {
+        if (!iso) return "";
+        var d = new Date(iso + "T00:00:00");
+        if (isNaN(d.getTime())) return "";
+        return d.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "short",
+          day: "numeric"
+        });
+      }
+
       var meta = document.getElementById("post-meta");
       var tag = document.createElement("span");
       tag.className = "tag";
       tag.textContent = post.categoryLabel;
+      meta.appendChild(tag);
       var read = document.createElement("span");
       read.className = "blog-card__readtime";
       read.textContent = post.readTime;
-      meta.appendChild(tag);
       meta.appendChild(read);
+      if (post.published) {
+        var date = document.createElement("span");
+        date.className = "blog-card__readtime";
+        date.textContent = formatDate(post.published);
+        meta.appendChild(date);
+      }
 
       var body = document.getElementById("post-body");
       post.body.forEach(function (block) {
@@ -304,6 +335,7 @@
       setMeta("property", "og:description", post.excerpt);
       setMeta("property", "og:url", url);
       setMeta("property", "og:image", img);
+      setMeta("property", "og:image:alt", post.title);
       setMeta("name", "twitter:title", post.title + " — Open Agent");
       setMeta("name", "twitter:description", post.excerpt);
       setMeta("name", "twitter:image", img);
@@ -315,6 +347,9 @@
         "description": post.excerpt,
         "image": img,
         "url": url,
+        "datePublished": post.published,
+        "dateModified": post.updated || post.published,
+        "articleSection": post.categoryLabel,
         "mainEntityOfPage": { "@type": "WebPage", "@id": url },
         "author": {
           "@type": "Person",
