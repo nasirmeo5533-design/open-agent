@@ -1,5 +1,5 @@
 /* ==========================================================================
-   OPEN AGENT — Main Script
+   OPEN AGENT Main Script
    Vanilla JS. No jQuery, no build tools.
    --------------------------------------------------------------------------
    Modules:
@@ -490,7 +490,7 @@
         "Name: " + data.name + "\n" +
         "Phone: " + data.phone + "\n" +
         "Email: " + data.email + "\n" +
-        "Service: " + (data.service || "Not sure yet — need advice") + "\n" +
+        "Service: " + (data.service || "Not sure yet need advice") + "\n" +
         "Budget: " + (data.budget || "-") + "\n" +
         "Store/Website: " + (data.storeUrl || "-") + "\n\n" +
         "Message:\n" + (data.message || "-");
@@ -499,7 +499,7 @@
         "https://wa.me/923703159642?text=" + encodeURIComponent(body);
       var mailLink =
         "mailto:abeerinfo5566@gmail.com?subject=" +
-        encodeURIComponent("New project inquiry — " + (data.service || "General")) +
+        encodeURIComponent("New project inquiry " + (data.service || "General")) +
         "&body=" +
         encodeURIComponent(body);
 
@@ -528,7 +528,7 @@
   }
 
   /* ------------------------------------------------------------------
-     09b. ANNOUNCEMENT BAR (rotating messages + offer countdown)
+     09b. ANNOUNCEMENT BAR (rotating messages)
      ------------------------------------------------------------------ */
   function initAnnounce() {
     var bar = document.getElementById("announce-bar");
@@ -536,35 +536,11 @@
     if (!bar || !msgEl) return;
 
     var messages = [
-      "25% OFF all services until Aug 14. First call is free.",
-      "Every package comes with a 3-day money-back guarantee.",
       "Plain English only. No confusing tech talk.",
       "Small budgets welcome. Prices start at PKR 15,000.",
-      "Pick your services in the pricing section — the total adds up by itself."
+      "Pick your services in the pricing section the total adds up by itself."
     ];
     var index = 0;
-
-    var timerEl = document.getElementById("announce-timer");
-    var digitsEl = timerEl ? document.getElementById("announce-timer-digits") : null;
-    if (timerEl && digitsEl) {
-      var deadline = new Date("2026-08-14T23:59:59");
-      function pad2(n) { return n < 10 ? "0" + n : "" + n; }
-      function tick() {
-        var diff = deadline.getTime() - Date.now();
-        if (diff <= 0) {
-          digitsEl.textContent = "00:00:00";
-          timerEl.classList.add("is-expired");
-          return;
-        }
-        var d = Math.floor(diff / 86400000);
-        var h = Math.floor((diff % 86400000) / 3600000);
-        var m = Math.floor((diff % 3600000) / 60000);
-        var s = Math.floor((diff % 60000) / 1000);
-        digitsEl.textContent = (d > 0 ? d + "d " : "") + pad2(h) + ":" + pad2(m) + ":" + pad2(s);
-      }
-      tick();
-      setInterval(tick, 1000);
-    }
 
     function show(i) {
       msgEl.textContent = messages[i];
@@ -724,7 +700,7 @@
           JSON.stringify(list.map(function (s) { return s.id; }))
         );
       } catch (e) {
-        // storage unavailable — ignore
+        // storage unavailable ignore
       }
     }
 
@@ -804,7 +780,7 @@
         try {
           localStorage.setItem("openagent.pricing", JSON.stringify(saved));
         } catch (e) {
-          // storage unavailable — ignore
+          // storage unavailable ignore
         }
         if (typeof window.__openAgentPricingSet === "function") {
           window.__openAgentPricingSet(saved);
