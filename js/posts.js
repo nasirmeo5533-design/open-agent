@@ -252,6 +252,65 @@
         { t: "h2", v: "The bottom line" },
         { t: "p", v: "WhatsApp is the cheapest, most personal channel a small business in Pakistan has. Fill your profile, add a catalog, set up quick replies, label your leads, and broadcast rarely but usefully. Reply fast, follow up once, and let Status do the free advertising. Do these basics and you'll sell more without spending a single rupee on ads. If you'd rather run your business than run your phone, that's what I'm here for. I can set up your WhatsApp system, build an AI agent to answer night messages, or manage the ads around it. Message me on WhatsApp and let's talk." }
       ]
+    },
+    "google-ads-pakistan": {
+      slug: "google-ads-pakistan",
+      category: "ads",
+      categoryLabel: "Ads",
+      readTime: "6 min read",
+      published: "2026-08-06",
+      updated: "2026-08-06",
+      title: "Google Ads for Small Businesses in Pakistan: A Simple Guide",
+      excerpt: "Google Ads brings customers who are already searching for what you sell. Here's how small businesses in Pakistan can start, without burning budget.",
+      hero: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=60",
+      heroFallback: "/assets/images/blog-meta-ads.svg",
+      faq: [
+        {
+          q: "How much does Google Ads cost per month in Pakistan?",
+          a: "Your ad spend is flexible and paid directly to Google, so you can start small. The management fee for Meta and Google Ads at Open Agent starts at PKR 30,000. The two costs are always separate and transparent."
+        },
+        {
+          q: "Is Google Ads good for small businesses in Pakistan?",
+          a: "Yes, especially for service and local businesses, because your ad appears at the moment someone is actively searching for what you offer. Small, focused budgets work well."
+        },
+        {
+          q: "What is the difference between Meta Ads and Google Ads?",
+          a: "Meta Ads shows your ad to people while they scroll through Facebook and Instagram. Google Ads shows your ad to people who are searching for what you sell. Both are useful, but they solve different problems."
+        },
+        {
+          q: "Do I pay ad spend to the agency or to Google?",
+          a: "At Open Agent, ad spend is billed separately and paid directly to the ad platform. The management fee covers setup, testing, and optimization."
+        }
+      ],
+      body: [
+        { t: "p", v: "Most small businesses in Pakistan only ever run ads on Facebook and Instagram. That's a mistake, because the people who see those ads are not always looking to buy. Google Ads works differently. Someone types 'AC repair in Karachi' or 'buy organic skincare in Pakistan' into Google, and your business appears right there, at the exact moment they want to buy. You don't interrupt them. You answer them. That's why Google Ads is one of the fastest ways to get real customers in Pakistan." },
+        { t: "h2", v: "Why Google Ads, not just Facebook ads" },
+        { t: "p", v: "Facebook and Instagram ads show your business to people while they scroll. Those people may not need you today, so the ad has to be clever enough to stop their thumb. Google Ads shows you to people who are already searching for what you sell. When someone types 'best wedding photographer in Karachi', they are telling Google exactly what they want. If your ad appears, they are already halfway to buying. For a small business with a limited budget, that buying intent is gold. You spend money on people who already want your service, instead of hoping someone stops scrolling." },
+        { t: "h2", v: "How much do Google Ads cost in Pakistan?" },
+        { t: "p", v: "Two costs are involved, and it's important to understand the difference. First is the ad spend: the money that goes to Google to show your ads. You pay this directly to Google, and you decide how much. Second is the management fee: what an agency charges to set up and run the ads for you. At Open Agent, Meta and Google Ads management starts at PKR 30,000, and your ad spend is always separate and billed directly. There are no hidden markups on your ad budget. For a local business, you can start small and scale only when you see results." },
+        { t: "h2", v: "The searches that actually make you money" },
+        { t: "p", v: "Not all searches are equal. 'How to fix an air conditioner' is a question someone asks for curiosity. 'AC repair near me in Karachi' is a customer with a broken machine. Your Google Ads should target searches that show buying intent. For a service business, that usually means a service plus a location: 'restaurant interior designer in Lahore', 'salon in DHA Karachi', 'lawyer for company registration in Pakistan'." },
+        { t: "p", v: "For an online store, it means product words: 'handmade candles price in Pakistan', 'buy leather wallet online', 'perfume gift set in Karachi'. Write down the exact things your customer would type at the moment they are ready to pay. Those are your keywords. Ten good keywords beat a hundred guesses every single time." },
+        { t: "h2", v: "Start small and focused" },
+        { t: "p", v: "The biggest mistake is starting with a big budget and broad keywords. A small budget that is focused almost always beats a big budget that is scattered. Start with one campaign, one city, and ten to fifteen keywords that match what your customers type. Send people to a page that is built to sell: if they searched for a service, send them to a page about that service, not your homepage. Watch one number, the cost per lead, and change what isn't working. Once you see leads coming in at a price you like, add more cities and more keywords." },
+        { t: "h2", v: "Google Ads vs Meta Ads: which one first?" },
+        { t: "p", v: "They do different jobs. Google Ads answers people who are already looking. Meta Ads finds people who don't know they want you yet. For most small businesses, the smart order is Google first if customers search for what you sell, and Meta later to build awareness. A restaurant, a clinic, or a home service business should start with Google, because their customers type a need into Google. A new fashion brand people have never heard of should start with Meta, because nobody searches for a brand they don't know. When your budget allows, both work together: Meta makes people aware, Google catches them at the moment they decide to buy." },
+        { t: "h2", v: "A simple first-30-days plan" },
+        { t: "p", v: "Week one: set up Google Ads, add your local keywords, and install conversion tracking before spending a single rupee. Week two: launch one small campaign and add negative keywords every day from your search terms report. Week three: improve your landing page so it matches your ad and answers the search. Week four: look at the numbers, pause what isn't working, and move the budget to what is. That's the whole plan. You don't need a fancy funnel or a marketing degree." },
+        { t: "h2", v: "Mistakes that burn your ad budget" },
+        { t: "p", v: "Four mistakes waste more Pakistani ad budgets than anything else. One: targeting broad words like 'shop' or 'online shopping', which eat money without bringing buyers. Two: sending everyone to the homepage and letting them figure it out. Three: ignoring negative keywords, so your ads show for 'free' and 'cheap' searches when you sell premium products. Four: no conversion tracking, so you can't see which search actually brought a sale. Fixing these four basics is usually enough to turn a losing account into a profitable one." },
+        { t: "h2", v: "What good Google Ads management looks like" },
+        { t: "p", v: "Agencies love to sound clever. Good management is simple and honest: the right keywords, a page that sells, clean tracking, and daily attention to what works. You should get a report you can understand, showing the money spent and the leads or sales that came back. If someone can't explain your ad account in plain English, that's a warning sign. At Open Agent, I run Meta and Google Ads from PKR 30,000, test what works, and move budget to the winners. Your ad spend goes straight to Google, and I never touch it." },
+        { t: "h2", v: "How to pick a Google Ads agency in Pakistan" },
+        { t: "p", v: "Any agency can create an ad account. Good ones ask questions first. Before you hire anyone, they should ask what you sell, who your customers are, where they are, and what one sale is worth to you. Then they should explain their plan in plain English and set a clear split between ad spend and their fee. Ask about reports: you should see money spent and leads or sales, not vanity numbers like clicks and impressions. Ask about ad spend: it should be billed directly to Google, never marked up. And be honest with yourself about promises no one can guarantee sales in week one, and anyone who promises 'guaranteed number one' is selling you a story. Good management is patient, transparent, and easy to understand." },
+        { t: "h2", v: "Frequently asked questions" },
+        { t: "p", v: "Q. How much does Google Ads cost per month in Pakistan? A. Your ad spend is flexible and paid directly to Google, so you can start small. My management fee for Meta and Google Ads starts at PKR 30,000. The two are always separate and transparent." },
+        { t: "p", v: "Q. Is Google Ads good for small businesses in Pakistan? A. Yes, especially for service and local businesses, because your ad appears at the moment someone is actively searching for what you offer. Small, focused budgets work well." },
+        { t: "p", v: "Q. What is the difference between Meta Ads and Google Ads? A. Meta Ads shows your ad to people while they scroll. Google Ads shows your ad to people who are searching for what you sell. Both are useful, but they solve different problems." },
+        { t: "p", v: "Q. Do I pay ad spend to the agency or to Google? A. At Open Agent, ad spend is billed separately and paid directly to the ad platform. The management fee covers setup, testing, and optimization." },
+        { t: "h2", v: "The bottom line" },
+        { t: "p", v: "Google Ads puts your business in front of people who are already looking for what you sell. Start small, target the right searches, and watch one number. If you'd rather focus on your business, I can set up and run your Google and Meta Ads for you, starting at PKR 30,000. Send me a message on WhatsApp and I'll show you what your account should look like." }
+      ]
     }
   };
 })();

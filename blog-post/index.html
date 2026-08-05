@@ -362,6 +362,24 @@
       bc.textContent = JSON.stringify(breadcrumb);
       document.head.appendChild(bc);
 
+      if (post.faq && post.faq.length) {
+        var faqSchema = {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": post.faq.map(function (item) {
+            return {
+              "@type": "Question",
+              "name": item.q,
+              "acceptedAnswer": { "@type": "Answer", "text": item.a }
+            };
+          })
+        };
+        var faqLd = document.createElement("script");
+        faqLd.type = "application/ld+json";
+        faqLd.textContent = JSON.stringify(faqSchema);
+        document.head.appendChild(faqLd);
+      }
+
       // --- Related posts (internal cross-linking) ---
       var list = document.getElementById("post-related-list");
       if (list) {
