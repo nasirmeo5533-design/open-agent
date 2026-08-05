@@ -423,13 +423,6 @@ button {
   width: 16px;
   height: 16px;
 }
-.nav-logo-img {
-  display: block;
-  height: 40px;
-  width: auto;
-  max-width: 180px;
-  object-fit: contain;
-}
 .nav-logo-word {
   font-size: 1.125rem;
   font-weight: 800;
