@@ -1,0 +1,21 @@
+{
+  "name": "Open Agent — AI & Digital Marketing for Small Businesses",
+  "short_name": "Open Agent",
+  "description": "AI agents, ads, websites, and digital marketing for small businesses in Pakistan and the US. Prices from PKR 15,000.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b1b3a",
+  "theme_color": "#ff6a00",
+  "icons": [
+    {
+      "src": "/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
