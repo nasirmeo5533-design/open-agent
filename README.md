@@ -24,11 +24,15 @@ Official website for **Open Agent**, founded by **Abeer Nasir** (Generative AI S
 
 ## Homepage Sections
 
-- Hero with typewriter effect and floating trust badges
+- Hero — outcome-focused headline, free strategy call CTA
 - Services — 7 services explained in plain English
+- Why AI — time, leads, late replies
 - Pricing calculator — tap services, total updates live, send plan via WhatsApp
-- How It Works — 3 steps
+- How It Works — steps
+- Industries
+- Why Businesses Choose Open Agent
 - About Me — Abeer Nasir
+- Why Work With Open Agent
 - FAQ — 8 common questions
 - Blog preview
 - Contact form (WhatsApp submission) + footer CTA

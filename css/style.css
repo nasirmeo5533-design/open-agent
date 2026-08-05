@@ -608,25 +608,6 @@ button {
   font-weight: 600;
   color: rgba(255, 255, 255, 0.7);
 }
-.hero-bullets {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
-  margin-top: 20px;
-}
-.hero-bullets li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.7);
-}
-.hero-bullets li::before {
-  content: "\2022";
-  color: var(--orange-core);
-}
 
 /* Live store snapshot */
 .snapshot {
@@ -1985,7 +1966,6 @@ button {
     padding-block: 112px;
   }
   .hero-sub { margin-inline: auto; }
-  .hero-bullets { justify-content: center; }
   .hero h1 { font-size: 3rem; line-height: 1.08; }
   .hero h1 { font-size: 3.75rem; }
   .hero-sub { font-size: 1.125rem; }
@@ -2172,99 +2152,6 @@ button {
 }
 .hero-media:hover .hero-media__frame img {
   transform: scale(1.05);
-}
-.hero-float {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  border-radius: 0.875rem;
-  background-color: #fff;
-  padding: 10px 16px;
-  box-shadow: var(--shadow-card-lg);
-  animation: float-y 4s ease-in-out infinite;
-}
-.hero-float strong {
-  display: block;
-  font-size: 0.8125rem;
-  font-weight: 800;
-  color: var(--ink);
-  white-space: nowrap;
-}
-.hero-float small {
-  display: block;
-  font-size: 0.6875rem;
-  color: var(--body);
-  white-space: nowrap;
-}
-.hero-float__icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  flex-shrink: 0;
-  border-radius: 0.5rem;
-  background-image: linear-gradient(to right, #FF6B00, #ff8c1a);
-  color: #fff;
-}
-.hero-float__icon svg {
-  width: 16px;
-  height: 16px;
-}
-.hero-float--top {
-  top: -18px;
-  right: -8px;
-}
-.hero-float--bottom {
-  bottom: -20px;
-  left: -8px;
-  animation-delay: 2s;
-}
-@keyframes float-y {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
-/* ---------- Trust strip ---------- */
-.trust-strip {
-  border-bottom: 1px solid var(--line);
-  background-color: #fff;
-}
-.trust-strip__inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 12px 24px;
-  padding-block: 18px;
-}
-.trust-strip__label {
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--slate-500);
-}
-.trust-badges {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 10px 20px;
-}
-.trust-badges li {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 0.8125rem;
-  font-weight: 700;
-  color: var(--navy-900);
-}
-.trust-badges svg {
-  width: 16px;
-  height: 16px;
-  color: var(--orange-core);
 }
 
 /* ---------- Service card extras ---------- */
@@ -2822,9 +2709,7 @@ button {
   }
   .hero-copy h1 { font-size: 3rem; line-height: 1.08; }
   .hero-sub { margin-inline: 0; }
-  .hero-bullets { justify-content: flex-start; }
   .hero-media__frame img { height: 420px; }
-  .trust-strip__inner { justify-content: space-between; }
   .svc { grid-template-columns: 1fr 1fr; gap: 56px; }
   .svc--reverse .svc-media { order: 2; }
   .svc-media img { height: 340px; }
@@ -3019,93 +2904,6 @@ body {
 /* ==========================================================================
    HOMEPAGE REDESIGN (black / orange / white)
    ========================================================================== */
-
-/* ---------- Trust logos (tools used) ---------- */
-.tool-logos {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 14px 28px;
-  margin-top: 40px;
-}
-.tool-logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.9375rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--slate-400);
-  opacity: 0.85;
-  transition: opacity 0.3s, color 0.3s;
-  white-space: nowrap;
-}
-.tool-logo:hover {
-  opacity: 1;
-  color: var(--navy-900);
-}
-.tool-logo svg {
-  width: 20px;
-  height: 20px;
-  flex: none;
-}
-.tool-logo svg path {
-  fill: currentColor;
-}
-.trust-strip__label {
-  margin-bottom: 8px;
-}
-
-/* ---------- What you get (trust bar) ---------- */
-.promise-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  margin-top: 8px;
-}
-.promise-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 24px;
-  border-radius: 1rem;
-  border: 1px solid var(--line);
-  background-color: #fff;
-  box-shadow: var(--shadow-card);
-  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
-}
-.promise-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255, 107, 0, 0.4);
-  box-shadow: var(--shadow-card-lg);
-}
-.promise-card__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: none;
-  width: 46px;
-  height: 46px;
-  border-radius: 13px;
-  background-color: rgba(255, 107, 0, 0.12);
-  color: var(--orange-core);
-}
-.promise-card__icon svg {
-  width: 22px;
-  height: 22px;
-}
-.promise-card h3 {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--navy-900);
-}
-.promise-card p {
-  margin-top: 4px;
-  font-size: 0.875rem;
-  line-height: 1.6;
-  color: var(--slate-600);
-}
 
 /* ---------- Why AI ---------- */
 .why-ai-grid {
@@ -3427,7 +3225,6 @@ body {
 /* ---------- Responsive additions ---------- */
 @media (min-width: 640px) {
   .industries-grid { grid-template-columns: repeat(3, 1fr); }
-  .promise-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (min-width: 768px) {
   .process-grid { grid-template-columns: repeat(2, 1fr); }
@@ -3435,7 +3232,6 @@ body {
 }
 @media (min-width: 1024px) {
   .process-grid { grid-template-columns: repeat(4, 1fr); }
-  .promise-grid { grid-template-columns: repeat(5, 1fr); }
   .why-ai-grid { grid-template-columns: repeat(3, 1fr); }
   .choose-grid { grid-template-columns: repeat(3, 1fr); }
   .work-with-grid { grid-template-columns: 1fr 1.1fr; gap: 56px; }
