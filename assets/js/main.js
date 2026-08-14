@@ -1,0 +1,145 @@
+(function(){
+'use strict'
+
+/* --- data --- */
+const site={name:'OpenAgent',email:'nasirmeo5533@gmail.com',wa:'https://wa.me/923703159642'}
+const slides=[
+  {img:'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1600&q=80',eyebrow:'AI-Powered Growth',title:'Meta Ads, Shopify & AI automation that help D2C brands grow.',text:"I'm Abeer Nasir. I help e-commerce and D2C brands grow with Meta Ads, Shopify, AI automation and content that actually converts — not vanity metrics.",cta:'Start a project'},
+  {img:'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80',eyebrow:'Data-Driven Marketing',title:'Small budgets, measured outcomes — every time.',text:'Real campaigns with real numbers. No fluff, no fake metrics. Just clear ROAS reporting and weekly optimization.',cta:'See my work'},
+  {img:'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=1600&q=80',eyebrow:'AI Automation',title:'Custom AI agents & workflows that save hours daily.',text:'No-code automation for lead capture, follow-ups, reporting and customer support. Built with ChatGPT, Claude, Gemini.',cta:'Explore services'}
+]
+const portfolio=[
+  {img:'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80',name:'E-commerce Ad Creative',role:'Meta Ads'},
+  {img:'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',name:'Campaign Results',role:'Meta Ads'},
+  {img:'https://images.unsplash.com/photo-1609749282774-5883a366cdd1?auto=format&fit=crop&w=800&q=80',name:'Perfume Brand Work',role:'Beauty / D2C'},
+  {img:'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=800&q=80',name:'AI Support Agent',role:'AI Agents'},
+  {img:'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80',name:'Shopify Layout',role:'Shopify'},
+  {img:'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',name:'Ad Analytics',role:'Meta Ads'},
+  {img:'https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=800&q=80',name:'Marketing Graphic',role:'Design'},
+  {img:'https://images.unsplash.com/photo-1716978499366-d5a84bf1fe70?auto=format&fit=crop&w=800&q=80',name:'Perfume Product Shot',role:'Beauty / D2C'},
+  {img:'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80',name:'Automation Workflow',role:'AI Automation'}
+]
+
+/* --- hero slider --- */
+function initSlider(){
+  const wrap=document.getElementById('heroSlides')
+  if(!wrap)return
+  const dots=document.getElementById('heroDots')
+  const bar=document.getElementById('heroBar')
+  let idx=0,timer
+  slides.forEach((s,i)=>{
+    const div=document.createElement('div')
+    div.className='hero-slide'+(i===0?' active':'')
+    div.style.backgroundImage='url('+s.img+')'
+    wrap.appendChild(div)
+    const btn=document.createElement('button')
+    btn.className=i===0?'active':''
+    btn.addEventListener('click',()=>go(i))
+    dots.appendChild(btn)
+  })
+  function go(i){
+    wrap.querySelectorAll('.hero-slide').forEach((e,j)=>e.classList.toggle('active',j===i))
+    dots.querySelectorAll('button').forEach((e,j)=>e.classList.toggle('active',j===i))
+    idx=i
+    resetBar()
+    updateText(i)
+  }
+  function resetBar(){
+    bar.style.transition='none';bar.style.width='0'
+    requestAnimationFrame(()=>{bar.style.transition='width 5s linear';bar.style.width='100%'})
+  }
+  function updateText(i){
+    const s=slides[i]
+    const el=document.getElementById('heroText')
+    if(el){
+      el.innerHTML='<span class="eyebrow">'+s.eyebrow+'</span><h1>'+s.title+'</h1><p>'+s.text+'</p><div class="cta-row"><a href="contact.html" class="btn">'+s.cta+' →</a></div>'
+    }
+  }
+  function next(){go((idx+1)%slides.length)}
+  function start(){timer=setInterval(next,6000);resetBar()}
+  function stop(){clearInterval(timer)}
+  start()
+  wrap.addEventListener('mouseenter',stop)
+  wrap.addEventListener('mouseleave',start)
+  updateText(0)
+}
+
+/* --- dark mode --- */
+function initTheme(){
+  const btn=document.getElementById('themeBtn')
+  if(!btn)return
+  const stored=localStorage.getItem('theme')
+  const dark=stored?stored==='dark':window.matchMedia('(prefers-color-scheme:dark)').matches
+  apply(dark)
+  btn.addEventListener('click',function(){apply(document.documentElement.getAttribute('data-theme')!=='dark')})
+  function apply(d){
+    document.documentElement.setAttribute('data-theme',d?'dark':'light')
+    localStorage.setItem('theme',d?'dark':'light')
+    btn.textContent=d?'☀️':'🌙'
+  }
+}
+
+/* --- mobile menu --- */
+function initMenu(){
+  const btn=document.getElementById('menuBtn'),nav=document.getElementById('nav')
+  if(!btn||!nav)return
+  btn.addEventListener('click',()=>nav.classList.toggle('open'))
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')))
+}
+
+/* --- scroll reveal --- */
+function initReveal(){
+  const els=document.querySelectorAll('.reveal')
+  if(!('IntersectionObserver'in window)){els.forEach(e=>e.classList.add('in'));return}
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1})
+  els.forEach(el=>io.observe(el))
+}
+
+/* --- portfolio grid + lightbox --- */
+function initPortfolio(){
+  const grid=document.getElementById('pfGrid')
+  if(!grid)return
+  portfolio.forEach((p,i)=>{
+    const div=document.createElement('div')
+    div.className='pf reveal'
+    div.innerHTML='<img src="'+p.img+'" alt="'+p.name+'" loading="lazy"><div class="cap"><b>'+p.name+'</b><span>'+p.role+'</span></div>'
+    grid.appendChild(div)
+  })
+  const lb=document.getElementById('lb'),img=lb?.querySelector('img'),name=lb?.querySelector('.meta b'),role=lb?.querySelector('.meta span')
+  if(!lb)return
+  grid.addEventListener('click',(e)=>{
+    const pf=e.target.closest('.pf')
+    if(!pf)return
+    const i=Array.from(grid.children).indexOf(pf)
+    const d=portfolio[i];if(!d)return
+    img.src=d.img;img.alt=d.name
+    name.textContent=d.name;role.textContent=d.role
+    lb.classList.add('open');document.body.style.overflow='hidden'
+  })
+  lb.addEventListener('click',()=>{lb.classList.remove('open');document.body.style.overflow=''})
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){lb.classList.remove('open');document.body.style.overflow=''}})
+}
+
+/* --- contact form --- */
+function initForm(){
+  const form=document.getElementById('contactForm')
+  if(!form)return
+  form.addEventListener('submit',function(e){
+    e.preventDefault()
+    const msg=document.getElementById('formMsg')
+    if(msg){msg.textContent='✅ Thanks! We will reach out via WhatsApp or email soon.';msg.style.display='block'}
+    form.reset()
+  })
+}
+
+/* --- init --- */
+document.addEventListener('DOMContentLoaded',function(){
+  initSlider()
+  initTheme()
+  initMenu()
+  initReveal()
+  initPortfolio()
+  initForm()
+})
+
+})()
