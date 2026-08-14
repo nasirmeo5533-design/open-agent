@@ -254,6 +254,12 @@ p{color:var(--text-muted)}
 .statband b{font-family:var(--font-display);font-size:2.4rem;color:var(--primary);font-variant-numeric:tabular-nums}
 .statband span{display:block;font-family:var(--font-mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-top:6px}
 
+/* --- floating WhatsApp button --- */
+.fwa{position:fixed;bottom:28px;right:24px;z-index:9999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s var(--ease)}
+.fwa svg{width:30px;height:30px;fill:#fff}
+.fwa:hover{transform:scale(1.1)}
+@media(prefers-reduced-motion:reduce){.fwa{transition:none}}
+
 /* --- reveal --- */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .reveal.in{opacity:1;transform:none}
