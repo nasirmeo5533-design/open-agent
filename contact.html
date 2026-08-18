@@ -37,40 +37,71 @@
   </div>
 </header>
 
-<section class="hero" style="padding:140px 0 100px;">
-  <div class="hero-overlay" style="background:linear-gradient(120deg,rgba(11,10,9,.93) 42%,rgba(11,10,9,.6) 70%,rgba(37,99,235,.18)),url(https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&w=1600&q=80) center/cover no-repeat"></div>
-  <div class="hero-glow"></div>
-  <div class="wrap">
-    <span class="eyebrow">Contact</span>
-    <h1>Let's talk about <em>your</em> growth.</h1>
-    <p>Fastest way: message me on WhatsApp. Or fill the form and I'll get back to you.</p>
+<section class="hero-bg-img" style="background:var(--text)">
+  <div style="position:absolute;inset:0;background:url('assets/images/contact-hero.jpg') center/cover no-repeat;opacity:.35"></div>
+  <div class="wrap hero-center">
+    <span class="eyebrow" style="color:var(--accent)">Contact</span>
+    <h1 style="font-size:clamp(2.2rem,4.5vw,3.6rem)">Let's talk about <em>your</em> growth.</h1>
+    <p style="color:rgba(255,255,255,.7);font-size:1.1rem;max-width:50ch;margin:18px auto 0">Fastest way: message me on WhatsApp. Or fill the form and I'll get back to you.</p>
   </div>
 </section>
 
 <section>
-  <div class="wrap cgrid">
-    <div class="reveal">
-      <span class="eyebrow">Send a message</span>
-      <h2>Contact form</h2>
-      <p style="color:var(--muted);margin-bottom:22px;">Tell me your name, email and what you need. I'll reply personally.</p>
-      <form id="contactForm">
-        <div class="field"><label for="name">Your name</label><input id="name" name="name" required placeholder="Jane Founder"></div>
-        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="you@brand.com"></div>
-        <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" placeholder="+92 300 0000000"></div>
-        <div class="field"><label for="msg">What do you need?</label><textarea id="msg" name="msg" rows="5" required placeholder="Meta Ads for my perfume store..."></textarea></div>
-        <button type="submit" class="btn">Send message →</button>
-        <p id="formMsg" style="display:none;color:var(--primary);margin-top:14px;font-weight:500;"></p>
-      </form>
-    </div>
-    <div class="reveal">
-      <div class="whatsapp-card">
-        <h3>Prefer WhatsApp?</h3>
-        <p>Tap below to open a chat with me directly. Best for quick questions and fast replies.</p>
-        <a href="https://wa.me/923703159642" class="wa-btn" target="_blank" rel="noopener">
-          <svg width="20" height="20" viewBox="0 0 32 32" fill="#fff"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.3 31.7l8-2.1c2.3 1.3 4.9 1.9 7.7 1.9 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.4c-2.4 0-4.7-.7-6.7-1.9l-.5-.3-4.7 1.2 1.3-4.6-.3-.5C3.3 20.3 2.6 18.2 2.6 16 2.6 8.2 8.2 2.6 16 2.6S29.4 8.2 29.4 16 23.8 28.8 16 28.8zm8.2-11.4c-.4-.2-2.5-1.2-2.9-1.4-.4-.1-.7-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.4.3-.8.1-2.3-1.1-3.8-2-5-4.7-.4-.7.4-.7.9-1.2.4-.4.9-1 .9-1.2l-.3-.9c-.1-.4-.3-.7-.3-.9 0-.2-.9-2.2-1.3-3-.3-.8-.7-.7-1-.7h-.9c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.4s1.5 3.9 1.7 4.2c.2.3 2.4 3.7 5.8 5.2 3.4 1.5 3.4 1 4 1 .6 0 2-.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.2-.4-.3-.8-.5z"/></svg>
+  <div class="wrap">
+    <div class="contact-split">
+      <div class="reveal">
+        <span class="eyebrow">Send a message</span>
+        <h2 style="margin-bottom:8px">Contact form</h2>
+        <p style="color:var(--text-muted);margin-bottom:28px;font-size:.95rem">Tell me your name, email and what you need. I'll reply personally.</p>
+        <form id="contactForm">
+          <div class="field"><label for="name">Your name</label><input id="name" name="name" required placeholder="Jane Founder"></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="you@brand.com"></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" placeholder="+92 300 0000000"></div>
+          <div class="field"><label for="service">Service interested in</label>
+            <select id="service" name="service" style="width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:var(--r);font-family:inherit;font-size:.95rem;background:var(--surface);color:var(--text);transition:border-color .15s,box-shadow .15s;appearance:auto">
+              <option value="">Select a service</option>
+              <option>Meta Ads</option>
+              <option>Shopify Development</option>
+              <option>AI Automation</option>
+              <option>AI Agents</option>
+              <option>AI Content</option>
+              <option>Web Development</option>
+              <option>Social Media</option>
+              <option>Multiple / Bundle</option>
+            </select>
+          </div>
+          <div class="field"><label for="msg">What do you need?</label><textarea id="msg" name="msg" rows="5" required placeholder="Meta Ads for my perfume store..."></textarea></div>
+          <button type="submit" class="btn">Send message →</button>
+          <p id="formMsg" style="display:none;color:var(--primary);margin-top:14px;font-weight:500;"></p>
+        </form>
+      </div>
+
+      <div class="reveal">
+        <div class="contact-info-card">
+          <h3 style="margin-bottom:24px">Get in touch</h3>
+          <div class="info-row">
+            <div class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><b>Email</b><span><a href="mailto:abeerinfo5566@gmail.com" style="color:var(--primary)">abeerinfo5566@gmail.com</a></span></div>
+          </div>
+          <div class="info-row">
+            <div class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><b>Phone</b><span><a href="tel:923703159642" style="color:var(--primary)">+92 370 3159642</a></span></div>
+          </div>
+          <div class="info-row">
+            <div class="ic"><svg viewBox="0 0 32 32" width="22" height="22" fill="currentColor"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.3 31.7l8-2.1c2.3 1.3 4.9 1.9 7.7 1.9 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.4c-2.4 0-4.7-.7-6.7-1.9l-.5-.3-4.7 1.2 1.3-4.6-.3-.5C3.3 20.3 2.6 18.2 2.6 16 2.6 8.2 8.2 2.6 16 2.6S29.4 8.2 29.4 16 23.8 28.8 16 28.8z"/></svg></div>
+            <div><b>WhatsApp</b><span><a href="https://wa.me/923703159642" target="_blank" rel="noopener" style="color:var(--primary)">+92 370 3159642</a></span></div>
+          </div>
+          <div class="info-row">
+            <div class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><b>Location</b><span>Karachi, Pakistan (remote worldwide)</span></div>
+          </div>
+        </div>
+
+        <a href="https://wa.me/923703159642" class="wa-btn" target="_blank" rel="noopener" style="display:flex;justify-content:center;margin-top:24px;width:100%;text-decoration:none">
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="#fff"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.3 31.7l8-2.1c2.3 1.3 4.9 1.9 7.7 1.9 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.4c-2.4 0-4.7-.7-6.7-1.9l-.5-.3-4.7 1.2 1.3-4.6-.3-.5C3.3 20.3 2.6 18.2 2.6 16 2.6 8.2 8.2 2.6 16 2.6S29.4 8.2 29.4 16 23.8 28.8 16 28.8z"/></svg>
           Chat on WhatsApp
         </a>
-        <p style="margin-top:18px;font-size:.85rem;color:#9a9894;">+92 370 3159642 · replies within a few hours</p>
+        <p style="text-align:center;margin-top:12px;font-size:.85rem;color:var(--text-muted)">Replies within a few hours</p>
       </div>
     </div>
   </div>
@@ -95,8 +126,8 @@
         <li><a href="case-studies.html">Case Studies</a></li><li><a href="blog.html">Blog</a></li>
         <li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li>
         <li><a href="privacy.html">Privacy</a></li>
-        <li><a href="terms.html">Terms of Service</a></li>
-        <li><a href="refund.html">Refund Policy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="refund.html">Refund</a></li>
       </ul></div>
       <div><h4>Contact</h4><ul>
         <li><a href="mailto:abeerinfo5566@gmail.com">abeerinfo5566@gmail.com</a></li>

@@ -37,38 +37,46 @@
   </div>
 </header>
 
-<section class="hero" style="padding:140px 0 100px;">
-  <div class="hero-overlay" style="background:linear-gradient(120deg,rgba(11,10,9,.93) 42%,rgba(11,10,9,.6) 70%,rgba(37,99,235,.18)),url(https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1600&q=80) center/cover no-repeat"></div>
-  <div class="hero-glow"></div>
-  <div class="wrap">
-    <span class="eyebrow">Portfolio</span>
-    <h1>Work that <em>speaks for itself</em>.</h1>
-    <p>A selection of Meta ad creatives, brand designs and AI marketing output. Tap any piece to see it full size.</p>
+<section class="hero-bg-img" style="background:var(--text)">
+  <div style="position:absolute;inset:0;background:url('assets/images/portfolio-hero.jpg') center/cover no-repeat;opacity:.35"></div>
+  <div class="wrap hero-center">
+    <span class="eyebrow" style="color:var(--accent)">Portfolio</span>
+    <h1 style="font-size:clamp(2.2rem,4.5vw,3.6rem)">Work that <em>speaks for itself</em>.</h1>
+    <p style="color:rgba(255,255,255,.7);font-size:1.1rem;max-width:50ch;margin:18px auto 0">A selection of Meta ad creatives, brand designs and AI marketing output. Tap any piece to see it full size.</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="pf-grid">
-      <div class="pf reveal"><img src="assets/images/portfolio/portfolio13.png" alt="Meta ad creative for e-commerce brand — small-budget Meta Ads test" data-name="E-commerce Ad Creative" data-role="Meta Ads"><div class="cap"><b>E-commerce Ad Creative</b><span>Meta Ads · small-budget test</span></div></div>
-      <div class="pf reveal"><img src="assets/images/portfolio/portfolio16.png" alt="Facebook ad campaign results" data-name="Campaign Results" data-role="Meta Ads"><div class="cap"><b>Campaign Results</b><span>Meta Ads · ROAS-positive</span></div></div>
-      <div class="pf reveal"><img src="assets/images/portfolio/portfolio17.png" alt="Brand identity design for D2C beauty brand — logo and visual system by Open Agent" data-name="Brand Identity" data-role="Design"><div class="cap"><b>Brand Identity</b><span>Design</span></div></div>
-      <div class="pf reveal"><img src="assets/images/portfolio/portfolio18.png" alt="AI-generated social post" data-name="AI Social Post" data-role="AI Content"><div class="cap"><b>AI Social Post</b><span>AI Content</span></div></div>
-      <div class="pf reveal"><img src="assets/images/portfolio/portfolio19.png" alt="Shopify product page layout that lifted conversion" data-name="Shopify Layout" data-role="Shopify"><div class="cap"><b>Shopify Layout</b><span>Shopify · CRO</span></div></div>
-      <div class="pf reveal"><img src="assets/images/portfolio/portfolio20.png" alt="Ad creative variant tested for perfume brand" data-name="Ad Variant" data-role="Meta Ads"><div class="cap"><b>Ad Variant</b><span>Meta Ads</span></div></div>
-      <div class="pf reveal"><img src="assets/images/portfolio/portfolio21.png" alt="Marketing graphic for social media — promotional post design by Open Agent" data-name="Marketing Graphic" data-role="Design"><div class="cap"><b>Marketing Graphic</b><span>Design</span></div></div>
-      <div class="pf reveal"><img src="assets/images/portfolio/portfolio_12.png" alt="Perfume brand creative that generated 6 leads from PKR 2,000" data-name="Perfume Brand Work" data-role="Beauty / D2C"><div class="cap"><b>Perfume Brand Work</b><span>Beauty / D2C · 6 leads / PKR 2,000</span></div></div>
-      <div class="pf reveal"><img src="assets/images/portfolio/portfolio_14.png" alt="Meta ad campaign creative set for e-commerce brand — multiple variants tested by Open Agent" data-name="Creative Set" data-role="Meta Ads"><div class="cap"><b>Creative Set</b><span>Meta Ads</span></div></div>
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="meta-ads">Meta Ads</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+      <button class="filter-btn" data-filter="shopify">Shopify</button>
+      <button class="filter-btn" data-filter="ai-content">AI Content</button>
+    </div>
+
+    <div class="masonry" id="masonryGrid">
+      <div class="masonry-item pf reveal" data-cat="meta-ads"><img src="assets/images/portfolio/portfolio13.png" alt="Meta ad creative for e-commerce brand" data-name="E-commerce Ad Creative" data-role="Meta Ads"><div class="cap"><b>E-commerce Ad Creative</b><span>Meta Ads · small-budget test</span></div></div>
+      <div class="masonry-item pf reveal" data-cat="meta-ads"><img src="assets/images/portfolio/portfolio16.png" alt="Facebook ad campaign results" data-name="Campaign Results" data-role="Meta Ads"><div class="cap"><b>Campaign Results</b><span>Meta Ads · ROAS-positive</span></div></div>
+      <div class="masonry-item pf reveal" data-cat="design"><img src="assets/images/portfolio/portfolio17.png" alt="Brand identity design" data-name="Brand Identity" data-role="Design"><div class="cap"><b>Brand Identity</b><span>Design</span></div></div>
+      <div class="masonry-item pf reveal" data-cat="ai-content"><img src="assets/images/portfolio/portfolio18.png" alt="AI-generated social post" data-name="AI Social Post" data-role="AI Content"><div class="cap"><b>AI Social Post</b><span>AI Content</span></div></div>
+      <div class="masonry-item pf reveal" data-cat="shopify"><img src="assets/images/portfolio/portfolio19.png" alt="Shopify product page layout" data-name="Shopify Layout" data-role="Shopify"><div class="cap"><b>Shopify Layout</b><span>Shopify · CRO</span></div></div>
+      <div class="masonry-item pf reveal" data-cat="meta-ads"><img src="assets/images/portfolio/portfolio20.png" alt="Ad creative variant" data-name="Ad Variant" data-role="Meta Ads"><div class="cap"><b>Ad Variant</b><span>Meta Ads</span></div></div>
+      <div class="masonry-item pf reveal" data-cat="design"><img src="assets/images/portfolio/portfolio21.png" alt="Marketing graphic for social media" data-name="Marketing Graphic" data-role="Design"><div class="cap"><b>Marketing Graphic</b><span>Design</span></div></div>
+      <div class="masonry-item pf reveal" data-cat="meta-ads"><img src="assets/images/portfolio/portfolio_12.png" alt="Perfume brand creative" data-name="Perfume Brand Work" data-role="Beauty / D2C"><div class="cap"><b>Perfume Brand Work</b><span>Beauty / D2C · 6 leads / PKR 2,000</span></div></div>
+      <div class="masonry-item pf reveal" data-cat="meta-ads"><img src="assets/images/portfolio/portfolio_14.png" alt="Meta ad campaign creative set" data-name="Creative Set" data-role="Meta Ads"><div class="cap"><b>Creative Set</b><span>Meta Ads</span></div></div>
     </div>
   </div>
 </section>
 
-<section class="center" style="background:var(--mist);">
+<section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
-    <span class="eyebrow">Your brand next?</span>
-    <h2>Let's make work worth showing</h2>
-    <p class="lead" style="margin:0 auto 24px;">Send me your products or goals — I'll turn them into creatives that convert.</p>
-    <a href="contact.html" class="btn">Start a project →</a>
+    <div class="cta-banner">
+      <h2>Your brand next?</h2>
+      <p>Send me your products or goals — I'll turn them into creatives that convert.</p>
+      <a href="contact.html" class="btn">Start a project →</a>
+    </div>
   </div>
 </section>
 
@@ -77,6 +85,23 @@
   <img src="" alt="" style="max-width:92vw;max-height:88vh;border-radius:8px;box-shadow:0 30px 80px -20px rgba(0,0,0,.8)">
   <div class="meta" style="position:absolute;bottom:34px;left:0;right:0;text-align:center;color:#fff"><b></b><span></span></div>
 </div>
+
+<script>
+document.querySelectorAll('#filterBar .filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#filterBar .filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('#masonryGrid .masonry-item').forEach(item => {
+      if (filter === 'all' || item.dataset.cat === filter) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
 
 <footer class="footer">
   <div class="wrap">
@@ -97,8 +122,8 @@
         <li><a href="case-studies.html">Case Studies</a></li><li><a href="blog.html">Blog</a></li>
         <li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li>
         <li><a href="privacy.html">Privacy</a></li>
-        <li><a href="terms.html">Terms of Service</a></li>
-        <li><a href="refund.html">Refund Policy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="refund.html">Refund</a></li>
       </ul></div>
       <div><h4>Contact</h4><ul>
         <li><a href="mailto:abeerinfo5566@gmail.com">abeerinfo5566@gmail.com</a></li>

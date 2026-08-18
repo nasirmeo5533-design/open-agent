@@ -37,66 +37,106 @@
   </div>
 </header>
 
-<section class="hero" style="padding:150px 0 90px;">
-  <div class="hero-overlay" style="background:linear-gradient(120deg,rgba(11,10,9,.93) 42%,rgba(11,10,9,.6) 70%,rgba(37,99,235,.18)),url(https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80) center/cover no-repeat"></div>
-  <div class="hero-glow"></div>
-  <div class="wrap" style="text-align:center;">
-    <span class="eyebrow">Pricing</span>
-    <h1>Simple, honest pricing — what you see is what you pay</h1>
-    <p class="lead" style="margin:0 auto;">Pick a level. Every plan includes weekly reporting and direct WhatsApp access. Backed by a 4-day money-back guarantee.</p>
+<section class="hero-center" style="background:linear-gradient(135deg,var(--primary),var(--text));padding:140px 0 80px">
+  <div class="wrap">
+    <span class="eyebrow" style="color:rgba(255,255,255,.7)">Pricing</span>
+    <h1 style="color:#fff;font-size:clamp(2rem,4vw,3.2rem)">Simple, honest pricing</h1>
+    <p style="color:rgba(255,255,255,.75);font-size:1.05rem;max-width:52ch;margin:14px auto 0">What you see is what you pay. Every plan includes weekly reporting and direct WhatsApp access. Backed by a 4-day money-back guarantee.</p>
   </div>
 </section>
 
-<section>
+<section style="margin-top:-40px;position:relative;z-index:5">
   <div class="wrap">
-    <div class="price-grid">
-      <div class="price reveal">
+    <div class="toggle-wrap">
+      <span class="toggle-label active" id="monthlyLabel">Monthly</span>
+      <div class="toggle-switch" id="billingToggle"></div>
+      <span class="toggle-label" id="annualLabel">Annual <span style="font-size:.75rem;color:var(--success);font-weight:600">Save 20%</span></span>
+    </div>
+
+    <div class="price-grid" id="pricingCards">
+      <div class="price card-lift reveal">
         <h4>Starter</h4>
-        <div class="amt">PKR 30,000<span>/mo</span></div>
+        <div class="amt" data-monthly="PKR 30,000" data-annual="PKR 24,000">PKR 30,000<span>/mo</span></div>
         <ul>
           <li>1 service line (e.g. Meta Ads OR AI automation)</li>
           <li>Weekly optimization</li>
           <li>Monthly report</li>
           <li>WhatsApp support</li>
         </ul>
-        <a href="contact.html" class="btn ghost">Choose Starter</a>
+        <a href="contact.html" class="btn ghost" style="margin-top:auto">Choose Starter</a>
       </div>
-      <div class="price reveal featured">
+      <div class="price featured card-lift reveal">
         <div class="pop">Most popular</div>
         <h4>Premium</h4>
-        <div class="amt">PKR 50,000<span>/mo</span></div>
+        <div class="amt" data-monthly="PKR 50,000" data-annual="PKR 40,000">PKR 50,000<span>/mo</span></div>
         <ul>
           <li>Up to 3 service lines</li>
           <li>Daily optimization</li>
           <li>Bi-weekly report + call</li>
           <li>Priority WhatsApp support</li>
         </ul>
-        <a href="contact.html" class="btn">Choose Premium</a>
+        <a href="contact.html" class="btn" style="margin-top:auto">Choose Premium</a>
       </div>
-      <div class="price reveal">
+      <div class="price card-lift reveal">
         <h4>Pro</h4>
-        <div class="amt">PKR 80,000<span>/mo</span></div>
+        <div class="amt" data-monthly="PKR 80,000" data-annual="PKR 64,000">PKR 80,000<span>/mo</span></div>
         <ul>
           <li>Full stack: Ads + Shopify + AI</li>
           <li>Daily optimization + testing</li>
           <li>Weekly report + strategy call</li>
           <li>Priority support + on-call</li>
         </ul>
-        <a href="contact.html" class="btn ghost">Choose Pro</a>
+        <a href="contact.html" class="btn ghost" style="margin-top:auto">Choose Pro</a>
       </div>
     </div>
-    <p style="text-align:center;margin-top:28px;color:var(--muted);">All prices in PKR. 4-day money-back guarantee — not satisfied in the first 4 days? Full refund, no questions. See <a href="refund.html" style="color:var(--primary);">Refund Policy</a>.</p>
+    <p style="text-align:center;margin-top:24px;color:var(--text-muted);font-size:.9rem">All prices in PKR. 4-day money-back guarantee — <a href="refund.html" style="color:var(--primary)">See Refund Policy</a></p>
   </div>
 </section>
 
-<section class="center" style="padding-bottom:120px;">
+<section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
-    <span class="eyebrow">Not sure which?</span>
-    <h2>Tell me your goal</h2>
-    <p class="lead" style="margin:0 auto 24px;">I'll recommend the right plan — or a custom bundle.</p>
-    <a href="contact.html" class="btn">Get a free quote →</a>
+    <div class="sec-head center">
+      <span class="eyebrow">Questions?</span>
+      <h2>Pricing FAQ</h2>
+    </div>
+    <div class="faq-acc" style="max-width:720px">
+      <details><summary>Is there a lock-in contract?</summary><p>No. You own your ad account and pixels from day one, and you can leave whenever you want. We keep clients with results, not contracts.</p></details>
+      <details><summary>What is the money-back guarantee?</summary><p>Not satisfied in the first 4 days? Full refund, no questions asked. See our refund policy for details.</p></details>
+      <details><summary>Do you work with small budgets?</summary><p>Absolutely. Most of our case studies started with PKR 1,000–2,000 ad spends. Small tests, measured results.</p></details>
+      <details><summary>How quickly can we start?</summary><p>After a free strategy call, we can launch campaigns within 48 hours for most projects.</p></details>
+      <details><summary>Can I upgrade or downgrade?</summary><p>Yes — just message me on WhatsApp and we'll adjust your plan next billing cycle.</p></details>
+    </div>
   </div>
 </section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-banner">
+      <h2>Not sure which plan?</h2>
+      <p>Tell me your goal and I'll recommend the right plan — or a custom bundle.</p>
+      <a href="contact.html" class="btn">Get a free quote →</a>
+    </div>
+  </div>
+</section>
+
+<script>
+const toggle = document.getElementById('billingToggle');
+const monthlyLabel = document.getElementById('monthlyLabel');
+const annualLabel = document.getElementById('annualLabel');
+const amounts = document.querySelectorAll('.amt[data-monthly]');
+
+toggle.addEventListener('click', () => {
+  toggle.classList.toggle('active');
+  const isAnnual = toggle.classList.contains('active');
+  monthlyLabel.classList.toggle('active', !isAnnual);
+  annualLabel.classList.toggle('active', isAnnual);
+  amounts.forEach(el => {
+    const val = isAnnual ? el.dataset.annual : el.dataset.monthly;
+    const suffix = el.querySelector('span') ? el.querySelector('span').textContent : '/mo';
+    el.innerHTML = val + '<span>' + suffix + '</span>';
+  });
+});
+</script>
 
 <footer class="footer">
   <div class="wrap">
@@ -118,8 +158,8 @@
         <li><a href="blog.html">Blog</a></li><li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="privacy.html">Privacy</a></li>
-        <li><a href="terms.html">Terms of Service</a></li>
-        <li><a href="refund.html">Refund Policy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="refund.html">Refund</a></li>
       </ul></div>
       <div><h4>Contact</h4><ul>
         <li><a href="mailto:abeerinfo5566@gmail.com">abeerinfo5566@gmail.com</a></li>

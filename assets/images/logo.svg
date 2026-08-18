@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 48" width="260" height="48">
+  <defs>
+    <linearGradient id="mark-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9B1B30"/>
+      <stop offset="100%" stop-color="#C62828"/>
+    </linearGradient>
+  </defs>
+  <!-- Distinctive mark: stylised "O" with an embedded upward arrow / node -->
+  <circle cx="22" cy="24" r="18" fill="none" stroke="url(#mark-grad)" stroke-width="3.2"/>
+  <path d="M22 10 L22 38 M22 10 L14 18 M22 10 L30 18" stroke="url(#mark-grad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Wordmark -->
+  <text x="50" y="32" font-family="'Playfair Display',Georgia,serif" font-weight="700" font-size="30" fill="#1C1917" letter-spacing="-0.5">Open</text>
+  <text x="133" y="32" font-family="'Playfair Display',Georgia,serif" font-weight="700" font-size="30" fill="#9B1B30" letter-spacing="-0.5">Agent</text>
+</svg>

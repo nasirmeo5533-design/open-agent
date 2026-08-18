@@ -38,83 +38,116 @@
       <a href="portfolio.html">Portfolio</a><a href="services.html">Services</a>
       <a href="pricing.html">Pricing</a><a href="case-studies.html">Case Studies</a>
 <a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
-      
       <a href="contact.html" class="btn">Get a Quote</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
   </div>
 </header>
 
-<section class="hero" style="padding:150px 0 120px;">
-  <div class="hero-overlay" style="background:linear-gradient(120deg,rgba(11,10,9,.93) 42%,rgba(11,10,9,.6) 70%,rgba(37,99,235,.18)),url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80) center/cover no-repeat"></div>
-  <div class="hero-glow"></div>
-  <div class="wrap">
-    <span class="eyebrow">Services</span>
-    <h1>Everything to <em>grow</em>, in one place.</h1>
-    <p>Eight practical service lines, all delivered by me — no account-manager ping-pong, no jargon reports. Pick the lever that hurts most today.</p>
+<section class="hero-bg-img" style="background:var(--text)">
+  <div style="position:absolute;inset:0;background:url('assets/images/services-hero.jpg') center/cover no-repeat;opacity:.35"></div>
+  <div class="wrap hero-center">
+    <span class="eyebrow" style="color:var(--accent)">Services</span>
+    <h1 style="font-size:clamp(2.2rem,4.5vw,3.6rem)">Everything to <em>grow</em>, in one place.</h1>
+    <p style="color:rgba(255,255,255,.7);font-size:1.1rem;max-width:54ch;margin:18px auto 0">Eight practical service lines, all delivered by me — no account-manager ping-pong, no jargon reports. Pick the lever that hurts most today.</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="head center" style="max-width:700px;margin:0 auto 52px;text-align:center">
+    <div class="sec-head center">
       <span class="eyebrow">The lever</span>
       <h2>What do you need to move?</h2>
       <p class="lead" style="margin:0 auto">Every service below starts with the same promise: a clear scope, a real number to measure, and a report you can actually read.</p>
     </div>
-    <div class="svc-grid">
-      <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l14-6v14L3 13z"/><path d="M3 11v2a2 2 0 0 0 2 2h2v4a2 2 0 0 0 4 0v-4h4"/></svg></div><h3>Meta Ads</h3><p>Facebook &amp; Instagram campaigns planned, launched and optimized for ROAS. Audience research, creative testing, daily tuning — small budgets welcome.</p></div>
-      <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.4 12.2a1.6 1.6 0 0 0 1.6 1.3h8.8a1.6 1.6 0 0 0 1.6-1.3L22 7H6"/></svg></div><h3>Shopify Development</h3><p>Store setup, theme customization, product-page optimization and checkout fixes that lift conversion.</p></div>
-      <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 13a7.6 7.6 0 0 0 0-2l2-1.5-2-3.4-2.3 1a7.6 7.6 0 0 0-1.7-1l-.3-2.6H10.9l-.3 2.6a7.6 7.6 0 0 0-1.7 1l-2.3-1-2 3.4L4.6 11a7.6 7.6 0 0 0 0 2l-2 1.5 2 3.4 2.3-1a7.6 7.6 0 0 0 1.7 1l.3 2.6h4.2l.3-2.6a7.6 7.6 0 0 0 1.7-1l2.3 1 2-3.4z"/></svg></div><h3>AI Automation</h3><p>No-code workflows (Zapier/Make/n8n style) that automate lead capture, follow-ups and reporting.</p></div>
-      <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="8" width="16" height="11" rx="2.5"/><path d="M12 8V5a2 2 0 0 0-4 0M12 8V5a2 2 0 0 1 4 0M9 13h.01M15 13h.01M9.5 16h5"/></svg></div><h3>AI Agents</h3><p>Custom chatbots &amp; virtual assistants built on LLMs (ChatGPT, Claude, Gemini) for support and lead gen — on your website or WhatsApp.</p></div>
-      <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L3 11l8 8 7-6zM3 11l3-3 4 4"/><circle cx="8.5" cy="8.5" r="1"/></svg></div><h3>AI Content</h3><p>Ad creatives, social posts and email copy generated with AI and refined for your niche and voice.</p></div>
-      <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M14 4l-4 16"/></svg></div><h3>Web Development</h3><p>Fast, clean, mobile-first websites — the same stack powering this site.</p></div>
-      <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l14-6v14L3 13z"/><path d="M3 11v2a2 2 0 0 0 2 2h2v4a2 2 0 0 0 4 0v-4h4"/><circle cx="12" cy="12" r="9"/></svg></div><h3>Paid Ads — Google &amp; Meta</h3><p>Full-funnel paid media across Google Search, Google Display, Facebook &amp; Instagram. Keyword and audience research, ad creative, bid strategy and weekly ROAS reporting.</p></div>
-      <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg></div><h3>Social Media</h3><p>Content calendars, organic growth and community management across Instagram, Facebook, X and LinkedIn — plus short-form video that builds your brand.</p></div>
+
+    <div class="tabs" id="serviceTabs" style="justify-content:center">
+      <button class="tab-btn active" data-tab="marketing">Marketing</button>
+      <button class="tab-btn" data-tab="development">Development</button>
+      <button class="tab-btn" data-tab="ai">AI &amp; Automation</button>
+    </div>
+
+    <div class="tab-content active" id="tab-marketing">
+      <div class="svc-grid">
+        <div class="svc card-lift reveal"><div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l14-6v14L3 13z"/><path d="M3 11v2a2 2 0 0 0 2 2h2v4a2 2 0 0 0 4 0v-4h4"/></svg></div><h3>Meta Ads</h3><p>Facebook &amp; Instagram campaigns planned, launched and optimized for ROAS. Audience research, creative testing, daily tuning — small budgets welcome.</p></div>
+        <div class="svc card-lift reveal"><div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l14-6v14L3 13z"/><path d="M3 11v2a2 2 0 0 0 2 2h2v4a2 2 0 0 0 4 0v-4h4"/><circle cx="12" cy="12" r="9"/></svg></div><h3>Paid Ads — Google &amp; Meta</h3><p>Full-funnel paid media across Google Search, Google Display, Facebook &amp; Instagram. Keyword and audience research, ad creative, bid strategy and weekly ROAS reporting.</p></div>
+        <div class="svc card-lift reveal"><div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg></div><h3>Social Media</h3><p>Content calendars, organic growth and community management across Instagram, Facebook, X and LinkedIn — plus short-form video that builds your brand.</p></div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-development">
+      <div class="svc-grid">
+        <div class="svc card-lift reveal"><div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.4 12.2a1.6 1.6 0 0 0 1.6 1.3h8.8a1.6 1.6 0 0 0 1.6-1.3L22 7H6"/></svg></div><h3>Shopify Development</h3><p>Store setup, theme customization, product-page optimization and checkout fixes that lift conversion.</p></div>
+        <div class="svc card-lift reveal"><div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M14 4l-4 16"/></svg></div><h3>Web Development</h3><p>Fast, clean, mobile-first websites — the same stack powering this site.</p></div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-ai">
+      <div class="svc-grid">
+        <div class="svc card-lift reveal"><div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 13a7.6 7.6 0 0 0 0-2l2-1.5-2-3.4-2.3 1a7.6 7.6 0 0 0-1.7-1l-.3-2.6H10.9l-.3 2.6a7.6 7.6 0 0 0-1.7 1l-2.3-1-2 3.4L4.6 11a7.6 7.6 0 0 0 0 2l-2 1.5 2 3.4 2.3-1a7.6 7.6 0 0 0 1.7 1l.3 2.6h4.2l.3-2.6a7.6 7.6 0 0 0 1.7-1l2.3 1 2-3.4z"/></svg></div><h3>AI Automation</h3><p>No-code workflows (Zapier/Make/n8n style) that automate lead capture, follow-ups and reporting.</p></div>
+        <div class="svc card-lift reveal"><div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="8" width="16" height="11" rx="2.5"/><path d="M12 8V5a2 2 0 0 0-4 0M12 8V5a2 2 0 0 1 4 0M9 13h.01M15 13h.01M9.5 16h5"/></svg></div><h3>AI Agents</h3><p>Custom chatbots &amp; virtual assistants built on LLMs (ChatGPT, Claude, Gemini) for support and lead gen — on your website or WhatsApp.</p></div>
+        <div class="svc card-lift reveal"><div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L3 11l8 8 7-6zM3 11l3-3 4 4"/><circle cx="8.5" cy="8.5" r="1"/></svg></div><h3>AI Content</h3><p>Ad creatives, social posts and email copy generated with AI and refined for your niche and voice.</p></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section style="background:var(--surface);">
+<section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
-    <div class="head center"><span class="eyebrow">Engagement</span><h2>How a project runs</h2></div>
-    <div class="steps">
-      <div class="step reveal"><div class="n">01</div><h4>Discovery call</h4><p>Free 20-min call to understand goals, budget and blockers.</p></div>
-      <div class="step reveal"><div class="n">02</div><h4>Proposal</h4><p>Clear scope, deliverables and price — no surprises.</p></div>
-      <div class="step reveal"><div class="n">03</div><h4>Build &amp; launch</h4><p>I do the work; you see progress weekly.</p></div>
-      <div class="step reveal"><div class="n">04</div><h4>Optimize</h4><p>Measure, report, improve every month.</p></div>
+    <div class="sec-head center">
+      <span class="eyebrow">Process</span>
+      <h2>How a project runs</h2>
+    </div>
+    <div class="process">
+      <div class="process-step reveal"><div class="num">1</div><h4>Discovery call</h4><p>Free 20-min call to understand goals, budget and blockers.</p></div>
+      <div class="process-step reveal"><div class="num">2</div><h4>Proposal</h4><p>Clear scope, deliverables and price — no surprises.</p></div>
+      <div class="process-step reveal"><div class="num">3</div><h4>Build &amp; launch</h4><p>I do the work; you see progress weekly.</p></div>
+      <div class="process-step reveal"><div class="num">4</div><h4>Optimize</h4><p>Measure, report, improve every month.</p></div>
     </div>
   </div>
 </section>
 
-<section id="ai-tools" style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section>
   <div class="wrap">
-    <div class="head center" style="max-width:680px;margin:0 auto 40px;text-align:center">
-      <span class="eyebrow">The stack</span>
-      <h2>The tools behind the work</h2>
-      <p class="lead" style="margin:0 auto">Production AI tools, configured and tuned by a human — so the output is on-brand, not generic.</p>
+    <div class="sec-head center">
+      <span class="eyebrow">Why choose us</span>
+      <h2>What you get with Open Agent</h2>
     </div>
-    <div class="tools">
-      <span class="tool"><svg viewBox="0 0 24 24"><path d="M12 2c-1.6 0-3 .8-3.8 2.1-.9-.4-1.9-.4-2.8 0L3.1 3.1v3.8c0 .9.5 1.8 1.3 2.3C4.2 10.5 4 11.7 4 13c0 1.3.2 2.5.4 3.8-.8.5-1.3 1.4-1.3 2.3v3.8l3.3-1c.9.4 1.9.4 2.8 0 .8 1.3 2.2 2.1 3.8 2.1s3-.8 3.8-2.1c.9.4 1.9.4 2.8 0l3.3 1v-3.8c0-.9-.5-1.8-1.3-2.3.2-1.3.4-2.5.4-3.8s-.2-2.5-.4-3.8c.8-.5 1.3-1.4 1.3-2.3V3.1l-3.3 1c-.9-.4-1.9-.4-2.8 0C15 2.8 13.6 2 12 2z"/></svg>ChatGPT</span>
-      <span class="tool"><svg viewBox="0 0 24 24"><path d="M12 3C8.7 3 6 5.7 6 9c0 1.6.6 3 1.6 4.1C6 14 5 15.7 5 17c0 2.2 2 4 5.3 4h3.4c3.3 0 5.3-1.8 5.3-4 0-1.3-1-3-2.6-3.9.9-1.1 1.6-2.5 1.6-4.1 0-3.3-2.7-6-6-6z"/></svg>Claude</span>
-      <span class="tool"><svg viewBox="0 0 24 24"><path d="M12 3C7 3 3 7 3 12s4 9 9 9 9-4 9-9-4-9-9-9zm0 15c-1 0-2-1.3-2-3s1-3 2-3 2 1.3 2 3-1 3-2 3z"/></svg>Gemini</span>
-      <span class="tool"><svg viewBox="0 0 24 24"><path d="M12 2C7.6 2 4 5.6 4 10c0 2.2.9 4.2 2.4 5.7-.2 1.9-1 3.3-2.2 4.3-.5.4-.2 1.2.5 1.2 2.4 0 4.3-.8 5.6-2 .6.1 1.1.2 1.7.2 4.4 0 8-3.6 8-8S16.4 2 12 2z"/></svg>Zapier</span>
-      <span class="tool"><svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 5.2 5 9.5c0 2.4 1.2 4.6 3 6 .4 2.7 1.6 4.6 4 5.5v-3c-1-.7-1.8-2-2-4 1 .5 2.1.8 3.5.8 1.5 0 2.6-.3 3.5-.8-.2 2-.9 3.3-2 4v3c2.4-.9 3.6-2.8 4-5.5 1.8-1.4 3-3.6 3-6 0-4.3-3-7.5-7-7.5zM12 6c1.2 0 2.2 1.6 2.2 3.5S13.2 13 12 13s-2.2-1.6-2.2-3.5S10.8 6 12 6z"/></svg>Make</span>
-      <span class="tool"><svg viewBox="0 0 24 24"><path d="M12 2C7.6 2 4 5.6 4 10c0 1.9.7 3.6 1.8 5L5 22l3.6-1.9c1.1.5 2.2.9 3.4.9 4.4 0 8-3.6 8-8s-3.6-8-8-8z"/></svg>n8n</span>
-      <span class="tool"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"/></svg>Meta</span>
-      <span class="tool"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>Google Ads</span>
+    <div style="max-width:640px;margin:0 auto">
+      <ul class="feature-list">
+        <li>One person accountable — no handoffs, no account managers</li>
+        <li>AI-powered workflows that save you 2+ hours daily</li>
+        <li>Small budgets welcome — tests from PKR 1,000</li>
+        <li>Weekly reporting with numbers you can actually read</li>
+        <li>48-hour campaign launch for most projects</li>
+        <li>You own your ad accounts and pixels from day one</li>
+        <li>No lock-in contracts — stay because of results</li>
+        <li>Direct WhatsApp access to the founder</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section class="center">
+<section>
   <div class="wrap">
-    <span class="eyebrow">Get started</span>
-    <h2>Tell me your goal</h2>
-    <p class="lead" style="margin:0 auto 24px;">Pick one service or ask for a bundle. I'll reply on WhatsApp or email.</p>
-    <a href="contact.html" class="btn">Get a free quote →</a>
+    <div class="cta-banner">
+      <h2>Get a free consultation</h2>
+      <p>Pick one service or ask for a bundle. I'll reply on WhatsApp or email.</p>
+      <a href="contact.html" class="btn">Get a free quote →</a>
+    </div>
   </div>
 </section>
+
+<script>
+document.querySelectorAll('#serviceTabs .tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#serviceTabs .tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+  });
+});
+</script>
 
 <footer class="footer">
   <div class="wrap">
@@ -135,8 +168,8 @@
         <li><a href="case-studies.html">Case Studies</a></li><li><a href="blog.html">Blog</a></li>
         <li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li>
         <li><a href="privacy.html">Privacy</a></li>
-        <li><a href="terms.html">Terms of Service</a></li>
-        <li><a href="refund.html">Refund Policy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="refund.html">Refund</a></li>
       </ul></div>
       <div><h4>Contact</h4><ul>
         <li><a href="mailto:abeerinfo5566@gmail.com">abeerinfo5566@gmail.com</a></li>
