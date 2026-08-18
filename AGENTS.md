@@ -59,12 +59,14 @@ Each `.html` is fully self-contained and must copy the existing pattern:
 
 ## Design system
 
-- **Theme:** Dark — `--bg:#0B0A09`, `--surface:#1C1917`, `--text:#F5F3F0`
-- **Primary:** Blue `#2563EB` (accent `#60A5FA`)
-- **Fonts:** Inter (display + body), JetBrains Mono (labels/eyebrows)
+- **Theme:** Light skin/cream — `--bg:#FDF2F0`, `--surface:#FFF1EE`, `--text:#1C1917`
+- **Primary:** Rose red `#E11D48` (accent `#FB7185`, hover `#F43F5E`)
+- **Fonts:** Playfair Display (display headlines via `--font-display`), Poppins (body via `--font-body`), JetBrains Mono (labels/eyebrows via `--font-mono`)
 - **Buttons:** Rounded `var(--r)` (12px), not pill-radius
 - **Layout:** Full-width sections, boxed content via `.wrap` (max-width 1180px)
 - Hero uses Unsplash stock images (set in `assets/js/main.js` `slides` array)
+- CSS file comment still says "Dark Agency Theme" / "Blue" — the variables have been updated but the comment header is stale
+- **Known issue:** 10 hardcoded `rgba(37,99,235,...)` values (old blue) remain in `style.css` — should be `rgba(225,29,72,...)` to match the new rose-red theme. Affected lines: btn box-shadow, hero-glow, svc:hover border, svc/why-card icon borders, faq-acc open state, input focus ring, timeline dot glow.
 
 ## Don't touch
 
