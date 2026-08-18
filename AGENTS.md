@@ -57,6 +57,15 @@ Each `.html` is fully self-contained and must copy the existing pattern:
 2. Add its URL to `sitemap.xml` (base `https://open-agent.agency/`; keep `robots.txt` pointing at it).
 3. For a blog post: add `blog/<slug>.html`, add the card to `blog.html`, and add a `sitemap.xml` entry. (Optionally mirror it into `js/posts.js` for the dynamic blog — not required.)
 
+## Design system
+
+- **Theme:** Dark — `--bg:#0B0A09`, `--surface:#1C1917`, `--text:#F5F3F0`
+- **Primary:** Blue `#2563EB` (accent `#60A5FA`)
+- **Fonts:** Inter (display + body), JetBrains Mono (labels/eyebrows)
+- **Buttons:** Rounded `var(--r)` (12px), not pill-radius
+- **Layout:** Full-width sections, boxed content via `.wrap` (max-width 1180px)
+- Hero uses Unsplash stock images (set in `assets/js/main.js` `slides` array)
+
 ## Don't touch
 
 - `google3cef563566032184.html` — Google site-verification file.

@@ -52,7 +52,7 @@ function initSlider(){
     const s=slides[i]
     const el=document.getElementById('heroText')
     if(el){
-      el.innerHTML='<span class="eyebrow">'+s.eyebrow+'</span><h1>'+s.title+'</h1><p>'+s.text+'</p><div class="cta-row"><a href="contact.html" class="btn">'+s.cta+' →</a></div>'
+      el.innerHTML='<span class="eyebrow">'+s.eyebrow+'</span><h1>'+s.title+'</h1><p>'+s.text+'</p><div class="cta-row"><a href="contact.html" class="btn">'+s.cta+' →</a><a href="#services" class="btn ghost">Explore services</a></div>'
     }
   }
   function next(){go((idx+1)%slides.length)}
@@ -62,21 +62,6 @@ function initSlider(){
   wrap.addEventListener('mouseenter',stop)
   wrap.addEventListener('mouseleave',start)
   updateText(0)
-}
-
-/* --- dark mode --- */
-function initTheme(){
-  const btn=document.getElementById('themeBtn')
-  if(!btn)return
-  const stored=localStorage.getItem('theme')
-  const dark=stored?stored==='dark':window.matchMedia('(prefers-color-scheme:dark)').matches
-  apply(dark)
-  btn.addEventListener('click',function(){apply(document.documentElement.getAttribute('data-theme')!=='dark')})
-  function apply(d){
-    document.documentElement.setAttribute('data-theme',d?'dark':'light')
-    localStorage.setItem('theme',d?'dark':'light')
-    btn.textContent=d?'☀️':'🌙'
-  }
 }
 
 /* --- mobile menu --- */
@@ -92,6 +77,26 @@ function initReveal(){
   const els=document.querySelectorAll('.reveal')
   if(!('IntersectionObserver'in window)){els.forEach(e=>e.classList.add('in'));return}
   const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1})
+  els.forEach(el=>io.observe(el))
+}
+
+/* --- stat counters --- */
+function initCounters(){
+  const els=document.querySelectorAll('[data-count]')
+  if(!('IntersectionObserver'in window)){els.forEach(e=>e.textContent=e.dataset.count);return}
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{
+    if(!e.isIntersecting)return
+    const el=e.target,target=parseInt(el.dataset.count),dur=2000
+    const start=performance.now()
+    function tick(now){
+      const p=Math.min((now-start)/dur,1)
+      const ease=1-Math.pow(1-p,3)
+      el.textContent=Math.floor(ease*target).toLocaleString()
+      if(p<1)requestAnimationFrame(tick)
+    }
+    requestAnimationFrame(tick)
+    io.unobserve(el)
+  })},{threshold:.3})
   els.forEach(el=>io.observe(el))
 }
 
@@ -120,6 +125,31 @@ function initPortfolio(){
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){lb.classList.remove('open');document.body.style.overflow=''}})
 }
 
+/* --- testimonial slider --- */
+function initTestimonials(){
+  const track=document.getElementById('testTrack')
+  const prev=document.getElementById('testPrev')
+  const next=document.getElementById('testNext')
+  if(!track||!prev||!next)return
+  let offset=0
+  function getStep(){
+    const card=track.querySelector('.test-card')
+    if(!card)return 0
+    return card.offsetWidth+20
+  }
+  function maxOffset(){
+    return Math.max(0,track.scrollWidth-track.parentElement.offsetWidth)
+  }
+  next.addEventListener('click',()=>{
+    offset=Math.min(offset+getStep(),maxOffset())
+    track.style.transform='translateX(-'+offset+'px)'
+  })
+  prev.addEventListener('click',()=>{
+    offset=Math.max(offset-getStep(),0)
+    track.style.transform='translateX(-'+offset+'px)'
+  })
+}
+
 /* --- contact form --- */
 function initForm(){
   const form=document.getElementById('contactForm')
@@ -127,7 +157,7 @@ function initForm(){
   form.addEventListener('submit',function(e){
     e.preventDefault()
     const msg=document.getElementById('formMsg')
-    if(msg){msg.textContent='✅ Thanks! We will reach out via WhatsApp or email soon.';msg.style.display='block'}
+    if(msg){msg.textContent='Thanks! We will reach out via WhatsApp or email soon.';msg.style.display='block'}
     form.reset()
   })
 }
@@ -135,10 +165,11 @@ function initForm(){
 /* --- init --- */
 document.addEventListener('DOMContentLoaded',function(){
   initSlider()
-  initTheme()
   initMenu()
   initReveal()
+  initCounters()
   initPortfolio()
+  initTestimonials()
   initForm()
 })
 
