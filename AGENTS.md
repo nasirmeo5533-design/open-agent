@@ -1,19 +1,19 @@
 # AGENTS.md
 
-**OpenAgent** — Premium B2B lead generation agency website (open-agent.agency).
+**OpenAgent** — B2B lead generation agency website for open-agent.agency.
 
 ## Architecture
 
 - **Pure static HTML/CSS/JS** — no build step, no package.json, no framework
-- Deployed via GitHub Actions to **GitHub Pages** (CNAME = open-agent.agency)
-- Remote: `https://github.com/nasirmeo5533-design/open-agent.git` (HTTPS)
+- Deployed to **GitHub Pages** via built-in "Deploy from a branch" (main → `/`)
+- Remote: `https://github.com/nasirmeo5533-design/open-agent.git`
 - Two coexisting site structures from a git merge — **do not delete Structure B**
 
 ## Commands
 
 - No build, test, lint, or install step
 - Local preview: `python -m http.server 8080` or any static server
-- Deploy: push to `main` → GitHub Actions → GitHub Pages
+- Deploy: push to `main` → GitHub Pages auto-deploys (no custom workflow)
 
 ## Design System
 
@@ -30,25 +30,26 @@
 index.html          — Homepage (hero, trust, problem, services, industries, process, portfolio, why-us, pricing, FAQ, contact)
 services.html       — 8 services detail page
 industries.html     — 5 industry verticals
-work.html           — Portfolio + case studies
-pricing.html        — 3 pricing tiers
+work.html           — Portfolio + case studies (JS grid + lightbox)
+pricing.html        — 3 pricing tiers (Custom, not PKR)
 about.html          — Founder story + expertise
-contact.html        — Form + WhatsApp
+contact.html        — Form with industry/budget dropdowns + WhatsApp
 blog.html           — Blog listing (links to blog/*.html)
 privacy.html        — Privacy policy
 terms.html          — Terms of service
 404.html            — Custom 404
 assets/css/style.css — Complete CSS (~800 lines)
-assets/js/main.js   — Vanilla JS (~200 lines)
+assets/js/main.js   — Vanilla JS (~200 lines): mobile menu, scroll reveal, stat counters, portfolio grid, lightbox, form handling
 assets/images/      — All images (portfolio, industries, OG, favicons, founder)
 blog/*.html         — 12 static blog posts
+.nojekyll           — Prevents Jekyll processing on GitHub Pages
 ```
 
 ## SEO
 
 - GA4: `G-MYQHFB4QNL`
 - Canonical: `https://open-agent.agency/`
-- JSON-LD: Organization (every page), BreadcrumbList (inner pages), FAQPage, Service
+- JSON-LD: Organization (every page), BreadcrumbList (inner pages), FAQPage (index + pricing)
 - sitemap.xml lists only Structure A URLs
 - robots.txt blocks Structure B pages (avoids duplicate content)
 
@@ -59,17 +60,18 @@ blog/*.html         — 12 static blog posts
 - **Social:** X (@Abeergrowth), Facebook, Instagram, LinkedIn
 - **Favicons:** `assets/images/branding/favicons/`
 - **OG images:** `assets/images/og/`
+- **Pricing:** "Custom" tiers — no PKR amounts shown on site
 
 ## Structure B (DO NOT TOUCH)
 
-Folder-based pages (`about/`, `services/`, `pricing/`, `contact/`, `faq/`, `terms/`, `privacy/`, `blog/index.html`, `blog-post.html`, `blog-post/`) with separate CSS/JS (`css/style.css`, `js/main.js`, `js/posts.js`). Left untouched from the remote merge. Block crawlers via robots.txt.
+Folder-based pages (`about/`, `services/`, `pricing/`, `contact/`, `faq/`, `terms/`, `privacy/`, `blog/index.html`, `blog-post.html`, `blog-post/`) with separate CSS/JS (`css/style.css`, `js/main.js`, `js/posts.js`). Left untouched from the remote merge. Blocked via robots.txt.
 
 ## Don't Touch
 
 - `google3cef563566032184.html` — Google site verification
 - `versions/` — archived builds (gitignored)
 - `CNAME` — custom domain config
-- `.github/workflows/deploy.yml` — GitHub Pages deploy
+- `.nojekyll` — required for GitHub Pages
 - Structure B files and assets
 
 ## Target Audience
