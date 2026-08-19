@@ -1,4 +1,15 @@
 User-agent: *
 Allow: /
+Disallow: /versions/
+Disallow: /about/
+Disallow: /services/
+Disallow: /pricing/
+Disallow: /contact/
+Disallow: /faq/
+Disallow: /terms/
+Disallow: /privacy/
+Disallow: /blog/index.html
+Disallow: /blog-post.html
+Disallow: /blog-post/
 
 Sitemap: https://open-agent.agency/sitemap.xml

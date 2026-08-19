@@ -1,81 +1,90 @@
 # AGENTS.md
 
-Marketing agency site (open-agent.agency) — **pure static HTML/CSS/JS, no build step.**
+**OpenAgent** — Premium B2B lead generation agency website (open-agent.agency).
+
+## Architecture
+
+- **Pure static HTML/CSS/JS** — no build step, no package.json, no framework
+- Deployed via GitHub Actions to **GitHub Pages** (CNAME = open-agent.agency)
+- Remote: `https://github.com/nasirmeo5533-design/open-agent.git` (HTTPS)
+- Two coexisting site structures from a git merge — **do not delete Structure B**
 
 ## Commands
 
-- No build, test, lint, or install step. No root `package.json`.
-- Local preview: `python -m http.server 8080` (or any static server). The system Python is uv-managed; if `pip install` fails with "externally managed", use a venv/uv instead.
-- Deploy: push to `main`. Remote is **HTTPS** (`https://github.com/nasirmeo5533-design/open-agent.git`) — SSH key auth is not set up. GitHub Actions deploys to GitHub Pages (`CNAME` = open-agent.agency). Live host confirmed as GitHub Pages, **not** Vercel.
+- No build, test, lint, or install step
+- Local preview: `python -m http.server 8080` or any static server
+- Deploy: push to `main` → GitHub Actions → GitHub Pages
 
-## Git history
+## Design System
 
-- `main` is a **merge of two unrelated histories** (`git merge --allow-unrelated-histories`). Old commits from the remote share no ancestor with local commits; don't expect a clean linear log.
-- The remote's GitHub Pages setup (`.github/workflows/deploy.yml`, `CNAME`) is now the deploy path. `vercel.json` redirects only apply if served from Vercel — they are inert on GitHub Pages; keep the file but don't rely on the redirects.
-
-## Two coexisting site structures (IMPORTANT)
-
-The merge left **two parallel, fully-working site versions** in the repo. Both are live on GitHub Pages. Do not "clean up" one by deleting it — the user decided to keep both as-is.
-
-**Structure A — flat pages (primary / actively edited):**
-- Root `*.html`: `index.html`, `about.html`, `services.html`, `pricing.html`, `portfolio.html`, `case-studies.html`, `faq.html`, `blog.html`, `contact.html`, `privacy.html`, `terms.html`, `refund.html`, `slides.html`.
-- `blog/*.html` — static posts (linked from `blog.html`).
-- Assets: `assets/css/style.css`, `assets/js/main.js`, `assets/images/...`.
-- `sitemap.xml` lists ONLY these flat URLs.
-
-**Structure B — folder pages (remote import, left untouched):**
-- `about/`, `services/` (with 7 sub-pages), `pricing/`, `contact/`, `faq/`, `terms/`, `privacy/`, `blog/index.html`, `blog-post.html`, `blog-post/`.
-- Root `css/style.css`, `js/main.js`, `js/posts.js` (a *different* style system).
-- `404.html`, `llms.txt`, `llms-full.txt`, `site.webmanifest`, root favicon files, `assets/logo.png`, `assets/images/abeer.jpg`, `assets/images/portfolio-N.png`, `assets/images/blog-*.svg`.
-
-Nothing in Structure A links to Structure B — they are independent. When editing, be sure you're touching the file for the structure you intend (e.g. `blog.html` vs `blog/index.html`).
-
-## Blog duality
-
-- **Flat blog**: `blog.html` → static cards → `blog/*.html` posts. This is the one to extend.
-- **Dynamic blog**: `blog/index.html` + `blog-post.html` render content from `js/posts.js` (~11 posts not present as flat files). Keep it functional; don't assume a post exists in both systems.
-
-## Page structure (when adding to Structure A)
-
-Each `.html` is fully self-contained and must copy the existing pattern:
-
-- GA4 gtag (`G-MYQHFB4QNL`) + Google Fonts preconnect/link in `<head>`
-- `<link rel="stylesheet" href="assets/css/style.css">` (prefix `../` inside `blog/`)
-- `.topbar` header nav + `.footer`
-- `<script src="assets/js/main.js">` at end of body (prefix `../` inside `blog/`)
-- Favicons reference `assets/images/branding/favicons/*` (not root favicon files, which belong to Structure B)
-- The AI chatbot embed (`https://personal-agent-nine-iota.vercel.app/embed.js`) exists **only on `index.html`** — don't assume it's on every page.
-
-## Asset paths
-
-- Current paths are `assets/css/style.css`, `assets/js/main.js`, `assets/images/...`.
-- Never reference legacy paths (`/assets/style.css`, `/images/...`) in new code.
-
-## When adding a page
-
-1. Add the HTML file in Structure A (copy the pattern above; correct relative paths).
-2. Add its URL to `sitemap.xml` (base `https://open-agent.agency/`; keep `robots.txt` pointing at it).
-3. For a blog post: add `blog/<slug>.html`, add the card to `blog.html`, and add a `sitemap.xml` entry. (Optionally mirror it into `js/posts.js` for the dynamic blog — not required.)
-
-## Design system
-
-- **Theme:** Light skin/cream — `--bg:#FDF2F0`, `--surface:#FFF1EE`, `--text:#1C1917`
-- **Primary:** Rose red `#E11D48` (accent `#FB7185`, hover `#F43F5E`)
-- **Fonts:** Playfair Display (display headlines via `--font-display`), Poppins (body via `--font-body`), JetBrains Mono (labels/eyebrows via `--font-mono`)
-- **Buttons:** Rounded `var(--r)` (12px), not pill-radius
+- **Theme:** Dark `#0A0A0A` with neon orange `#FF6B00` accent
+- **Typography:** Poppins (headings 600-700), DM Sans (body 400-500), JetBrains Mono (labels)
+- **Colors:** `--color-bg: #0A0A0A`, `--color-surface: #1A1A1A`, `--color-text: #FFFFFF`, `--color-text-secondary: #A0A0A0`, `--color-primary: #FF6B00`
+- **Buttons:** Rounded `var(--r)` (12px), orange primary, ghost variant
 - **Layout:** Full-width sections, boxed content via `.wrap` (max-width 1180px)
-- Hero uses Unsplash stock images (set in `assets/js/main.js` `slides` array)
-- CSS file comment still says "Dark Agency Theme" / "Blue" — the variables have been updated but the comment header is stale
-- **Known issue:** 10 hardcoded `rgba(37,99,235,...)` values (old blue) remain in `style.css` — should be `rgba(225,29,72,...)` to match the new rose-red theme. Affected lines: btn box-shadow, hero-glow, svc:hover border, svc/why-card icon borders, faq-acc open state, input focus ring, timeline dot glow.
+- **Responsive:** Mobile-first breakpoints at 560px, 768px, 900px
 
-## Don't touch
+## File Structure (Structure A — active)
 
-- `google3cef563566032184.html` — Google site-verification file.
-- `versions/` — archived alternate builds (Next.js, skill-spark); not the live site.
-- Structure B folder pages and their assets — the user chose to keep the parallel structure.
+```
+index.html          — Homepage (hero, trust, problem, services, industries, process, portfolio, why-us, pricing, FAQ, contact)
+services.html       — 8 services detail page
+industries.html     — 5 industry verticals
+work.html           — Portfolio + case studies
+pricing.html        — 3 pricing tiers
+about.html          — Founder story + expertise
+contact.html        — Form + WhatsApp
+blog.html           — Blog listing (links to blog/*.html)
+privacy.html        — Privacy policy
+terms.html          — Terms of service
+404.html            — Custom 404
+assets/css/style.css — Complete CSS (~800 lines)
+assets/js/main.js   — Vanilla JS (~200 lines)
+assets/images/      — All images (portfolio, industries, OG, favicons, founder)
+blog/*.html         — 12 static blog posts
+```
+
+## SEO
+
+- GA4: `G-MYQHFB4QNL`
+- Canonical: `https://open-agent.agency/`
+- JSON-LD: Organization (every page), BreadcrumbList (inner pages), FAQPage, Service
+- sitemap.xml lists only Structure A URLs
+- robots.txt blocks Structure B pages (avoids duplicate content)
+
+## Key Configuration
+
+- **WhatsApp:** `+92 370 3159642` (configurable in main.js `SITE.whatsapp`)
+- **Email:** `abeerinfo5566@gmail.com`
+- **Social:** X (@Abeergrowth), Facebook, Instagram, LinkedIn
+- **Favicons:** `assets/images/branding/favicons/`
+- **OG images:** `assets/images/og/`
+
+## Structure B (DO NOT TOUCH)
+
+Folder-based pages (`about/`, `services/`, `pricing/`, `contact/`, `faq/`, `terms/`, `privacy/`, `blog/index.html`, `blog-post.html`, `blog-post/`) with separate CSS/JS (`css/style.css`, `js/main.js`, `js/posts.js`). Left untouched from the remote merge. Block crawlers via robots.txt.
+
+## Don't Touch
+
+- `google3cef563566032184.html` — Google site verification
+- `versions/` — archived builds (gitignored)
+- `CNAME` — custom domain config
+- `.github/workflows/deploy.yml` — GitHub Pages deploy
+- Structure B files and assets
+
+## Target Audience
+
+B2B project-based businesses:
+1. Commercial Fit-Out & Design-Build
+2. Healthcare / Clinic Fit-Out
+3. Luxury Villa Interior / Design-Build
+4. Hospitality Fit-Out
+5. Commercial Landscaping
+
+Markets: UAE, Saudi Arabia, Pakistan, USA, Canada
 
 ## Skills (`.opencode/skills/`)
 
-- ~59 skills available (design/branding, marketing/CRO/SEO/copywriting, `web-asset-generator`, `agent-reach`). Newly installed skills only load after restarting the opencode session.
-- `web-asset-generator` scripts need Python deps — use its dedicated venv: `.opencode/skills/web-asset-generator/.venv\Scripts\python.exe`. Do not `pip install` into the uv-managed system Python.
-- Those scripts crash on the Windows cp1252 console — set `$env:PYTHONIOENCODING='utf-8'` before running. When writing files via PowerShell, use UTF-8 with no BOM (`[System.IO.File]::WriteAllText(path, text, (New-Object System.Text.UTF8Encoding $false))`) to avoid mojibake.
+- ~60 skills available (design, marketing, CRO, SEO, copywriting)
+- `web-asset-generator` needs Python venv: `.opencode/skills/web-asset-generator/.venv\Scripts\python.exe`
+- Set `$env:PYTHONIOENCODING='utf-8'` before running Python scripts on Windows
