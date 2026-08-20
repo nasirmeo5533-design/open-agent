@@ -27,23 +27,24 @@
 ## File Structure (Structure A — active)
 
 ```
-index.html          — Homepage (hero, trust, problem, services, industries, process, portfolio, why-us, pricing, FAQ, contact)
-services.html       — 8 services detail page
-industries.html     — 5 industry verticals
-work.html           — Portfolio + case studies (JS grid + lightbox)
-pricing.html        — 3 pricing tiers (Custom, not PKR)
-about.html          — Founder story + expertise
-contact.html        — Form with industry/budget dropdowns + WhatsApp
-faq.html            — FAQ page with JSON-LD FAQPage schema
-blog.html           — Blog listing (links to blog/*.html)
-privacy.html        — Privacy policy
-terms.html          — Terms of service
-404.html            — Custom 404
-assets/css/style.css — Complete CSS (~800 lines)
-assets/js/main.js   — Vanilla JS (~200 lines): mobile menu, scroll reveal, stat counters, portfolio grid, lightbox, form handling
-assets/images/      — All images (portfolio, industries, OG, favicons, founder)
-blog/*.html         — 12 static blog posts
-.nojekyll           — Prevents Jekyll processing on GitHub Pages
+index.html              — Homepage (hero, trust, problem, services, industries, process, portfolio, why-us, pricing, FAQ, contact)
+services.html           — 8 services detail page
+industries.html         — 5 industry verticals (hub page)
+work.html               — Portfolio + case studies (JS grid + lightbox)
+pricing.html            — 3 pricing tiers (Custom, not PKR)
+about.html              — Founder story + expertise
+contact.html            — Form with industry/budget dropdowns + WhatsApp
+faq.html                — FAQ page with JSON-LD FAQPage schema
+blog.html               — Blog listing (links to blog/*.html)
+privacy.html            — Privacy policy
+terms.html              — Terms of service
+404.html                — Custom 404
+industries/*.html       — 5 industry sub-pages (commercial-fit-out, healthcare-fit-out, luxury-villa, hospitality, commercial-landscaping)
+blog/*.html             — 12 static blog posts (NOT blog/index.html — that's Structure B)
+assets/css/style.css    — Complete CSS (~800 lines)
+assets/js/main.js       — Vanilla JS (~200 lines): mobile menu, scroll reveal, stat counters, portfolio grid, lightbox, form handling
+assets/images/          — All images (portfolio, industries, OG, favicons, founder)
+.nojekyll               — Prevents Jekyll processing on GitHub Pages
 ```
 
 ## HTML Conventions
