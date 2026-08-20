@@ -27,11 +27,9 @@
 ## File Structure (Structure A — active)
 
 ```
-index.html              — Homepage (hero, trust, problem, services, industries, process, portfolio, why-us, pricing, FAQ, contact)
+index.html              — Homepage (hero, trust, problem, services, industries, process, why-us, FAQ, contact)
 services.html           — 8 services detail page
 industries.html         — 5 industry verticals (hub page)
-work.html               — Portfolio + case studies (JS grid + lightbox)
-pricing.html            — 3 pricing tiers (Custom, not PKR)
 about.html              — Founder story + expertise
 contact.html            — Form with industry/budget dropdowns + WhatsApp
 faq.html                — FAQ page with JSON-LD FAQPage schema
@@ -77,13 +75,13 @@ Every Structure A page follows this pattern:
 - **Root pages** use relative paths: `assets/css/style.css`, `assets/js/main.js`
 - **Blog posts** (`blog/`) use `../assets/css/style.css`, `../assets/js/main.js`
 - **Accessibility:** skip-link, `role` attributes, `aria-label` on icon buttons, `aria-hidden="true"` on decorative SVGs, `loading="lazy"` + `width`/`height` on images
-- **Schema:** Organization JSON-LD on every page; BreadcrumbList on inner pages; FAQPage on index + pricing
+- **Schema:** Organization JSON-LD on every page; BreadcrumbList on inner pages; FAQPage on index
 
 ## SEO
 
 - GA4: `G-MYQHFB4QNL`
 - Canonical: `https://open-agent.agency/`
-- JSON-LD: Organization (every page), BreadcrumbList (inner pages), FAQPage (index + pricing)
+- JSON-LD: Organization (every page), BreadcrumbList (inner pages), FAQPage (index)
 - sitemap.xml lists only Structure A URLs
 - robots.txt blocks Structure B pages (avoids duplicate content)
 
