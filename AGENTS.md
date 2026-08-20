@@ -34,6 +34,7 @@ work.html           — Portfolio + case studies (JS grid + lightbox)
 pricing.html        — 3 pricing tiers (Custom, not PKR)
 about.html          — Founder story + expertise
 contact.html        — Form with industry/budget dropdowns + WhatsApp
+faq.html            — FAQ page with JSON-LD FAQPage schema
 blog.html           — Blog listing (links to blog/*.html)
 privacy.html        — Privacy policy
 terms.html          — Terms of service
@@ -44,6 +45,38 @@ assets/images/      — All images (portfolio, industries, OG, favicons, founder
 blog/*.html         — 12 static blog posts
 .nojekyll           — Prevents Jekyll processing on GitHub Pages
 ```
+
+## HTML Conventions
+
+Every Structure A page follows this pattern:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- charset, viewport, title, meta description, canonical -->
+  <!-- og:*, twitter:* meta tags -->
+  <!-- Google Fonts: Poppins, DM Sans, JetBrains Mono -->
+  <!-- <link href="assets/css/style.css"> (root pages) or "../assets/css/style.css" (blog/) -->
+  <!-- GA4 gtag.js async snippet -->
+  <!-- <script type="application/ld+json"> Organization + page-specific schema -->
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="topbar" role="banner"> ... nav ... </header>
+  <main id="main-content" role="main"> ... sections ... </main>
+  <footer class="footer" role="contentinfo"> ... </footer>
+  <a class="fwa" href="https://wa.me/923703159642"> WhatsApp floating button </a>
+  <div class="lightbox"> portfolio lightbox overlay </div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
+```
+
+- **Root pages** use relative paths: `assets/css/style.css`, `assets/js/main.js`
+- **Blog posts** (`blog/`) use `../assets/css/style.css`, `../assets/js/main.js`
+- **Accessibility:** skip-link, `role` attributes, `aria-label` on icon buttons, `aria-hidden="true"` on decorative SVGs, `loading="lazy"` + `width`/`height` on images
+- **Schema:** Organization JSON-LD on every page; BreadcrumbList on inner pages; FAQPage on index + pricing
 
 ## SEO
 
@@ -88,5 +121,5 @@ Markets: UAE, Saudi Arabia, Pakistan, USA, Canada
 ## Skills (`.opencode/skills/`)
 
 - ~60 skills available (design, marketing, CRO, SEO, copywriting)
-- `web-asset-generator` needs Python venv: `.opencode/skills/web-asset-generator/.venv\Scripts\python.exe`
+- `web-asset-generator` needs Python venv: `.opencode/skills/web-asset-generator/.venv/Scripts/python.exe`
 - Set `$env:PYTHONIOENCODING='utf-8'` before running Python scripts on Windows

@@ -7,20 +7,20 @@
       readTime: "4 min read",
       published: "2026-02-18",
       updated: "2026-02-18",
-      title: "Social Media Made Simple for Small Businesses",
+      title: "Social Media Made Simple for High-Value Businesses",
       excerpt: "You don't need to post every day or be on every app. A simple plan on two platforms is enough. Here is the easy way.",
       hero: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=1200&q=60",
       heroFallback: "/assets/images/blog-seo-d2c.svg",
       body: [
         { t: "p", v: "You don't need to post every day. You don't need to be on every app. You need one simple plan on the two places where your customers actually spend their time. That's it." },
         { t: "h2", v: "Pick two platforms, not five" },
-        { t: "p", v: "Most small businesses fail at social media because they try to do everything. They open accounts on Facebook, Instagram, TikTok, and more then give up after a month because it's too much. The fix is simple: pick the two platforms where your customers are. For most shops in Pakistan, that's Facebook and Instagram. For a B2B service, it might be LinkedIn and WhatsApp. Two platforms, done well, always beat five done badly." },
+        { t: "p", v: "Most high-value businesses fail at social media because they try to do everything. They open accounts on Facebook, Instagram, TikTok, and LinkedIn, then give up after a month because it's too much. The fix is simple: pick the two platforms where your customers are. For most project-based businesses, that's LinkedIn and Instagram. Two platforms, done well, always beat five done badly." },
         { t: "h2", v: "A simple content plan" },
-        { t: "p", v: "You don't need a content calendar that looks like a science project. Start with three kinds of posts: show your product, share a customer story, and answer one question people keep asking you. That's the whole plan. Show what you sell. Show that real people are happy with it. Show that you can be trusted. Keep this rhythm going, and people will start to remember your name so when they need what you sell, they come to you first." },
-        { t: "h2", v: "Reply fast that's the real game" },
-        { t: "p", v: "The people who reply fastest win. When someone sends a message or leaves a comment, answer within the hour if you can. Many small businesses reply the next day, and by then the customer has already bought from someone else. You don't need a big team for this you need speed. A quick 'Yes, we have it in stock' can be the difference between a sale and a lost customer." },
+        { t: "p", v: "You don't need a content calendar that looks like a science project. Start with three kinds of posts: showcase your completed projects, share a client testimonial, and answer one question people keep asking you. That's the whole plan. Show what you deliver. Show that real clients are happy with it. Show that you can be trusted. Keep this rhythm going, and people will start to remember your name — so when they need what you offer, they come to you first." },
+        { t: "h2", v: "Reply fast — that's the real game" },
+        { t: "p", v: "The people who reply fastest win. When someone sends a message or leaves a comment, answer within the hour if you can. Many businesses reply the next day, and by then the client has already contacted someone else. You don't need a big team for this — you need speed. A quick 'Yes, we can help with that' can be the difference between a new project and a lost opportunity." },
         { t: "h2", v: "The bottom line" },
-        { t: "p", v: "Social media isn't complicated. Two platforms. Three kinds of posts. Fast replies. If that still sounds like work you don't have time for, that's exactly what I do I run the whole thing for you, starting at PKR 15,000 a month. You stay visible, I do the work." }
+        { t: "p", v: "Social media isn't complicated. Two platforms. Three kinds of posts. Fast replies. If that still sounds like work you don't have time for, that's exactly what I do — I run the whole thing for you. You stay visible, I do the work." }
       ]
     },
     "small-budget-ads": {
@@ -30,20 +30,20 @@
       readTime: "4 min read",
       published: "2026-03-05",
       updated: "2026-03-05",
-      title: "Small-Budget Ads: Get Sales Without Burning Cash",
+      title: "Small-Budget Ads: Get Qualified Enquiries Without Burning Cash",
       excerpt: "You don't need a big ad budget to see results. You need the right setup. Here is how to start small and win.",
       hero: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=60",
       heroFallback: "/assets/images/blog-meta-ads.svg",
       body: [
-        { t: "p", v: "You hear stories of brands spending big money on ads and making big money back. So you think: ads are for large companies with large budgets. That's wrong. Small budgets can win but only if you set up your ads the right way from day one." },
+        { t: "p", v: "You hear stories of businesses spending big money on ads and getting big results back. So you think: ads are for large companies with large budgets. That's wrong. Small budgets can win — but only if you set up your ads the right way from day one." },
         { t: "h2", v: "Small budget, one job" },
-        { t: "p", v: "When you have a small budget, your ads have to do one job, not three. Don't try to make people aware of your brand, learn about you, and buy from you all at once. Pick one goal: a purchase. Send people to a page built to sell. If you split a small budget across 'brand awareness', 'traffic', and 'sales', every campaign gets too little money to learn anything." },
+        { t: "p", v: "When you have a small budget, your ads have to do one job, not three. Don't try to make people aware of your brand, learn about you, and enquire all at once. Pick one goal: a qualified enquiry. Send people to a page built to convert. If you split a small budget across 'brand awareness', 'traffic', and 'enquiries', every campaign gets too little money to learn anything." },
         { t: "h2", v: "Start with the people who already know you" },
-        { t: "p", v: "Your easiest sales will always come from people who already know you. So start there: send your first small budget to people who visited your website, who follow your page, or who bought before. These people need less convincing, so your money goes further. Once you see a few sales, let the ad platform find more people who look like them." },
+        { t: "p", v: "Your easiest opportunities will always come from people who already know you. So start there: send your first small budget to people who visited your website, who follow your page, or who enquired before. These people need less convincing, so your money goes further. Once you see a few enquiries, let the ad platform find more people who look like them." },
         { t: "h2", v: "Watch the number that matters" },
-        { t: "p", v: "Most beginners stare at likes and comments. Those feel good, but they don't pay the bills. Watch the number that matters: how much it costs you to get one sale. If one sale costs more than you earn on that sale, stop and fix the ad or the page. Don't pour in more money and hope. A small budget wins when the setup is right and every rupee has one clear job." },
+        { t: "p", v: "Most beginners stare at likes and comments. Those feel good, but they don't pay the bills. Watch the number that matters: how much it costs you to get one qualified enquiry. If one enquiry costs more than that enquiry is worth to your business, stop and fix the ad or the landing page. Don't pour in more money and hope. A small budget wins when the setup is right and every dollar has one clear job." },
         { t: "h2", v: "The bottom line" },
-        { t: "p", v: "You don't need a big budget. You need a clear goal, the right audience, and one number you watch. That's the whole game. If you want help setting it up right the first time, that's what I do Meta and Google ads starting at PKR 30,000." }
+        { t: "p", v: "You don't need a big budget. You need a clear goal, the right audience, and one number you watch. That's the whole game. If you want help setting it up right the first time, that's what I do — book a free growth audit and let's talk." }
       ]
     },
     "ai-agent": {
@@ -60,13 +60,13 @@
       body: [
         { t: "p", v: "Everyone is talking about AI agents, and it sounds complicated. It isn't. Here is the simplest way to think about it: an AI agent is a worker that never sleeps, never takes a break, and never gets bored of answering the same question." },
         { t: "h2", v: "What an AI agent actually does" },
-        { t: "p", v: "You give it your information your products, your prices, your rules. Then your customers can talk to it on WhatsApp, Facebook, or your website. It answers their questions in seconds, any time of day or night. When it doesn't know something, it sends the conversation to a real person. Think of it as your front desk, working 24 hours a day." },
+        { t: "p", v: "You give it your information — your services, your pricing, your processes. Then your potential clients can talk to it on WhatsApp, Facebook, or your website. It answers their questions in seconds, any time of day or night. When it doesn't know something, it sends the conversation to a real person. Think of it as your front desk, working 24 hours a day." },
         { t: "h2", v: "Do you even need one?" },
-        { t: "p", v: "Ask yourself three questions. Do customers ask you the same questions again and again? Do you reply late because you're busy? Do you lose sales when people message you at night? If you answered yes to any of these, an AI agent will quickly pay for itself. If customers never message you and you have all the time in the world, you can skip it for now." },
+        { t: "p", v: "Ask yourself three questions. Do potential clients ask you the same questions again and again? Do you reply late because you're busy on site? Do you lose opportunities when people message you at night? If you answered yes to any of these, an AI agent will quickly pay for itself. If clients never message you and you have all the time in the world, you can skip it for now." },
         { t: "h2", v: "What it is not" },
-        { t: "p", v: "An AI agent is not magic, and it won't fix a bad product or a rude attitude. It can't have deep conversations about feelings. But for the everyday stuff 'Is this in stock?', 'How long is delivery?', 'What sizes do you have?' it's faster and cheaper than hiring someone to sit and answer the phone all day." },
+        { t: "p", v: "An AI agent is not magic, and it won't fix a bad service or a rude attitude. It can't have deep conversations about feelings. But for the everyday stuff — 'Do you do commercial fit-outs?', 'What areas do you cover?', 'Can I see your portfolio?' — it's faster and cheaper than hiring someone to sit and answer the phone all day." },
         { t: "h2", v: "The bottom line" },
-        { t: "p", v: "If your business gets the same questions over and over, an AI agent saves you time and catches sales you'd otherwise miss at night. I set these up starting at PKR 40,000 ready to plug into WhatsApp, Facebook, or your website." }
+        { t: "p", v: "If your business gets the same questions over and over, an AI agent saves you time and catches enquiries you'd otherwise miss at night. Book a free growth audit and let's talk about whether this makes sense for your business." }
       ]
     },
     "ai-agent-development": {
@@ -77,19 +77,19 @@
       published: "2026-04-02",
       updated: "2026-04-02",
       title: "Custom AI Agents: Your Business on Autopilot",
-      excerpt: "A ready-made agent answers your customers. A custom agent does your work. Here is what happens behind the scenes.",
+      excerpt: "A ready-made agent answers your clients. A custom agent does your work. Here is what happens behind the scenes.",
       hero: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=60",
       heroFallback: "/assets/images/blog-automation.svg",
       body: [
-        { t: "p", v: "A ready-made AI agent answers your customers. A custom AI agent does your work. If you want to know which one your business needs, keep reading this is about the agents that work behind the scenes while you run your business." },
+        { t: "p", v: "A ready-made AI agent answers your clients. A custom AI agent does your work. If you want to know which one your business needs, keep reading — this is about the agents that work behind the scenes while you run your business." },
         { t: "h2", v: "The boring work is the best place to start" },
-        { t: "p", v: "Look at your week. Copying numbers into a report. Sending the same follow-up message to every lead. Moving order details from one app to another. None of this needs a human brain it's just work that has to happen. A custom AI agent can do it while you sleep, without complaining and without mistakes." },
+        { t: "p", v: "Look at your week. Copying numbers into a report. Sending the same follow-up message to every lead. Moving project details from one app to another. None of this needs a human brain — it's just work that has to happen. A custom AI agent can do it while you sleep, without complaining and without mistakes." },
         { t: "h2", v: "What a custom agent looks like" },
-        { t: "p", v: "It depends on your business. For one store, it reads every new order, sends each customer their tracking number, and adds the order to a spreadsheet. For a service business, it takes every new lead, sends a friendly first message, and reminds them politely if they don't reply. For a team, it collects numbers from different places and sends one clean report every morning. You tell me the job, I build the worker." },
+        { t: "p", v: "It depends on your business. For one fit-out company, it reads every new enquiry, sends each prospect a friendly first message, and reminds them politely if they don't reply. For a clinic, it takes every new lead, qualifies them by budget and timeline, and routes the hot ones to the sales team. For a project-based business, it collects data from different sources and sends one clean report every morning. You tell me the job, I build the worker." },
         { t: "h2", v: "It connects to the tools you already use" },
-        { t: "p", v: "You don't need to change anything about how you work. Your agent can work with your spreadsheets, your online store, your email, and your WhatsApp. It does the same steps a good employee would do it just never sleeps, never takes a day off, and never makes a typo at 1am." },
+        { t: "p", v: "You don't need to change anything about how you work. Your agent can work with your spreadsheets, your CRM, your email, and your WhatsApp. It does the same steps a good employee would do — it just never sleeps, never takes a day off, and never makes a typo at 1am." },
         { t: "h2", v: "The bottom line" },
-        { t: "p", v: "If you're tired of doing the same tasks every single week, a custom AI agent is the fix. I build these starting at PKR 80,000, test them until they work properly, and hand you a helper that makes your week shorter." }
+        { t: "p", v: "If you're tired of doing the same tasks every single week, a custom AI agent is the fix. I build these, test them until they work properly, and hand you a helper that makes your week shorter. Book a free growth audit to discuss your workflow." }
       ]
     },
     "digital-marketing": {
@@ -100,19 +100,19 @@
       published: "2026-04-16",
       updated: "2026-04-16",
       title: "Digital Marketing in Plain English: A Beginner's Guide",
-      excerpt: "Digital marketing sounds big and scary. It isn't. It's just four simple pieces and you don't need to learn any of them.",
+      excerpt: "Digital marketing sounds big and scary. It isn't. It's just four simple pieces — and you don't need to learn any of them.",
       hero: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=1200&q=60",
       heroFallback: "/assets/images/blog-meta-ads.svg",
       body: [
-        { t: "p", v: "Digital marketing sounds big and scary. It isn't. At its heart, it's just one simple idea: get in front of the people who want what you sell, and make it easy for them to buy." },
+        { t: "p", v: "Digital marketing sounds big and scary. It isn't. At its heart, it's just one simple idea: get in front of the people who need what you offer, and make it easy for them to get in touch." },
         { t: "h2", v: "The four pieces" },
-        { t: "p", v: "Almost all digital marketing is four things: ads (paying to be seen), social media (being seen without paying), content (showing you can be trusted), and your website (where people actually buy). That's it. The confusion comes when people throw around words like 'funnels' and 'ROAS' and 'engagement rates'. Behind the fancy words, it's still just these four pieces." },
-        { t: "h2", v: "Why most small businesses fail at it" },
-        { t: "p", v: "They do a bit of everything, with no plan, and give up when nothing works after two weeks. Digital marketing is not a light switch. It's a slow cooker. Ads can bring people fast, but trust takes time. The businesses that win are the ones who stay consistent for months not the ones who panic after a week." },
+        { t: "p", v: "Almost all digital marketing is four things: ads (paying to be seen), social media (being seen without paying), content (showing you can be trusted), and your website (where people actually enquire). That's it. The confusion comes when people throw around words like 'funnels' and 'ROAS' and 'engagement rates'. Behind the fancy words, it's still just these four pieces." },
+        { t: "h2", v: "Why most businesses fail at it" },
+        { t: "p", v: "They do a bit of everything, with no plan, and give up when nothing works after two weeks. Digital marketing is not a light switch. It's a slow cooker. Ads can bring people fast, but trust takes time. The businesses that win are the ones who stay consistent for months — not the ones who panic after a week." },
         { t: "h2", v: "You don't need to learn it all" },
         { t: "p", v: "This is the part most people miss. You don't need to become an expert. You need one person who knows what they're doing, and a plan you can understand. If I explain my strategy and it sounds like a different language, that's a bad sign. You should always understand what's happening with your money." },
         { t: "h2", v: "The bottom line" },
-        { t: "p", v: "Digital marketing is ads, social media, content, and a website done together, with a plan, over time. If you'd rather run your business than learn marketing, I can run the whole thing for you, starting at PKR 50,000." }
+        { t: "p", v: "Digital marketing is ads, social media, content, and a website done together, with a plan, over time. If you'd rather run your business than learn marketing, I can run the whole thing for you. Book a free growth audit and let's talk." }
       ]
     },
     "generative-ai": {
@@ -123,21 +123,21 @@
       published: "2026-05-07",
       updated: "2026-05-07",
       title: "What Can Generative AI Really Do for Your Business?",
-      excerpt: "Generative AI can write, make pictures, and create ideas in seconds. Here is where it genuinely helps a small business.",
+      excerpt: "Generative AI can write, make pictures, and create ideas in seconds. Here is where it genuinely helps a business.",
       hero: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=60",
       heroFallback: "/assets/images/blog-automation.svg",
       body: [
-        { t: "p", v: "Generative AI can write, make pictures, and create ideas in seconds. It sounds like a gimmick, so let me show you where it genuinely helps a small business not the hype, just the useful parts." },
+        { t: "p", v: "Generative AI can write, make pictures, and create ideas in seconds. It sounds like a gimmick, so let me show you where it genuinely helps a business — not the hype, just the useful parts." },
         { t: "h2", v: "Content without the expensive agency" },
-        { t: "p", v: "Product descriptions, ad copy, social posts, emails this is where generative AI shines. Write one good description, and AI can make ten versions for your ads, your website, and your Instagram. In the past, this cost a copywriter a lot of money. Now it costs a fraction of that and with the right person guiding it, it still sounds human." },
+        { t: "p", v: "Ad copy, landing page content, social posts, emails — this is where generative AI shines. Write one good description, and AI can make ten versions for your ads, your website, and your social channels. In the past, this cost a copywriter a lot of money. Now it costs a fraction of that — and with the right person guiding it, it still sounds human." },
         { t: "h2", v: "Images without a designer on speed dial" },
-        { t: "p", v: "Need a picture of your product on a beach? A banner for a sale? An idea for a logo? Generative AI can create images from a short sentence. You can test ten ideas before spending a single rupee on a designer. When you find one you love, a designer can polish it but you're no longer stuck waiting, or paying for every rough idea." },
+        { t: "p", v: "Need a banner for a project showcase? A visual for a social post? An idea for a brand identity? Generative AI can create images from a short sentence. You can test ten ideas before spending a single dollar on a designer. When you find one you love, a designer can polish it — but you're no longer stuck waiting, or paying for every rough idea." },
         { t: "h2", v: "Ideas, fast" },
-        { t: "p", v: "Stuck on what to post this week? Tell AI what you sell and who your customers are, and it gives you fifty ideas in a minute. Most will be average. Two or three will be good. And those two or three are worth more than staring at a blank page all day." },
+        { t: "p", v: "Stuck on what to post this week? Tell AI what you do and who your clients are, and it gives you fifty ideas in a minute. Most will be average. Two or three will be good. And those two or three are worth more than staring at a blank page all day." },
         { t: "h2", v: "The honest part" },
-        { t: "p", v: "Generative AI is a tool, not a person. It doesn't know your customers like you do. That's why it works best with a human guiding it that's me. I use AI to make content faster and cheaper for you, but I check every word and image so it still feels like your brand." },
+        { t: "p", v: "Generative AI is a tool, not a person. It doesn't know your clients like you do. That's why it works best with a human guiding it — that's me. I use AI to make content faster and cheaper for you, but I check every word and image so it still feels like your brand." },
         { t: "h2", v: "The bottom line" },
-        { t: "p", v: "Generative AI makes good content fast and cheap the right words, the right pictures, the right ideas. That's my job as your generative AI specialist, starting at PKR 65,000." }
+        { t: "p", v: "Generative AI makes good content fast and affordable — the right words, the right pictures, the right ideas. Book a free growth audit and let's talk about how this fits into your marketing." }
       ]
     },
     "meta-ads": {
@@ -148,42 +148,42 @@
       published: "2026-05-21",
       updated: "2026-05-21",
       title: "Why Your Meta Ads Are Burning Budget (And How AI Fixes It)",
-      excerpt: "Most stores waste ad money on the wrong audience. Here is how AI finds the right buyer faster and cuts your cost per sale.",
+      excerpt: "Most businesses waste ad money on the wrong audience. Here is how AI finds the right buyer faster and cuts your cost per enquiry.",
       hero: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=60",
       heroFallback: "/assets/images/blog-meta-ads.svg",
       body: [
-        { t: "p", v: "In Pakistan, most stores treat Meta ads like a lottery. They top up PKR 50,000, pick an audience that says 'interested in fashion,' and hit publish. When the money runs out, they blame the algorithm. The algorithm is not the problem. The problem is that you handed it a guessing game instead of a buying signal." },
-        { t: "h2", v: "The real reason your cost per sale is climbing" },
-        { t: "p", v: "Broad audiences stopped working when tracking changed. Meta simply has less data, so it spends your budget learning who NOT to show the ad to. An ad set targeting 'women 18–45, Pakistan, interested in shopping' covers tens of millions of people, and most of them are not buying today. That is why results get expensive every week: the machine is paying to guess. A store that gives Meta clean signals runs differently a pixel tracking only purchase-ready actions, a lookalike built from real customers, and two or three creative winners instead of ten bored variations. With the same budget, the algorithm now hunts for people who behave like your buyers, and cost per sale usually drops." },
+        { t: "p", v: "Most businesses treat Meta ads like a lottery. They set a budget, pick an audience that says 'interested in interior design,' and hit publish. When the money runs out, they blame the algorithm. The algorithm is not the problem. The problem is that you handed it a guessing game instead of a buying signal." },
+        { t: "h2", v: "The real reason your cost per enquiry is climbing" },
+        { t: "p", v: "Broad audiences stopped working when tracking changed. Meta simply has less data, so it spends your budget learning who NOT to show the ad to. An ad set targeting 'business owners, Pakistan, interested in design' covers millions of people, and most of them are not looking for your services today. That is why results get expensive every week: the machine is paying to guess. A business that gives Meta clean signals runs differently — a pixel tracking only enquiry-ready actions, a lookalike built from real clients, and two or three creative winners instead of ten bored variations. With the same budget, the algorithm now hunts for people who behave like your buyers, and cost per enquiry usually drops." },
         { t: "h2", v: "What AI actually changes" },
-        { t: "p", v: "AI does not make a bad product sell. What it does is run the optimization loop no human can keep up with. It watches every ad's results, moves budget to the creative that is winning, and pauses the one that is not daily, not weekly. It also scores your customer list and feeds your best buyers back into Meta as custom audiences, so the machine learns from every single sale." },
+        { t: "p", v: "AI does not make a bad service sell. What it does is run the optimization loop no human can keep up with. It watches every ad's results, moves budget to the creative that is winning, and pauses the one that is not — daily, not weekly. It also scores your client list and feeds your best buyers back into Meta as custom audiences, so the machine learns from every single enquiry." },
         { t: "h2", v: "Three fixes you can make this week" },
-        { t: "p", v: "One: install the Meta pixel and track one clear event purchases, not page views. Two: stop stacking interests and let the audience learn from your customer list. Three: commit to a few creative tests a week and let the numbers pick a winner. On a small budget, run one focused ad set instead of spreading your money across five. One campaign with a signal always beats five without one." },
+        { t: "p", v: "One: install the Meta pixel and track one clear event — enquiries, not page views. Two: stop stacking interests and let the audience learn from your client list. Three: commit to a few creative tests a week and let the numbers pick a winner. On a small budget, run one focused ad set instead of spreading your money across five. One campaign with a signal always beats five without one." },
         { t: "h2", v: "The bottom line" },
-        { t: "p", v: "Burning budget is a signal, not a sentence. If your ads are expensive, the fix is almost always structure and signals not more money. That is the system I run for stores in Karachi and across Pakistan: AI doing the testing, you watching the cost per sale drop. Book a call and I will show you what your account looks like through that lens." }
+        { t: "p", v: "Burning budget is a signal, not a sentence. If your ads are expensive, the fix is almost always structure and signals — not more money. That is the system I run for high-value project businesses: AI doing the testing, you watching the cost per enquiry drop. Book a free growth audit and I will show you what your account looks like through that lens." }
       ]
     },
-    "seo-d2c": {
-      slug: "seo-d2c",
+    "seo-b2b": {
+      slug: "seo-b2b",
       category: "seo",
       categoryLabel: "SEO",
       readTime: "4 min read",
       published: "2026-06-11",
-      updated: "2026-06-11",
-      title: "SEO for D2C: Get Found Before Your Competitors Do",
-      excerpt: "Your customers are searching right now. If your store is not on page one, a competitor takes the sale.",
+      updated: "2026-08-20",
+      title: "SEO for Project-Based Businesses: Get Found Before Your Competitors",
+      excerpt: "Your ideal clients are searching right now. If your website is not on page one, a competitor takes the project.",
       hero: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=60",
       heroFallback: "/assets/images/blog-seo-d2c.svg",
       body: [
-        { t: "p", v: "Think about the last search you made before buying something. 'Best running shoes under 10k.' 'Skincare for oily skin in Pakistan.' 'Where to buy [product] in Lahore.' Every one of those is a sale in progress, and the person clicks the store that answers first. If your store is not on page one, that customer buys from a competitor who is without ever seeing your brand." },
-        { t: "h2", v: "SEO is the cheapest customer you will ever get" },
-        { t: "p", v: "A Meta click costs money every single time, and you pay again tomorrow to get another one. An SEO click costs nothing: the visitor found you because your page answered their question. That is why stores with even a small search presence keep selling while their ad budget is paused. And in Pakistan, where most online stores have done little SEO, ranking for a few product terms can put you ahead of almost every competitor in your niche." },
+        { t: "p", v: "Think about the last search you made before hiring a service provider. 'Best interior designer in Karachi.' 'Commercial fit-out companies in Dubai.' 'Luxury villa renovation near me.' Every one of those is a project in progress, and the client clicks the company that answers first. If your website is not on page one, that client hires a competitor who is — without ever seeing your brand." },
+        { t: "h2", v: "SEO is the cheapest lead you will ever get" },
+        { t: "p", v: "A Meta click costs money every single time, and you pay again tomorrow to get another one. An SEO click costs nothing: the visitor found you because your page answered their question. That is why businesses with even a small search presence keep getting enquiries while their ad budget is paused. And in competitive markets, where most companies have done little SEO, ranking for a few service terms can put you ahead of almost every competitor in your niche." },
         { t: "h2", v: "The three pages that actually rank" },
-        { t: "p", v: "Category pages win the 'best [product] in Pakistan' searches. Product pages win '[product] price in Pakistan' searches the highest-intent searches a buyer can type. Blog posts win the 'how to choose' and 'what is the difference' questions that happen right before the purchase. Most stores skip all three, spend on ads, and then wonder why the ads are the only thing bringing sales." },
+        { t: "p", v: "Service pages win the 'best [service] in [city]' searches. Portfolio pages win '[service] price in [city]' searches — the highest-intent searches a buyer can type. Blog posts win the 'how to choose' and 'what to look for' questions that happen right before the hiring decision. Most businesses skip all three, spend on ads, and then wonder why the ads are the only thing bringing enquiries." },
         { t: "h2", v: "What to do in the next 30 days" },
-        { t: "p", v: "Fix the basics first: fast hosting, clean URLs, one heading per page, and a title that puts your keyword and city in front. Then write product descriptions that answer real questions size, material, delivery, warranty instead of 'premium quality, best price.' Publish two category pages and one buying guide. Set up Google Search Console, which is free and tells you exactly which searches your store already appears for and where you rank." },
+        { t: "p", v: "Fix the basics first: fast hosting, clean URLs, one heading per page, and a title that puts your service and city in front. Then write service descriptions that answer real questions — budget ranges, timelines, what's included — instead of vague promises. Publish two service area pages and one buying guide. Set up Google Search Console, which is free and tells you exactly which searches your site already appears for and where you rank." },
         { t: "h2", v: "The bottom line" },
-        { t: "p", v: "You do not need to outspend your competitors you need to show up where they are not. Start with the pages that match what buyers actually type, and the traffic compounds while your ad spend stays flat. I help stores in Karachi build exactly this, one page at a time." }
+        { t: "p", v: "You do not need to outspend your competitors — you need to show up where they are not. Start with the pages that match what clients actually type, and the traffic compounds while your ad spend stays flat. I help project-based businesses build exactly this, one page at a time." }
       ]
     },
     "automation": {
@@ -193,19 +193,19 @@
       readTime: "5 min read",
       published: "2026-06-25",
       updated: "2026-06-25",
-      title: "How to Automate Your Store's Busywork",
-      excerpt: "Order updates. Support replies. Daily reports. Your team does these by hand and loses hours every week. Here is the fix.",
+      title: "How to Automate Your Business's Busywork",
+      excerpt: "Enquiry follow-ups. Proposal reminders. Daily reports. Your team does these by hand and loses hours every week. Here is the fix.",
       hero: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=60",
       heroFallback: "/assets/images/blog-automation.svg",
       body: [
-        { t: "p", v: "Every week your team answers the same WhatsApp messages 'Where is my order?' retypes the same tracking numbers, and copies the same figures into a report. For a store doing thirty orders a day, that adds up to many hours a week of work a machine can finish in seconds. That is not small stuff. That is a part-time salary disappearing into copy-paste." },
+        { t: "p", v: "Every week your team answers the same WhatsApp messages, retypes the same follow-up messages, and copies the same figures into a report. For a business handling dozens of enquiries a week, that adds up to many hours of work a machine can finish in seconds. That is not small stuff. That is a part-time salary disappearing into copy-paste." },
         { t: "h2", v: "Where your hours actually go" },
-        { t: "p", v: "Three tasks eat most store teams alive: order updates and tracking numbers, support replies about status and returns, and daily reports for the owner. None of them need a human judgment call. Each one is a repeatable sequence exactly what automation is built for. When I audit a store, these three usually account for most of the manual work." },
+        { t: "p", v: "Three tasks eat most project-based teams alive: enquiry follow-ups and qualification, proposal reminders and scheduling, and daily reports for the owner. None of them need a human judgment call. Each one is a repeatable sequence — exactly what automation is built for. When I audit a business, these three usually account for most of the manual work." },
         { t: "h2", v: "The three automations to start with" },
-        { t: "p", v: "Order updates: connect your store's order feed to WhatsApp or email, and send the tracking number automatically the moment an order is fulfilled. Support replies: give a small AI agent your most common questions order status, size guide, return policy and let it answer in seconds, escalating only when it cannot. Daily reports: have the system pull orders, revenue, and cost per acquisition into one WhatsApp message every morning, before you even ask." },
-        { t: "p", v: "That's the setup I build for stores in Karachi and across Pakistan: order updates send themselves, the AI agent answers the common questions on its own, and the owner gets the morning report before asking for it. Weekly manual work drops to a fraction of what it was your team gets time back for the parts that actually need a person." },
+        { t: "p", v: "Enquiry follow-up: connect your lead source to WhatsApp or email, and send a personalised first response automatically the moment an enquiry arrives. Proposal reminders: give a small AI agent your most common questions — budget, timeline, project scope — and let it qualify leads in seconds, escalating only when it cannot. Daily reports: have the system pull enquiries, pipeline status, and cost per lead into one WhatsApp message every morning, before you even ask." },
+        { t: "p", v: "That's the setup I build for project-based businesses: enquiry follow-ups send themselves, the AI agent qualifies leads on its own, and the owner gets the morning report before asking for it. Weekly manual work drops to a fraction of what it was — your team gets time back for the parts that actually need a person." },
         { t: "h2", v: "What automation cannot replace" },
-        { t: "p", v: "Judgment calls: refunds with a story, an angry VIP customer, a pricing decision. Automate the repetitive majority, and your team finally gets time for the part that actually needs a person which is also the part that builds the brand. The busywork was never your business. It was just the tax you paid for not having a system." }
+        { t: "p", v: "Judgment calls: a complex project proposal, an important client relationship, a pricing decision. Automate the repetitive majority, and your team finally gets time for the part that actually needs a person — which is also the part that builds the business. The busywork was never your business. It was just the tax you paid for not having a system." }
       ]
     },
     "whatsapp-business": {
@@ -216,41 +216,29 @@
       published: "2026-08-04",
       updated: "2026-08-04",
       title: "WhatsApp Business Marketing: A Simple Guide",
-      excerpt: "Learn to sell more on WhatsApp with a free profile, catalog, quick replies, and labels. In plain English, for small businesses in Pakistan and the US.",
+      excerpt: "Learn to generate more enquiries on WhatsApp with a free profile, catalog, quick replies, and labels. In plain English, for businesses in Pakistan and the US.",
       hero: "https://images.unsplash.com/photo-1611606063065-ee7946f0787a?auto=format&fit=crop&w=1200&q=60",
       heroFallback: "/assets/images/blog-whatsapp.svg",
       body: [
-        { t: "p", v: "In Pakistan, WhatsApp is not just another app. It's where your customers actually live. They open it dozens of times a day, and when they want to buy something, they message the seller first. Most businesses use WhatsApp only to answer questions. The smart ones use it to sell. This guide shows you the simple system free tools, messages that work, and the mistakes to avoid." },
-        { t: "h2", v: "Why WhatsApp not email, not Facebook" },
-        { t: "p", v: "Email is basically dead for most small businesses in Pakistan. A Facebook post is seen by a small fraction of your followers. But a WhatsApp message sits right next to messages from family and friends. It feels personal, it feels trusted, and it gets answered. That's why shops that chat on WhatsApp close more sales than shops that wait for website orders. The reply rate is faster than email, the open rate is higher than any ad, and none of it costs you a rupee. For a small business, no other channel builds this much trust for free." },
+        { t: "p", v: "In Pakistan, WhatsApp is not just another app. It's where your clients actually live. They open it dozens of times a day, and when they need a service, they message the provider first. Most businesses use WhatsApp only to answer questions. The smart ones use it to generate and manage enquiries. This guide shows you the simple system — free tools, messages that work, and the mistakes to avoid." },
+        { t: "h2", v: "Why WhatsApp — not email, not Facebook" },
+        { t: "p", v: "Email is basically dead for most service businesses in Pakistan. A Facebook post is seen by a small fraction of your followers. But a WhatsApp message sits right next to messages from family and friends. It feels personal, it feels trusted, and it gets answered. That's why businesses that chat on WhatsApp close more projects than businesses that wait for website enquiries. The reply rate is faster than email, the open rate is higher than any ad, and none of it costs you a rupee." },
         { t: "h2", v: "Start with the free WhatsApp Business app" },
-        { t: "p", v: "You do not need the paid version to start. The free WhatsApp Business app has everything a small shop needs. It's a separate app from your personal WhatsApp, made for selling. Install it on the phone you already have, and you can also use it on your computer. Skip the paid Business API for now that's for bigger operations and costs money per message. Start free, and upgrade only when your business genuinely outgrows the free app. Most shops never do." },
+        { t: "p", v: "You do not need the paid version to start. The free WhatsApp Business app has everything a growing business needs. It's a separate app from your personal WhatsApp, made for business. Install it on the phone you already have, and you can also use it on your computer. Skip the paid Business API for now — that's for bigger operations. Start free, and upgrade only when your business genuinely outgrows the free app." },
         { t: "h2", v: "Fill your business profile like it's your shopfront" },
-        { t: "p", v: "Your profile is the first thing a customer sees before you say a single word. A half-filled profile looks like a hobby, not a business. Fill it properly: your real business name, a clean logo or photo, your address, your website, your business hours, and one line about what you do. This takes fifteen minutes once, and it quietly builds trust every day after that. When a customer sees a complete, professional profile, they feel safe handing over their money. When they see a blank one, they hesitate and hesitation is where sales die." },
-        { t: "h2", v: "Put your best products in the catalog" },
-        { t: "p", v: "The catalog is the most underused tool on WhatsApp Business. It's a mini store inside the app. Add your top ten to fifteen products with a clean photo, a short description, and your price in rupees. When a customer asks 'do you have this in stock?', you send the catalog item instead of typing a paragraph. No more blurry screenshots of a price list. The catalog makes you look organized, and it answers half the questions before they are even asked. For home-based shops, the catalog often replaces a website completely." },
+        { t: "p", v: "Your profile is the first thing a client sees before you say a single word. A half-filled profile looks like a hobby, not a business. Fill it properly: your real business name, a clean logo or photo, your address, your website, your business hours, and one line about what you do. This takes fifteen minutes once, and it quietly builds trust every day after that." },
+        { t: "h2", v: "Put your best services in the catalog" },
+        { t: "p", v: "The catalog is the most underused tool on WhatsApp Business. It's a mini portfolio inside the app. Add your top services or project categories with a clean photo, a short description, and a starting price range. When a client asks 'do you do commercial fit-outs?', you send the catalog item instead of typing a paragraph. The catalog makes you look organized, and it answers half the questions before they are even asked." },
         { t: "h2", v: "Set up quick replies and away messages" },
-        { t: "p", v: "Every day you type the same answers: 'yes, it's available', 'what's your location?', 'how long is delivery?', 'send me your price list'. Quick replies save these as shortcuts, so you answer with two taps instead of typing it out for the fiftieth time. Set an away message for the hours you sleep, so nobody waits in silence. Set a greeting for the first message from a new customer, so they always get a warm start. These small setups take twenty minutes once and save you hours every single week." },
+        { t: "p", v: "Every day you type the same answers: 'Yes, we cover that area,' 'What's your budget range?', 'Can I send you our portfolio?' Quick replies save these as shortcuts, so you answer with two taps instead of typing it out for the fiftieth time. Set an away message for the hours you sleep, so nobody waits in silence. Set a greeting for the first message from a new client, so they always get a warm start." },
         { t: "h2", v: "Use labels so no lead slips away" },
-        { t: "p", v: "Every chat is a customer waiting to be sorted. Labels are a free filing system: New Lead, Hot Lead, Asked Price, Order Placed, COD Pending, Repeat Customer. When a chat has a label, you know exactly what to do next and you never forget to follow up on a hot lead. This is the difference between hoping and knowing. Shops that label their chats close more sales because nothing falls through the cracks. It takes ten minutes a day, and it turns your WhatsApp from a messy inbox into a sales desk." },
-        { t: "h2", v: "Build your list the right way" },
-        { t: "p", v: "A small list of real buyers beats a big list of strangers. Grow your list with people who actually want to hear from you. Put a 'Chat on WhatsApp' button on your website and your Facebook page. Add your number to receipts and delivery notes. Ask happy customers if you can send them offers. Never buy numbers and never copy them from Facebook groups it breaks WhatsApp's rules, it wastes your time, and it can get your account banned for good. Permission is the whole game. A customer who chose to be on your list will read your messages; one who didn't will block you." },
-        { t: "h2", v: "Send broadcasts people actually read" },
-        { t: "p", v: "A broadcast sends one message to many people at once. Done badly, it gets you blocked. Done well, it makes you money. Send two to four broadcasts a month not one a day. Make most of them useful: a tip, a new arrival, a behind-the-scenes look, a customer story. Use promotions sparingly. A simple rule: seven helpful messages for every three sales messages. And never broadcast to people who didn't save your number or agree to receive updates. Someone who blocks you is a customer you can never reach again protect your list like it's your most valuable asset, because it is." },
-        { t: "h2", v: "Mistakes that get you banned" },
-        { t: "p", v: "A handful of habits can cost you your WhatsApp account and with it, every customer you built. Sending the same message to thousands of strangers. Buying a list of numbers. Using words like 'URGENT 90% OFF' and 'earn lakhs from home' in bulk. Forwarding spam. All of these can get your number flagged, then banned. Pakistan's telecom authority is cracking down on bulk messaging too, so the risk is real. The safe rule: only message people who know you, keep broadcasts small and rare, and never buy lists. One honest, growing list is worth a million random numbers." },
-        { t: "h2", v: "Post on Status for free advertising" },
-        { t: "p", v: "Status is the most ignored free tool on WhatsApp, and it's a gift. The people who saved your number see your Status when they open the app. Post a photo of your new stock, a short video of your product, or a picture of a happy customer. A few times a week is plenty. Keep it simple: one clear photo, one short line, your number. You stay in front of your customers all week without spending a single rupee. For a small business, Status is free advertising that actually gets seen." },
-        { t: "h2", v: "Reply fast the sales trick most shops miss" },
-        { t: "p", v: "The business that replies fastest wins. When a customer messages you at 11pm and you answer at 11am, they have already bought from someone else. Speed is free trust. If you can't be available all day, set an away message that says when you'll reply, and let the greeting message keep the conversation warm. For many small shops, a simple 'yes, it's available, I'll keep it for you' answered within the hour is worth more than a month of paid ads. Fast replies turn browsers into buyers." },
-        { t: "h2", v: "The follow-up that turns 'maybe' into a sale" },
-        { t: "p", v: "Most sales are lost in the silence after 'I'll think about it'. A short, polite follow-up the next day saves them: 'Hi, just checking if you had any questions about the product. I can hold it for you till tomorrow.' No pressure, no tricks just a nudge. Use your labels to find the people who asked about a product but didn't order, and follow up with them once. You'll be surprised how many were waiting for exactly that message. One gentle follow-up a day brings back more sales than a week of shouting promotions." },
-        { t: "h2", v: "When you outgrow the free app" },
-        { t: "p", v: "The free app is enough for most small businesses. When your chats grow beyond one person, when orders get complicated, or when you want to send order updates automatically, it's time to move up. The WhatsApp Business API lets multiple people answer the same number, sends automatic order and tracking updates, and can run an AI assistant that answers common questions at night. Click-to-WhatsApp ads on Facebook and Instagram are also powerful here someone taps your ad and lands straight in your chat, ready to talk. This is the stage where a little setup saves you hours every week." },
-        { t: "h2", v: "Your first 30 days on WhatsApp Business" },
-        { t: "p", v: "Here is a plan you can copy. Week one: install the app, fill your profile, and add your top ten products to the catalog. Week two: set up quick replies, a greeting, and an away message, then start labeling every new chat. Week three: put a 'Chat on WhatsApp' button on your website and your Facebook page, and add your number to your receipts. Week four: send your first broadcast to people who know you one useful message, not a sales push. Then post a Status a few times a week, and follow up once with anyone who asked a price but didn't order. That's the whole system, and it costs nothing but a little time. Do this for a month and you'll have a sales machine most shops in your city still don't have." },
+        { t: "p", v: "Every chat is a potential project waiting to be sorted. Labels are a free filing system: New Lead, Hot Lead, Proposal Sent, Follow Up, Repeat Client. When a chat has a label, you know exactly what to do next — and you never forget to follow up on a hot lead. This is the difference between hoping and knowing." },
+        { t: "h2", v: "Reply fast — the sales trick most businesses miss" },
+        { t: "p", v: "The business that replies fastest wins. When a client messages you at 11pm and you answer at 11am, they have already contacted someone else. Speed is free trust. If you can't be available all day, set an away message that says when you'll reply, and let the greeting message keep the conversation warm. For many businesses, a quick response within the hour is worth more than a month of paid ads." },
+        { t: "h2", v: "The follow-up that turns 'maybe' into a project" },
+        { t: "p", v: "Most projects are lost in the silence after 'I'll think about it'. A short, polite follow-up the next day saves them: 'Hi, just checking if you had any questions about the project. Happy to walk you through the options.' No pressure, no tricks — just a nudge. Use your labels to find the people who enquired but didn't commit, and follow up with them once." },
         { t: "h2", v: "The bottom line" },
-        { t: "p", v: "WhatsApp is the cheapest, most personal channel a small business in Pakistan has. Fill your profile, add a catalog, set up quick replies, label your leads, and broadcast rarely but usefully. Reply fast, follow up once, and let Status do the free advertising. Do these basics and you'll sell more without spending a single rupee on ads. If you'd rather run your business than run your phone, that's what I'm here for. I can set up your WhatsApp system, build an AI agent to answer night messages, or manage the ads around it. Message me on WhatsApp and let's talk." }
+        { t: "p", v: "WhatsApp is the cheapest, most personal channel a service business in Pakistan has. Fill your profile, add a catalog, set up quick replies, label your leads, and reply fast. Do these basics and you'll generate more enquiries without spending a single rupee on ads. If you'd rather run your business than run your phone, that's what I'm here for." }
       ]
     },
     "google-ads-pakistan": {
@@ -260,17 +248,17 @@
       readTime: "6 min read",
       published: "2026-08-06",
       updated: "2026-08-06",
-      title: "Google Ads for Small Businesses in Pakistan: A Simple Guide",
-      excerpt: "Google Ads brings customers who are already searching for what you sell. Here's how small businesses in Pakistan can start, without burning budget.",
+      title: "Google Ads for Service Businesses in Pakistan: A Simple Guide",
+      excerpt: "Google Ads brings clients who are already searching for what you offer. Here's how service businesses in Pakistan can start, without burning budget.",
       hero: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=60",
       heroFallback: "/assets/images/blog-meta-ads.svg",
       faq: [
         {
           q: "How much does Google Ads cost per month in Pakistan?",
-          a: "Your ad spend is flexible and paid directly to Google, so you can start small. The management fee for Meta and Google Ads at Open Agent starts at PKR 30,000. The two costs are always separate and transparent."
+          a: "Your ad spend is flexible and paid directly to Google, so you can start small. The management fee is custom-scoped based on your business needs. The two costs are always separate and transparent."
         },
         {
-          q: "Is Google Ads good for small businesses in Pakistan?",
+          q: "Is Google Ads good for service businesses in Pakistan?",
           a: "Yes, especially for service and local businesses, because your ad appears at the moment someone is actively searching for what you offer. Small, focused budgets work well."
         },
         {
@@ -279,37 +267,28 @@
         },
         {
           q: "Do I pay ad spend to the agency or to Google?",
-          a: "At Open Agent, ad spend is billed separately and paid directly to the ad platform. The management fee covers setup, testing, and optimization."
+          a: "Ad spend is billed separately and paid directly to the ad platform. The management fee covers setup, testing, and optimization."
         }
       ],
       body: [
-        { t: "p", v: "Most small businesses in Pakistan only ever run ads on Facebook and Instagram. That's a mistake, because the people who see those ads are not always looking to buy. Google Ads works differently. Someone types 'AC repair in Karachi' or 'buy organic skincare in Pakistan' into Google, and your business appears right there, at the exact moment they want to buy. You don't interrupt them. You answer them. That's why Google Ads is one of the fastest ways to get real customers in Pakistan." },
+        { t: "p", v: "Most service businesses in Pakistan only ever run ads on Facebook and Instagram. That's a mistake, because the people who see those ads are not always looking to buy. Google Ads works differently. Someone types 'interior designer in Karachi' or 'commercial fit-out company in Dubai' into Google, and your business appears right there, at the exact moment they want to hire. You don't interrupt them. You answer them. That's why Google Ads is one of the fastest ways to get real clients in Pakistan." },
         { t: "h2", v: "Why Google Ads, not just Facebook ads" },
-        { t: "p", v: "Facebook and Instagram ads show your business to people while they scroll. Those people may not need you today, so the ad has to be clever enough to stop their thumb. Google Ads shows you to people who are already searching for what you sell. When someone types 'best wedding photographer in Karachi', they are telling Google exactly what they want. If your ad appears, they are already halfway to buying. For a small business with a limited budget, that buying intent is gold. You spend money on people who already want your service, instead of hoping someone stops scrolling." },
+        { t: "p", v: "Facebook and Instagram ads show your business to people while they scroll. Those people may not need you today, so the ad has to be clever enough to stop their thumb. Google Ads shows you to people who are already searching for what you offer. When someone types 'best wedding planner in Lahore', they are telling Google exactly what they want. If your ad appears, they are already halfway to hiring. For a service business with a limited budget, that buying intent is gold." },
         { t: "h2", v: "How much do Google Ads cost in Pakistan?" },
-        { t: "p", v: "Two costs are involved, and it's important to understand the difference. First is the ad spend: the money that goes to Google to show your ads. You pay this directly to Google, and you decide how much. Second is the management fee: what an agency charges to set up and run the ads for you. At Open Agent, Meta and Google Ads management starts at PKR 30,000, and your ad spend is always separate and billed directly. There are no hidden markups on your ad budget. For a local business, you can start small and scale only when you see results." },
+        { t: "p", v: "Two costs are involved, and it's important to understand the difference. First is the ad spend: the money that goes to Google to show your ads. You pay this directly to Google, and you decide how much. Second is the management fee: what an agency charges to set up and run the ads for you. Ad spend is always separate and billed directly. There are no hidden markups on your ad budget. For a local business, you can start small and scale only when you see results." },
         { t: "h2", v: "The searches that actually make you money" },
-        { t: "p", v: "Not all searches are equal. 'How to fix an air conditioner' is a question someone asks for curiosity. 'AC repair near me in Karachi' is a customer with a broken machine. Your Google Ads should target searches that show buying intent. For a service business, that usually means a service plus a location: 'restaurant interior designer in Lahore', 'salon in DHA Karachi', 'lawyer for company registration in Pakistan'." },
-        { t: "p", v: "For an online store, it means product words: 'handmade candles price in Pakistan', 'buy leather wallet online', 'perfume gift set in Karachi'. Write down the exact things your customer would type at the moment they are ready to pay. Those are your keywords. Ten good keywords beat a hundred guesses every single time." },
+        { t: "p", v: "Not all searches are equal. 'How to design an office' is a question someone asks for curiosity. 'Office fit-out company near me in Karachi' is a client with a project. Your Google Ads should target searches that show buying intent. For a service business, that usually means a service plus a location: 'restaurant interior designer in Lahore', 'clinic fit-out in DHA Karachi', 'villa renovation in Dubai'." },
+        { t: "p", v: "Write down the exact things your client would type at the moment they are ready to hire. Those are your keywords. Ten good keywords beat a hundred guesses every single time." },
         { t: "h2", v: "Start small and focused" },
-        { t: "p", v: "The biggest mistake is starting with a big budget and broad keywords. A small budget that is focused almost always beats a big budget that is scattered. Start with one campaign, one city, and ten to fifteen keywords that match what your customers type. Send people to a page that is built to sell: if they searched for a service, send them to a page about that service, not your homepage. Watch one number, the cost per lead, and change what isn't working. Once you see leads coming in at a price you like, add more cities and more keywords." },
+        { t: "p", v: "The biggest mistake is starting with a big budget and broad keywords. A small budget that is focused almost always beats a big budget that is scattered. Start with one campaign, one city, and ten to fifteen keywords that match what your clients type. Send people to a page that is built to convert: if they searched for a service, send them to a page about that service, not your homepage. Watch one number, the cost per lead, and change what isn't working." },
         { t: "h2", v: "Google Ads vs Meta Ads: which one first?" },
-        { t: "p", v: "They do different jobs. Google Ads answers people who are already looking. Meta Ads finds people who don't know they want you yet. For most small businesses, the smart order is Google first if customers search for what you sell, and Meta later to build awareness. A restaurant, a clinic, or a home service business should start with Google, because their customers type a need into Google. A new fashion brand people have never heard of should start with Meta, because nobody searches for a brand they don't know. When your budget allows, both work together: Meta makes people aware, Google catches them at the moment they decide to buy." },
+        { t: "p", v: "They do different jobs. Google Ads answers people who are already looking. Meta Ads finds people who don't know they need you yet. For most service businesses, the smart order is Google first if clients search for what you offer, and Meta later to build awareness. A clinic, a fit-out company, or a landscaping business should start with Google, because their clients type a need into Google. A new brand people have never heard of should start with Meta, because nobody searches for a brand they don't know. When your budget allows, both work together." },
         { t: "h2", v: "A simple first-30-days plan" },
-        { t: "p", v: "Week one: set up Google Ads, add your local keywords, and install conversion tracking before spending a single rupee. Week two: launch one small campaign and add negative keywords every day from your search terms report. Week three: improve your landing page so it matches your ad and answers the search. Week four: look at the numbers, pause what isn't working, and move the budget to what is. That's the whole plan. You don't need a fancy funnel or a marketing degree." },
+        { t: "p", v: "Week one: set up Google Ads, add your local keywords, and install conversion tracking before spending a single rupee. Week two: launch one small campaign and add negative keywords every day from your search terms report. Week three: improve your landing page so it matches your ad and answers the search. Week four: look at the numbers, pause what isn't working, and move the budget to what is. That's the whole plan." },
         { t: "h2", v: "Mistakes that burn your ad budget" },
-        { t: "p", v: "Four mistakes waste more Pakistani ad budgets than anything else. One: targeting broad words like 'shop' or 'online shopping', which eat money without bringing buyers. Two: sending everyone to the homepage and letting them figure it out. Three: ignoring negative keywords, so your ads show for 'free' and 'cheap' searches when you sell premium products. Four: no conversion tracking, so you can't see which search actually brought a sale. Fixing these four basics is usually enough to turn a losing account into a profitable one." },
-        { t: "h2", v: "What good Google Ads management looks like" },
-        { t: "p", v: "Agencies love to sound clever. Good management is simple and honest: the right keywords, a page that sells, clean tracking, and daily attention to what works. You should get a report you can understand, showing the money spent and the leads or sales that came back. If someone can't explain your ad account in plain English, that's a warning sign. At Open Agent, I run Meta and Google Ads from PKR 30,000, test what works, and move budget to the winners. Your ad spend goes straight to Google, and I never touch it." },
-        { t: "h2", v: "How to pick a Google Ads agency in Pakistan" },
-        { t: "p", v: "Any agency can create an ad account. Good ones ask questions first. Before you hire anyone, they should ask what you sell, who your customers are, where they are, and what one sale is worth to you. Then they should explain their plan in plain English and set a clear split between ad spend and their fee. Ask about reports: you should see money spent and leads or sales, not vanity numbers like clicks and impressions. Ask about ad spend: it should be billed directly to Google, never marked up. And be honest with yourself about promises no one can guarantee sales in week one, and anyone who promises 'guaranteed number one' is selling you a story. Good management is patient, transparent, and easy to understand." },
-        { t: "h2", v: "Frequently asked questions" },
-        { t: "p", v: "Q. How much does Google Ads cost per month in Pakistan? A. Your ad spend is flexible and paid directly to Google, so you can start small. My management fee for Meta and Google Ads starts at PKR 30,000. The two are always separate and transparent." },
-        { t: "p", v: "Q. Is Google Ads good for small businesses in Pakistan? A. Yes, especially for service and local businesses, because your ad appears at the moment someone is actively searching for what you offer. Small, focused budgets work well." },
-        { t: "p", v: "Q. What is the difference between Meta Ads and Google Ads? A. Meta Ads shows your ad to people while they scroll. Google Ads shows your ad to people who are searching for what you sell. Both are useful, but they solve different problems." },
-        { t: "p", v: "Q. Do I pay ad spend to the agency or to Google? A. At Open Agent, ad spend is billed separately and paid directly to the ad platform. The management fee covers setup, testing, and optimization." },
+        { t: "p", v: "Four mistakes waste more ad budgets than anything else. One: targeting broad words like 'design' or 'construction', which eat money without bringing buyers. Two: sending everyone to the homepage and letting them figure it out. Three: ignoring negative keywords, so your ads show for 'free' and 'DIY' searches when you sell premium services. Four: no conversion tracking, so you can't see which search actually brought an enquiry. Fixing these four basics is usually enough to turn a losing account into a profitable one." },
         { t: "h2", v: "The bottom line" },
-        { t: "p", v: "Google Ads puts your business in front of people who are already looking for what you sell. Start small, target the right searches, and watch one number. If you'd rather focus on your business, I can set up and run your Google and Meta Ads for you, starting at PKR 30,000. Send me a message on WhatsApp and I'll show you what your account should look like." }
+        { t: "p", v: "Google Ads puts your business in front of people who are already looking for what you offer. Start small, target the right searches, and watch one number. If you'd rather focus on your business, I can set up and run your Google and Meta Ads for you. Send me a message on WhatsApp and I'll show you what your account should look like." }
       ]
     }
   };
