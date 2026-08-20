@@ -92,7 +92,6 @@ Every Structure A page follows this pattern:
 - **Social:** X (@Abeergrowth), Facebook, Instagram, LinkedIn
 - **Favicons:** `assets/images/branding/favicons/`
 - **OG images:** `assets/images/og/`
-- **Pricing:** "Custom" tiers — no PKR amounts shown on site
 
 ## Structure B (DO NOT TOUCH)
 
