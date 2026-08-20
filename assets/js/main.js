@@ -150,11 +150,29 @@ function initForm(){
   var msg=document.getElementById('formMsg');
   form.addEventListener('submit',function(e){
     e.preventDefault();
+    if(!form.checkValidity()){
+      form.reportValidity();
+      return;
+    }
+    var data=new FormData(form);
+    var labels={
+      name:'Name',email:'Email',phone:'Phone',company:'Company',website:'Website',
+      industry:'Industry',market:'Market',project_value:'Project value',budget:'Monthly marketing budget',
+      current_method:'Current lead generation method',primary_goal:'Primary goal',message:'Project details'
+    };
+    var lines=['Hi OpenAgent, I would like a free growth audit.',''];
+    Object.keys(labels).forEach(function(key){
+      var value=(data.get(key)||'').trim();
+      if(value)lines.push(labels[key]+': '+value);
+    });
+    var url='https://wa.me/923703159642?text='+encodeURIComponent(lines.join('\n'));
     if(msg){
-      msg.textContent='Thanks! We\'ll be in touch within 4 business hours with next steps.';
+      msg.textContent='Opening WhatsApp with your details. Please send the pre-filled message to complete your enquiry.';
       msg.className='form-msg success';
       msg.style.display='block';
     }
+    if(typeof gtag==='function')gtag('event','generate_lead',{method:'WhatsApp contact form'});
+    window.open(url,'_blank','noopener,noreferrer');
     form.reset();
   });
 }
@@ -179,7 +197,7 @@ function initActiveNav(){
   var path=window.location.pathname.split('/').pop()||'index.html';
   links.forEach(function(a){
     var href=a.getAttribute('href');
-    if(href===path||(path===''&&href==='index.html')){
+    if(href===path||(path==='index.html'&&(href==='/'||href==='index.html'))){
       a.style.color='var(--color-text)';
     }
   });

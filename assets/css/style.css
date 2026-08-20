@@ -302,8 +302,9 @@ p { color: var(--color-text-secondary); }
   position: relative; border-radius: var(--r-lg);
   overflow: hidden; min-height: 320px;
   display: flex; align-items: flex-end;
-  cursor: default;
+  cursor: pointer; color: inherit; text-decoration: none;
 }
+.ind-card:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 4px; }
 .ind-card img {
   position: absolute; inset: 0;
   width: 100%; height: 100%; object-fit: cover;
