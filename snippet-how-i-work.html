@@ -1,0 +1,53 @@
+<style>
+.oa-how-i-work { padding: 80px 20px; background: var(--bg-dark, #0a0a0a); }
+.oa-how-i-work__container { max-width: 1100px; margin: 0 auto; }
+.oa-how-i-work__eyebrow { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent, #ff6b00); font-weight: 700; margin: 0 0 12px; }
+.oa-how-i-work__title { font-size: clamp(28px, 4vw, 40px); font-weight: 700; color: var(--text-light, #f5f5f5); margin: 0 0 12px; line-height: 1.2; }
+.oa-how-i-work__sub { font-size: 16px; color: #a3a3a3; max-width: 660px; margin: 0 0 48px; line-height: 1.6; }
+.oa-how-i-work__steps { display: flex; gap: 32px; }
+.oa-how-i-work__step { flex: 1; position: relative; }
+.oa-how-i-work__step:not(:last-child)::after { content: ""; position: absolute; top: 26px; left: calc(100% + 6px); width: 20px; height: 2px; background: rgba(255, 255, 255, 0.18); }
+.oa-how-i-work__number { font-size: 44px; font-weight: 800; color: var(--accent, #ff6b00); line-height: 1; margin: 0 0 14px; }
+.oa-how-i-work__step-title { font-size: 17px; font-weight: 700; color: var(--text-light, #f5f5f5); margin: 0 0 10px; line-height: 1.35; }
+.oa-how-i-work__step-desc { font-size: 14px; color: #a3a3a3; line-height: 1.7; margin: 0; }
+@media (max-width: 768px) {
+  .oa-how-i-work { padding: 64px 20px; }
+  .oa-how-i-work__steps { flex-direction: column; gap: 36px; }
+  .oa-how-i-work__step:not(:last-child)::after { display: none; }
+  .oa-how-i-work__number { font-size: 38px; }
+}
+</style>
+<section class="oa-how-i-work">
+  <div class="oa-how-i-work__container">
+    <p class="oa-how-i-work__eyebrow">The Process</p>
+    <h2 class="oa-how-i-work__title">How I Work</h2>
+    <p class="oa-how-i-work__sub">No fluff. No handoffs. One person who owns your results from day one.</p>
+    <div class="oa-how-i-work__steps">
+      <div class="oa-how-i-work__step">
+        <p class="oa-how-i-work__number">01</p>
+        <h3 class="oa-how-i-work__step-title">Understand Your Business</h3>
+        <p class="oa-how-i-work__step-desc">I learn about your business, your target clients, your past marketing, and your goals before recommending anything. No cookie-cutter strategies &mdash; everything starts with your specific situation.</p>
+      </div>
+      <div class="oa-how-i-work__step">
+        <p class="oa-how-i-work__number">02</p>
+        <h3 class="oa-how-i-work__step-title">Build the Plan</h3>
+        <p class="oa-how-i-work__step-desc">Based on what I learn, I map out the fastest path to results &mdash; which channels, which offer, which audience, and what timeline is realistic. You get a clear plan before any work begins.</p>
+      </div>
+      <div class="oa-how-i-work__step">
+        <p class="oa-how-i-work__number">03</p>
+        <h3 class="oa-how-i-work__step-title">Execute With Precision</h3>
+        <p class="oa-how-i-work__step-desc">I build your campaigns, automations, content systems, or Shopify setup with speed and attention to detail. You stay informed at every stage &mdash; no black boxes.</p>
+      </div>
+      <div class="oa-how-i-work__step">
+        <p class="oa-how-i-work__number">04</p>
+        <h3 class="oa-how-i-work__step-title">Go Live &amp; Gather Data</h3>
+        <p class="oa-how-i-work__step-desc">Everything goes live and I track results from day one. Early data tells us what's working and what needs to be adjusted before we scale.</p>
+      </div>
+      <div class="oa-how-i-work__step">
+        <p class="oa-how-i-work__number">05</p>
+        <h3 class="oa-how-i-work__step-title">Improve Every Week</h3>
+        <p class="oa-how-i-work__step-desc">I review performance weekly and make data-driven improvements. The goal is compounding results &mdash; every week should be better than the last.</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,148 @@
+<style>
+.oa-portfolio { padding: 80px 20px; background: var(--bg-light, #ffffff); }
+.oa-portfolio__container { max-width: 1100px; margin: 0 auto; }
+.oa-portfolio__eyebrow { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent, #ff6b00); font-weight: 700; margin: 0 0 12px; }
+.oa-portfolio__title { font-size: clamp(28px, 4vw, 40px); font-weight: 700; color: var(--text-primary, #111111); margin: 0 0 12px; line-height: 1.2; }
+.oa-portfolio__sub { font-size: 16px; color: #555555; max-width: 660px; margin: 0 0 36px; line-height: 1.6; }
+.oa-portfolio__filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+.oa-portfolio__filter-btn { padding: 9px 20px; border-radius: 999px; border: 1px solid #e5e5e5; background: #ffffff; color: var(--text-primary, #111111); font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s ease; font-family: inherit; }
+.oa-portfolio__filter-btn:hover { border-color: var(--accent, #ff6b00); color: var(--accent, #ff6b00); }
+.oa-portfolio__filter-btn.is-active { background: var(--accent, #ff6b00); border-color: var(--accent, #ff6b00); color: #ffffff; }
+.oa-portfolio__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.oa-portfolio__card { background: #ffffff; border: 1px solid #e5e5e5; border-radius: 12px; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.oa-portfolio__card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); }
+.oa-portfolio__card.is-hidden { display: none; }
+.oa-portfolio__media { aspect-ratio: 16 / 10; background: #f0f0f0; position: relative; overflow: hidden; }
+.oa-portfolio__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.oa-portfolio__fallback { position: absolute; inset: 0; display: none; align-items: center; justify-content: center; flex-direction: column; gap: 8px; background: linear-gradient(135deg, #f5f5f5, #eaeaea); color: #888888; font-size: 14px; font-weight: 500; text-align: center; padding: 16px; }
+.oa-portfolio__fallback-icon { font-size: 34px; line-height: 1; }
+.oa-portfolio__body { padding: 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.oa-portfolio__badge { align-self: flex-start; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 12px; border-radius: 999px; color: #ffffff; }
+.oa-portfolio__badge--meta-ads { background: var(--accent, #ff6b00); }
+.oa-portfolio__badge--shopify { background: #2563eb; }
+.oa-portfolio__badge--ai-content { background: #8b5cf6; }
+.oa-portfolio__card-title { font-size: 16px; font-weight: 700; color: var(--text-primary, #111111); margin: 0; line-height: 1.4; }
+.oa-portfolio__desc { font-size: 14px; color: #555555; line-height: 1.6; margin: 0; }
+.oa-portfolio__result { font-size: 14px; font-weight: 700; color: var(--accent, #ff6b00); margin: auto 0 0; padding-top: 8px; }
+@media (max-width: 768px) {
+  .oa-portfolio__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .oa-portfolio { padding: 64px 20px; }
+  .oa-portfolio__grid { grid-template-columns: 1fr; }
+  .oa-portfolio__filters { gap: 8px; }
+}
+</style>
+<section class="oa-portfolio">
+  <div class="oa-portfolio__container">
+    <p class="oa-portfolio__eyebrow">Portfolio</p>
+    <h2 class="oa-portfolio__title">Work That Speaks</h2>
+    <p class="oa-portfolio__sub">Real projects. Real results. Every piece below was built or managed by Abeer Nasir at OpenAgent.</p>
+    <div class="oa-portfolio__filters" role="group" aria-label="Filter portfolio by category">
+      <button type="button" class="oa-portfolio__filter-btn is-active" data-filter="all">All</button>
+      <button type="button" class="oa-portfolio__filter-btn" data-filter="meta-ads">Meta Ads</button>
+      <button type="button" class="oa-portfolio__filter-btn" data-filter="shopify">Shopify</button>
+      <button type="button" class="oa-portfolio__filter-btn" data-filter="ai-content">AI Content</button>
+    </div>
+    <div class="oa-portfolio__grid">
+      <article class="oa-portfolio__card" data-category="meta-ads">
+        <div class="oa-portfolio__media">
+          <img src="assets/images/portfolio/meta-ads-beauty.jpg" alt="Meta Ads campaign results for beauty brand" loading="lazy" width="640" height="400" onerror="this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='flex'">
+          <div class="oa-portfolio__fallback"><span class="oa-portfolio__fallback-icon">&#128248;</span>Screenshot uploading soon</div>
+        </div>
+        <div class="oa-portfolio__body">
+          <span class="oa-portfolio__badge oa-portfolio__badge--meta-ads">Meta Ads</span>
+          <h3 class="oa-portfolio__card-title">E-Commerce Meta Ads &mdash; Beauty Brand</h3>
+          <p class="oa-portfolio__desc">Planned, launched and optimized a Meta Ads campaign for a Pakistani beauty/perfume D2C brand. Managed creatives, audiences, and budget allocation.</p>
+          <p class="oa-portfolio__result">30 qualified sales &middot; PKR 1,000 ad spend</p>
+        </div>
+      </article>
+      <article class="oa-portfolio__card" data-category="meta-ads">
+        <div class="oa-portfolio__media">
+          <img src="assets/images/portfolio/meta-ads-leads.jpg" alt="Lead generation campaign results for local business" loading="lazy" width="640" height="400" onerror="this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='flex'">
+          <div class="oa-portfolio__fallback"><span class="oa-portfolio__fallback-icon">&#128248;</span>Screenshot uploading soon</div>
+        </div>
+        <div class="oa-portfolio__body">
+          <span class="oa-portfolio__badge oa-portfolio__badge--meta-ads">Meta Ads</span>
+          <h3 class="oa-portfolio__card-title">Lead Generation Campaign &mdash; Local Business</h3>
+          <p class="oa-portfolio__desc">Built a Facebook &amp; Instagram lead generation campaign from scratch. Handled audience research, ad copy, creative testing, and weekly optimization.</p>
+          <p class="oa-portfolio__result">6 qualified leads &middot; PKR 2,000 ad spend</p>
+        </div>
+      </article>
+      <article class="oa-portfolio__card" data-category="shopify">
+        <div class="oa-portfolio__media">
+          <img src="assets/images/portfolio/shopify-perfume.jpg" alt="Shopify store setup for perfume brand" loading="lazy" width="640" height="400" onerror="this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='flex'">
+          <div class="oa-portfolio__fallback"><span class="oa-portfolio__fallback-icon">&#128248;</span>Screenshot uploading soon</div>
+        </div>
+        <div class="oa-portfolio__body">
+          <span class="oa-portfolio__badge oa-portfolio__badge--shopify">Shopify</span>
+          <h3 class="oa-portfolio__card-title">Shopify Store Setup &mdash; Perfume Brand</h3>
+          <p class="oa-portfolio__desc">Set up and optimized a Shopify store for a Pakistani perfume brand. Improved product pages, navigation, and checkout flow to increase conversions.</p>
+          <p class="oa-portfolio__result">Full store setup &middot; Conversion-optimized</p>
+        </div>
+      </article>
+      <article class="oa-portfolio__card" data-category="ai-content">
+        <div class="oa-portfolio__media">
+          <img src="assets/images/portfolio/ai-content-ecom.jpg" alt="AI content workflow for e-commerce brand" loading="lazy" width="640" height="400" onerror="this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='flex'">
+          <div class="oa-portfolio__fallback"><span class="oa-portfolio__fallback-icon">&#128248;</span>Screenshot uploading soon</div>
+        </div>
+        <div class="oa-portfolio__body">
+          <span class="oa-portfolio__badge oa-portfolio__badge--ai-content">AI Content</span>
+          <h3 class="oa-portfolio__card-title">AI Content System &mdash; E-Commerce Brand</h3>
+          <p class="oa-portfolio__desc">Developed an AI-assisted content workflow for social media and advertising. Built prompt templates and content pipelines using ChatGPT and Claude.</p>
+          <p class="oa-portfolio__result">3x faster content output &middot; Consistent brand voice</p>
+        </div>
+      </article>
+      <article class="oa-portfolio__card" data-category="ai-content">
+        <div class="oa-portfolio__media">
+          <img src="assets/images/portfolio/ebook-ai-guide.jpg" alt="Generative AI Specialist free ebook cover" loading="lazy" width="640" height="400" onerror="this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='flex'">
+          <div class="oa-portfolio__fallback"><span class="oa-portfolio__fallback-icon">&#128248;</span>Screenshot uploading soon</div>
+        </div>
+        <div class="oa-portfolio__body">
+          <span class="oa-portfolio__badge oa-portfolio__badge--ai-content">AI Content</span>
+          <h3 class="oa-portfolio__card-title">Free Ebook &mdash; Generative AI Specialist Guide</h3>
+          <p class="oa-portfolio__desc">Authored and published a complete free ebook on Generative AI for business owners and marketers. Distributed via LinkedIn and direct links.</p>
+          <p class="oa-portfolio__result">Published &amp; distributed free &middot; Builds authority</p>
+        </div>
+      </article>
+      <article class="oa-portfolio__card" data-category="ai-content">
+        <div class="oa-portfolio__media">
+          <img src="assets/images/portfolio/ebook-digital-marketing.jpg" alt="Why Businesses Fail at Digital Marketing free ebook cover" loading="lazy" width="640" height="400" onerror="this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='flex'">
+          <div class="oa-portfolio__fallback"><span class="oa-portfolio__fallback-icon">&#128248;</span>Screenshot uploading soon</div>
+        </div>
+        <div class="oa-portfolio__body">
+          <span class="oa-portfolio__badge oa-portfolio__badge--ai-content">AI Content</span>
+          <h3 class="oa-portfolio__card-title">Free Ebook &mdash; Why Businesses Fail at Digital Marketing</h3>
+          <p class="oa-portfolio__desc">Wrote and published a practical ebook helping small business owners understand common digital marketing mistakes and how to fix them.</p>
+          <p class="oa-portfolio__result">Published &amp; distributed free &middot; Builds trust</p>
+        </div>
+      </article>
+    </div>
+  </div>
+  <script>
+  (function () {
+    var roots = document.querySelectorAll('.oa-portfolio');
+    roots.forEach(function (root) {
+      var btns = root.querySelectorAll('.oa-portfolio__filter-btn');
+      var cards = root.querySelectorAll('.oa-portfolio__card');
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          btns.forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          var filter = btn.getAttribute('data-filter');
+          cards.forEach(function (card) {
+            var show = filter === 'all' || card.getAttribute('data-category') === filter;
+            card.classList.toggle('is-hidden', !show);
+          });
+        });
+      });
+      root.querySelectorAll('.oa-portfolio__media img').forEach(function (img) {
+        if (!img.getAttribute('src')) {
+          img.style.display = 'none';
+          if (img.nextElementSibling) img.nextElementSibling.style.display = 'flex';
+        }
+      });
+    });
+  })();
+  </script>
+</section>
