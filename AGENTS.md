@@ -1,123 +1,61 @@
 # AGENTS.md
 
-**OpenAgent** — B2B lead generation agency website for open-agent.agency.
-
-## Architecture
-
-- **Pure static HTML/CSS/JS** — no build step, no package.json, no framework
-- Deployed to **GitHub Pages** via built-in "Deploy from a branch" (main → `/`)
-- Remote: `https://github.com/nasirmeo5533-design/open-agent.git`
-- Two coexisting site structures from a git merge — **do not delete Structure B**
+**OpenAgent** — digital marketing agency website for open-agent.agency.
 
 ## Commands
 
-- No build, test, lint, or install step
-- Local preview: `python -m http.server 8080` or any static server
-- Deploy: push to `main` → GitHub Pages auto-deploys (no custom workflow)
+- **No build, test, lint, or install step.** Pure static HTML/CSS/JS.
+- Local preview: `python -m http.server 8080` (repo root), then `http://localhost:8080`
+- Deploy: push to `main` → GitHub Pages auto-deploys (`CNAME` = open-agent.agency)
+- Verification is manual: start local server + check pages return 200; grep/`Test-Path` every internal href to catch broken links; validate JSON-LD blocks parse (`ConvertFrom-Json`). No automated suite exists.
 
-## Design System
+## Three generations of files coexist — know which one you're editing
 
-- **Theme:** Dark `#0A0A0A` with neon orange `#FF6B00` accent
-- **Typography:** Poppins (headings 600-700), DM Sans (body 400-500), JetBrains Mono (labels)
-- **Colors:** `--color-bg: #0A0A0A`, `--color-surface: #1A1A1A`, `--color-text: #FFFFFF`, `--color-text-secondary: #A0A0A0`, `--color-primary: #FF6B00`
-- **Buttons:** Rounded `var(--r)` (12px), orange primary, ghost variant
-- **Layout:** Full-width sections, boxed content via `.wrap` (max-width 1180px)
-- **Responsive:** Mobile-first breakpoints at 560px, 768px, 900px
+1. **Active design (v2 Indigo)** — the only set to edit for new work:
+   - Root: `index.html`, `about.html`, `contact.html`, `services.html`, `pricing.html`, `portfolio.html`, `blogs.html`
+   - Subfolder: `services/search-engine-optimization.html`, `services/social-media-management.html`, `services/performance-marketing.html`, `services/website-development.html`, `services/graphic-designing.html`
+   - Shared assets: `assets/css/style.css` (v2 design system, indigo/pink light theme), `assets/js/main.js`
+2. **Legacy Structure A (old dark `#0A0A0A`/orange `#FF6B00` theme)** — still live and in sitemap but superseded: `industries.html` + `industries/*.html`, `blog.html` + `blog/*.html` (12 posts), `faq.html`. Do not delete or restyle without asking.
+3. **Structure B (DO NOT TOUCH)** — folder-based duplicates from a git-history merge: `about/`, `pricing/`, `contact/`, `faq/`, `terms/`, `privacy/`, `blog-post/`, `blog/index.html`, `services/index.html`, `services/<topic>/` folders, plus separate `css/style.css` and `js/main.js`. Blocked via robots.txt.
 
-## File Structure (Structure A — active)
+Never touch: `google3cef563566032184.html`, `CNAME`, `.nojekyll`, `versions/`.
 
-```
-index.html              — Homepage (hero, trust, problem, services, industries, process, why-us, FAQ, contact)
-services.html           — 8 services detail page
-industries.html         — 5 industry verticals (hub page)
-about.html              — Founder story + expertise
-contact.html            — Form with industry/budget dropdowns + WhatsApp
-faq.html                — FAQ page with JSON-LD FAQPage schema
-blog.html               — Blog listing (links to blog/*.html)
-privacy.html            — Privacy policy
-terms.html              — Terms of service
-404.html                — Custom 404
-industries/*.html       — 5 industry sub-pages (commercial-fit-out, healthcare-fit-out, luxury-villa, hospitality, commercial-landscaping)
-blog/*.html             — 12 static blog posts (NOT blog/index.html — that's Structure B)
-assets/css/style.css    — Complete CSS (~800 lines)
-assets/js/main.js       — Vanilla JS (~200 lines): mobile menu, scroll reveal, stat counters, portfolio grid, lightbox, form handling
-assets/images/          — All images (portfolio, industries, OG, favicons, founder)
-.nojekyll               — Prevents Jekyll processing on GitHub Pages
-```
+## Path conventions (breaks silently if wrong)
 
-## HTML Conventions
+- Root pages: `assets/css/style.css`, `assets/js/main.js`, plain links (`about.html`)
+- Pages under `services/`: **every** asset/link prefixed `../` (`../assets/css/style.css`, `../index.html`); only intra-folder service links are bare slugs
+- Canonicals stay absolute (`https://open-agent.agency/services/<slug>.html`)
+- New top-level subfolders risk colliding with robots.txt Disallow rules that exist to block Structure B duplicates — check before adding
 
-Every Structure A page follows this pattern:
+## Shared markup is copy-pasted, not included
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- charset, viewport, title, meta description, canonical -->
-  <!-- og:*, twitter:* meta tags -->
-  <!-- Google Fonts: Poppins, DM Sans, JetBrains Mono -->
-  <!-- <link href="assets/css/style.css"> (root pages) or "../assets/css/style.css" (blog/) -->
-  <!-- GA4 gtag.js async snippet -->
-  <!-- <script type="application/ld+json"> Organization + page-specific schema -->
-</head>
-<body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
-  <header class="topbar" role="banner"> ... nav ... </header>
-  <main id="main-content" role="main"> ... sections ... </main>
-  <footer class="footer" role="contentinfo"> ... </footer>
-  <a class="fwa" href="https://wa.me/923703159642"> WhatsApp floating button </a>
-  <div class="lightbox"> portfolio lightbox overlay </div>
-  <script src="assets/js/main.js" defer></script>
-</body>
-</html>
-```
+There are no includes/templating. Header/topbar, offcanvas mobile menu, footer, WhatsApp float anchor are duplicated verbatim on every page. Any nav/footer change must be replicated across all 12 active pages (and decided whether legacy pages get it too).
 
-- **Root pages** use relative paths: `assets/css/style.css`, `assets/js/main.js`
-- **Blog posts** (`blog/`) use `../assets/css/style.css`, `../assets/js/main.js`
-- **Accessibility:** skip-link, `role` attributes, `aria-label` on icon buttons, `aria-hidden="true"` on decorative SVGs, `loading="lazy"` + `width`/`height` on images
-- **Schema:** Organization JSON-LD on every page; BreadcrumbList on inner pages; FAQPage on index
+- Exactly **one** `<div class="overlay" id="overlay">` per page — a second copy breaks the mobile-menu backdrop
+- GA4 ID `G-MYQHFB4QNL` snippet is hardcoded in each page's `<head>`
+
+## v2 design system (`assets/css/style.css`) + behavior in `main.js`
+
+- Palette: indigo `#4E2FDA` (+hover `#3A1FC0`), pink `#FB3189`, ink `#16123A`, tint `--indigo-soft`; font Poppins; icons via Font Awesome 6.5.2 CDN
+- **No external images anywhere.** Visuals = Font Awesome icons + gradient utility classes (`.bt-g1..g6`, `.wt-g1..g6`, `.media-panel`, `.avatar` initials). Keep it that way unless adding real assets deliberately
+- JS-driven behaviors auto-init by class/attribute — reuse these instead of writing new JS:
+  - Reveal on scroll: `.rv` + optional `data-delay="1..3"`
+  - Counters: `<span data-count="350">0</span>` (IntersectionObserver)
+  - Tabs: container `[data-tabs]`, buttons `[data-tab=key]`, panels `.plan-panel[data-panel=key]`
+  - Filters: bar `[data-filter-group]`, buttons `[data-filter]`, cards `[data-cat="a b"]`
+  - Testimonial slider: `.tslider` with `.tslide`s, `.t-dots`, `.t-prev`, `.t-next`
+  - FAQ accordion: `.faq-wrap > .faq-item > .faq-q + .faq-a`
+  - Lead forms: `form[data-lead-form]` → opens WhatsApp pre-filled with fields; needs a sibling `.form-status`
+- WhatsApp number / email live in `main.js` `SITE` config AND hardcoded in float/footer anchors on every page — change both
 
 ## SEO
 
-- GA4: `G-MYQHFB4QNL`
-- Canonical: `https://open-agent.agency/`
-- JSON-LD: Organization (every page), BreadcrumbList (inner pages), FAQPage (index)
-- sitemap.xml lists only Structure A URLs
-- robots.txt blocks Structure B pages (avoids duplicate content)
+- Every page: unique title/description, canonical, og tags, Organization JSON-LD; inner pages add BreadcrumbList; service pages add Service schema; FAQ sections must have matching FAQPage JSON-LD (questions must equal on-page text)
+- Add every new crawlable page to `sitemap.xml`
+- robots.txt intentionally disallows Structure B duplicate paths while allowing active pages — keep that separation when editing
 
-## Key Configuration
+## Brand constants
 
-- **WhatsApp:** `+92 370 3159642` (configurable in main.js `SITE.whatsapp`)
-- **Email:** `abeerinfo5566@gmail.com`
-- **Social:** X (@Abeergrowth), Facebook, Instagram, LinkedIn
-- **Favicons:** `assets/images/branding/favicons/`
-- **OG images:** `assets/images/og/`
-
-## Structure B (DO NOT TOUCH)
-
-Folder-based pages (`about/`, `services/`, `pricing/`, `contact/`, `faq/`, `terms/`, `privacy/`, `blog/index.html`, `blog-post.html`, `blog-post/`) with separate CSS/JS (`css/style.css`, `js/main.js`, `js/posts.js`). Left untouched from the remote merge. Blocked via robots.txt.
-
-## Don't Touch
-
-- `google3cef563566032184.html` — Google site verification
-- `versions/` — archived builds (gitignored)
-- `CNAME` — custom domain config
-- `.nojekyll` — required for GitHub Pages
-- Structure B files and assets
-
-## Target Audience
-
-B2B project-based businesses:
-1. Commercial Fit-Out & Design-Build
-2. Healthcare / Clinic Fit-Out
-3. Luxury Villa Interior / Design-Build
-4. Hospitality Fit-Out
-5. Commercial Landscaping
-
-Markets: UAE, Saudi Arabia, Pakistan, USA, Canada
-
-## Skills (`.opencode/skills/`)
-
-- ~60 skills available (design, marketing, CRO, SEO, copywriting)
-- `web-asset-generator` needs Python venv: `.opencode/skills/web-asset-generator/.venv/Scripts/python.exe`
-- Set `$env:PYTHONIOENCODING='utf-8'` before running Python scripts on Windows
+- Contact: WhatsApp `+92 370 3159642` (`wa.me/923703159642`), email `abeerinfo5566@gmail.com`
+- Socials: X @Abeergrowth, Facebook profile id 61572143246804, IG @growthbot_02, LinkedIn abeer-nasir
+- Favicons: `assets/images/branding/favicons/`; OG images: `assets/images/og/`

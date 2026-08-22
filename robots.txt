@@ -2,7 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /versions/
 Disallow: /about/
-Disallow: /services/
 Disallow: /pricing/
 Disallow: /contact/
 Disallow: /faq/
@@ -11,5 +10,13 @@ Disallow: /privacy/
 Disallow: /blog/index.html
 Disallow: /blog-post.html
 Disallow: /blog-post/
+Disallow: /services/index.html
+Disallow: /services/ai-agent/
+Disallow: /services/ai-agent-development/
+Disallow: /services/ai-website-development/
+Disallow: /services/digital-marketing/
+Disallow: /services/generative-ai/
+Disallow: /services/meta-google-ads/
+Disallow: /services/social-media/
 
 Sitemap: https://open-agent.agency/sitemap.xml
