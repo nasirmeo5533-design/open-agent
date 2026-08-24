@@ -1,6 +1,6 @@
 /* ==========================================================================
-   OpenAgent Design System — v2 "Indigo"
-   Palette: indigo #4E2FDA · pink #FB3189 · light bg #F6F5FD · ink #16123A
+   OpenAgent Design System â€” v2 "Indigo"
+   Palette: indigo #4E2FDA Â· pink #FB3189 Â· light bg #F6F5FD Â· ink #16123A
    Font: Poppins | Icons: Font Awesome 6
    ========================================================================== */
 
@@ -683,6 +683,55 @@ h4 { font-size: 1.05rem; }
 .gallery-tile { border-radius: var(--r-lg); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.92); font-size: 42px; }
 
 /* --------------------------------------------------------------------------
+   Photo additions (Unsplash) â€” hero background, service cards, panels
+   -------------------------------------------------------------------------- */
+.hero.hero-photo {
+  background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+}
+.hero-photo h1 { color: #fff; }
+.hero-photo h1 em {
+  color: transparent;
+  background: linear-gradient(90deg, #C4B5FD, #FF9CC6);
+  -webkit-background-clip: text; background-clip: text;
+}
+.hero-photo p.lede { color: rgba(255,255,255,.88); }
+.hero-photo .eyebrow { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.35); color: #fff; }
+.hero-photo .btn-ghost { color: #fff; border-color: #fff; }
+.hero-photo .btn-ghost:hover { background: #fff; color: var(--ink); }
+
+.card-media {
+  display: block; width: calc(100% + 60px); max-width: none;
+  margin: -34px -30px 2px; height: 200px; object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+.service-card.featured .card-media { margin-top: 0; width: 100%; margin-left: 0; }
+
+.media-panel img.photo {
+  position: absolute; inset: 0; z-index: 1;
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+.contact-visual img {
+  width: 100%; max-height: 450px; object-fit: cover;
+  border-radius: var(--r-xl); box-shadow: var(--shadow-lg);
+}
+
+/* Scroll-to-top */
+.to-top {
+  position: fixed; right: 26px; bottom: 94px; z-index: 1190;
+  width: 46px; height: 46px; border-radius: 50%;
+  background: var(--indigo); color: #fff; font-size: 15px;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 10px 24px rgba(78,47,218,.38);
+  opacity: 0; visibility: hidden; transform: translateY(12px);
+  transition: opacity .25s ease, visibility .25s ease, transform .25s ease, background .25s ease;
+}
+.to-top.show { opacity: 1; visibility: visible; transform: none; }
+.to-top:hover { background: var(--indigo-hover); transform: translateY(-3px); }
+
+/* --------------------------------------------------------------------------
    Reveal-on-scroll
    -------------------------------------------------------------------------- */
 .rv { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
@@ -728,5 +777,5 @@ h4 { font-size: 1.05rem; }
 }
 
 @media print {
-  .topbar, .fwa, .offcanvas, .overlay, .marquee { display: none; }
+  .topbar, .fwa, .offcanvas, .overlay, .marquee, .to-top { display: none; }
 }

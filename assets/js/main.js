@@ -4,7 +4,7 @@
   var SITE = {
     name: 'OpenAgent',
     whatsapp: '923703159642',
-    email: 'abeerinfo5566@gmail.com'
+    email: 'hello@open-agent.agency'
   };
   window.SITE = SITE;
 
@@ -83,13 +83,15 @@
   /* ---------- Animated counters ---------- */
   function animateCounter(el) {
     var target = parseInt(el.getAttribute('data-count'), 10) || 0;
-    var dur = 1600;
+    var dur = 2000; // ms — animate over 2 seconds
+    var prefix = el.getAttribute('data-prefix') || '';
+    var suffix = el.getAttribute('data-suffix') || '';
     var start = null;
     function tick(ts) {
       if (!start) start = ts;
       var p = Math.min((ts - start) / dur, 1);
-      var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(target * eased).toLocaleString('en-US');
+      var eased = 1 - Math.pow(1 - p, 3); // ease-out cubic
+      el.textContent = prefix + Math.round(target * eased).toLocaleString('en-US') + suffix;
       if (p < 1) requestAnimationFrame(tick);
     }
     requestAnimationFrame(tick);
@@ -103,7 +105,7 @@
           co.unobserve(en.target);
         }
       });
-    }, { threshold: 0.4 });
+    }, { threshold: 0.3 });
     counters.forEach(function (el) { co.observe(el); });
   } else {
     counters.forEach(animateCounter);
@@ -225,6 +227,19 @@
       form.reset();
     });
   });
+
+  /* ---------- Scroll-to-top ---------- */
+  var toTop = document.getElementById('toTop');
+  if (toTop) {
+    var onToTopScroll = function () {
+      toTop.classList.toggle('show', window.scrollY > 400);
+    };
+    window.addEventListener('scroll', onToTopScroll, { passive: true });
+    onToTopScroll();
+    toTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
   /* ---------- Year stamp ---------- */
   document.querySelectorAll('[data-year]').forEach(function (el) {
