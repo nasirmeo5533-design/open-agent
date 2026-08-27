@@ -96,7 +96,7 @@ https://unsplash.com/photos/HQpFFY7eSEw/download?force=true
 
 ---
 
-## Additional /备用 Images
+## Additional / Backup Images
 
 These are backup alternatives if the primary choices don't work:
 

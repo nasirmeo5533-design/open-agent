@@ -24,7 +24,7 @@
     li.addEventListener('mouseenter', function () { li.classList.add('open'); });
     li.addEventListener('mouseleave', function () { li.classList.remove('open'); });
     trigger.addEventListener('click', function (e) {
-      if (li.classList.contains('has-drop') && !li.contains(document.activeElement.closest('.dropdown'))) {
+      if (li.classList.contains('has-drop') && !li.contains(document.activeElement && document.activeElement.closest('.dropdown'))) {
         e.preventDefault();
         li.classList.toggle('open');
       }
@@ -116,7 +116,11 @@
     var q = item.querySelector('.faq-q');
     var a = item.querySelector('.faq-a');
     if (!q || !a) return;
-    q.setAttribute('aria-expanded', 'false');
+    var wasOpen = item.classList.contains('open');
+    q.setAttribute('aria-expanded', wasOpen ? 'true' : 'false');
+    if (wasOpen) {
+      a.style.maxHeight = a.scrollHeight + 'px';
+    }
     q.addEventListener('click', function () {
       var isOpen = item.classList.contains('open');
       item.closest('.faq-wrap').querySelectorAll('.faq-item.open').forEach(function (o) {
@@ -192,7 +196,7 @@
       b.type = 'button';
       b.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
       b.addEventListener('click', function () { go(i); window.clearInterval(timer); auto(); });
-      dotsWrap.appendChild(b);
+      if (dotsWrap) dotsWrap.appendChild(b);
     });
 
     if (prev) prev.addEventListener('click', function () { go(idx - 1); window.clearInterval(timer); auto(); });
@@ -204,10 +208,12 @@
 
   /* ---------- Active nav highlighting ---------- */
   var path = (window.location.pathname.split('/').pop() || 'index.html');
+  if (path === '' || path === '/') path = 'index.html';
   document.querySelectorAll('.nav-desktop > li').forEach(function (li) {
     li.querySelectorAll('a[href]').forEach(function (a) {
       var href = a.getAttribute('href').split('#')[0];
-      if (href && href === path) li.classList.add('active');
+      if (href === '/' && path === 'index.html') li.classList.add('active');
+      else if (href && href === path) li.classList.add('active');
     });
   });
 

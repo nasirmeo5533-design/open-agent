@@ -1,6 +1,6 @@
 /* ==========================================================================
-   OpenAgent Design System â€” v2 "Indigo"
-   Palette: indigo #4E2FDA Â· pink #FB3189 Â· light bg #F6F5FD Â· ink #16123A
+   OpenAgent Design System — v2 "Indigo"
+   Palette: indigo #4E2FDA · pink #FB3189 · light bg #F6F5FD · ink #16123A
    Font: Poppins | Icons: Font Awesome 6
    ========================================================================== */
 
@@ -698,7 +698,7 @@ h4 { font-size: 1.08rem; }
 .gallery-tile { border-radius: var(--r-lg); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.92); font-size: 42px; }
 
 /* --------------------------------------------------------------------------
-   Photo additions (Unsplash) â€” hero background, service cards, panels
+   Photo additions (Unsplash) — hero background, service cards, panels
    -------------------------------------------------------------------------- */
 .hero.hero-photo {
   background:
