@@ -11,13 +11,15 @@
 
 ## Three generations of files coexist — know which one you're editing
 
-1. **Active design — two themes, know which one you're editing** (all use `assets/js/main.js`):
-   - **Homepage (`index.html`) is its own black/white/orange design system** — load order `assets/css/style.css` THEN `assets/css/home.css`, everything scoped under `<body class="home">`. Headings are Poppins (NOT Playfair). No stock photos; icons + geometric SVGs only. Do homepage changes in `home.css`, never in `style.css` (shared).
+1. **Active design — four themes, know which one you're editing** (all use `assets/js/main.js`):
+   - **Homepage (`index.html`)** — black/white/orange design system in `assets/css/home.css`, scoped under `<body class="home">`. Load order `style.css` THEN `home.css`. See "Homepage design system" below.
+   - **About page (`about.html`)** — its OWN black/white/orange design system in `assets/css/about.css`, scoped under `<body class="about">`. Matches the homepage identity (same palette/Poppins/buttons/footer) but is a **separate** file — do homepage changes in `home.css` and About changes in `about.css`. See "About page design system" below.
+   - **Services page (`services.html`)** — its OWN black/white/orange design system in `assets/css/services.css`, scoped under `<body class="services">`, same palette/Poppins/buttons/footer as the homepage/About. **No stock photos — typography + icons only.** See "Services page design system" below.
    - **v2 Indigo pages (shared `assets/css/style.css`, indigo/pink light theme):**
-     - Full-nav pages (offcanvas + hamburger): `about.html`, `services.html`, `blogs.html`, `contact.html`
+     - Full-nav pages (offcanvas + hamburger): `blogs.html`, `contact.html`
      - Light v2 pages (footer + WhatsApp float, **no** offcanvas menu): `404.html`, `privacy.html`, `terms.html`
      - Active service pages under `services/`, the only six, in nav + sitemap: `ai-agent-development.html`, `ai-automation.html`, `full-stack-development.html`, `meta-google-ads.html`, `video-editing.html`, `search-engine-optimization.html`
-2. **Legacy Structure A (old dark `#0A0A0A`/orange `#FF6B00` theme)** — still live and in sitemap but superseded: `industries.html` + `industries/*.html`, `blog.html` + `blog/*.html` (12 posts), `faq.html`. Do not delete or restyle without asking. These are the only pages using the local photos under `assets/images/`.
+2. **Legacy Structure A (old dark `#0A0A0A`/orange `#FF6B00` theme)** — still live and in sitemap but superseded: `industries.html` + `industries/*.html`, `blog.html` + `blog/*.html` (12 posts), `faq.html`. Do not delete or restyle without asking. Aside from the About founder photo, these are the only pages using the local photos under `assets/images/`.
 3. **Structure B (DO NOT TOUCH)** — folder-based duplicates from a git-history merge, blocked via robots.txt: `about/`, `pricing/`, `contact/`, `faq/`, `terms/`, `privacy/`, `blog-post/`, `blog/index.html`, `services/index.html`, `services/<topic>/` folders, plus separate `css/style.css` and `js/main.js`.
 
 Never touch: `google3cef563566032184.html`, `CNAME`, `.nojekyll`, `versions/`.
@@ -43,7 +45,7 @@ Not real / orphaned (leftover, NOT linked in nav or sitemap — do not "fix" the
 
 There are no includes/templating. Header/topbar, offcanvas mobile menu, footer, WhatsApp float anchor, and the `<button id="toTop" class="to-top">` back-to-top control (sits directly before the `main.js` script tag) are duplicated verbatim on every page that has them. Any nav/footer-level change must be replicated across all that markup is duplicated on — and you must decide whether legacy Structure A pages get it too (`main.js` no-ops safely when `#toTop` is absent).
 
-- The homepage's header/footer/offcanvas are restyled for its black/orange theme — same structure/classes, different colors (see the homepage section below). The homepage footer diverges slightly (nav list labels "About", "Services", "Insights", "Contact") — don't blindly copy its footer text to other pages.
+- The homepage, About AND Services page header/footer/offcanvas are restyled for their black/orange themes — same structure/classes, different colors (see the homepage, About and Services sections below). The homepage, About and Services footers share the labels "About", "Services", "Insights", "Contact", "Run by Abeer Nasir" — don't blindly copy that footer text to v2 pages, which use different labels.
 - Exactly **one** `<div class="overlay" id="overlay">` per offcanvas page — a second copy breaks the mobile-menu backdrop (`404/privacy/terms.html` have no offcanvas at all)
 - GA4 ID `G-MYQHFB4QNL` snippet is hardcoded in each page's `<head>`
 
@@ -53,13 +55,28 @@ There are no includes/templating. Header/topbar, offcanvas mobile menu, footer, 
 - Every rule is prefixed `body.home` and this file is loaded **after** `style.css` on `index.html` only, so the shared stylesheet is safe to reuse on all other pages. Do not move homepage styling into `style.css`.
 - Business-voice contract: the site is run by ONE individual (Abeer Nasir) and copy deliberately avoids team/we wording, fake stats, testimonials, and guaranteed-results claims. When editing homepage copy, keep this honest, singular-voice tone.
 
+## About page design system (`assets/css/about.css`, scoped under `body.about`)
+
+- The About page (`about.html`) matches the homepage visual identity — black `#000`/white/off-white `#f7f7f5`/orange `#FF6B00`, Poppins headings (Playfair overridden), minimal premium layout. **It is a separate stylesheet, not `home.css`**; only `about.html` loads it (`style.css` THEN `about.css`). Never move About styling into `style.css` or share it with the homepage.
+- Same honesty rules as the homepage apply: singular-voice, independent operator (Abeer works alone) — no team/we language ("team", "specialists", "developers", "departments", "staff"), no fake stats, testimonials, portfolio, credentials, or guarantees.
+- **Real founder photo**: the only genuine personal image lives at `assets/images/founder/abeer-founder.jpg` (800×800, used in the About intro portrait). Other `abeer`-named files (`assets/images/abeer.jpg`, `assets/images/branding/abeer.png`) are only referenced by Structure B / legacy files — don't rely on them for active pages. Replace/pick a portrait by editing the `<img src>` in `about.html` Section 1.
+- The homepage hero uses geometric SVGs, but the About intro uses the founder photo in a `portrait` panel with an overlay name card — don't remove or stub it with a stock/AI image.
+- Load-order and scoping rules mirror the homepage: every rule prefixed `body.about`, loaded after the shared `style.css`, so `style.css` stays reusable on v2 pages.
+
+## Services page design system (`assets/css/services.css`, scoped under `body.services`)
+
+- The Services page (`services.html`) matches the homepage/About visual identity — black `#000`/white/off-white `#f7f7f5`/orange `#FF6B00`, Poppins headings (Playfair overridden), minimal premium layout. **It is a separate stylesheet, not `home.css`/`about.css`**; only `services.html` loads it (`style.css` THEN `services.css`). Never move Services styling into `style.css` or the other scoped sheets.
+- Same honesty rules as the homepage/About: singular-voice, independent operator (Abeer works alone), direct client contact — no team/we wording, no fake stats, results, testimonials, portfolio, credentials, or guarantees. Advertising and SEO carry explicit no-guarantee transparency notes.
+- **No stock photos at all** — the Services page must stay typography + icon led (no `<img>` tags). Use numbered service cards, "Good for" lists, borders and orange accents instead.
+- Load-order/scoping rules mirror the homepage/About: every rule prefixed `body.services`, loaded after `style.css`.
+
 ## v2 design system (`assets/css/style.css`) + behavior in `main.js`
 
-- Palette: indigo `#4E2FDA` (+hover `#3A1FC0`), pink `#FB3189`, ink `#16123A`, tint `--indigo-soft`; font Poppins (Google Fonts); icons via Font Awesome 6.5.2 CDN; headings use Playfair Display (v2 only — not the homepage)
+- Palette: indigo `#4E2FDA` (+hover `#3A1FC0`), pink `#FB3189`, ink `#16123A`, tint `--indigo-soft`; font Poppins (Google Fonts); icons via Font Awesome 6.5.2 CDN; headings use Playfair Display (v2 only — not the homepage, About or Services)
 - **v2 page visuals are icon + photo classes, never local files.** Photos are lazy-loaded Unsplash `<img>`s with explicit `width`/`height`, wired through these CSS hooks: hero background = add `hero-photo` class to `.hero`; service-card photos = `<img class="card-media">` as first child of `.service-card`; photos inside a split's `.media-panel` get `class="photo"` (absolutely positioned, covers panel); contact page uses `.contact-visual`. Only og:image meta tags point at local `assets/images/og/`
 - JS-driven behaviors auto-init by class/attribute — reuse these instead of writing new JS:
   - Reveal on scroll: `.rv` + optional `data-delay="1..3"`
-  - Counters: `<span data-count="120" data-suffix="+">0</span>` — optional `data-prefix`/`data-suffix`, ~2s ease-out once visible. **Do NOT add counters to the homepage** — its honest-design contract forbids fake stat numbers.
+  - Counters: `<span data-count="120" data-suffix="+">0</span>` — optional `data-prefix`/`data-suffix`, ~2s ease-out once visible. **Do NOT add counters to the homepage, About or Services** — their honest-design contract forbids fake stat numbers.
   - Tabs: container `[data-tabs]`, buttons `[data-tab=key]`, panels `.plan-panel[data-panel=key]`
   - Filters: bar `[data-filter-group]`, buttons `[data-filter]`, cards `[data-cat="a b"]`
   - Testimonial slider: `.tslider` with `.tslide`s, `.t-dots`, `.t-prev`, `.t-next` — defined in `main.js` but **currently unused by any page**
