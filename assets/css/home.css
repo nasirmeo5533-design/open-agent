@@ -1,0 +1,408 @@
+/* ==========================================================================
+   OpenAgent Homepage — Black / White / Orange
+   Scoped to the homepage only. Other pages keep the shared v2 stylesheet.
+   ========================================================================== */
+
+body.home {
+  background: #ffffff;
+  color: #3a3a3a;
+  overflow-x: hidden;
+}
+
+body.home h1, body.home h2, body.home h3, body.home h4, body.home h5 {
+  font-family: 'Poppins', sans-serif;
+  color: #0a0a0a;
+  letter-spacing: -.02em;
+}
+
+body.home ::selection { background: #FF6B00; color: #fff; }
+
+/* --------------------------------------------------------------------------
+   Header / navigation — black bar
+   -------------------------------------------------------------------------- */
+body.home .topbar {
+  background: #000000;
+  box-shadow: none;
+}
+body.home .topbar.scrolled { box-shadow: 0 10px 30px rgba(0,0,0,.18); }
+body.home .topbar-inner { max-width: var(--wrap); }
+
+body.home .brand { color: #ffffff; }
+body.home .brand .dot {
+  background: #FF6B00;
+  border-radius: 8px;
+}
+body.home .brand span { color: #FF6B00; }
+
+body.home .nav-desktop > li > a {
+  color: #e6e6e6;
+  font-weight: 500;
+}
+body.home .nav-desktop > li > a:hover,
+body.home .nav-desktop > li.active > a {
+  color: #ffffff;
+  background: rgba(255,255,255,.12);
+}
+body.home .nav-desktop > li.has-drop > a i { color: #999; }
+
+body.home .dropdown {
+  background: #111111;
+  border-color: #2a2a2a;
+  box-shadow: 0 24px 60px rgba(0,0,0,.5);
+}
+body.home .dropdown::before { background: #111111; border-color: #2a2a2a; }
+body.home .dropdown a { color: #e6e6e6; }
+body.home .dropdown a i { color: #FF6B00; }
+body.home .dropdown a:hover { background: #1f1f1f; color: #ffffff; }
+
+body.home .header-actions .btn {
+  background: #FF6B00;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #ffffff;
+  box-shadow: 0 10px 26px rgba(255,107,0,.32);
+}
+body.home .header-actions .btn:hover { background: #ff7f1f; transform: translateY(-2px); }
+
+body.home .hamburger {
+  background: rgba(255,255,255,.12);
+  color: #ffffff;
+}
+
+/* Offcanvas mobile menu */
+body.home .offcanvas { background: #0a0a0a; }
+body.home .offcanvas .brand { color: #fff; }
+body.home .oc-close { background: #1f1f1f; color: #fff; }
+body.home .oc-nav > li { border-color: #242424; }
+body.home .oc-link { color: #fff; }
+body.home .oc-link:hover { color: #FF6B00; }
+body.home .oc-sub a { color: #bdbdbd; border-color: #2a2a2a; }
+body.home .oc-sub a:hover { color: #FF6B00; border-color: #FF6B00; }
+body.home .overlay { background: rgba(0,0,0,.6); }
+body.home .offcanvas .btn { background: #FF6B00; color: #fff; }
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+body.home .btn {
+  border-radius: 999px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+body.home .btn-primary {
+  background: #FF6B00;
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(255,107,0,.32);
+}
+body.home .btn-primary:hover {
+  background: #ff7f1f;
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(255,107,0,.4);
+}
+body.home .btn-ghost {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255,255,255,.7);
+}
+body.home .btn-ghost:hover { background: #ffffff; color: #0a0a0a; }
+body.home .btn-ghost-dark {
+  background: transparent;
+  color: #0a0a0a;
+  border: 2px solid #0a0a0a;
+}
+body.home .btn-ghost-dark:hover { background: #0a0a0a; color: #fff; }
+body.home .btn-ghost-orange {
+  background: transparent;
+  color: #FF6B00;
+  border: 2px solid #FF6B00;
+}
+body.home .btn-ghost-orange:hover { background: #FF6B00; color: #fff; }
+
+/* --------------------------------------------------------------------------
+   Hero — dark, typography-driven
+   -------------------------------------------------------------------------- */
+body.home .hero {
+  background: #000000;
+  padding: 120px 0 110px;
+}
+body.home .hero-inner {
+  text-align: left;
+  max-width: 960px;
+  margin-inline: auto;
+}
+body.home .hero .eyebrow {
+  display: inline-flex; align-items: center;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.25);
+  color: #aeaeae;
+  font-weight: 600; font-size: 13px;
+  letter-spacing: .12em; text-transform: uppercase;
+  padding: 9px 18px; border-radius: 999px;
+  margin-bottom: 28px;
+}
+body.home .hero .eyebrow::before {
+  content: ""; width: 8px; height: 8px; border-radius: 50%;
+  background: #FF6B00;
+}
+body.home .hero h1 {
+  color: #ffffff;
+  font-size: clamp(2.5rem, 6vw, 4.7rem);
+  line-height: 1.08;
+  margin: 0;
+}
+body.home .hero h1 strong { color: #FF6B00; font-weight: 800; }
+body.home .hero p.lede {
+  color: #d0d0d0;
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+  max-width: 640px;
+  margin: 26px 0 0;
+  line-height: 1.7;
+}
+body.home .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 40px; }
+body.home .hero-pills {
+  margin-top: 44px;
+  display: flex; flex-wrap: wrap; gap: 10px 22px;
+  color: #9a9a9a; font-size: 13.5px; font-weight: 500;
+  padding-top: 26px;
+  border-top: 1px solid rgba(255,255,255,.14);
+}
+body.home .hero-pills span { display: inline-flex; align-items: center; gap: 8px; }
+body.home .hero-pills i { color: #FF6B00; font-size: 10px; }
+
+body.home .shape { color: #2a2a2a; }
+body.home .shape-star-accent { color: #FF6B00; }
+
+/* --------------------------------------------------------------------------
+   Sections base
+   -------------------------------------------------------------------------- */
+body.home .section { padding: 100px 0; }
+body.home .section.tint { background: #f7f7f5; }
+body.home .section.dark { background: #0a0a0a; }
+
+body.home .section-head { max-width: 720px; margin: 0 auto 60px; text-align: center; }
+body.home .section-head.left { margin-left: 0; text-align: left; }
+body.home .section-head .tag-label {
+  display: inline-flex; align-items: center; gap: 10px;
+  color: #FF6B00; font-weight: 700; font-size: 13px;
+  text-transform: uppercase; letter-spacing: .14em; margin-bottom: 16px;
+}
+body.home .section-head .tag-label::before {
+  content: ""; width: 26px; height: 2px; background: #FF6B00;
+  display: inline-block;
+}
+body.home .section-head h2 { font-size: clamp(1.9rem, 3.6vw, 2.9rem); line-height: 1.15; }
+body.home .section-head p { color: #5f5f5f; margin-top: 16px; font-size: 1.05rem; }
+body.home .section-head p.light { color: #bdbdbd; }
+
+/* --------------------------------------------------------------------------
+   Numbered cards (positioning)
+   -------------------------------------------------------------------------- */
+body.home .pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+body.home .pillar-card {
+  background: #ffffff;
+  border: 1px solid #ece8e2;
+  border-top: 3px solid #FF6B00;
+  padding: 40px 34px;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+body.home .pillar-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(0,0,0,.08);
+  border-color: #FF6B00;
+}
+body.home .pillar-num {
+  font-size: 3.2rem; font-weight: 800; line-height: 1;
+  color: #FF6B00; display: block; margin-bottom: 22px; letter-spacing: -.02em;
+}
+body.home .pillar-card h3 { font-size: 1.25rem; margin-bottom: 12px; }
+body.home .pillar-card p { font-size: 15px; color: #5f5f5f; margin: 0; }
+
+/* --------------------------------------------------------------------------
+   Service cards
+   -------------------------------------------------------------------------- */
+body.home .svc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+body.home .svc-card {
+  background: #ffffff;
+  border: 1px solid #ece8e2;
+  border-radius: 16px;
+  padding: 38px 32px 32px;
+  display: flex; flex-direction: column; gap: 16px;
+  min-height: 300px;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+body.home .svc-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(0,0,0,.08);
+  border-color: #FF6B00;
+}
+body.home .svc-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+body.home .svc-num { font-weight: 700; color: #FF6B00; font-size: 14px; letter-spacing: .04em; }
+body.home .svc-ic {
+  width: 56px; height: 56px; border-radius: 14px; flex: none;
+  background: #f4f2ee; color: #0a0a0a;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+  transition: background .3s, color .3s;
+}
+body.home .svc-card:hover .svc-ic { background: #FF6B00; color: #fff; }
+body.home .svc-card h3 { font-size: 1.18rem; }
+body.home .svc-card p { font-size: 15px; color: #5f5f5f; flex: 1; }
+body.home .svc-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-weight: 600; font-size: 14.5px; color: #FF6B00;
+}
+body.home .svc-link i { transition: transform .25s; }
+body.home .svc-card:hover .svc-link i { transform: translateX(6px); }
+
+/* --------------------------------------------------------------------------
+   Principles (why OpenAgent) — dark section
+   -------------------------------------------------------------------------- */
+body.home .principle-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+body.home .principle-card {
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  padding: 40px 36px;
+}
+body.home .principle-num {
+  font-size: 2.6rem; font-weight: 800; line-height: 1;
+  color: #FF6B00; display: block; margin-bottom: 20px;
+}
+body.home .principle-card h3 { color: #ffffff; font-size: 1.2rem; margin-bottom: 12px; }
+body.home .principle-card p { color: #bdbdbd; font-size: 15px; margin: 0; }
+
+/* --------------------------------------------------------------------------
+   Process steps
+   -------------------------------------------------------------------------- */
+body.home .step-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+body.home .step-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #ece8e2;
+  padding: 36px 28px;
+  transition: transform .3s, box-shadow .3s, border-color .3s;
+}
+body.home .step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(0,0,0,.08);
+  border-color: #FF6B00;
+}
+body.home .step-num {
+  font-size: 3rem; font-weight: 800; line-height: 1;
+  color: #FF6B00; display: block; margin-bottom: 18px;
+}
+body.home .step-card h3 { font-size: 1.1rem; margin-bottom: 10px; }
+body.home .step-card p { font-size: 14.5px; color: #5f5f5f; margin: 0; }
+
+/* --------------------------------------------------------------------------
+   Who I work with
+   -------------------------------------------------------------------------- */
+body.home .who-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+body.home .who-card {
+  background: #ffffff;
+  border: 1px solid #ece8e2;
+  border-left: 3px solid #FF6B00;
+  padding: 38px 34px;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+body.home .who-card:hover { transform: translateY(-6px); box-shadow: 0 24px 50px rgba(0,0,0,.08); }
+body.home .who-card h3 { font-size: 1.18rem; margin-bottom: 14px; }
+body.home .who-card p { font-size: 15px; color: #5f5f5f; margin: 0; }
+
+/* --------------------------------------------------------------------------
+   Final CTA
+   -------------------------------------------------------------------------- */
+body.home .final-cta {
+  background: #000000;
+  border-radius: 20px;
+  padding: clamp(56px, 8vw, 96px) clamp(26px, 7vw, 96px);
+  text-align: center;
+  color: #fff;
+  position: relative; overflow: hidden;
+}
+body.home .final-cta::before {
+  content: ""; position: absolute; width: 360px; height: 360px;
+  border-radius: 50%; background: radial-gradient(circle, rgba(255,107,0,.28), transparent 65%);
+  top: -120px; right: -80px;
+}
+body.home .final-cta::after {
+  content: ""; position: absolute; width: 300px; height: 300px;
+  border-radius: 50%; background: radial-gradient(circle, rgba(255,107,0,.2), transparent 65%);
+  bottom: -130px; left: -70px;
+}
+body.home .final-cta h2 { color: #ffffff; position: relative; z-index: 1; font-size: clamp(2rem, 4vw, 3rem); }
+body.home .final-cta p { position: relative; z-index: 1; color: #cfcfcf; max-width: 620px; margin: 18px auto 0; font-size: 1.05rem; }
+body.home .final-cta .btn-row { position: relative; z-index: 1; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 38px; }
+body.home .final-cta small { position: relative; z-index: 1; display: block; margin-top: 30px; color: #9a9a9a; font-size: 13.5px; }
+
+/* --------------------------------------------------------------------------
+   Footer — minimal
+   -------------------------------------------------------------------------- */
+body.home .footer {
+  background: #000000;
+  color: #b5b5b5;
+  padding: 72px 0 0;
+}
+body.home .footer::before { display: none; }
+body.home .footer .brand { color: #fff; }
+body.home .footer .brand span { color: #FF6B00; }
+body.home .footer h4 { color: #ffffff; font-size: 1rem; margin-bottom: 20px; letter-spacing: .02em; }
+body.home .footer-about > p { color: #b5b5b5; }
+body.home .footer ul a { color: #b5b5b5; }
+body.home .footer ul a:hover { color: #FF6B00; }
+body.home .footer .socials a {
+  border-color: rgba(255,255,255,.22); color: #fff;
+}
+body.home .footer .socials a:hover { background: #FF6B00; border-color: #FF6B00; }
+body.home .footer .contact-list i { color: #FF6B00; }
+body.home .footer-bottom { border-color: rgba(255,255,255,.14); color: #9a9a9a; }
+body.home .footer-bottom p strong { color: #FF6B00; }
+
+/* --------------------------------------------------------------------------
+   Scroll-to-top
+   -------------------------------------------------------------------------- */
+body.home .to-top { background: #FF6B00; color: #fff; box-shadow: 0 10px 24px rgba(255,107,0,.4); }
+body.home .to-top:hover { background: #ff7f1f; }
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 1080px) {
+  body.home .pillar-grid,
+  body.home .who-grid,
+  body.home .svc-grid { grid-template-columns: repeat(2, 1fr); }
+  body.home .step-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  body.home .section { padding: 68px 0; }
+  body.home .hero { padding: 84px 0 80px; }
+  body.home .pillar-grid,
+  body.home .who-grid,
+  body.home .svc-grid,
+  body.home .step-grid { grid-template-columns: 1fr; }
+  body.home .principle-grid { grid-template-columns: 1fr; }
+}
+
+@media print {
+  body.home .hero, body.home .fwa { display: none; }
+}
