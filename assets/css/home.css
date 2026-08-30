@@ -173,6 +173,45 @@ body.home .shape { color: #2a2a2a; }
 body.home .shape-star-accent { color: #FF6B00; }
 
 /* --------------------------------------------------------------------------
+   Tools I work with — logo strip
+   -------------------------------------------------------------------------- */
+body.home .section.tools { padding: 76px 0; }
+body.home .tools .section-head { margin-bottom: 44px; }
+body.home .tools-grid {
+  list-style: none; margin: 0; padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+body.home .tool {
+  background: #f7f7f5;
+  border: 1px solid #ece8e2;
+  border-radius: 14px;
+  padding: 22px 20px;
+  min-height: 86px;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease, background .3s ease;
+}
+body.home .tool:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.07);
+  border-color: #e3ddd3;
+}
+body.home .tool img {
+  max-width: 100%;
+  max-height: 42px;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(1) contrast(1.02);
+  opacity: .72;
+  transition: filter .35s ease, opacity .35s ease;
+}
+body.home .tool:hover img {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
    Sections base
    -------------------------------------------------------------------------- */
 body.home .section { padding: 100px 0; }
@@ -391,6 +430,7 @@ body.home .to-top:hover { background: #ff7f1f; }
   body.home .who-grid,
   body.home .svc-grid { grid-template-columns: repeat(2, 1fr); }
   body.home .step-grid { grid-template-columns: repeat(2, 1fr); }
+  body.home .tools-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 640px) {
@@ -401,6 +441,10 @@ body.home .to-top:hover { background: #ff7f1f; }
   body.home .svc-grid,
   body.home .step-grid { grid-template-columns: 1fr; }
   body.home .principle-grid { grid-template-columns: 1fr; }
+  body.home .section.tools { padding: 56px 0; }
+  body.home .tools-grid { grid-template-columns: repeat(2, 1fr); }
+  body.home .tool { min-height: 72px; padding: 16px 14px; }
+  body.home .tool img { max-height: 32px; }
 }
 
 @media print {
