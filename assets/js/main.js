@@ -123,11 +123,14 @@
     }
     q.addEventListener('click', function () {
       var isOpen = item.classList.contains('open');
-      item.closest('.faq-wrap').querySelectorAll('.faq-item.open').forEach(function (o) {
-        o.classList.remove('open');
-        o.querySelector('.faq-a').style.maxHeight = null;
-        o.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
-      });
+      var wrap = item.closest('.faq-wrap');
+      if (wrap) {
+        wrap.querySelectorAll('.faq-item.open').forEach(function (o) {
+          o.classList.remove('open');
+          o.querySelector('.faq-a').style.maxHeight = null;
+          o.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        });
+      }
       if (!isOpen) {
         item.classList.add('open');
         a.style.maxHeight = a.scrollHeight + 'px';

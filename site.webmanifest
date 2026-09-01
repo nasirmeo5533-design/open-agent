@@ -1,11 +1,11 @@
 {
   "name": "Open Agent — AI & Digital Marketing for Small Businesses",
   "short_name": "Open Agent",
-  "description": "AI agents, ads, websites, and digital marketing for small businesses in Pakistan and the US. Prices from PKR 15,000.",
+  "description": "AI agents, automation, development, ads and SEO. Independent studio run by Abeer Nasir.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0b1b3a",
-  "theme_color": "#ff6a00",
+  "background_color": "#0A0F1E",
+  "theme_color": "#3B82F6",
   "icons": [
     {
       "src": "/favicon-96x96.png",
