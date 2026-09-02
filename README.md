@@ -1,31 +1,29 @@
-# Open Agent — AI-Powered Lead Generation for B2B
+# OpenAgent — open-agent.agency
 
-Official website for **OpenAgent**, founded by **Abeer Nasir** — a B2B lead generation agency serving project-based businesses (fit-out, healthcare, luxury interiors, hospitality, landscaping) across UAE, Saudi Arabia, Pakistan, USA, and Canada.
+Official website for **OpenAgent**, an independent AI & digital growth studio run by **Abeer Nasir** (Karachi, Pakistan — working with clients worldwide).
 
 > Live at [open-agent.agency](https://open-agent.agency) — hosted on **GitHub Pages** (auto-deploys on push to `main`).
 
-## Tech Stack
+## What's inside
 
 - **HTML5 / CSS3 / JavaScript** — vanilla, no frameworks, no build step
-- **GitHub Pages** — static deployment from `main` branch (`CNAME` = open-agent.agency)
-- **SVG** — inline icons throughout
+- **GitHub Pages** — static deployment from `main` (`CNAME` = open-agent.agency, `.nojekyll` included)
 
-## Two coexisting site structures
+### Active pages
 
-The repo is a merge of two unrelated histories and carries **two parallel site versions**.
+| Page | Stylesheet |
+|---|---|
+| `index.html` (homepage) | `assets/css/home.css` |
+| `about.html` | `assets/css/about.css` |
+| `services.html` + 6 pages in `services/` | `assets/css/services.css` |
+| `contact.html` | `assets/css/contact.css` |
+| `blogs.html` + 12 articles in `blog/` | `assets/css/blogs.css` |
+| `404.html`, `privacy.html`, `terms.html` | `assets/css/style.css` (v2) |
+| `industries.html`, `faq.html`, legacy `blog.html` | legacy orange theme |
 
-**Structure A — flat pages (primary / actively edited):**
-- Root `*.html`: `index.html`, `about.html`, `services.html`, `pricing.html`, `industries.html`, `work.html`, `blog.html`, `contact.html`, `privacy.html`, `terms.html`, `404.html`
-- Static blog posts in `blog/*.html` (linked from `blog.html`)
-- Assets: `assets/css/style.css`, `assets/js/main.js`, `assets/images/...`
-- `sitemap.xml` lists these flat URLs
+All active pages share `assets/css/style.css` + `assets/js/main.js`, with a page-specific scoped stylesheet loaded after it. Tool logos for the homepage "Tools I Work With" section live at the repo root as `.webp` files.
 
-**Structure B — folder pages (remote import, left untouched):**
-- `about/`, `services/`, `pricing/`, `contact/`, `faq/`, `terms/`, `privacy/`, `blog/index.html`, `blog-post.html`, `blog-post/`
-- Root `css/style.css`, `js/main.js`, `js/posts.js` (a different style system)
-- Blocked via `robots.txt` to avoid duplicate content
-
-## Getting Started
+## Getting started
 
 ```bash
 git clone https://github.com/nasirmeo5533-design/open-agent.git
@@ -39,6 +37,11 @@ No build step needed — just serve the static files.
 
 Push to `main` → GitHub Pages auto-deploys (built-in "Deploy from a branch", no custom workflow). The `CNAME` file points to `open-agent.agency`. The `.nojekyll` file prevents Jekyll processing.
 
+## Contact
+
+- WhatsApp: [+92 370 3159642](https://wa.me/923703159642)
+- Email: hello@open-agent.agency
+
 ## License
 
-All content and code in this repository are the property of Open Agent. All rights reserved.
+All content and code in this repository are the property of OpenAgent. All rights reserved.

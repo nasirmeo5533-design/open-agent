@@ -40,3 +40,7 @@ next-env.d.ts
 # unrelated local projects — never deploy to the site
 /OpenChatCut/
 /remotion/
+
+# internal files — never deploy
+AGENTS.md
+.opencode/
