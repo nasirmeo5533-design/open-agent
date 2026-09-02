@@ -1,4 +1,4 @@
-"""Regenerate OpenAgent brand images in the Ink + Electric Blue theme.
+"""Regenerate OpenAgent brand images in the black/orange theme.
 
 Creates:
   - OG/social images (1200x630, 1200x1200) in assets/images/og/
@@ -10,10 +10,10 @@ import os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FONTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "oagen-fonts")
 
-INK = (10, 15, 30)        # #0A0F1E
-INK_2 = (16, 26, 48)      # #101A30 elevated surface
-BLUE = (59, 130, 246)     # #3B82F6
-BLUE_LIGHT = (96, 165, 250)  # #60A5FA
+INK = (10, 10, 10)        # #0A0A0A
+INK_2 = (22, 22, 22)      # #161616 elevated surface
+ORANGE = (255, 107, 0)    # #FF6B00
+ORANGE_LIGHT = (255, 140, 26)  # #FF8C1A
 WHITE = (248, 250, 252)   # #F8FAFC
 MUTED = (148, 163, 184)   # slate-400
 
@@ -74,9 +74,9 @@ def grid_lines(img, alpha=14, step=80):
     overlay = Image.new("RGBA", (w, h), (0, 0, 0, 0))
     d = ImageDraw.Draw(overlay)
     for x in range(0, w, step):
-        d.line([(x, 0), (x, h)], fill=BLUE + (alpha,), width=1)
+        d.line([(x, 0), (x, h)], fill=ORANGE + (alpha,), width=1)
     for y in range(0, h, step):
-        d.line([(0, y), (w, y)], fill=BLUE + (alpha,), width=1)
+        d.line([(0, y), (w, y)], fill=ORANGE + (alpha,), width=1)
     img.alpha_composite(overlay)
     return img
 
@@ -136,8 +136,8 @@ def fit_font(img, text, size, weight="SemiBold", max_width=None):
 # ---------------------------------------------------------------- OG images
 def make_og(path, w, h, tagline, layout="wide"):
     img = base_canvas(w, h)
-    glow(img, w * 0.82, h * 0.1, int(w * 0.45), BLUE, 60)
-    glow(img, w * 0.05, h * 0.95, int(w * 0.35), BLUE_LIGHT, 40)
+    glow(img, w * 0.82, h * 0.1, int(w * 0.45), ORANGE, 60)
+    glow(img, w * 0.05, h * 0.95, int(w * 0.35), ORANGE_LIGHT, 40)
     img = grid_lines(img, alpha=12)
 
     d = ImageDraw.Draw(img)
@@ -151,12 +151,12 @@ def make_og(path, w, h, tagline, layout="wide"):
     # wordmark
     wm_f = poppins(int(h * 0.135), "Bold")
     gradient_text(img, (margin - int(w * 0.004), h * 0.30), "OpenAgent",
-                  wm_f, BLUE_LIGHT, BLUE)
+                  wm_f, ORANGE_LIGHT, ORANGE)
 
     # accent bar under wordmark
     bar_y = h * 0.50
     accent_bar(img, margin, int(bar_y), int(w * 0.14), max(6, int(h * 0.014)),
-               BLUE_LIGHT, BLUE)
+               ORANGE_LIGHT, ORANGE)
 
     # tagline (auto-fit to canvas width; supports \n line breaks)
     longest_line = max(tagline.split("\n"), key=len)
@@ -179,7 +179,7 @@ def make_og(path, w, h, tagline, layout="wide"):
     chip_h = dh + pad * 2
     chip_y = h - margin - chip_h
     d.rounded_rectangle([margin, chip_y, margin + dw + pad * 2.4, chip_y + chip_h],
-                        radius=chip_h // 2, fill=BLUE + (255,))
+                        radius=chip_h // 2, fill=ORANGE + (255,))
     d.text((margin + int(pad * 1.2), chip_y + pad - db[1] - int(h * 0.004)), dom,
            font=dom_f, fill=(255, 255, 255, 255))
 
@@ -188,20 +188,23 @@ def make_og(path, w, h, tagline, layout="wide"):
 
 
 # ---------------------------------------------------------------- favicons
+FAV_BG = (11, 27, 58)  # #0b1b3a legacy favicon navy square
+
+
 def make_favicon(size, rounded_corners=True):
     s = size * 4  # supersample
     img = Image.new("RGBA", (s, s), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    d.rounded_rectangle([0, 0, s - 1, s - 1], radius=int(s * 0.25), fill=INK + (255,))
+    d.rounded_rectangle([0, 0, s - 1, s - 1], radius=int(s * 0.25), fill=FAV_BG + (255,))
     d.rounded_rectangle([int(s * 0.03)] * 2 + [s - int(s * 0.03)] * 2,
-                        radius=int(s * 0.22), outline=BLUE + (110,), width=max(1, s // 42))
+                        radius=int(s * 0.22), outline=ORANGE + (110,), width=max(1, s // 42))
     fnt = ImageFont.truetype(os.path.join(FONTS, "Poppins-Bold.ttf"), int(s * 0.42))
     text = "OA"
     bbox = d.textbbox((0, 0), text, font=fnt)
     tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
     x = (s - tw) // 2 - bbox[0]
     y = (s - th) // 2 - bbox[1] - int(s * 0.01)
-    gradient_text(img, (x, y), text, fnt, BLUE_LIGHT, BLUE)
+    gradient_text(img, (x, y), text, fnt, ORANGE_LIGHT, ORANGE)
     img = img.resize((size, size), Image.LANCZOS)
     if rounded_corners:
         img = rounded(img, int(size * 0.25))
