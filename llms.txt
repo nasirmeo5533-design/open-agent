@@ -1,24 +1,25 @@
 # OpenAgent
 
-> Independent AI & digital growth studio for small businesses, run by one person. Founded by Abeer Nasir, based in Karachi, Pakistan.
+> Digital marketing studio specialising in real estate and interior design, run by one person. Founded by Abeer Nasir, based in Karachi, Pakistan.
 
-OpenAgent helps businesses grow with AI agents, automation, full-stack development, Meta & Google Ads, video editing and SEO — practical solutions, direct communication, no jargon. Every project is handled personally by Abeer Nasir.
+OpenAgent helps real estate agents, property developers, interior designers and fit-out studios attract high-value clients online — with Meta & Google Ads, SEO, websites, video content and AI automation. Practical solutions, direct communication, no jargon. Every project is handled personally by Abeer Nasir.
 
 ## Key facts
 
 - Founder: Abeer Nasir (independent operator — no team, no middlemen)
+- Specialist focus: real estate marketing and interior design marketing
 - Location: Karachi, Pakistan — works with clients worldwide
 - Direct contact on every project
 - Contact: WhatsApp +92 370 3159642 · Email hello@open-agent.agency
 
 ## Services
 
+- Meta & Google Ads: https://open-agent.agency/services/meta-google-ads.html
+- Search Engine Optimization: https://open-agent.agency/services/search-engine-optimization.html
+- Full Stack Development: https://open-agent.agency/services/full-stack-development.html
+- Video Editing: https://open-agent.agency/services/video-editing.html
 - AI Agent Development: https://open-agent.agency/services/ai-agent-development.html
 - AI Automation: https://open-agent.agency/services/ai-automation.html
-- Full Stack Development: https://open-agent.agency/services/full-stack-development.html
-- Meta & Google Ads: https://open-agent.agency/services/meta-google-ads.html
-- Video Editing: https://open-agent.agency/services/video-editing.html
-- Search Engine Optimization: https://open-agent.agency/services/search-engine-optimization.html
 
 Pricing is scoped per project — start a conversation via the contact page. Advertising and SEO carry no ranking or performance guarantees (stated openly on those pages).
 
@@ -27,12 +28,20 @@ Pricing is scoped per project — start a conversation via the contact page. Adv
 - Home: https://open-agent.agency/
 - About: https://open-agent.agency/about.html
 - Services: https://open-agent.agency/services.html
+- Portfolio: https://open-agent.agency/portfolio.html
 - Insights (blog): https://open-agent.agency/blogs.html
 - Contact: https://open-agent.agency/contact.html
 - Privacy policy: https://open-agent.agency/privacy.html
 - Terms of service: https://open-agent.agency/terms.html
 
 ## Blog articles
+
+Niche focus:
+
+- Meta Ads for Real Estate: https://open-agent.agency/blog/meta-ads-real-estate-leads.html
+- Interior Design Digital Marketing: https://open-agent.agency/blog/interior-design-digital-marketing.html
+
+General insights:
 
 - AI Agent Cost in 2026: https://open-agent.agency/blog/ai-agent-cost-2026.html
 - AI Automation for Recruiters: https://open-agent.agency/blog/ai-automation-recruiters.html
@@ -41,8 +50,8 @@ Pricing is scoped per project — start a conversation via the contact page. Adv
 - Which AI Industry Is Growing: https://open-agent.agency/blog/ai-industry.html
 - AI Tools for Small Business: https://open-agent.agency/blog/ai-tools-small-business.html
 - Digital Marketing Explained: https://open-agent.agency/blog/digital-marketing.html
-- Meta Ads for Perfume & Beauty Brands: https://open-agent.agency/blog/meta-ads-perfume-beauty.html
+- Meta Ads for High-Value Services: https://open-agent.agency/blog/meta-ads-perfume-beauty.html
 - Meta Ads on a Small Budget: https://open-agent.agency/blog/meta-ads-perfume-budget.html
 - Meta vs Google Ads: https://open-agent.agency/blog/meta-vs-google-ads.html
-- Shopify CRO Guide: https://open-agent.agency/blog/shopify-cro-guide.html
-- Shopify in Pakistan Guide: https://open-agent.agency/blog/shopify-pakistan-guide.html
+- Conversion Optimization Guide: https://open-agent.agency/blog/shopify-cro-guide.html
+- Digital Growth in Pakistan: https://open-agent.agency/blog/shopify-pakistan-guide.html
