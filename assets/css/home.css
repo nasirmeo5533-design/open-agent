@@ -349,23 +349,78 @@ body.home .step-card h3 { font-size: 1.1rem; margin-bottom: 10px; }
 body.home .step-card p { font-size: 14.5px; color: #5f5f5f; margin: 0; }
 
 /* --------------------------------------------------------------------------
-   Who I work with
+   Who I work with — niche cards with imagery
    -------------------------------------------------------------------------- */
-body.home .who-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
-}
 body.home .who-card {
   background: #ffffff;
   border: 1px solid #ece8e2;
   border-left: 3px solid #FF6B00;
-  padding: 38px 34px;
+  padding: 0;
+  overflow: hidden;
   transition: transform .3s ease, box-shadow .3s ease;
 }
 body.home .who-card:hover { transform: translateY(-6px); box-shadow: 0 24px 50px rgba(0,0,0,.08); }
+body.home .who-card figure {
+  margin: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+body.home .who-card figure img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform .5s ease;
+}
+body.home .who-card:hover figure img { transform: scale(1.04); }
+body.home .who-body { padding: 30px 32px 34px; }
 body.home .who-card h3 { font-size: 1.18rem; margin-bottom: 14px; }
 body.home .who-card p { font-size: 15px; color: #5f5f5f; margin: 0; }
+
+/* --------------------------------------------------------------------------
+   Portfolio — real screenshots, real numbers
+   -------------------------------------------------------------------------- */
+body.home .pf-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+body.home .pf-card {
+  background: #ffffff;
+  border: 1px solid #ece8e2;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  text-decoration: none;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+body.home .pf-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(0,0,0,.08);
+  border-color: #FF6B00;
+}
+body.home .pf-card figure {
+  margin: 0;
+  height: 220px;
+  background: #f7f7f5;
+  padding: 16px;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+body.home .pf-card figure img {
+  max-width: 100%; max-height: 100%;
+  width: auto; height: auto;
+  object-fit: contain;
+}
+body.home .pf-body {
+  padding: 20px 22px 24px;
+  border-top: 1px solid #ece8e2;
+}
+body.home .pf-cat {
+  color: #FF6B00; font-weight: 700;
+  font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase;
+}
+body.home .pf-card h3 { font-size: 1.02rem; margin: 8px 0 6px; }
+body.home .pf-card p { font-size: 13.5px; color: #5f5f5f; margin: 0; line-height: 1.55; }
+body.home .pf-more { text-align: center; margin-top: 48px; }
 
 /* --------------------------------------------------------------------------
    Final CTA
@@ -431,6 +486,7 @@ body.home .to-top:hover { background: #ff7f1f; }
   body.home .svc-grid { grid-template-columns: repeat(2, 1fr); }
   body.home .step-grid { grid-template-columns: repeat(2, 1fr); }
   body.home .tools-grid { grid-template-columns: repeat(3, 1fr); }
+  body.home .pf-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 640px) {
@@ -441,6 +497,8 @@ body.home .to-top:hover { background: #ff7f1f; }
   body.home .svc-grid,
   body.home .step-grid { grid-template-columns: 1fr; }
   body.home .principle-grid { grid-template-columns: 1fr; }
+  body.home .pf-grid { grid-template-columns: 1fr; }
+  body.home .pf-card figure { height: 180px; }
   body.home .section.tools { padding: 56px 0; }
   body.home .tools-grid { grid-template-columns: repeat(2, 1fr); }
   body.home .tool { min-height: 72px; padding: 16px 14px; }
