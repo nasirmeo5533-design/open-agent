@@ -122,7 +122,7 @@ body.home .btn-ghost-orange:hover { background: #FF6B00; color: #fff; }
    Hero — dark, typography-driven
    -------------------------------------------------------------------------- */
 body.home .hero {
-  background: #000000;
+  background: #ffffff;
   padding: 120px 0 110px;
 }
 body.home .hero-inner {
@@ -133,8 +133,8 @@ body.home .hero-inner {
 body.home .hero .eyebrow {
   display: inline-flex; align-items: center;
   background: transparent;
-  border: 1px solid rgba(255,255,255,.25);
-  color: #aeaeae;
+  border: 1px solid rgba(0,0,0,.2);
+  color: #5c5c5c;
   font-weight: 600; font-size: 13px;
   letter-spacing: .12em; text-transform: uppercase;
   padding: 9px 18px; border-radius: 999px;
@@ -145,14 +145,14 @@ body.home .hero .eyebrow::before {
   background: #FF6B00;
 }
 body.home .hero h1 {
-  color: #ffffff;
+  color: #0a0a0a;
   font-size: clamp(2.5rem, 6vw, 4.7rem);
   line-height: 1.08;
   margin: 0;
 }
 body.home .hero h1 strong { color: #FF6B00; font-weight: 800; }
 body.home .hero p.lede {
-  color: #d0d0d0;
+  color: #555555;
   font-size: clamp(1.05rem, 1.7vw, 1.25rem);
   max-width: 640px;
   margin: 26px 0 0;
@@ -162,14 +162,22 @@ body.home .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 40p
 body.home .hero-pills {
   margin-top: 44px;
   display: flex; flex-wrap: wrap; gap: 10px 22px;
-  color: #9a9a9a; font-size: 13.5px; font-weight: 500;
+  color: #6b6b6b; font-size: 13.5px; font-weight: 500;
   padding-top: 26px;
-  border-top: 1px solid rgba(255,255,255,.14);
+  border-top: 1px solid rgba(0,0,0,.1);
 }
 body.home .hero-pills span { display: inline-flex; align-items: center; gap: 8px; }
 body.home .hero-pills i { color: #FF6B00; font-size: 10px; }
 
-body.home .shape { color: #2a2a2a; }
+/* hero sits on white — invert the dark-section ghost button inside it */
+body.home .hero .btn-ghost {
+  background: transparent;
+  color: #0a0a0a;
+  border: 2px solid rgba(0,0,0,.75);
+}
+body.home .hero .btn-ghost:hover { background: #0a0a0a; color: #ffffff; }
+
+body.home .shape { color: #e8e4de; }
 body.home .shape-star-accent { color: #FF6B00; }
 
 /* --------------------------------------------------------------------------
@@ -202,13 +210,10 @@ body.home .tool img {
   max-height: 42px;
   height: auto;
   object-fit: contain;
-  filter: grayscale(1) contrast(1.02);
-  opacity: .72;
-  transition: filter .35s ease, opacity .35s ease;
+  transition: transform .35s ease;
 }
 body.home .tool:hover img {
-  filter: grayscale(0);
-  opacity: 1;
+  transform: scale(1.05);
 }
 
 /* --------------------------------------------------------------------------

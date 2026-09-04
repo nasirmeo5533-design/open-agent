@@ -4,7 +4,7 @@
   var SITE = {
     name: 'OpenAgent',
     whatsapp: '923703159642',
-    email: 'hello@open-agent.agency'
+    email: 'abeerinfo5566@gmail.com'
   };
   window.SITE = SITE;
 

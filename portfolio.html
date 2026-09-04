@@ -21,11 +21,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/portfolio.css?v=20260903b">
+<link rel="stylesheet" href="assets/css/portfolio.css?v=20260905">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYQHFB4QNL"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-MYQHFB4QNL')</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"OpenAgent","url":"https://open-agent.agency/portfolio.html","logo":"https://open-agent.agency/assets/images/logo-mark.svg","description":"Real campaign results from OpenAgent — Meta Ads conversions, social media growth and e-commerce work by Abeer Nasir.","email":"hello@open-agent.agency","telephone":"+92-370-3159642","address":{"@type":"PostalAddress","addressLocality":"Karachi","addressCountry":"PK"},"sameAs":["https://x.com/Abeergrowth","https://www.facebook.com/profile.php?id=61572143246804","https://www.instagram.com/growthbot_02/","https://www.linkedin.com/in/abeer-nasir-3052b628a/"],"founder":{"@type":"Person","name":"Abeer Nasir"}}
+{"@context":"https://schema.org","@type":"Organization","name":"OpenAgent","url":"https://open-agent.agency/portfolio.html","logo":"https://open-agent.agency/assets/images/logo-mark.svg","description":"Real campaign results from OpenAgent — Meta Ads conversions, social media growth and e-commerce work by Abeer Nasir.","email":"abeerinfo5566@gmail.com","telephone":"+92-370-3159642","address":{"@type":"PostalAddress","addressLocality":"Karachi","addressCountry":"PK"},"sameAs":["https://x.com/Abeergrowth","https://www.facebook.com/profile.php?id=61572143246804","https://www.instagram.com/growthbot_02/","https://www.linkedin.com/in/abeer-nasir-3052b628a/"],"founder":{"@type":"Person","name":"Abeer Nasir"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://open-agent.agency/"},{"@type":"ListItem","position":2,"name":"Portfolio","item":"https://open-agent.agency/portfolio.html"}]}
@@ -312,7 +312,7 @@
         <h4>Get In Touch</h4>
         <ul class="contact-list">
           <li><i class="fa-solid fa-phone"></i><a href="tel:+923703159642">+92 370 3159642</a></li>
-          <li><i class="fa-solid fa-envelope"></i><a href="mailto:hello@open-agent.agency">hello@open-agent.agency</a></li>
+          <li><i class="fa-solid fa-envelope"></i><a href="mailto:abeerinfo5566@gmail.com">abeerinfo5566@gmail.com</a></li>
           <li><i class="fa-solid fa-location-dot"></i><span>Karachi, Pakistan — serving clients worldwide</span></li>
         </ul>
       </div>
@@ -330,5 +330,46 @@
 
 <button id="toTop" class="to-top" type="button" aria-label="Scroll back to top"><i class="fa-solid fa-arrow-up"></i></button>
 <script src="assets/js/main.js?v=20260903" defer></script>
+
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Portfolio image viewer" hidden>
+  <button class="lb-close" type="button" aria-label="Close full screen"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lb-nav lb-prev" type="button" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+  <figure class="lb-stage"><img src="" alt=""></figure>
+  <button class="lb-nav lb-next" type="button" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+<script>
+(function () {
+  var lb = document.getElementById('lightbox');
+  if (!lb) return;
+  var img = lb.querySelector('img');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.pf-card figure img'));
+  var idx = 0;
+  function show(i) {
+    idx = (i + cards.length) % cards.length;
+    img.src = cards[idx].src;
+    img.alt = cards[idx].alt;
+    lb.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    lb.hidden = true;
+    img.src = '';
+    document.body.style.overflow = '';
+  }
+  cards.forEach(function (el, i) {
+    el.closest('.pf-card').addEventListener('click', function (e) { e.preventDefault(); show(i); });
+  });
+  lb.querySelector('.lb-close').addEventListener('click', close);
+  lb.querySelector('.lb-prev').addEventListener('click', function () { show(idx - 1); });
+  lb.querySelector('.lb-next').addEventListener('click', function () { show(idx + 1); });
+  lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(idx - 1);
+    if (e.key === 'ArrowRight') show(idx + 1);
+  });
+})();
+</script>
 </body>
 </html>

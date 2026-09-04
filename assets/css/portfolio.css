@@ -216,3 +216,54 @@ body.portfolio .to-top:hover { background: #ff7f1f; }
   body.portfolio .pf-grid { grid-template-columns: 1fr; }
   body.portfolio .pf-card figure { height: 200px; padding: 14px; }
 }
+
+/* -------------------------------------------------------------------------- */
+/* LIGHTBOX — fullscreen image viewer                                          */
+/* -------------------------------------------------------------------------- */
+body.portfolio .lb {
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(0,0,0,.92);
+  display: flex; align-items: center; justify-content: center;
+  padding: 32px;
+}
+body.portfolio .lb[hidden] { display: none; }
+body.portfolio .lb-stage {
+  margin: 0; max-width: min(1200px, 92vw); max-height: 88vh;
+  display: flex; align-items: center; justify-content: center;
+}
+body.portfolio .lb-stage img {
+  max-width: 100%; max-height: 88vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 30px 80px rgba(0,0,0,.6);
+  background: #fff;
+}
+body.portfolio .lb-close {
+  position: absolute; top: 20px; right: 24px;
+  background: transparent; border: none; cursor: pointer;
+  color: #fff; font-size: 30px; line-height: 1;
+  padding: 10px; border-radius: 8px;
+  transition: color .2s ease;
+}
+body.portfolio .lb-close:hover { color: #FF6B00; }
+body.portfolio .lb-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.25);
+  color: #fff; cursor: pointer;
+  width: 48px; height: 48px; border-radius: 50%;
+  font-size: 18px;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .2s ease, border-color .2s ease;
+}
+body.portfolio .lb-nav:hover { background: #FF6B00; border-color: #FF6B00; }
+body.portfolio .lb-prev { left: 20px; }
+body.portfolio .lb-next { right: 20px; }
+@media (max-width: 640px) {
+  body.portfolio .lb { padding: 16px 44px; }
+  body.portfolio .lb-nav { width: 38px; height: 38px; font-size: 15px; }
+  body.portfolio .lb-prev { left: 6px; }
+  body.portfolio .lb-next { right: 6px; }
+}
+
+body.portfolio .pf-card { cursor: zoom-in; }
