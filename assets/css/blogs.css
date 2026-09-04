@@ -285,8 +285,8 @@ body.blogs .footer-bottom p strong { color: #FF6B00; }
    -------------------------------------------------------------------------- */
 body.blogs .to-top { background: #FF6B00; color: #fff; box-shadow: 0 10px 24px rgba(255,107,0,.4); }
 body.blogs .to-top:hover { background: #ff7f1f; }
-body.blogs .fwa { background: #FF6B00; }
-body.blogs .fwa:hover { background: #ff7f1f; }
+body.blogs .fwa { background: #25D366; }
+body.blogs .fwa:hover { background: #1fb857; }
 
 /* --------------------------------------------------------------------------
    Article / blog-post page — long-form reading

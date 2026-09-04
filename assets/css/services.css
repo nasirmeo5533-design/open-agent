@@ -310,8 +310,8 @@ body.services .footer-bottom p strong { color: #FF6B00; }
    -------------------------------------------------------------------------- */
 body.services .to-top { background: #FF6B00; color: #fff; box-shadow: 0 10px 24px rgba(255,107,0,.4); }
 body.services .to-top:hover { background: #ff7f1f; }
-body.services .fwa { background: #FF6B00; }
-body.services .fwa:hover { background: #ff7f1f; }
+body.services .fwa { background: #25D366; }
+body.services .fwa:hover { background: #1fb857; }
 
 /* --------------------------------------------------------------------------
    Service detail pages (services/*.html) — black/white/orange, no stock photos

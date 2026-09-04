@@ -310,8 +310,8 @@ body.contact .footer-bottom p strong { color: #FF6B00; }
    -------------------------------------------------------------------------- */
 body.contact .to-top { background: #FF6B00; color: #fff; box-shadow: 0 10px 24px rgba(255,107,0,.4); }
 body.contact .to-top:hover { background: #ff7f1f; }
-body.contact .fwa { background: #FF6B00; }
-body.contact .fwa:hover { background: #ff7f1f; }
+body.contact .fwa { background: #25D366; }
+body.contact .fwa:hover { background: #1fb857; }
 
 /* --------------------------------------------------------------------------
    Responsive
