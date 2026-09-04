@@ -17,7 +17,6 @@ OpenAgent helps real estate agents, property developers, interior designers and 
 - Meta & Google Ads: https://open-agent.agency/services/meta-google-ads.html
 - Search Engine Optimization: https://open-agent.agency/services/search-engine-optimization.html
 - Full Stack Development: https://open-agent.agency/services/full-stack-development.html
-- Video Editing: https://open-agent.agency/services/video-editing.html
 - AI Agent Development: https://open-agent.agency/services/ai-agent-development.html
 - AI Automation: https://open-agent.agency/services/ai-automation.html
 

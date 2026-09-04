@@ -476,6 +476,15 @@ h4 { font-size: 1.08rem; }
   transition: .25s;
 }
 .socials a:hover { background: var(--pink); border-color: var(--pink); transform: translateY(-4px); }
+/* real brand colors per network */
+.socials a[href*="x.com"], .socials a[href*="twitter.com"] { background: #000000; border-color: #000000; color: #fff; }
+.socials a[href*="facebook.com"] { background: #1877F2; border-color: #1877F2; color: #fff; }
+.socials a[href*="instagram.com"] { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285aeb 90%); border-color: transparent; color: #fff; }
+.socials a[href*="linkedin.com"] { background: #0A66C2; border-color: #0A66C2; color: #fff; }
+.socials a[href*="wa.me"] { background: #25D366; border-color: #25D366; color: #fff; }
+/* WhatsApp CTAs are always WhatsApp green, on every theme */
+body a.btn[href*="wa.me"] { background: #25D366 !important; border-color: #25D366 !important; color: #fff !important; }
+body a.btn[href*="wa.me"]:hover { background: #1fb857 !important; border-color: #1fb857 !important; }
 .contact-list li { display: flex; gap: 13px; align-items: flex-start; font-size: 14.5px; }
 .contact-list i { color: var(--pink); margin-top: 5px; width: 17px; text-align: center; }
 .footer-bottom {
