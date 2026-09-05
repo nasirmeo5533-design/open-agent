@@ -317,9 +317,13 @@ body.services .fwa:hover { background: #1fb857; }
    Service detail pages (services/*.html) — black/white/orange, no stock photos
    -------------------------------------------------------------------------- */
 body.services .page-hero {
-  background: #000000;
+  background: #ffffff;
   padding: 74px 0 64px;
 }
+body.services .page-hero h1 { color: #0a0a0a; }
+body.services .page-hero .lede { color: #555555; font-size: clamp(1.02rem, 1.7vw, 1.2rem); max-width: 660px; margin: 24px auto 0; line-height: 1.7; }
+body.services .page-hero .btn-ghost { color: #0a0a0a; border-color: rgba(0,0,0,.55); }
+body.services .page-hero .btn-ghost:hover { background: #0a0a0a; color: #ffffff; }
 body.services .page-hero .breadcrumb {
   background: rgba(255,255,255,.08);
   border-color: rgba(255,255,255,.18);
@@ -328,7 +332,7 @@ body.services .page-hero .breadcrumb {
 body.services .page-hero .eyebrow { margin-bottom: 22px; }
 body.services .hero-media {
   margin: 0 0 36px;
-  border: 1px solid #2a2a2a;
+  border: 1px solid #ece8e2;
   border-radius: 14px;
   overflow: hidden;
   background: #111111;
