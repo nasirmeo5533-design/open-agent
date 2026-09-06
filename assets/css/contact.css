@@ -85,6 +85,20 @@ body.contact .hero {
   padding: 110px 0 100px;
 }
 body.contact .hero-inner { text-align: center; max-width: 900px; margin-inline: auto; }
+body.contact .hero-media {
+  margin: 0 auto 36px;
+  max-width: 900px;
+  border: 1px solid #2a2a2a;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #111111;
+}
+body.contact .hero-media img {
+  display: block; width: 100%; height: 380px; object-fit: cover; object-position: center;
+}
+@media (max-width: 640px) {
+  body.contact .hero-media img { height: 220px; }
+}
 body.contact .hero .eyebrow {
   display: inline-flex; align-items: center;
   background: transparent;
