@@ -35,4 +35,16 @@
   <url><loc>https://open-agent.agency/blog/ai-agent-cost-2026.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://open-agent.agency/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://open-agent.agency/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url>
+    <loc>https://open-agent.agency/blog/ai-chatbot-property-inquiries.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://open-agent.agency/blog/interior-design-clients-online.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
