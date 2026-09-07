@@ -64,7 +64,7 @@ body.portfolio .btn-ghost-orange { background: transparent; color: #FF6B00; bord
 body.portfolio .btn-ghost-orange:hover { background: #FF6B00; color: #fff; }
 
 /* Hero — dark, typography-driven */
-body.portfolio .hero { background: #000000; padding: 110px 0 96px; }
+body.portfolio .hero { background: #ffffff; padding: 110px 0 96px; }
 body.portfolio .hero-inner { text-align: left; max-width: 960px; margin-inline: auto; }
 body.portfolio .hero .eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
@@ -75,10 +75,10 @@ body.portfolio .hero .eyebrow {
 body.portfolio .hero .eyebrow::before {
   content: ""; width: 8px; height: 8px; border-radius: 50%; background: #FF6B00;
 }
-body.portfolio .hero h1 { color: #ffffff; font-size: clamp(2.4rem, 5.4vw, 4.2rem); line-height: 1.1; margin: 0; }
+body.portfolio .hero h1 { color: #0a0a0a; font-size: clamp(2.4rem, 5.4vw, 4.2rem); line-height: 1.1; margin: 0; }
 body.portfolio .hero h1 strong { color: #FF6B00; font-weight: 800; }
 body.portfolio .hero p.lede {
-  color: #d0d0d0; font-size: clamp(1.05rem, 1.7vw, 1.22rem);
+  color: #555555; font-size: clamp(1.05rem, 1.7vw, 1.22rem);
   max-width: 700px; margin: 26px 0 0; line-height: 1.7;
 }
 
@@ -272,10 +272,10 @@ body.portfolio .pf-card { cursor: zoom-in; }
 body.portfolio .hero-media {
   margin: 0 auto 36px;
   max-width: 900px;
-  border: 1px solid #2a2a2a;
+  border: 1px solid #ece8e2;
   border-radius: 14px;
   overflow: hidden;
-  background: #111111;
+  background: #ffffff;
 }
 body.portfolio .hero-media img {
   display: block; width: 100%; height: 380px; object-fit: cover; object-position: center;
