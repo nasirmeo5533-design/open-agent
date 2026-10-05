@@ -1,26 +1,25 @@
 # OpenAgent
 
-> Digital marketing studio specialising in real estate and interior design, run by one person. Founded by Abeer Nasir, based in Karachi, Pakistan.
+> Social media and paid growth support for U.S. brands and businesses, run by Abeer Nasir.
 
-OpenAgent helps real estate agents, property developers, interior designers and fit-out studios attract high-value clients online — with Meta & Google Ads, SEO, full-stack websites and AI automation. Practical solutions, direct communication, no jargon. Every project is handled personally by Abeer Nasir.
+OpenAgent helps U.S. brands, e-commerce businesses, B2B companies, small businesses and larger companies improve how they show up, create demand and use paid advertising.
 
-## Key facts
+## Contact
 
-- Founder: Abeer Nasir (independent operator — no team, no middlemen)
-- Specialist focus: real estate marketing and interior design marketing
-- Location: Karachi, Pakistan — works with clients worldwide
-- Direct contact on every project
-- Contact: WhatsApp +92 370 3159642 · Email abeerinfo5566@gmail.com
+- WhatsApp: +92 370 3159642
+- Email: abeerinfo5566@gmail.com
+- Focus: U.S. clients only
+- Direct contact with Abeer Nasir
 
 ## Services
 
-- Meta & Google Ads: https://open-agent.agency/services/meta-google-ads.html
-- Search Engine Optimization: https://open-agent.agency/services/search-engine-optimization.html
-- Full Stack Development: https://open-agent.agency/services/full-stack-development.html
-- AI Agent Development: https://open-agent.agency/services/ai-agent-development.html
-- AI Automation: https://open-agent.agency/services/ai-automation.html
+- Social Media Management: https://open-agent.agency/services/ai-agent-development.html
+- Social Media Marketing: https://open-agent.agency/services/ai-automation.html
+- Digital Marketing: https://open-agent.agency/services/full-stack-development.html
+- Meta Ads: https://open-agent.agency/services/meta-google-ads.html
+- Google Ads: https://open-agent.agency/services/search-engine-optimization.html
 
-Pricing is scoped per project — start a conversation via the contact page. Advertising and SEO carry no ranking or performance guarantees (stated openly on those pages).
+OpenAgent does not guarantee advertising performance, rankings, revenue or specific outcomes. Scope and expectations are discussed before work begins.
 
 ## Main pages
 
@@ -28,29 +27,10 @@ Pricing is scoped per project — start a conversation via the contact page. Adv
 - About: https://open-agent.agency/about.html
 - Services: https://open-agent.agency/services.html
 - Portfolio: https://open-agent.agency/portfolio.html
-- Insights (blog): https://open-agent.agency/blogs.html
 - Contact: https://open-agent.agency/contact.html
 - Privacy policy: https://open-agent.agency/privacy.html
 - Terms of service: https://open-agent.agency/terms.html
 
-## Blog articles
+## Paid growth insight
 
-Niche focus:
-
-- Meta Ads for Real Estate: https://open-agent.agency/blog/meta-ads-real-estate-leads.html
-- Interior Design Digital Marketing: https://open-agent.agency/blog/interior-design-digital-marketing.html
-
-General insights:
-
-- AI Agent Cost in 2026: https://open-agent.agency/blog/ai-agent-cost-2026.html
-- AI Automation for Recruiters: https://open-agent.agency/blog/ai-automation-recruiters.html
-- AI Automation for Small Business: https://open-agent.agency/blog/ai-automation-small-business.html
-- AI Content & Social Media: https://open-agent.agency/blog/ai-content-social-media.html
-- Which AI Industry Is Growing: https://open-agent.agency/blog/ai-industry.html
-- AI Tools for Small Business: https://open-agent.agency/blog/ai-tools-small-business.html
-- Digital Marketing Explained: https://open-agent.agency/blog/digital-marketing.html
-- Meta vs Google Ads: https://open-agent.agency/blog/meta-vs-google-ads.html
-- AI Chatbot for Property Inquiries: https://open-agent.agency/blog/ai-chatbot-property-inquiries.html
-- How to Get Interior Design Clients Online: https://open-agent.agency/blog/interior-design-clients-online.html
-- Conversion Optimization Guide: https://open-agent.agency/blog/shopify-cro-guide.html
-- Digital Growth in Pakistan: https://open-agent.agency/blog/shopify-pakistan-guide.html
+- Meta Ads vs Google Ads: https://open-agent.agency/blog/meta-vs-google-ads.html

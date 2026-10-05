@@ -580,3 +580,32 @@ body.home .founder-actions { margin-top: 28px; display: flex; gap: 14px; flex-wr
   body.home .founder-portrait { max-width: 460px; }
   body.home .founder-portrait img { height: 400px; }
 }
+/* 2026 U.S. positioning refresh */
+body.home { background: #f7f7f5; color: #111; }
+body.home .hero { background: #050505; min-height: 720px; display: flex; align-items: center; overflow: hidden; position: relative; }
+body.home .hero::before { content: ""; position: absolute; width: 620px; height: 620px; border: 1px solid rgba(255,107,0,.3); border-radius: 50%; right: -150px; top: -120px; box-shadow: 0 0 0 48px rgba(255,107,0,.04), 0 0 0 110px rgba(255,107,0,.025); }
+body.home .hero-inner { position: relative; z-index: 1; max-width: 980px; padding: 120px 0 110px; text-align: left; }
+body.home .hero h1 { max-width: 850px; font-size: clamp(3.2rem, 7vw, 6.8rem); letter-spacing: -.065em; line-height: .98; }
+body.home .hero h1 strong { color: #ff6b00; }
+body.home .hero .lede { max-width: 680px; color: #c6c6c2; font-size: clamp(1rem, 1.6vw, 1.22rem); line-height: 1.75; }
+body.home .hero-pills { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 34px; color: #b7b7b2; }
+body.home .hero-pills span { font-size: 12px; letter-spacing: .03em; }
+body.home .hero-pills i { color: #ff6b00; font-size: 7px; margin-right: 6px; vertical-align: middle; }
+body.home .section { padding: clamp(76px, 9vw, 130px) 0; }
+body.home .section-head h2 { letter-spacing: -.04em; }
+body.home .section-head p { max-width: 680px; }
+body.home .founder { border-top: 1px solid #232323; }
+body.home .founder-copy .tag-label, body.home .dark .tag-label { color: #ff6b00; }
+body.home .founder-copy h2 { letter-spacing: -.045em; }
+body.home .pillar-grid, body.home .svc-grid, body.home .who-grid { gap: 18px; }
+body.home .pillar-card, body.home .svc-card, body.home .who-card { border-radius: 18px; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+body.home .pillar-card:hover, body.home .svc-card:hover, body.home .who-card:hover { transform: translateY(-5px); box-shadow: 0 22px 50px rgba(0,0,0,.09); border-color: #ff6b00; }
+body.home .svc-card h3 { letter-spacing: -.02em; }
+body.home .final-cta { border-radius: 24px; }
+body.home .footer { border-top: 1px solid #1f1f1f; }
+@media (max-width: 700px) {
+  body.home .hero { min-height: 650px; }
+  body.home .hero-inner { padding: 92px 0 80px; }
+  body.home .hero h1 { font-size: clamp(2.7rem, 14vw, 4.2rem); }
+  body.home .hero-pills { gap: 8px 12px; }
+}
