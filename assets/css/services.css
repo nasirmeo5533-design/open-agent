@@ -1,5 +1,5 @@
-/* ==========================================================================
-   OpenAgent Services Page — Black / White / Orange
+﻿/* ==========================================================================
+   OpenAgent Services Page â€” Black / White / Orange
    Scoped to the Services page only (body.services). Matches the homepage
    and About page visual identity.
    ========================================================================== */
@@ -19,7 +19,7 @@ body.services h1, body.services h2, body.services h3, body.services h4, body.ser
 body.services ::selection { background: #FF6B00; color: #fff; }
 
 /* --------------------------------------------------------------------------
-   Header / navigation — black bar
+   Header / navigation â€” black bar
    -------------------------------------------------------------------------- */
 body.services .topbar { background: #000000; box-shadow: none; }
 body.services .topbar.scrolled { box-shadow: 0 10px 30px rgba(0,0,0,.18); }
@@ -78,7 +78,7 @@ body.services .breadcrumb i { color: #FF6B00; }
 body.services .breadcrumb [aria-current] { color: #ffffff; font-weight: 600; }
 
 /* --------------------------------------------------------------------------
-   Hero — dark, typography-led
+   Hero â€” dark, typography-led
    -------------------------------------------------------------------------- */
 body.services .hero {
   background: #000000;
@@ -135,7 +135,7 @@ body.services .section-head p { color: #5f5f5f; margin-top: 16px; font-size: 1.0
 body.services .section-head p.light { color: #bdbdbd; }
 
 /* --------------------------------------------------------------------------
-   Service cards — 6 offerings
+   Service cards â€” 6 offerings
    -------------------------------------------------------------------------- */
 body.services .svc-grid {
   display: grid;
@@ -150,205 +150,7 @@ body.services .svc-grid > :nth-child(3) {
 body.services .svc-grid > :nth-child(4),
 body.services .svc-grid > :nth-child(5) {
   grid-column: span 3;
-}
-body.services .svc-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
-body.services .svc-card {
-  background: #ffffff;
-  border: 1px solid #e8e4dc;
-  border-radius: 20px;
-  padding: 38px 32px 30px;
-  display: flex; flex-direction: column; gap: 16px;
-  box-shadow: 0 4px 18px rgba(0,0,0,.03);
-  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
-}
-body.services .svc-card:hover { transform: translateY(-6px); box-shadow: 0 24px 50px rgba(0,0,0,.08); border-color: #FF6B00; }
-body.services .svc-num {
-  font-weight: 700; color: #FF6B00; font-size: 12.5px; letter-spacing: .08em;
-  background: rgba(255,107,0,.08); padding: 5px 12px; border-radius: 999px;
-}
-body.services .svc-ic {
-  width: 54px; height: 54px; border-radius: 14px; flex: none;
-  background: #f5f3ef; border: 1px solid #ebe6dd; color: #0a0a0a;
-  display: flex; align-items: center; justify-content: center; font-size: 21px;
-  transition: background .3s, color .3s, transform .3s, border-color .3s;
-}
-body.services .svc-card:hover .svc-ic { background: #FF6B00; color: #fff; border-color: #FF6B00; transform: scale(1.05); }
-body.services .svc-card h3 { font-size: 1.25rem; margin-bottom: 4px; }
-body.services .svc-card > p { font-size: 15px; color: #5f5f5f; margin: 0; line-height: 1.65; }
-body.services .svc-good {
-  border-top: 1px solid #ece8e2;
-  padding-top: 18px;
-  margin-top: 4px;
-}
-body.services .svc-good-label {
-  display: block; font-size: 12px; font-weight: 700;
-  color: #9a9a9a; letter-spacing: .1em; text-transform: uppercase;
-  margin-bottom: 12px;
-}
-body.services .svc-good ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
-body.services .svc-good li {
-  display: flex; align-items: flex-start; gap: 10px;
-  font-size: 14px; color: #3a3a3a;
-}
-body.services .svc-good li::before {
-  content: ""; width: 7px; height: 7px; border-radius: 50%;
-  background: #FF6B00; flex: none; margin-top: 7px;
-}
-body.services .svc-note {
-  border-top: 1px solid #ece8e2;
-  padding-top: 16px;
-  margin-top: auto;
-  font-size: 13.5px; color: #8a8a8a; line-height: 1.6;
-}
-body.services .svc-note i { color: #FF6B00; margin-right: 8px; }
-body.services .svc-link {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-weight: 600; font-size: 14.5px; color: #FF6B00;
-  margin-top: auto; padding-top: 10px;
-}
-body.services .svc-link i { transition: transform .25s; }
-body.services .svc-card:hover .svc-link i { transform: translateX(6px); }
-
-/* --------------------------------------------------------------------------
-   Choose the right service — problem-based cards
-   -------------------------------------------------------------------------- */
-body.services .choose-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-body.services .choose-card {
-  background: #ffffff;
-  border: 1px solid #ece8e2;
-  border-left: 3px solid #FF6B00;
-  border-radius: 14px;
-  padding: 32px 28px;
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-body.services .choose-card:hover { transform: translateY(-6px); box-shadow: 0 24px 50px rgba(0,0,0,.08); }
-body.services .choose-card .choose-q { font-size: 15px; font-weight: 600; color: #0a0a0a; margin-bottom: 12px; }
-body.services .choose-card h4 { font-size: 1.06rem; margin-bottom: 14px; }
-body.services .choose-label { display: block; font-size: 11.5px; font-weight: 700; color: #9a9a9a; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 12px; }
-body.services .choose-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-body.services .choose-tags span {
-  font-size: 12.5px; font-weight: 600; color: #0a0a0a;
-  border: 1px solid #e3ddd3; border-radius: 999px; padding: 5px 12px;
-  background: #faf9f7;
-}
-body.services .choose-example { display: block; margin-top: 16px; font-size: 12.5px; color: #9a9a9a; }
-
-/* --------------------------------------------------------------------------
-   What every project includes — 4 numbered points
-   -------------------------------------------------------------------------- */
-body.services .inc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-body.services .inc-card {
-  background: #ffffff;
-  border: 1px solid #ece8e2;
-  padding: 38px 28px;
-  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
-}
-body.services .inc-card:hover { transform: translateY(-6px); box-shadow: 0 24px 50px rgba(0,0,0,.08); border-color: #FF6B00; }
-body.services .inc-num { font-size: 2.6rem; font-weight: 800; line-height: 1; color: #FF6B00; display: block; margin-bottom: 20px; }
-body.services .inc-card h3 { font-size: 1.12rem; margin-bottom: 10px; }
-body.services .inc-card p { font-size: 14.5px; color: #5f5f5f; margin: 0; }
-
-/* --------------------------------------------------------------------------
-   How I work — dark, 4 steps
-   -------------------------------------------------------------------------- */
-body.services .how-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-body.services .how-card {
-  background: #141414;
-  border: 1px solid #2a2a2a;
-  border-radius: 14px;
-  padding: 38px 28px;
-  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
-}
-body.services .how-card:hover { transform: translateY(-6px); box-shadow: 0 24px 50px rgba(0,0,0,.4); border-color: #FF6B00; }
-body.services .how-num { font-size: 2.6rem; font-weight: 800; line-height: 1; color: #FF6B00; display: block; margin-bottom: 20px; }
-body.services .how-card h3 { color: #ffffff; font-size: 1.15rem; margin-bottom: 10px; }
-body.services .how-card p { color: #bdbdbd; font-size: 14.5px; margin: 0; }
-
-/* --------------------------------------------------------------------------
-   Transparency — 3 principles, minimal
-   -------------------------------------------------------------------------- */
-body.services .trans-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-body.services .trans-card {
-  border-top: 3px solid #FF6B00;
-  padding: 34px 6px 0;
-}
-body.services .trans-card h3 { font-size: 1.2rem; margin-bottom: 14px; }
-body.services .trans-card p { font-size: 15px; color: #5f5f5f; margin: 0; }
-
-/* --------------------------------------------------------------------------
-   Final CTA — black banner
-   -------------------------------------------------------------------------- */
-body.services .final-cta {
-  background: #000000;
-  border-radius: 20px;
-  padding: clamp(56px, 8vw, 96px) clamp(26px, 7vw, 96px);
-  text-align: center;
-  color: #fff;
-  position: relative; overflow: hidden;
-}
-body.services .final-cta::before {
-  content: ""; position: absolute; width: 360px; height: 360px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,107,0,.28), transparent 65%);
-  top: -120px; right: -80px;
-}
-body.services .final-cta::after {
-  content: ""; position: absolute; width: 300px; height: 300px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,107,0,.2), transparent 65%);
-  bottom: -130px; left: -70px;
-}
-body.services .final-cta h2 { color: #ffffff; position: relative; z-index: 1; font-size: clamp(2rem, 4vw, 3rem); }
-body.services .final-cta p { position: relative; z-index: 1; color: #cfcfcf; max-width: 640px; margin: 18px auto 0; font-size: 1.05rem; }
-body.services .final-cta .btn-row { position: relative; z-index: 1; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 38px; }
-body.services .final-cta small { position: relative; z-index: 1; display: block; margin-top: 30px; color: #9a9a9a; font-size: 13.5px; }
-
-/* --------------------------------------------------------------------------
-   Footer — minimal, matches homepage/About
-   -------------------------------------------------------------------------- */
-body.services .footer { background: #000000; color: #b5b5b5; padding: 72px 0 0; }
-body.services .footer::before { display: none; }
-body.services .footer .brand { color: #fff; }
-body.services .footer .brand span { color: #FF6B00; }
-body.services .footer h4 { color: #ffffff; font-size: 1rem; margin-bottom: 20px; letter-spacing: .02em; }
-body.services .footer-about > p { color: #b5b5b5; }
-body.services .footer ul a { color: #b5b5b5; }
-body.services .footer ul a:hover { color: #FF6B00; }
-body.services .footer .socials a { border-color: rgba(255,255,255,.22); color: #fff; }
-body.services .footer .socials a:hover { background: #FF6B00; border-color: #FF6B00; }
-body.services .footer .contact-list i { color: #FF6B00; }
-body.services .footer-bottom { border-color: rgba(255,255,255,.14); color: #9a9a9a; }
-body.services .footer-bottom p strong { color: #FF6B00; }
-
-/* --------------------------------------------------------------------------
-   Scroll-to-top / WhatsApp float
-   -------------------------------------------------------------------------- */
-body.services .to-top { background: #FF6B00; color: #fff; box-shadow: 0 10px 24px rgba(255,107,0,.4); }
-body.services .to-top:hover { background: #ff7f1f; }
-body.services .fwa { background: #25D366; }
-body.services .fwa:hover { background: #1fb857; }
-
-/* --------------------------------------------------------------------------
-   Service detail pages (services/*.html) — black/white/orange, no stock photos
-   -------------------------------------------------------------------------- */
-body.services .page-hero {
-  background: #ffffff;
-  padding: 74px 0 64px;
-}
-body.services .page-hero h1 { color: #0a0a0a; }
-body.services .page-hero .lede { color: #555555; font-size: clamp(1.02rem, 1.7vw, 1.2rem); max-width: 660px; margin: 24px auto 0; line-height: 1.7; }
-body.services .page-hero .btn-ghost { color: #0a0a0a; border-color: rgba(0,0,0,.55); }
-body.services .page-hero .btn-ghost:hover { background: #0a0a0a; color: #ffffff; }
-body.services .page-hero .breadcrumb {
-  background: #ffffff;
-  border-color: #ece8e2;
-  box-shadow: 0 4px 14px rgba(0,0,0,.04);
-}
-body.services .page-hero .eyebrow {
-  margin-bottom: 22px;
-  background: #ffffff;
-  border-color: #ece8e2;
-  color: #0a0a0a;
-}
-body.services .page-hero .eyebrow i { color: #FF6B00; }
+}body.services .page-hero .eyebrow i { color: #FF6B00; }
 body.services .page-hero-inner { max-width: 900px; margin-inline: auto; }
 body.services .page-hero .btn-row {
   display: flex;
@@ -403,7 +205,8 @@ body.services .detail-visual .dv-flow li {
 body.services .detail-visual .dv-flow i { color: #FF6B00; flex: none; }
 
 body.services .check-list { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 12px; }
-body.services .check-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: #3a3a3a; }
+body.services .check-list li,
+body.services .check-list > div { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: #3a3a3a; }
 body.services .check-list i { color: #FF6B00; margin-top: 4px; flex: none; }
 body.services .split-copy h2 { margin-bottom: 16px; }
 body.services .split-copy p { color: #5f5f5f; font-size: 15.5px; line-height: 1.7; }
@@ -539,3 +342,4 @@ body.services .final-cta .btn-row .btn-ghost:hover { background: #fff; color: #0
 @media print {
   body.services .hero, body.services .page-hero, body.services .fwa { display: none; }
 }
+

@@ -1,5 +1,5 @@
-/* ==========================================================================
-   OpenAgent Homepage — Black / White / Orange
+﻿/* ==========================================================================
+   OpenAgent Homepage â€” Black / White / Orange
    Scoped to the homepage only. Other pages keep the shared v2 stylesheet.
    ========================================================================== */
 
@@ -18,7 +18,7 @@ body.home h1, body.home h2, body.home h3, body.home h4, body.home h5 {
 body.home ::selection { background: #FF6B00; color: #fff; }
 
 /* --------------------------------------------------------------------------
-   Header / navigation — black bar
+   Header / navigation â€” black bar
    -------------------------------------------------------------------------- */
 body.home .topbar {
   background: #000000;
@@ -119,7 +119,7 @@ body.home .btn-ghost-orange {
 body.home .btn-ghost-orange:hover { background: #FF6B00; color: #fff; }
 
 /* --------------------------------------------------------------------------
-   Hero — dark, typography-driven
+   Hero â€” dark, typography-driven
    -------------------------------------------------------------------------- */
 body.home .hero {
   background: #ffffff;
@@ -169,7 +169,7 @@ body.home .hero-pills {
 body.home .hero-pills span { display: inline-flex; align-items: center; gap: 8px; }
 body.home .hero-pills i { color: #FF6B00; font-size: 10px; }
 
-/* hero sits on white — invert the dark-section ghost button inside it */
+/* hero sits on white â€” invert the dark-section ghost button inside it */
 body.home .hero .btn-ghost {
   background: transparent;
   color: #0a0a0a;
@@ -181,7 +181,7 @@ body.home .shape { color: #e8e4de; }
 body.home .shape-star-accent { color: #FF6B00; }
 
 /* --------------------------------------------------------------------------
-   Tools I work with — logo strip
+   Tools I work with â€” logo strip
    -------------------------------------------------------------------------- */
 body.home .section.tools { padding: 76px 0; }
 body.home .tools .section-head { margin-bottom: 44px; }
@@ -326,7 +326,7 @@ body.home .svc-link i { transition: transform .25s; }
 body.home .svc-card:hover .svc-link i { transform: translateX(6px); }
 
 /* --------------------------------------------------------------------------
-   Principles (why OpenAgent) — dark section
+   Principles (why OpenAgent) â€” dark section
    -------------------------------------------------------------------------- */
 body.home .principle-grid {
   display: grid;
@@ -381,13 +381,12 @@ body.home .step-card h3 { font-size: 1.15rem; margin-bottom: 10px; }
 body.home .step-card p { font-size: 14.5px; color: #5f5f5f; margin: 0; line-height: 1.65; }
 
 /* --------------------------------------------------------------------------
-   Who I work with — niche cards with imagery
+   Who I work with â€” niche cards with imagery
    -------------------------------------------------------------------------- */
 body.home .who-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
+  gap: 24px;}
 body.home .who-card {
   background: #ffffff;
   border: 1px solid #e8e4dc;
@@ -418,7 +417,7 @@ body.home .who-card h3 { font-size: 1.2rem; margin-bottom: 12px; }
 body.home .who-card p { font-size: 15px; color: #5f5f5f; margin: 0; line-height: 1.65; }
 
 /* --------------------------------------------------------------------------
-   Portfolio — real screenshots, real numbers
+   Portfolio â€” real screenshots, real numbers
    -------------------------------------------------------------------------- */
 body.home .pf-grid {
   display: grid;
@@ -498,7 +497,7 @@ body.home .final-cta .btn-row { position: relative; z-index: 1; display: flex; g
 body.home .final-cta small { position: relative; z-index: 1; display: block; margin-top: 30px; color: #9a9a9a; font-size: 13.5px; }
 
 /* --------------------------------------------------------------------------
-   Footer — minimal
+   Footer â€” minimal
    -------------------------------------------------------------------------- */
 body.home .footer {
   background: #000000;
@@ -615,7 +614,7 @@ body.home .form-status.show { display: block; }
 body.home .btn-inquiry { background: #25D366 !important; border-color: #25D366 !important; color: #fff !important; box-shadow: 0 12px 30px rgba(37,211,102,.32); }
 body.home .btn-inquiry:hover { background: #1fb857 !important; border-color: #1fb857 !important; transform: translateY(-2px); }
 
-/* Founder intro — second section, dark card style */
+/* Founder intro â€” second section, dark card style */
 body.home .founder { background: #050505; padding: 96px 0; }
 body.home .founder-grid { display: grid; grid-template-columns: 400px 1fr; gap: 64px; align-items: center; }
 body.home .founder-portrait { position: relative; }
@@ -667,3 +666,4 @@ body.home .footer { border-top: 1px solid #1f1f1f; }
   body.home .hero h1 { font-size: clamp(2.7rem, 14vw, 4.2rem); }
   body.home .hero-pills { gap: 8px 12px; }
 }
+
