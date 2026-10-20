@@ -667,3 +667,29 @@ body.home .footer { border-top: 1px solid #1f1f1f; }
   body.home .hero-pills { gap: 8px 12px; }
 }
 
+/* --------------------------------------------------------------------------
+   Process — supporting photo (added 2026-10-20)
+   -------------------------------------------------------------------------- */
+body.home .process-visual {
+  margin: 0 0 44px;
+  border: 1px solid #e8e4dc;
+  border-top: 3px solid #FF6B00;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #f0ece6;
+  box-shadow: 0 24px 54px rgba(0,0,0,.1);
+}
+body.home .process-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2.22 / 1;
+  object-fit: cover;
+  object-position: center;
+  image-rendering: -webkit-optimize-contrast;
+}
+@media (max-width: 640px) {
+  body.home .process-visual { margin-bottom: 32px; border-radius: 16px; }
+  body.home .process-visual img { aspect-ratio: 16 / 9; }
+}
+
