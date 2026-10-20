@@ -356,6 +356,11 @@ body.home .step-card p { font-size: 14.5px; color: #5f5f5f; margin: 0; }
 /* --------------------------------------------------------------------------
    Who I work with — niche cards with imagery
    -------------------------------------------------------------------------- */
+body.home .who-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
 body.home .who-card {
   background: #ffffff;
   border: 1px solid #ece8e2;
@@ -591,6 +596,12 @@ body.home .hero .lede { max-width: 680px; color: #c6c6c2; font-size: clamp(1rem,
 body.home .hero-pills { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 34px; color: #b7b7b2; }
 body.home .hero-pills span { font-size: 12px; letter-spacing: .03em; }
 body.home .hero-pills i { color: #ff6b00; font-size: 7px; margin-right: 6px; vertical-align: middle; }
+/* dark hero: keep headline + secondary text readable */
+body.home .hero h1 { color: #ffffff; }
+body.home .hero p.lede { color: #c6c6c2; }
+body.home .hero .btn-ghost { color: #ffffff; border-color: rgba(255,255,255,.7); }
+body.home .hero .btn-ghost:hover { background: #ffffff; color: #0a0a0a; }
+body.home .hero-pills { border-top-color: rgba(255,255,255,.14); }
 body.home .section { padding: clamp(76px, 9vw, 130px) 0; }
 body.home .section-head h2 { letter-spacing: -.04em; }
 body.home .section-head p { max-width: 680px; }
