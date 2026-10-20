@@ -693,3 +693,35 @@ body.home .process-visual img {
   body.home .process-visual img { aspect-ratio: 16 / 9; }
 }
 
+/* --------------------------------------------------------------------------
+   Hero — banner background photo (added 2026-10-20, user request)
+   Pexels free-license photo 5827831, cropped 16:9 to assets/images/home/hero-banner.jpg
+   Layering: image + gradient overlay sit at z-index 0, the orange ring
+   (::before) at 1, hero copy (.hero-inner) stays at 1 above the rings.
+   -------------------------------------------------------------------------- */
+body.home .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 76% center;
+}
+body.home .hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(5,5,5,.97) 0%, rgba(5,5,5,.93) 34%, rgba(5,5,5,.74) 66%, rgba(5,5,5,.52) 100%),
+    linear-gradient(180deg, rgba(5,5,5,.3) 0%, rgba(5,5,5,.08) 45%, rgba(5,5,5,.42) 100%);
+}
+body.home .hero::before { z-index: 1; }
+@media (max-width: 700px) {
+  body.home .hero-bg { object-position: 68% center; }
+  body.home .hero::after {
+    background: linear-gradient(180deg, rgba(5,5,5,.88) 0%, rgba(5,5,5,.9) 55%, rgba(5,5,5,.94) 100%);
+  }
+}
+
