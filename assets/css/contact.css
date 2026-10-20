@@ -149,19 +149,23 @@ body.contact .contact-split {
 body.contact .contact-side h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.18; margin-bottom: 16px; }
 body.contact .contact-side > p { color: #5f5f5f; font-size: 1.02rem; line-height: 1.7; max-width: 460px; margin-bottom: 40px; }
 
-body.contact .ct-options { display: grid; gap: 16px; }
+body.contact .ct-options { display: grid; gap: 18px; }
 body.contact .ct-opt {
   display: flex; align-items: flex-start; gap: 18px;
   background: #ffffff;
-  border: 1px solid #ece8e2;
-  border-left: 3px solid #FF6B00;
-  border-radius: 14px;
-  padding: 24px 26px;
+  border: 1px solid #e8e4dc;
+  border-radius: 18px;
+  padding: 26px 28px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.03);
   transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
 }
 body.contact .ct-opt:hover { transform: translateY(-4px); box-shadow: 0 20px 44px rgba(0,0,0,.08); border-color: #FF6B00; }
-body.contact .ct-num { font-size: 0.95rem; font-weight: 800; color: #FF6B00; letter-spacing: .02em; flex: none; padding-top: 3px; }
-body.contact .ct-opt-body h3 { font-size: 1.12rem; margin-bottom: 6px; }
+body.contact .ct-num {
+  font-size: 12px; font-weight: 700; color: #FF6B00; letter-spacing: .08em;
+  background: rgba(255,107,0,.08); padding: 4px 10px; border-radius: 999px;
+  flex: none; margin-top: 2px;
+}
+body.contact .ct-opt-body h3 { font-size: 1.15rem; margin-bottom: 6px; }
 body.contact .ct-opt-body p { font-size: 14.5px; color: #5f5f5f; margin: 0 0 16px; }
 body.contact .ct-opt .btn { padding: 11px 22px; font-size: 14px; }
 body.contact .ct-opt .btn-ghost-dark { color: #0a0a0a; border-color: #0a0a0a; }
@@ -172,9 +176,9 @@ body.contact .ct-opt .btn-ghost-dark:hover { background: #0a0a0a; color: #fff; }
    -------------------------------------------------------------------------- */
 body.contact .form-card {
   background: #ffffff;
-  border: 1px solid #ece8e2;
-  border-top: 3px solid #FF6B00;
-  border-radius: 18px;
+  border: 1px solid #e8e4dc;
+  border-top: 4px solid #FF6B00;
+  border-radius: 20px;
   padding: clamp(30px, 4vw, 48px);
   box-shadow: 0 30px 70px rgba(0,0,0,.07);
 }
@@ -223,18 +227,19 @@ body.contact .form-status.show { display: block; }
 /* --------------------------------------------------------------------------
    What happens next — 3 steps
    -------------------------------------------------------------------------- */
-body.contact .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+body.contact .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 body.contact .steps-card {
   background: #ffffff;
-  border: 1px solid #ece8e2;
-  border-top: 3px solid #FF6B00;
-  border-radius: 16px;
+  border: 1px solid #e8e4dc;
+  border-top: 4px solid #FF6B00;
+  border-radius: 20px;
   padding: 38px 30px;
+  box-shadow: 0 4px 18px rgba(0,0,0,.03);
   transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
 }
 body.contact .steps-card:hover { transform: translateY(-6px); box-shadow: 0 24px 50px rgba(0,0,0,.08); border-color: #FF6B00; }
-body.contact .steps-num { font-size: 2.6rem; font-weight: 800; line-height: 1; color: #FF6B00; display: block; margin-bottom: 20px; letter-spacing: -.02em; }
-body.contact .steps-card h3 { font-size: 1.12rem; margin-bottom: 10px; }
+body.contact .steps-num { font-size: 2.8rem; font-weight: 800; line-height: 1; color: #FF6B00; display: block; margin-bottom: 20px; letter-spacing: -.02em; }
+body.contact .steps-card h3 { font-size: 1.18rem; margin-bottom: 10px; }
 body.contact .steps-card p { font-size: 14.5px; color: #5f5f5f; margin: 0; line-height: 1.7; }
 
 /* --------------------------------------------------------------------------
