@@ -1,5 +1,5 @@
 ﻿/* ==========================================================================
-   OpenAgent Services Page â€” Black / White / Orange
+   OpenAgent Services Page — Black / White / Orange
    Scoped to the Services page only (body.services). Matches the homepage
    and About page visual identity.
    ========================================================================== */
@@ -19,7 +19,7 @@ body.services h1, body.services h2, body.services h3, body.services h4, body.ser
 body.services ::selection { background: #FF6B00; color: #fff; }
 
 /* --------------------------------------------------------------------------
-   Header / navigation â€” black bar
+   Header / navigation — black bar
    -------------------------------------------------------------------------- */
 body.services .topbar { background: #000000; box-shadow: none; }
 body.services .topbar.scrolled { box-shadow: 0 10px 30px rgba(0,0,0,.18); }
@@ -78,7 +78,7 @@ body.services .breadcrumb i { color: #FF6B00; }
 body.services .breadcrumb [aria-current] { color: #ffffff; font-weight: 600; }
 
 /* --------------------------------------------------------------------------
-   Hero â€” dark, typography-led
+   Hero — dark, typography-led
    -------------------------------------------------------------------------- */
 body.services .hero {
   background: #000000;
@@ -135,7 +135,7 @@ body.services .section-head p { color: #5f5f5f; margin-top: 16px; font-size: 1.0
 body.services .section-head p.light { color: #bdbdbd; }
 
 /* --------------------------------------------------------------------------
-   Service cards â€” 6 offerings
+   Service cards — 6 offerings
    -------------------------------------------------------------------------- */
 body.services .svc-grid {
   display: grid;
@@ -179,37 +179,11 @@ body.services .hero-media img {
 }
 
 body.services .split { align-items: center; gap: 56px; }
-body.services .split-media { max-width: 480px; }
-body.services .detail-visual {
-  background: #f4f2ee;
-  border: 1px solid #ece8e2;
-  border-top: 3px solid #FF6B00;
-  border-radius: 16px;
-  padding: 48px 40px;
-  display: flex; flex-direction: column; gap: 26px;
-  align-items: flex-start;
-}
-body.services .detail-visual .dv-ic {
-  width: 64px; height: 64px; border-radius: 16px;
-  background: #FF6B00; color: #fff;
-  display: flex; align-items: center; justify-content: center; font-size: 26px;
-}
-body.services .detail-visual h3 { margin: 0; font-size: 1.35rem; }
-body.services .detail-visual p { color: #5f5f5f; margin: 0; font-size: 15px; line-height: 1.6; }
-body.services .detail-visual .dv-flow { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; width: 100%; }
-body.services .detail-visual .dv-flow li {
-  display: flex; align-items: center; gap: 12px;
-  font-size: 14px; font-weight: 600; color: #0a0a0a;
-  border: 1px solid #ece8e2; background: #fff; border-radius: 10px; padding: 12px 16px;
-}
-body.services .detail-visual .dv-flow i { color: #FF6B00; flex: none; }
 
 body.services .check-list { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 12px; }
 body.services .check-list li,
 body.services .check-list > div { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: #3a3a3a; }
 body.services .check-list i { color: #FF6B00; margin-top: 4px; flex: none; }
-body.services .split-copy h2 { margin-bottom: 16px; }
-body.services .split-copy p { color: #5f5f5f; font-size: 15.5px; line-height: 1.7; }
 
 /* Feature cards (included / capabilities) */
 body.services .feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
@@ -270,31 +244,6 @@ body.services .faq-a { padding: 0 26px; max-height: 0; overflow: hidden; transit
 body.services .faq-item.open .faq-a { padding: 0 26px 22px; max-height: 400px; }
 body.services .faq-a p { color: #5f5f5f; font-size: 15px; line-height: 1.65; margin: 0; }
 
-/* Other services (detail pages) */
-body.services .more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-body.services .more-card {
-  background: #ffffff;
-  border: 1px solid #ece8e2;
-  border-radius: 16px;
-  padding: 32px 28px;
-  display: flex; flex-direction: column; gap: 12px;
-  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
-}
-body.services .more-card:hover { transform: translateY(-6px); box-shadow: 0 24px 50px rgba(0,0,0,.08); border-color: #FF6B00; }
-body.services .more-card .more-ic {
-  width: 48px; height: 48px; border-radius: 12px;
-  background: #f4f2ee; color: #0a0a0a;
-  display: flex; align-items: center; justify-content: center; font-size: 19px;
-}
-body.services .more-card h3 { font-size: 1.1rem; margin: 0; }
-body.services .more-card p { font-size: 14.5px; color: #5f5f5f; margin: 0; }
-body.services .more-card .more-link {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-weight: 600; font-size: 14px; color: #FF6B00; margin-top: 6px;
-}
-body.services .more-card .more-link i { transition: transform .25s; }
-body.services .more-card:hover .more-link i { transform: translateX(6px); }
-
 /* CTA banner (detail pages) reuses .final-cta */
 body.services .final-cta .btn-row .btn-ghost { border-color: rgba(255,255,255,.7); color: #fff; }
 body.services .final-cta .btn-row .btn-ghost:hover { background: #fff; color: #0a0a0a; }
@@ -311,8 +260,8 @@ body.services .final-cta .btn-row .btn-ghost:hover { background: #fff; color: #0
   body.services .svc-grid > :nth-child(5) { grid-column: 1 / -1; }
   body.services .choose-grid,
   body.services .inc-grid,
-  body.services .how-grid { grid-template-columns: repeat(2, 1fr); }
-  body.services .trans-grid { grid-template-columns: repeat(3, 1fr); }
+  body.services .how-grid 
+  body.services .trans-grid 
   body.services .feat-grid,
   body.services .more-grid { grid-template-columns: repeat(2, 1fr); }
   body.services .proc-grid { grid-template-columns: repeat(2, 1fr); }
@@ -336,7 +285,7 @@ body.services .final-cta .btn-row .btn-ghost:hover { background: #fff; color: #0
   body.services .svc-grid > :nth-child(3),
   body.services .svc-grid > :nth-child(4),
   body.services .svc-grid > :nth-child(5) { grid-column: auto; }
-  body.services .detail-visual { padding: 32px 24px; }
+  body.services .detail-visual 
 }
 
 @media print {

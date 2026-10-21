@@ -80,37 +80,6 @@
     revealEls.forEach(function (el) { el.classList.add('in-view'); });
   }
 
-  /* ---------- Animated counters ---------- */
-  function animateCounter(el) {
-    var target = parseInt(el.getAttribute('data-count'), 10) || 0;
-    var dur = 2000; // ms — animate over 2 seconds
-    var prefix = el.getAttribute('data-prefix') || '';
-    var suffix = el.getAttribute('data-suffix') || '';
-    var start = null;
-    function tick(ts) {
-      if (!start) start = ts;
-      var p = Math.min((ts - start) / dur, 1);
-      var eased = 1 - Math.pow(1 - p, 3); // ease-out cubic
-      el.textContent = prefix + Math.round(target * eased).toLocaleString('en-US') + suffix;
-      if (p < 1) requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-  }
-  var counters = document.querySelectorAll('[data-count]');
-  if ('IntersectionObserver' in window && counters.length) {
-    var co = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) {
-          animateCounter(en.target);
-          co.unobserve(en.target);
-        }
-      });
-    }, { threshold: 0.3 });
-    counters.forEach(function (el) { co.observe(el); });
-  } else {
-    counters.forEach(animateCounter);
-  }
-
   /* ---------- FAQ accordion ---------- */
   document.querySelectorAll('.faq-item').forEach(function (item) {
     var q = item.querySelector('.faq-q');
@@ -139,21 +108,6 @@
     });
   });
 
-  /* ---------- Generic tabs (pricing etc.) ---------- */
-  document.querySelectorAll('[data-tabs]').forEach(function (group) {
-    var tabs = group.querySelectorAll('[data-tab]');
-    tabs.forEach(function (tab) {
-      tab.addEventListener('click', function () {
-        var key = tab.getAttribute('data-tab');
-        group.querySelectorAll('[data-tab]').forEach(function (t) { t.classList.remove('on'); });
-        tab.classList.add('on');
-        document.querySelectorAll('.plan-panel').forEach(function (p) {
-          p.classList.toggle('on', p.getAttribute('data-panel') === key);
-        });
-      });
-    });
-  });
-
   /* ---------- Portfolio filters ---------- */
   document.querySelectorAll('[data-filter-group]').forEach(function (bar) {
     var btns = bar.querySelectorAll('[data-filter]');
@@ -168,45 +122,6 @@
         });
       });
     });
-  });
-
-  /* ---------- Testimonial slider ---------- */
-  document.querySelectorAll('.tslider').forEach(function (slider) {
-    var slides = slider.querySelectorAll('.tslide');
-    var dotsWrap = slider.querySelector('.t-dots');
-    var prev = slider.querySelector('.t-prev');
-    var next = slider.querySelector('.t-next');
-    var idx = 0;
-    var timer = null;
-
-    if (!slides.length) return;
-
-    function go(n) {
-      idx = (n + slides.length) % slides.length;
-      slides.forEach(function (s, i) { s.classList.toggle('active', i === idx); });
-      if (dotsWrap) {
-        dotsWrap.querySelectorAll('button').forEach(function (d, i) {
-          d.classList.toggle('on', i === idx);
-        });
-      }
-    }
-    function auto() {
-      timer = window.setInterval(function () { go(idx + 1); }, 6000);
-    }
-
-    slides.forEach(function (_, i) {
-      var b = document.createElement('button');
-      b.type = 'button';
-      b.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
-      b.addEventListener('click', function () { go(i); window.clearInterval(timer); auto(); });
-      if (dotsWrap) dotsWrap.appendChild(b);
-    });
-
-    if (prev) prev.addEventListener('click', function () { go(idx - 1); window.clearInterval(timer); auto(); });
-    if (next) next.addEventListener('click', function () { go(idx + 1); window.clearInterval(timer); auto(); });
-
-    go(0);
-    auto();
   });
 
   /* ---------- Active nav highlighting ---------- */
