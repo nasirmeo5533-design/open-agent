@@ -303,14 +303,6 @@ body.about .principle-grid {
   grid-template-columns: repeat(2, 1fr);
   gap: 26px;
 }
-body.about .principle-item .principle-num {
-  font-size: 2.2rem;
-  font-weight: 800;
-  line-height: 1;
-  color: #FF6B00;
-  display: block;
-  margin-bottom: 18px;
-}
 
 /* --------------------------------------------------------------------------
    Final CTA — black banner
@@ -398,8 +390,7 @@ body.about .fwa:hover { background: #1fb857; }
 @media (max-width: 640px) {
   body.about .section { padding: 68px 0; }
   body.about .intro 
-  body.about .cap-grid,
-  body.about .how-grid,
+  body.about .cap-grid, 
   body.about .principle-grid { grid-template-columns: 1fr; }
   body.about .cap-grid > :nth-child(1),
   body.about .cap-grid > :nth-child(2),

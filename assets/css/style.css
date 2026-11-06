@@ -214,8 +214,6 @@ h4 { font-size: 1.08rem; }
    -------------------------------------------------------------------------- */
 .section { padding: 96px 0; position: relative; }
 .section.tint { background: var(--indigo-soft); }
-.section.dark-tint { background: linear-gradient(160deg, var(--indigo-deep), #37188F 60%, #5A21C4); color: #fff; }
-.section.dark-tint h2, .section.dark-tint h3 { color: #fff; }
 .section-head { max-width: 720px; margin: 0 auto 56px; text-align: center; }
 .section-head.left { margin-left: 0; text-align: left; }
 .section-head p { margin-top: 14px; font-size: 1.05rem; }
@@ -230,8 +228,6 @@ h4 { font-size: 1.08rem; }
   font-weight: 600; font-size: 14.5px; color: var(--indigo);
 }
 .card-link i { transition: transform .25s; }
-.service-card:hover .card-link i { transform: translateX(6px); }
-.service-card.featured .card-link { color: #fff; }
 .step-card { background: #fff; border: 1px solid var(--line); border-radius: var(--r-lg); padding: 34px 28px; position: relative; transition: transform .3s, box-shadow .3s; }
 .step-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
 .step-num {
@@ -241,9 +237,7 @@ h4 { font-size: 1.08rem; }
 }
 .step-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
 .step-card p { font-size: 14.5px; }
-.tslide.active { display: block; animation: fade-up .5s ease both; }
 @keyframes fade-up { from { opacity: 0; transform: translateY(18px);} to { opacity: 1; transform: none;} }
-.t-dots button.on { width: 30px; background: var(--indigo); }
 
 /* --------------------------------------------------------------------------
    Blog cards
@@ -263,7 +257,6 @@ h4 { font-size: 1.08rem; }
 .blog-body h3 { font-size: 1.12rem; }
 .blog-body h3 a:hover { color: var(--indigo); }
 .blog-body p { font-size: 14.5px; flex: 1; }
-.cta-banner .btn-row { position: relative; z-index: 1; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 34px; }
 
 /* --------------------------------------------------------------------------
    Footer
@@ -332,14 +325,11 @@ body a.btn[href*="wa.me"]:hover { background: #1fb857 !important; border-color: 
 .breadcrumb a:hover { color: var(--indigo); }
 .breadcrumb i { font-size: 9px; color: var(--pink); }
 .breadcrumb [aria-current] { color: var(--indigo); font-weight: 600; }
-.ptab.on { background: var(--indigo); color: #fff; border-color: var(--indigo); box-shadow: 0 8px 22px rgba(78,47,218,.3); }
-.plan-panel.on { display: block; animation: fade-up .45s ease both; }
 
 /* --------------------------------------------------------------------------
    Portfolio
    -------------------------------------------------------------------------- */
 .filter-bar { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 44px; }
-.fbtn.on { background: var(--pink); border-color: var(--pink); color: #fff; box-shadow: 0 8px 20px rgba(251,49,137,.3); }
 
 /* --------------------------------------------------------------------------
    FAQ accordion
@@ -379,23 +369,15 @@ body a.btn[href*="wa.me"]:hover { background: #1fb857 !important; border-color: 
    About page
    -------------------------------------------------------------------------- */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-.split.rev .split-media { order: 2; }
-.split-copy .check-list { margin-top: 22px; display: grid; gap: 12px; }
 .check-list li { display: flex; gap: 12px; font-size: 15px; color: var(--ink); font-weight: 500; }
 .check-list i { color: var(--pink); margin-top: 4px; }
 
 /* --------------------------------------------------------------------------
-   Photo additions (Unsplash) — hero background, service cards, panels
-   -------------------------------------------------------------------------- */
-.hero.hero-photo {
+   Photo additions (Unsplash) — hero background,  service cards{
   background:
     linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
     url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
 }
-.hero-photo p.lede { color: rgba(255,255,255,.88); }
-.hero-photo .eyebrow { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.35); color: #fff; }
-.hero-photo .btn-ghost { color: #fff; border-color: #fff; }
-.hero-photo .btn-ghost:hover { background: #fff; color: var(--ink); }
 
 /* Scroll-to-top */
 .to-top {
@@ -442,19 +424,10 @@ body a.btn[href*="wa.me"]:hover { background: #1fb857 !important; border-color: 
 }
 
 @media (max-width: 640px) {
-  .section { padding: 68px 0; }
-  .services-grid, .why-grid, .blog-grid, .work-grid, .process-grid, .team-grid,
-  .form-grid, .plan-grid { grid-template-columns: 1fr; }
-  .stats-band 
-  .client-wall 
-  .footer-grid { grid-template-columns: 1fr; gap: 34px; }
-  .hero-card 
-  .metric-chip 
-  .tslide 
-  .float-chip 
-  .footer-bottom { justify-content: center; text-align: center; }
+  .section { padding: 68px 0; } .blog-grid, 
+  .form-grid{ grid-template-columns: 1fr; }
 }
 
 @media print {
-  .topbar, .fwa, .offcanvas, .overlay, .marquee, .to-top { display: none; }
+  .topbar,  .fwa,  .offcanvas,  .overlay,  .to-top { display: none; }
 }

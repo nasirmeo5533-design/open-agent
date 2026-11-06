@@ -132,13 +132,6 @@ body.blogs .cat-tag {
   color: #FF6B00;
 }
 body.blogs .cat-tag::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #FF6B00; margin-right: 8px; }
-body.blogs .featured-body .cat-tag { color: #FF6B00; margin-bottom: 18px; }
-body.blogs .featured-body .card-link {
-  display: inline-flex; align-items: center; gap: 8px;
-  margin-top: 32px; font-weight: 600; font-size: 15px; color: #FF6B00;
-}
-body.blogs .featured-body .card-link i { transition: transform .25s; }
-body.blogs .featured:hover .card-link i { transform: translateX(6px); }
 
 /* --------------------------------------------------------------------------
    Category filter bar
@@ -206,7 +199,6 @@ body.blogs .card-link {
 }
 body.blogs .card-link i { transition: transform .25s; }
 body.blogs .blog-card:hover .card-link i { transform: translateX(6px); }
-body.blogs .bottom-cta .btn-row { margin-top: 32px; }
 
 /* --------------------------------------------------------------------------
    Final CTA — black banner
