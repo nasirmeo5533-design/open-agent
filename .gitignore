@@ -40,9 +40,16 @@ next-env.d.ts
 # unrelated local projects — never deploy to the site
 /OpenChatCut/
 /remotion/
+/backup-20261106/
 
 # internal files — never deploy
 AGENTS.md
 .opencode/
 _backup/
 assets/SKILL.md
+
+# local agent tooling (do not deploy)
+AGENTS.md
+.opencode/
+.impeccable/
+PRODUCT.md

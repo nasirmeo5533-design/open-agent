@@ -1,23 +1,20 @@
 # OpenAgent
 
-> Social media and paid growth support for U.S. brands and businesses, run by Abeer Nasir.
+> Performance marketing and social media management for businesses in Pakistan and the U.S., run by Abeer Nasir.
 
-OpenAgent helps U.S. brands, e-commerce businesses, B2B companies, small businesses and larger companies improve how they show up, create demand and use paid advertising.
+OpenAgent helps brands, e-commerce businesses, B2B companies and small businesses run paid campaigns with a defined objective and a social media presence that publishes consistently. Work is scoped in writing before it starts.
 
 ## Contact
 
 - WhatsApp: +92 370 3159642
 - Email: abeerinfo5566@gmail.com
-- Focus: U.S. clients only
+- Markets: Pakistan and the United States
 - Direct contact with Abeer Nasir
 
 ## Services
 
-- Social Media Management: https://open-agent.agency/services/ai-agent-development.html
-- Social Media Marketing: https://open-agent.agency/services/ai-automation.html
-- Digital Marketing: https://open-agent.agency/services/full-stack-development.html
-- Meta Ads: https://open-agent.agency/services/meta-google-ads.html
-- Google Ads: https://open-agent.agency/services/search-engine-optimization.html
+- Performance Marketing: https://open-agent.agency/services/performance-marketing.html
+- Social Media Management: https://open-agent.agency/services/social-media-management.html
 
 OpenAgent does not guarantee advertising performance, rankings, revenue or specific outcomes. Scope and expectations are discussed before work begins.
 
@@ -26,11 +23,12 @@ OpenAgent does not guarantee advertising performance, rankings, revenue or speci
 - Home: https://open-agent.agency/
 - About: https://open-agent.agency/about.html
 - Services: https://open-agent.agency/services.html
-- Portfolio: https://open-agent.agency/portfolio.html
+- Portfolio: https://open-agent.agency/index.html#portfolio
 - Contact: https://open-agent.agency/contact.html
 - Privacy policy: https://open-agent.agency/privacy.html
 - Terms of service: https://open-agent.agency/terms.html
 
-## Paid growth insight
+## Insights
 
 - Meta Ads vs Google Ads: https://open-agent.agency/blog/meta-vs-google-ads.html
+- Social media posting frequency: https://open-agent.agency/blog/social-media-posting-frequency.html

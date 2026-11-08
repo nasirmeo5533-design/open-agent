@@ -26,7 +26,7 @@ Open `http://localhost:8080`.
 | `index.html` | `assets/css/home.css` |
 | `about.html` | `assets/css/about.css` |
 | `services.html` and five detail pages in `services/` | `assets/css/services.css` |
-| `portfolio.html` | `assets/css/portfolio.css` |
+| Homepage portfolio section (`index.html#portfolio`) | Included in `assets/css/home.css` |
 | `contact.html` | `assets/css/contact.css` |
 | `blogs.html` and the retained paid-growth article | `assets/css/blogs.css` |
 | `404.html`, `privacy.html`, `terms.html` | `assets/css/style.css` |
