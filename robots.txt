@@ -15,7 +15,6 @@ Disallow: /services/ai-agent/
 Disallow: /services/ai-agent-development/
 Disallow: /services/digital-marketing/
 Disallow: /services/generative-ai/
-Disallow: /services/meta-google-ads/
 Disallow: /services/social-media/
 
 Sitemap: https://open-agent.agency/sitemap.xml
