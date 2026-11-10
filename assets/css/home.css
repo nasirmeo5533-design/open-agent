@@ -204,17 +204,18 @@ body.home .btn-ghost-orange:hover {
   transform: translateY(-2px);
 }
 
-/* style.css forces green on wa.me buttons — the reference (KDM) keeps its
-   signature gradient on WhatsApp CTAs instead; out-rank the shared rules */
+/* WhatsApp CTAs carry the WhatsApp-green identity everywhere, matching the float */
 body.home a.btn[href*="wa.me"] {
-  background: var(--accent) !important;
-  border-color: transparent !important;
+  background: #48c356 !important;
+  border-color: #48c356 !important;
   color: #fff !important;
   border-radius: 999px !important;
+  box-shadow: 0 10px 26px rgba(72, 195, 86, 0.35);
 }
 body.home a.btn[href*="wa.me"]:hover,
 body.home a.btn[href*="wa.me"]:focus-visible {
-  opacity: 0.9;
+  background: #3bab4e !important;
+  border-color: #3bab4e !important;
   transform: translateY(-2px);
 }
 

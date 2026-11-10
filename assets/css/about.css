@@ -179,10 +179,10 @@ body.about .btn-ghost-dark:hover {
   color: var(--accent) !important;
   transform: translateY(-2px);
 }
-/* wa.me buttons join the monochrome system — black, no green */
+/* wa.me buttons carry the WhatsApp-green identity everywhere, matching the float */
 body.about a.btn[href*="wa.me"] {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: #48c356;
+  border-color: #48c356;
   color: #fff;
 }
 body.about a.fwa {
@@ -190,7 +190,7 @@ body.about a.fwa {
   border-color: #48c356;
   color: #fff;
 }
-body.about a.btn[href*="wa.me"]:hover { background: #1c1c1c; }
+body.about a.btn[href*="wa.me"]:hover { background: #3bab4e; }
 body.about a.fwa:hover { background: #3bab4e; }
 body.about .fwa {
   border-radius: 50% !important;

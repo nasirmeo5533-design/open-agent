@@ -186,10 +186,10 @@ body.services .btn-ghost-dark:hover {
   color: var(--accent) !important;
   transform: translateY(-2px);
 }
-/* KDM keeps the green WhatsApp identity */
+/* wa.me buttons carry the WhatsApp-green identity everywhere, matching the float */
 body.services a.btn[href*="wa.me"] {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: #48c356;
+  border-color: #48c356;
   color: #fff;
 }
 body.services a.fwa {
@@ -197,7 +197,7 @@ body.services a.fwa {
   border-color: #48c356;
   color: #fff;
 }
-body.services a.btn[href*="wa.me"]:hover { background: #1c1c1c; }
+body.services a.btn[href*="wa.me"]:hover { background: #3bab4e; }
 body.services a.fwa:hover { background: #3bab4e; }
 body.services .fwa {
   border-radius: 50% !important;
