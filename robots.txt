@@ -1,12 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: /versions/
-Disallow: /about/
 Disallow: /pricing/
-Disallow: /contact/
 Disallow: /faq/
-Disallow: /terms/
-Disallow: /privacy/
 Disallow: /blog/index.html
 Disallow: /blog-post.html
 Disallow: /blog-post/
