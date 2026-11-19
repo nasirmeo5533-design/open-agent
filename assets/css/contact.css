@@ -674,3 +674,29 @@ body.contact .footer-bottom p strong { color: var(--ink); }
 @media print {
   body.contact .fwa { display: none; }
 }
+
+/* --------------------------------------------------------------------------
+   Header-only correction.
+   monochrome.css sizes the header with design tokens (--space-*, --radius-*)
+   that this page never loads, so those declarations resolve to zero. These
+   page-scoped rules restore the intended header spacing/alignment with literal
+   values. No other section is affected.
+   -------------------------------------------------------------------------- */
+body.contact .topbar-inner { gap: 32px; }
+body.contact .topbar .brand,
+body.contact .oc-head .brand { gap: 0; }
+body.contact .nav-desktop { gap: 24px; }
+body.contact .header-actions { gap: 12px; }
+body.contact .nav-desktop > li > a { border-radius: 0; }
+body.contact .nav-desktop > li > a::after { display: none; }
+
+/* --------------------------------------------------------------------------
+   Hero/body layout correction.
+   monochrome.css is a global homepage-theme override that sets .hero-inner and
+   .section-head to a 12-column grid (and pins h2/p to grid columns). Those
+   literal rules leak onto this page, collapsing the hero image and lede into a
+   single narrow column. This page's CSS lays both out in normal block flow, so
+   neutralize the inherited grid here. Nothing outside this page is affected.
+   -------------------------------------------------------------------------- */
+body.contact .hero-inner,
+body.contact .section-head { display: block; }

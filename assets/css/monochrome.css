@@ -188,7 +188,6 @@ h4 { font-size: 1.1rem; }
 }
 .topbar.scrolled { box-shadow: 0 4px 20px rgba(0, 16, 26, 0.06); }
 .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: var(--space-xl); min-height: 72px; }
-.nav { margin-left: auto; }
 
 .brand {
   font: 700 1.4rem/1 var(--ff); letter-spacing: -0.04em; color: var(--ink);
@@ -495,7 +494,8 @@ h4 { font-size: 1.1rem; }
    Responsive
    -------------------------------------------------------------------------- */
 @media (max-width: 1080px) {
-  .nav { display: none; }
+  .nav-desktop { display: none; }
+  .header-actions .btn { display: none; }
   .hamburger { display: inline-flex; align-items: center; justify-content: center; }
   .grid-3, .grid-2 { grid-template-columns: minmax(0, 1fr); }
   .stat-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }

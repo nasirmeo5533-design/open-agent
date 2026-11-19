@@ -302,3 +302,27 @@ body.portfolio .footer-bottom p strong { color: var(--ink); }
 @media (prefers-reduced-motion: reduce) {
   body.portfolio .res-card, body.portfolio .btn { transition: none; }
 }
+
+/* --------------------------------------------------------------------------
+   Header-only correction.
+   monochrome.css sizes the header with design tokens (--space-*, --radius-*)
+   that this page never loads, so those declarations resolve to zero. These
+   page-scoped rules restore the intended header alignment with literal values.
+   No other section is affected.
+   -------------------------------------------------------------------------- */
+body.portfolio .topbar-inner { gap: 32px; }
+body.portfolio .topbar .brand,
+body.portfolio .oc-head .brand { gap: 0; }
+body.portfolio .header-actions { gap: 12px; }
+body.portfolio .nav-desktop > li > a { border-radius: 0; }
+
+/* --------------------------------------------------------------------------
+   Hero/body layout correction.
+   monochrome.css is a global homepage-theme override that sets .hero-inner and
+   .section-head to a 12-column grid (and pins h2/p to grid columns). Those
+   literal rules leak onto this page, collapsing the hero text and lede into a
+   single narrow column. This page's CSS lays both out in normal block flow, so
+   neutralize the inherited grid here. Nothing outside this page is affected.
+   -------------------------------------------------------------------------- */
+body.portfolio .hero-inner,
+body.portfolio .section-head { display: block; }
