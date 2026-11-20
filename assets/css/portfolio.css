@@ -1,8 +1,8 @@
 /* ==========================================================================
    OpenAgent Portfolio Page — "Results Report" (2026-11)
-   Deliberately a DIFFERENT feel from the homepage dark theme: warm paper
-   ground, near-black text, one restrained orange accent (#FF6B00) and
-   oversized result numerals — like a printed campaign report.
+   Deliberately a different feel from the homepage's compact marketing layout:
+   monochrome ink, white ground and oversized result numerals — like a printed
+   campaign report.
    Scoped entirely under body.portfolio. Loads after style.css.
    No contact form on this page — result cards + honest-claims block + CTA.
    ========================================================================== */
@@ -10,23 +10,24 @@
 body.portfolio {
   --accent: #00101a;
   --accent-soft: #0b2030;
-  --ground: #f7f7f5;
+  --ground: #ffffff;
   --card: #ffffff;
-  --tint: #efeeea;
-  --line: #e3e1db;
-  --ink: #171512;
-  --ink-2: #2a2622;
-  --text: #5f5a52;
-  --text-2: #8d877d;
-  --shadow: 0 12px 32px rgba(23, 21, 18, 0.08);
-  --shadow-sm: 0 4px 16px rgba(23, 21, 18, 0.05);
+  --tint: #f5f5f6;
+  --line: #e6e8ea;
+  --ink: #00101a;
+  --ink-2: #0b2030;
+  --text: #656c7a;
+  --text-2: #656c7a;
+  --shadow: 0 18px 44px rgba(0, 0, 0, 0.12);
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.06);
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
-  --wrap: 1180px;
+  --wrap: 1240px;
 
   background: var(--ground);
-  color: var(--text);
+  color: var(--ink);
   overflow-x: hidden;
-  font-size: 16px;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 /* ---- browser surfaces ---- */
@@ -53,14 +54,14 @@ body.portfolio h1, body.portfolio h2, body.portfolio h3, body.portfolio h4 {
 /* -------------------------------------------------------------------------- */
 /* Topbar — paper, unobtrusive                                               */
 /* -------------------------------------------------------------------------- */
-body.portfolio .topbar { background: rgba(247, 247, 245, 0.92); backdrop-filter: blur(10px); }
-body.portfolio .topbar.scrolled { box-shadow: 0 4px 20px rgba(23, 21, 18, 0.06); }
+body.portfolio .topbar { background: #ffffff; backdrop-filter: none; border-bottom: 1px solid var(--line); }
+body.portfolio .topbar.scrolled { box-shadow: none; }
 body.portfolio .topbar-inner { max-width: var(--wrap); }
 body.portfolio .brand { color: var(--ink); font-weight: 700; }
 body.portfolio .brand span { color: var(--ink); }
 body.portfolio .nav-desktop > li > a {
-  color: var(--ink-2); font-size: 13.5px; font-weight: 500;
-  padding: 9px 15px; border-radius: 999px; position: relative; transition: color .25s var(--ease);
+  color: var(--ink-2); font-size: 14px; font-weight: 500;
+  padding: 9px 15px; border-radius: 10px; position: relative; transition: color .2s var(--ease);
 }
 body.portfolio .nav-desktop > li > a:hover,
 body.portfolio .nav-desktop > li.active > a { color: var(--accent); background: transparent; }
@@ -74,10 +75,10 @@ body.portfolio .dropdown a { color: var(--ink-2); border-radius: 12px; }
 body.portfolio .dropdown a i { color: var(--accent); }
 body.portfolio .dropdown a:hover { color: var(--accent); background: var(--tint); }
 body.portfolio .header-actions .btn {
-  background: var(--ink); color: #fff; border-radius: 999px; font-size: 13px; padding: 11px 20px;
-  transition: opacity .25s var(--ease), transform .25s var(--ease);
+  background: var(--ink); color: #ffffff; border: 1px solid var(--ink); border-radius: 10px; font-size: 14px; font-weight: 500; padding: 0 30px;
+  transition: background-color .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease);
 }
-body.portfolio .header-actions .btn:hover { opacity: 0.88; transform: none; color: #fff; }
+body.portfolio .header-actions .btn:hover { background: #0b2030; border-color: #0b2030; color: #ffffff; }
 body.portfolio .hamburger { background: var(--card); color: var(--ink); border-radius: 10px; border: 1px solid var(--line); }
 
 /* offcanvas — paper drawer */
@@ -90,24 +91,24 @@ body.portfolio .oc-link:hover { color: var(--accent); }
 body.portfolio .oc-sub a { color: var(--text); border-color: var(--line); }
 body.portfolio .oc-sub a:hover { color: var(--accent); border-color: var(--accent); }
 body.portfolio .overlay { background: rgba(23, 21, 18, 0.45); }
-body.portfolio .offcanvas .btn { background: var(--ink); color: #fff; border-radius: 999px; }
+body.portfolio .offcanvas .btn { background: var(--ink); color: #ffffff; border-radius: 10px; }
 
 /* -------------------------------------------------------------------------- */
-/* Buttons — orange primary, ink ghost; wa.me always WhatsApp green           */
+/* Buttons — homepage-shaped; wa.me always WhatsApp green                      */
 /* -------------------------------------------------------------------------- */
 body.portfolio .btn {
-  font-family: 'Poppins', sans-serif; font-weight: 600; border-radius: 999px;
-  transition: transform .3s var(--ease), box-shadow .3s var(--ease), opacity .3s var(--ease);
+  font-family: 'Poppins', sans-serif; font-weight: 500; border-radius: 10px;
+  transition: background-color .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease);
 }
 body.portfolio .btn-primary {
-  background: var(--accent); color: #fff; border-color: var(--accent);
-  box-shadow: 0 10px 26px rgba(255, 107, 0, 0.28);
+  background: var(--ink); color: #ffffff; border: 1px solid var(--ink);
+  box-shadow: none;
 }
-body.portfolio .btn-primary:hover { background: #e55f00; transform: translateY(-2px); }
+body.portfolio .btn-primary:hover { background: #0b2030; border-color: #0b2030; }
 body.portfolio .btn-ghost,
-body.portfolio .btn-ghost-orange { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
+body.portfolio .btn-ghost-orange { background: transparent; color: var(--ink); border: 1px solid var(--color-mid); }
 body.portfolio .btn-ghost:hover,
-body.portfolio .btn-ghost-orange:hover { border-color: var(--ink); transform: translateY(-2px); }
+body.portfolio .btn-ghost-orange:hover { background: var(--tint); border-color: var(--ink); }
 
 /* wa.me buttons carry the WhatsApp-green identity everywhere, matching the float */
 body.portfolio a.btn[href*="wa.me"] {
@@ -143,17 +144,10 @@ body.portfolio .hero {
   position: relative;
   overflow: hidden;
 }
-body.portfolio .hero::before {
-  content: ""; position: absolute; right: -140px; top: -140px; width: 420px; height: 420px;
-  border-radius: 50%; border: 1.5px solid var(--line); opacity: .7; pointer-events: none;
-}
 body.portfolio .hero-inner { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; position: relative; }
 body.portfolio .hero .eyebrow {
-  display: inline-flex; align-items: center; gap: 9px; color: var(--accent);
-  font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 20px;
-}
-body.portfolio .hero .eyebrow::before {
-  content: "\f005"; font-family: "Font Awesome 6 Free"; font-weight: 900; font-size: 10px;
+  display: inline-block; color: var(--text);
+  font-size: 13px; font-weight: 500; letter-spacing: 0; text-transform: none; margin-bottom: 20px;
 }
 body.portfolio .hero h1 {
   font-size: clamp(2.5rem, 5.6vw, 4.3rem); font-weight: 700; letter-spacing: -0.05em;
@@ -183,17 +177,14 @@ body.portfolio .stat-lab {
 /* -------------------------------------------------------------------------- */
 /* Section shell                                                             */
 /* -------------------------------------------------------------------------- */
-body.portfolio .section { padding: clamp(74px, 9vw, 110px) 0; background: var(--ground); }
+body.portfolio .section { padding: clamp(64px, 8vw, 112px) 0; background: var(--ground); }
 body.portfolio .section.tint { background: var(--tint); }
 body.portfolio .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
 body.portfolio .section-head { max-width: 780px; margin: 0 auto 52px; }
 body.portfolio .section-head .tag-label {
-  display: inline-flex; align-items: center; gap: 8px; color: var(--accent);
-  background: transparent; border: 1px solid var(--accent); border-radius: 999px;
-  padding: 6px 16px; font-size: 11.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
-}
-body.portfolio .section-head .tag-label::before {
-  content: "\f005"; font-family: "Font Awesome 6 Free"; font-weight: 900; font-size: 10px;
+  display: inline-block; color: var(--text);
+  background: transparent; border: 0; border-radius: 0;
+  padding: 0; font-size: 13px; font-weight: 500; letter-spacing: 0; text-transform: none;
 }
 body.portfolio .section-head h2 {
   margin: 18px 0 0; font-size: clamp(1.7rem, 3.2vw, 2.4rem); font-weight: 600; letter-spacing: -0.04em; line-height: 1.12;
@@ -224,7 +215,7 @@ body.portfolio .res-num {
 body.portfolio .res-num b { color: var(--accent); font-weight: 700; }
 body.portfolio .res-body { color: var(--text); font-size: 14.5px; line-height: 1.7; margin: 0 0 20px; flex: 1; }
 body.portfolio .res-fig {
-  margin: 0; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: var(--tint);
+  margin: 0; border: 1px solid var(--line); border-radius: 24px; overflow: hidden; background: var(--tint);
 }
 body.portfolio .res-fig img {
   display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: top left;
@@ -235,7 +226,7 @@ body.portfolio .res-fig img {
 /* -------------------------------------------------------------------------- */
 body.portfolio .claims {
   background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent);
-  border-radius: 20px; padding: clamp(28px, 4vw, 44px); box-shadow: var(--shadow-sm);
+  border-radius: 24px; padding: clamp(28px, 4vw, 44px); box-shadow: var(--shadow-sm);
   max-width: 880px; margin: 0 auto;
 }
 body.portfolio .claims h2 { margin: 0 0 8px; font-size: clamp(1.35rem, 2.4vw, 1.7rem); }
@@ -265,27 +256,27 @@ body.portfolio .btn-row { display: flex; flex-wrap: wrap; gap: 14px; justify-con
 body.portfolio .final-cta .btn {
   background: transparent; color: #fff; border: 1.5px solid rgba(255, 255, 255, 0.28);
 }
-body.portfolio .final-cta .btn:hover { border-color: #fff; transform: translateY(-2px); }
-body.portfolio .final-cta .btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-body.portfolio .final-cta .btn-primary:hover { background: #e55f00; }
+body.portfolio .final-cta .btn:hover { border-color: #ffffff; background: rgba(255, 255, 255, 0.08); }
+body.portfolio .final-cta .btn-primary { background: #ffffff; border-color: #ffffff; color: var(--ink); }
+body.portfolio .final-cta .btn-primary:hover { background: #f2f2f2; border-color: #f2f2f2; color: var(--ink); }
 
 /* -------------------------------------------------------------------------- */
-/* Footer — paper                                                             */
+/* Footer — homepage dark band                                                */
 /* -------------------------------------------------------------------------- */
-body.portfolio .footer { background: var(--ground); color: var(--text); padding: 64px 0 0; }
+body.portfolio .footer { background: #00101a; color: #f3f3f3; padding: 64px 0 32px; }
 body.portfolio .footer::before { display: none; }
-body.portfolio .footer .brand { color: var(--ink); }
-body.portfolio .footer .brand span { color: var(--ink); }
-body.portfolio .footer h4 { color: var(--ink); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; }
-body.portfolio .footer-about > p { color: var(--text); font-size: 13.5px; line-height: 1.7; }
-body.portfolio .footer ul a { color: var(--text); font-size: 13.5px; }
-body.portfolio .footer ul a:hover { color: var(--accent); }
-body.portfolio .footer ul li { border-bottom: 1px dashed var(--line); padding-bottom: 7px; }
-body.portfolio .footer .socials a { border: 1px solid var(--line); color: var(--ink-2); }
-body.portfolio .footer .socials a:hover { background: transparent; border-color: var(--accent); color: var(--accent); }
-body.portfolio .footer .contact-list i { color: var(--accent); }
-body.portfolio .footer-bottom { border-color: var(--line); color: var(--text-2); }
-body.portfolio .footer-bottom p strong { color: var(--ink); }
+body.portfolio .footer .brand,
+body.portfolio .footer .brand span { color: #f3f3f3; }
+body.portfolio .footer h4 { color: #f3f3f3; font-size: 12px; font-weight: 600; letter-spacing: 0; text-transform: none; }
+body.portfolio .footer-about > p { color: rgba(243, 243, 243, 0.68); font-size: 14px; line-height: 1.6; }
+body.portfolio .footer ul a { color: rgba(243, 243, 243, 0.82); font-size: 14px; }
+body.portfolio .footer ul a:hover { color: #ffffff; }
+body.portfolio .footer ul li { border-bottom: 0; padding-bottom: 0; }
+body.portfolio .footer .socials a { border: 1px solid rgba(243, 243, 243, 0.22); color: #f3f3f3; border-radius: 40px; }
+body.portfolio .footer .socials a:hover { background: transparent; border-color: #ffffff; color: #ffffff; }
+body.portfolio .footer .contact-list i { color: #f3f3f3; }
+body.portfolio .footer-bottom { border-color: rgba(243, 243, 243, 0.18); color: rgba(243, 243, 243, 0.62); }
+body.portfolio .footer-bottom p strong { color: #f3f3f3; }
 
 /* -------------------------------------------------------------------------- */
 /* Responsive                                                                 */
@@ -314,7 +305,7 @@ body.portfolio .topbar-inner { gap: 32px; }
 body.portfolio .topbar .brand,
 body.portfolio .oc-head .brand { gap: 0; }
 body.portfolio .header-actions { gap: 12px; }
-body.portfolio .nav-desktop > li > a { border-radius: 0; }
+body.portfolio .nav-desktop > li > a { border-radius: 10px; }
 
 /* --------------------------------------------------------------------------
    Hero/body layout correction.

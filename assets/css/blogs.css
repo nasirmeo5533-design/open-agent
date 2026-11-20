@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    OpenAgent Insights / Blog Pages — "Monochrome" (black & white, 2026-11)
    Reference-inspired (kdmagency.com mental model, never copied). White ground,
    single accent: pure black #000000 — no purple, no orange, no gradient.
@@ -8,29 +8,30 @@
    ========================================================================== */
 
 body.blogs {
-  /* ---- tokens — FULL BLACK & WHITE (user-locked 2026-11: inspired, never copied) ---- */
-  --accent: #000000;
+  /* Homepage-aligned monochrome tokens. Legacy names stay page-scoped. */
+  --accent: #00101a;
   --ground: #ffffff;
-  --tint: #fafafa;
-  --hero-tint: #f7f7f7;
-  --peach: #f2f2f2;
-  --lav: #eeeeee;
-  --why-purple: #f5f5f5;
-  --why-peach: #efefef;
-  --line: #e6e6e6;
-  --line-purple: #d4d4d4;
-  --ink: #0a0a0a;
-  --ink-2: #1c1c1c;
-  --text: #5c5c5c;
-  --text-2: #8a8a8a;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --tint: #f5f5f6;
+  --hero-tint: #f5f5f6;
+  --peach: #f5f5f6;
+  --lav: #f5f5f6;
+  --why-purple: #f5f5f6;
+  --why-peach: #f5f5f6;
+  --line: #e6e8ea;
+  --line-purple: #e6e8ea;
+  --ink: #00101a;
+  --ink-2: #0b2030;
+  --text: #656c7a;
+  --text-2: #656c7a;
+  --shadow: 0 18px 44px rgba(0, 0, 0, 0.12);
   --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.06);
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 
   background: var(--ground);
-  color: var(--text);
+  color: var(--ink);
   overflow-x: hidden;
-  font-size: 16px;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 /* ---- browser surfaces ---- */
@@ -120,20 +121,20 @@ body.blogs .dropdown a i { color: var(--accent); }
 body.blogs .dropdown a:hover { color: var(--accent); padding-left: 22px; background: transparent; }
 
 body.blogs .header-actions .btn {
-  background: var(--accent) !important;
-  color: #fff;
-  border-radius: 0 !important;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 12px 20px;
-  clip-path: polygon(0 0, 92% 0, 100% 20%, 100% 100%, 8% 100%, 0 80%);
+  background: var(--ink) !important;
+  color: #ffffff;
+  border: 1px solid var(--ink) !important;
+  border-radius: 10px !important;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  padding: 0 30px;
+  clip-path: none;
   box-shadow: none !important;
-  border: 0;
-  transition: opacity 0.3s;
+  transition: background-color 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease);
 }
-body.blogs .header-actions .btn:hover { opacity: 0.9; transform: none; color: #fff; }
+body.blogs .header-actions .btn:hover { background: #0b2030 !important; border-color: #0b2030 !important; color: #ffffff; }
 
 body.blogs .hamburger { background: var(--hero-tint); color: var(--ink); border-radius: 10px; }
 
@@ -147,36 +148,35 @@ body.blogs .oc-link:hover { color: var(--accent); }
 body.blogs .oc-sub a { color: var(--text); border-color: #f0f0f0; }
 body.blogs .oc-sub a:hover { color: var(--accent); border-color: var(--accent); }
 body.blogs .overlay { background: rgba(23, 21, 27, 0.45); }
-body.blogs .offcanvas .btn { background: var(--accent); color: #fff; border-radius: 999px; }
+body.blogs .offcanvas .btn { background: var(--ink); color: #ffffff; border-radius: 10px; }
 
 /* --------------------------------------------------------------------------
-   Buttons — pills
+   Buttons — homepage-shaped squares
    -------------------------------------------------------------------------- */
 body.blogs .btn {
-  border-radius: 999px;
+  border-radius: 10px;
   font-weight: 500;
-  font-size: 14px;
-  transition: background 0.3s var(--ease), color 0.3s var(--ease),
-              transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
+  font-size: 16px;
+  transition: background-color 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease);
 }
 body.blogs .btn-primary {
-  background: var(--accent) !important;
-  color: #fff !important;
-  border: 0 !important;
-  box-shadow: var(--shadow-sm);
+  background: var(--ink) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--ink) !important;
+  box-shadow: none;
 }
-body.blogs .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
+body.blogs .btn-primary:hover { background: #0b2030 !important; border-color: #0b2030 !important; }
 body.blogs .btn-ghost,
 body.blogs .btn-ghost-dark {
   background: transparent !important;
-  color: var(--accent) !important;
-  border: 1.5px solid var(--accent) !important;
+  color: var(--ink) !important;
+  border: 1px solid var(--color-mid, #656c7a) !important;
 }
 body.blogs .btn-ghost:hover,
 body.blogs .btn-ghost-dark:hover {
-  background: #f5f5f5 !important;
-  color: var(--accent) !important;
-  transform: translateY(-2px);
+  background: var(--tint) !important;
+  color: var(--ink) !important;
+  border-color: var(--ink) !important;
 }
 /* wa.me buttons carry the WhatsApp-green identity everywhere, matching the float */
 body.blogs a.btn[href*="wa.me"] {
@@ -237,16 +237,15 @@ body.blogs .hero::before {
 }
 body.blogs .hero-inner { text-align: center; max-width: 900px; margin-inline: auto; position: relative; z-index: 1; }
 body.blogs .hero .eyebrow {
-  display: inline-flex; align-items: center;
-  background: var(--ground);
-  border: 1px solid var(--line-purple);
-  color: var(--accent);
-  font-weight: 600; font-size: 12px;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  padding: 9px 18px; border-radius: 999px;
+  display: inline-block;
+  background: transparent;
+  border: 0;
+  color: var(--text);
+  font-weight: 500; font-size: 13px;
+  letter-spacing: 0; text-transform: none;
+  padding: 0; border-radius: 0;
   margin-bottom: 26px;
 }
-body.blogs .hero .eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
 body.blogs .hero h1 {
   color: var(--ink);
   font-size: clamp(2.2rem, 5vw, 3.8rem);
@@ -286,18 +285,18 @@ body.blogs .hero-media img {
 /* --------------------------------------------------------------------------
    Sections base
    -------------------------------------------------------------------------- */
-body.blogs .section { padding: clamp(74px, 9vw, 110px) 0; background: var(--ground); }
+body.blogs .section { padding: clamp(64px, 8vw, 112px) 0; background: var(--ground); }
 body.blogs .section.tint { background: var(--tint); }
 
 body.blogs .section-head { max-width: 780px; margin: 0 auto 44px; text-align: left; }
 body.blogs .section-head.left { margin-left: 0; text-align: left; }
 body.blogs .section-head .tag-label {
   display: inline-block;
-  color: var(--accent);
-  font-weight: 700;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 13px;
+  text-transform: none;
+  letter-spacing: 0;
   margin-bottom: 10px;
 }
 body.blogs .section-head .tag-label::before { display: none; }
@@ -388,7 +387,7 @@ body.blogs .blog-grid {
 body.blogs .blog-card {
   background: var(--ground);
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 24px;
   padding: 0;
   display: flex; flex-direction: column;
   overflow: hidden;
@@ -483,34 +482,34 @@ body.blogs .final-cta .btn-ghost {
 body.blogs .final-cta .btn-ghost:hover { background: rgba(255, 255, 255, 0.14) !important; color: #fff !important; }
 
 /* --------------------------------------------------------------------------
-   Footer — white, contact chips
+   Footer — homepage dark band
    -------------------------------------------------------------------------- */
-body.blogs .footer { background: var(--ground); color: var(--text); padding: 64px 0 0; }
+body.blogs .footer { background: #00101a; color: #f3f3f3; padding: var(--space-3xl) 0 var(--space-xl); }
 body.blogs .footer::before { display: none; }
-body.blogs .footer .brand { color: var(--ink); }
-body.blogs .footer .brand span { color: var(--ink); }
+body.blogs .footer .brand,
+body.blogs .footer .brand span { color: #f3f3f3; }
 body.blogs .footer h4 {
-  color: var(--accent);
-  font-size: 10.5px;
-  font-weight: 700;
+  color: #f3f3f3;
+  font-size: 12px;
+  font-weight: 600;
   margin-bottom: 18px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
 }
-body.blogs .footer-about > p { color: var(--text); font-size: 13.5px; line-height: 1.7; }
-body.blogs .footer ul a { color: var(--text); font-size: 13.5px; }
-body.blogs .footer ul a:hover { color: var(--accent); }
-body.blogs .footer ul li { border-bottom: 1px dashed #f0f0f0; padding-bottom: 7px; }
+body.blogs .footer-about > p { color: rgba(243, 243, 243, 0.68); font-size: 14px; line-height: 1.6; }
+body.blogs .footer ul a { color: rgba(243, 243, 243, 0.82); font-size: 14px; }
+body.blogs .footer ul a:hover { color: #ffffff; }
+body.blogs .footer ul li { border-bottom: 0; padding-bottom: 0; }
 body.blogs .footer .socials a {
-  border-color: var(--line);
-  color: var(--text);
-  border-radius: 10px;
-  transition: border-color 0.3s var(--ease), color 0.3s var(--ease);
+  border-color: rgba(243, 243, 243, 0.22);
+  color: #f3f3f3;
+  border-radius: 40px;
+  transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
 }
-body.blogs .footer .socials a:hover { background: transparent; border-color: var(--line-purple); color: var(--accent); }
-body.blogs .footer .contact-list i { color: var(--accent); }
-body.blogs .footer-bottom { border-color: #efefef; color: var(--text); }
-body.blogs .footer-bottom p strong { color: var(--ink); }
+body.blogs .footer .socials a:hover { background: transparent; border-color: #ffffff; color: #ffffff; }
+body.blogs .footer .contact-list i { color: #f3f3f3; }
+body.blogs .footer-bottom { border-color: rgba(243, 243, 243, 0.18); color: rgba(243, 243, 243, 0.62); }
+body.blogs .footer-bottom p strong { color: #f3f3f3; }
 
 /* --------------------------------------------------------------------------
    Scroll-to-top / WhatsApp float
@@ -649,7 +648,7 @@ body.blogs .post-foot {
   border-top: 1px solid var(--line);
   display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; align-items: center;
 }
-body.blogs .post-foot .btn { border-radius: 999px; font-weight: 600; }
+body.blogs .post-foot .btn { border-radius: 10px; font-weight: 500; }
 
 /* --------------------------------------------------------------------------
    Responsive
