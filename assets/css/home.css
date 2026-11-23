@@ -2,6 +2,24 @@
    White ground, light-grey bands, black ink and black buttons, Poppins.
    No decorative colour: the only colour on the page comes from real campaign images. */
 
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 2000;
+  background: var(--color-ink);
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 0 0 var(--radius-sm) 0;
+  outline: none;
+}
+
+.skip-link:focus {
+  left: 0;
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
 /* --------------------------------------------------------------------------
    Header
    -------------------------------------------------------------------------- */
@@ -1236,6 +1254,12 @@
 
   .hero-media {
     grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  .media-card {
+    aspect-ratio: 16 / 9;
   }
 
   .stat-grid {

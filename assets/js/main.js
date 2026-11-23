@@ -47,16 +47,46 @@
   var openBtn = document.getElementById('hamburger');
   var closeBtn = document.getElementById('ocClose');
 
+  function getFocusable() {
+    if (!oc) return [];
+    return Array.prototype.slice.call(oc.querySelectorAll('a[href], button:not([disabled])'))
+      .filter(function (el) { return el.getClientRects().length > 0; });
+  }
+
   function setMenu(open) {
     if (!oc || !overlay) return;
     oc.classList.toggle('open', open);
     overlay.classList.toggle('show', open);
     document.body.style.overflow = open ? 'hidden' : '';
+    if (openBtn) openBtn.setAttribute('aria-expanded', String(open));
+    if (open) {
+      var first = getFocusable()[0];
+      if (first) first.focus();
+    } else if (openBtn) {
+      openBtn.focus();
+    }
   }
   if (openBtn) openBtn.addEventListener('click', function () { setMenu(true); });
   if (closeBtn) closeBtn.addEventListener('click', function () { setMenu(false); });
   if (overlay) overlay.addEventListener('click', function () { setMenu(false); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+  document.addEventListener('keydown', function (e) {
+    if (!oc || !oc.classList.contains('open')) return;
+    if (e.key === 'Escape') {
+      setMenu(false);
+    } else if (e.key === 'Tab') {
+      var focusable = getFocusable();
+      if (!focusable.length) return;
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  });
 
   document.querySelectorAll('.oc-item > .oc-link').forEach(function (btn) {
     btn.addEventListener('click', function () {
