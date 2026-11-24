@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="title desc">
+  <title id="title">Ads campaign objective, creative, tracking and optimization</title>
+  <desc id="desc">A monochrome editorial composition showing a defined objective, ad creative, conversion tracking and an optimization loop.</desc>
+
+  <rect width="1600" height="900" fill="#f5f5f6"/>
+
+  <!-- objective panel -->
+  <rect x="120" y="166" width="420" height="568" rx="20" fill="#00101a"/>
+  <circle cx="330" cy="450" r="150" fill="none" stroke="#ffffff" stroke-width="5" opacity="0.32"/>
+  <circle cx="330" cy="450" r="100" fill="none" stroke="#ffffff" stroke-width="5" opacity="0.55"/>
+  <circle cx="330" cy="450" r="48" fill="none" stroke="#ffffff" stroke-width="5"/>
+  <circle cx="330" cy="450" r="14" fill="#ffffff"/>
+  <path d="M330 300 V252 M330 600 V648 M180 450 H132 M480 450 H528" stroke="#ffffff" stroke-width="14" stroke-linecap="round" opacity="0.75"/>
+
+  <!-- objective to creative -->
+  <path d="M560 450 H612" stroke="#00101a" stroke-width="14" stroke-linecap="square"/>
+  <path d="M586 414 L632 450 L586 486 Z" fill="#00101a"/>
+
+  <!-- creative panel -->
+  <rect x="650" y="130" width="430" height="640" rx="18" fill="#ffffff" stroke="#c9ced2" stroke-width="5"/>
+  <rect x="694" y="182" width="342" height="270" rx="12" fill="#e6e8ea"/>
+  <circle cx="948" cy="256" r="42" fill="#c5c8cc"/>
+  <path d="M708 434 L812 320 L884 386 L944 316 L1022 434 Z" fill="#00101a"/>
+  <rect x="694" y="492" width="300" height="16" rx="8" fill="#00101a"/>
+  <rect x="694" y="530" width="342" height="14" rx="7" fill="#d8dcde"/>
+  <rect x="694" y="562" width="250" height="14" rx="7" fill="#d8dcde"/>
+  <rect x="694" y="650" width="196" height="56" rx="10" fill="#00101a"/>
+
+  <!-- creative to measurement -->
+  <path d="M1100 450 H1152" stroke="#00101a" stroke-width="14" stroke-linecap="square"/>
+  <path d="M1126 414 L1172 450 L1126 486 Z" fill="#00101a"/>
+
+  <!-- tracking and optimization panel -->
+  <rect x="1190" y="200" width="300" height="560" rx="18" fill="#ffffff" stroke="#c9ced2" stroke-width="5"/>
+  <rect x="1232" y="248" width="216" height="16" rx="8" fill="#00101a"/>
+
+  <path d="M1340 330 V610" stroke="#00101a" stroke-width="14"/>
+  <circle cx="1340" cy="342" r="34" fill="#00101a"/>
+  <circle cx="1340" cy="476" r="34" fill="#ffffff" stroke="#00101a" stroke-width="14"/>
+  <circle cx="1340" cy="610" r="34" fill="#00101a"/>
+  <circle cx="1340" cy="342" r="10" fill="#ffffff"/>
+  <circle cx="1340" cy="610" r="10" fill="#ffffff"/>
+
+  <!-- optimization loop -->
+  <path d="M1260 650 C1228 700 1260 736 1320 736 C1382 736 1422 700 1408 652" fill="none" stroke="#00101a" stroke-width="14" stroke-linecap="round"/>
+  <path d="M1380 630 L1418 650 L1378 672 Z" fill="#00101a"/>
+
+  <rect x="1232" y="392" width="120" height="12" rx="6" fill="#d8dcde"/>
+  <rect x="1232" y="526" width="160" height="12" rx="6" fill="#d8dcde"/>
+</svg>
