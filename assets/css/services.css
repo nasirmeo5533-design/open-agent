@@ -85,7 +85,7 @@ body.services .topbar.scrolled { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); }
 body.services .topbar-inner { max-width: var(--wrap); }
 
 body.services .brand { color: var(--ink); font-weight: 700; }
-body.services .brand .dot { background: var(--accent); border-radius: 8px; }
+
 body.services .brand span { color: var(--ink); }
 
 body.services .nav-desktop > li > a {
@@ -215,11 +215,7 @@ body.services .to-top:hover { background: var(--accent); color: #fff; border-col
 /* --------------------------------------------------------------------------
    Breadcrumb — soft chip
    -------------------------------------------------------------------------- */
-body.services .page-hero .breadcrumb {
-  background: var(--hero-tint);
-  border-color: var(--line-purple);
-  box-shadow: none;
-}
+
 body.services .breadcrumb a { color: var(--text-2); }
 body.services .breadcrumb a:hover { color: var(--accent); }
 body.services .breadcrumb i { color: var(--accent); }
@@ -275,17 +271,6 @@ body.services .hero p.lede {
   margin: 24px auto 0;
   line-height: 1.75;
 }
-body.services .hero-pills {
-  margin-top: 38px;
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 22px;
-  color: var(--text);
-  font-size: 13.5px; font-weight: 500;
-  padding-top: 24px;
-  border-top: 1px dashed var(--line-purple);
-}
-body.services .hero-pills span { display: inline-flex; align-items: center; gap: 8px; }
-body.services .hero-pills i { color: var(--accent); font-size: 10px; }
-body.services .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 38px; }
 
 /* --------------------------------------------------------------------------
    Sections base
@@ -309,243 +294,32 @@ body.services .section-head .tag-label {
 body.services .section-head .tag-label::before { display: none; }
 body.services .section-head h2 { margin: 0; }
 body.services .section-head p { color: var(--text); margin-top: 14px; font-size: 1rem; line-height: 1.75; }
-body.services .section-head p.light { color: var(--text); }
+
 body.services .section.dark h2, body.services .section.dark h3 { color: var(--ink); }
 
 /* --------------------------------------------------------------------------
    Service cards (overview) — pastel bento, KDM accent pair
    -------------------------------------------------------------------------- */
-body.services .svc-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-body.services .svc-head { display: flex; align-items: center; gap: 14px; }
-body.services .svc-card {
-  background: var(--ground);
-  border: 1px solid var(--line-purple);
-  border-radius: 24px;
-  padding: 32px 28px 28px;
-  display: flex; flex-direction: column; gap: 14px;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
-}
-body.services .svc-card:nth-child(even) { background: var(--lav); border-color: transparent; }
-body.services .svc-card:nth-child(3n) { background: var(--peach); border-color: transparent; }
-body.services .svc-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+
 /* left vertical accent + bottom-right dash (KDM signature pair) */
-body.services .svc-card::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 26px;
-  width: 3px; height: 44px;
-  border-radius: 0 999px 999px 0;
-  background: var(--accent);
-}
-body.services .svc-card::after {
-  content: "";
-  position: absolute;
-  bottom: 0; right: 0;
-  width: 33%; height: 4px;
-  border-radius: 999px 0 0 0;
-  background: var(--accent);
-}
-body.services .svc-card:nth-child(even)::before,
-body.services .svc-card:nth-child(even)::after { background: var(--accent); }
+
 /* the sequence mark becomes a quiet pill chip, not a giant numeral */
-body.services .svc-num {
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 1;
-  color: var(--accent);
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 14px;
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid var(--line-purple);
-  border-radius: 999px;
-  letter-spacing: 0.06em;
-  margin: 0;
-}
-body.services .svc-ic {
-  width: 48px; height: 48px; border-radius: 12px; flex: none;
-  background: var(--ground);
-  border: 2px solid var(--accent);
-  color: var(--accent);
-  display: flex; align-items: center; justify-content: center; font-size: 19px;
-  transition: transform 0.35s var(--ease);
-}
-body.services .svc-card:hover .svc-ic { transform: translateY(-3px) rotate(-4deg); }
-body.services .svc-card h3 { font-size: 1.14rem; letter-spacing: -0.035em; margin-bottom: 4px; }
-body.services .svc-card > p { font-size: 14.5px; color: var(--text); margin: 0; line-height: 1.7; }
-body.services .svc-good {
-  border-top: 1px dashed #f0f0f0;
-  padding-top: 16px;
-  margin-top: 4px;
-}
-body.services .svc-good-label {
-  display: block; font-size: 11px; font-weight: 700;
-  color: var(--accent);
-  letter-spacing: 0.1em; text-transform: uppercase;
-  margin-bottom: 12px;
-}
-body.services .svc-good ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
-body.services .svc-good li {
-  display: flex; align-items: flex-start; gap: 10px;
-  font-size: 14px; color: var(--text);
-}
-body.services .svc-good li::before {
-  content: ""; width: 7px; height: 7px; border-radius: 50%;
-  background: var(--accent); flex: none; margin-top: 7px;
-}
-body.services .svc-card:nth-child(even) .svc-good li::before { background: var(--accent); }
-body.services .svc-note {
-  border-top: 1px dashed #f0f0f0;
-  padding-top: 14px;
-  margin-top: auto;
-  font-size: 13.5px; color: var(--text); line-height: 1.6;
-}
-body.services .svc-note i { color: var(--accent); margin-right: 8px; }
-body.services .svc-link {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid var(--ground);
-  border-radius: 999px;
-  padding: 9px 18px;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--accent);
-  margin-top: 4px;
-  align-self: flex-start;
-  transition: background 0.3s var(--ease), color 0.3s var(--ease);
-}
-body.services .svc-link:hover { background: var(--accent); color: #fff; }
-body.services .svc-link i { transition: transform 0.25s; }
-body.services .svc-card:hover .svc-link i { transform: translateX(4px); }
 
 /* --------------------------------------------------------------------------
    Choose the right service — pastel problem cards
    -------------------------------------------------------------------------- */
-body.services .choose-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-body.services .choose-card {
-  background: var(--why-purple);
-  border: 0;
-  border-radius: 24px;
-  padding: 32px 28px;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
-}
-body.services .choose-card:nth-child(even) { background: var(--why-peach); }
-body.services .choose-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
-body.services .choose-card::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 26px;
-  width: 3px; height: 42px;
-  border-radius: 0 999px 999px 0;
-  background: var(--accent);
-}
-body.services .choose-card:nth-child(even)::before { background: var(--accent); }
-body.services .choose-card .choose-q { font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 12px; }
-body.services .choose-card h4 { font-size: 1.06rem; margin-bottom: 14px; }
-body.services .choose-label { display: block; font-size: 11px; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
-body.services .choose-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-body.services .choose-tags span {
-  font-size: 12.5px; font-weight: 600; color: var(--ink-2);
-  border: 1px solid #d4d4d4;
-  border-radius: 999px; padding: 5px 12px;
-  background: rgba(255, 255, 255, 0.75);
-}
-body.services .choose-example { display: block; margin-top: 16px; font-size: 12.5px; color: var(--text); }
 
 /* --------------------------------------------------------------------------
    What every project includes — white cards, pill number chips
    -------------------------------------------------------------------------- */
-body.services .inc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-body.services .inc-card {
-  background: var(--ground);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 34px 28px;
-  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
-}
-body.services .inc-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
-body.services .inc-num {
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 1;
-  color: var(--accent);
-  display: inline-flex;
-  margin-bottom: 18px;
-  padding: 8px 14px;
-  background: var(--hero-tint);
-  border: 1px solid var(--line-purple);
-  border-radius: 999px;
-  letter-spacing: 0.06em;
-}
-body.services .inc-card h3 { font-size: 1.12rem; margin-bottom: 10px; }
-body.services .inc-card p { font-size: 14.5px; color: var(--text); margin: 0; line-height: 1.65; }
 
 /* --------------------------------------------------------------------------
    How I work — light pastel steps (KDM has no dark sections)
    -------------------------------------------------------------------------- */
-body.services .how-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-body.services .how-card {
-  background: var(--why-purple);
-  border: 0;
-  border-radius: 24px;
-  padding: 34px 28px;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
-}
-body.services .how-card:nth-child(even) { background: var(--why-peach); }
-body.services .how-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
-body.services .how-card::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 30px;
-  width: 3px; height: 44px;
-  border-radius: 0 999px 999px 0;
-  background: var(--accent);
-}
-body.services .how-card:nth-child(even)::before { background: var(--accent); }
-body.services .how-num {
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 1;
-  color: var(--accent);
-  display: inline-flex;
-  margin-bottom: 18px;
-  padding: 8px 14px;
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid var(--line-purple);
-  border-radius: 999px;
-  letter-spacing: 0.06em;
-}
-body.services .how-card h3 { color: var(--ink); font-size: 1.12rem; margin-bottom: 10px; }
-body.services .how-card p { color: var(--text); font-size: 14.5px; margin: 0; line-height: 1.65; }
 
 /* --------------------------------------------------------------------------
    Transparency — quiet gradient-rule columns
    -------------------------------------------------------------------------- */
-body.services .trans-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-body.services .trans-card {
-  padding: 34px 6px 0;
-  position: relative;
-}
-body.services .trans-card::before {
-  content: "";
-  display: block;
-  width: 34px; height: 3px;
-  border-radius: 999px;
-  background: var(--accent);
-  margin-bottom: 16px;
-}
-body.services .trans-card h3 { font-size: 1.2rem; margin-bottom: 14px; }
-body.services .trans-card p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.7; }
 
 /* --------------------------------------------------------------------------
    Final CTA — purple gradient banner
@@ -625,155 +399,20 @@ body.services .footer-bottom p strong { color: #f3f3f3; }
 /* --------------------------------------------------------------------------
    Service detail pages (services/*.html) — lavender hero, no stock photos
    -------------------------------------------------------------------------- */
-body.services .page-hero {
-  background: var(--hero-tint);
-  padding: 74px 0 64px;
-  position: relative;
-  overflow: hidden;
-}
-body.services .page-hero::before {
-  content: "";
-  position: absolute;
-  right: -110px; top: -120px;
-  width: 340px; height: 340px;
-  border-radius: 50%;
-  border: 22px solid rgba(0, 0, 0, 0.05);
-  pointer-events: none;
-}
-body.services .page-hero h1 {
-  color: var(--ink);
-  position: relative;
-  z-index: 1;
-}
+
 /* gradient keyword on detail hero, matching the site grammar */
-body.services .page-hero h1 strong {
-  color: transparent;
-  font-weight: 700;
-  background: var(--accent);
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-body.services .page-hero .lede {
-  color: var(--text);
-  font-size: clamp(1rem, 1.6vw, 1.15rem);
-  max-width: 660px;
-  margin: 24px auto 0;
-  line-height: 1.75;
-}
-body.services .page-hero .btn-ghost { color: var(--accent); border-color: var(--accent); }
-body.services .page-hero .btn-ghost:hover { background: var(--ground); color: var(--accent); }
-body.services .page-hero-inner { max-width: 900px; margin-inline: auto; position: relative; z-index: 1; }
-body.services .page-hero .btn-row {
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 32px;
-}
+
 body.services .wrap.narrow { max-width: 900px; }
-body.services .hero-media {
-  margin: 0 0 36px;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  overflow: hidden;
-  background: var(--ground);
-}
-body.services .hero-media img {
-  display: block;
-  width: 100%;
-  height: 460px;
-  object-fit: cover;
-  object-position: center;
-}
-@media (max-width: 640px) {
-  body.services .hero-media img { height: 240px; }
-}
 
 /* Split sections — lavender visual panel */
 body.services .split { align-items: center; gap: 56px; }
-body.services .split-media { max-width: 480px; }
-body.services .detail-visual {
-  background: var(--why-purple);
-  border: 0;
-  border-radius: 24px;
-  padding: 44px 38px;
-  display: flex; flex-direction: column; gap: 24px;
-  align-items: flex-start;
-  position: relative;
-  overflow: hidden;
-}
-body.services .detail-visual::after {
-  content: "";
-  position: absolute;
-  bottom: 0; right: 0;
-  width: 33%; height: 4px;
-  border-radius: 999px 0 0 0;
-  background: var(--accent);
-}
-body.services .detail-visual .dv-ic {
-  width: 56px; height: 56px;
-  border-radius: 14px;
-  background: var(--ground);
-  border: 2px solid var(--accent);
-  color: var(--accent);
-  display: flex; align-items: center; justify-content: center; font-size: 23px;
-}
-body.services .detail-visual h3 { margin: 0; font-size: 1.32rem; }
-body.services .detail-visual p { color: var(--text); margin: 0; font-size: 15px; line-height: 1.65; }
-body.services .detail-visual .dv-flow { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; width: 100%; }
-body.services .detail-visual .dv-flow li {
-  display: flex; align-items: center; gap: 12px;
-  font-size: 14px; font-weight: 600; color: var(--ink);
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
-  padding: 12px 2px;
-}
-body.services .detail-visual .dv-flow li:last-child { border-bottom: 0; }
-body.services .detail-visual .dv-flow i { color: var(--accent); flex: none; }
 
 body.services .check-list { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 12px; }
 body.services .check-list li,
 body.services .check-list > div { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: var(--text); line-height: 1.65; }
 body.services .check-list i { color: var(--accent); margin-top: 4px; flex: none; }
-body.services .split-copy h2 { margin-bottom: 16px; }
-body.services .split-copy p { color: var(--text); font-size: 15.5px; line-height: 1.75; }
 
 /* Feature cards (included / capabilities) — pastel bento with icon chips */
-body.services .feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-body.services .feat-card {
-  background: var(--ground);
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  padding: 32px 28px;
-  display: flex; flex-direction: column; gap: 14px;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
-}
-body.services .feat-card:nth-child(even) { background: var(--why-purple); border-color: transparent; }
-body.services .feat-card:nth-child(3n) { background: var(--peach); border-color: transparent; }
-body.services .feat-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
-body.services .feat-card::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 26px;
-  width: 3px; height: 42px;
-  border-radius: 0 999px 999px 0;
-  background: var(--accent);
-}
-body.services .feat-card:nth-child(even)::before { background: var(--accent); }
-body.services .feat-ic,
-body.services .feat-icon {
-  width: 48px; height: 48px; border-radius: 12px; flex: none;
-  background: var(--ground);
-  border: 2px solid var(--accent);
-  color: var(--accent);
-  display: flex; align-items: center; justify-content: center; font-size: 19px;
-  transition: transform 0.35s var(--ease);
-}
-body.services .feat-card:hover .feat-ic,
-body.services .feat-card:hover .feat-icon { transform: translateY(-3px) rotate(-4deg); }
-body.services .feat-card h3 { font-size: 1.1rem; margin: 0; letter-spacing: -0.035em; }
-body.services .feat-card p { font-size: 14.5px; color: var(--text); margin: 0; line-height: 1.65; }
 
 /* Process steps (detail pages) — white cards, pill number chips */
 body.services .proc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
@@ -827,49 +466,15 @@ body.services .faq-item.open .faq-a { padding: 0 24px 20px; max-height: 400px; }
 body.services .faq-a p { color: var(--text); font-size: 15px; line-height: 1.7; margin: 0; }
 
 /* Other services (detail pages) — pastel cards, pill links */
-body.services .more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-body.services .more-card {
-  background: var(--ground);
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  padding: 30px 26px;
-  display: flex; flex-direction: column; gap: 12px;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
-}
-body.services .more-card:nth-child(even) { background: var(--lav); border-color: transparent; }
-body.services .more-card:nth-child(3n) { background: var(--peach); border-color: transparent; }
-body.services .more-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
-body.services .more-card .more-ic {
-  width: 48px; height: 48px; border-radius: 12px;
-  background: var(--ground);
-  border: 2px solid var(--accent);
-  color: var(--accent);
-  display: flex; align-items: center; justify-content: center; font-size: 19px;
-  transition: transform 0.35s var(--ease);
-}
-body.services .more-card:hover .more-ic { transform: translateY(-3px) rotate(-4deg); }
-body.services .more-card h3 { font-size: 1.1rem; margin: 0; letter-spacing: -0.035em; }
-body.services .more-card p { font-size: 14.5px; color: var(--text); margin: 0; line-height: 1.6; }
-body.services .more-card .more-link {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-weight: 600; font-size: 14px; color: var(--accent); margin-top: 6px;
-}
-body.services .more-card .more-link i { transition: transform 0.25s; }
-body.services .more-card:hover .more-link i { transform: translateX(4px); }
 
 /* --------------------------------------------------------------------------
    Responsive
    -------------------------------------------------------------------------- */
 @media (max-width: 1080px) {
-  body.services .svc-grid { grid-template-columns: repeat(2, 1fr); }
-  body.services .choose-grid,
-  body.services .inc-grid,
-  body.services .how-grid { grid-template-columns: repeat(2, 1fr); }
-  body.services .trans-grid { grid-template-columns: repeat(3, 1fr); }
-  body.services .feat-grid,
-  body.services .more-grid { grid-template-columns: repeat(2, 1fr); }
+  
+  
+  
+  
   body.services .proc-grid { grid-template-columns: repeat(2, 1fr); }
   body.services .split { grid-template-columns: 1fr; }
 }
@@ -877,7 +482,7 @@ body.services .more-card:hover .more-link i { transform: translateX(4px); }
 @media (max-width: 640px) {
   body.services .section { padding: 56px 0; }
   body.services .hero { padding: 68px 0 64px; }
-  body.services .page-hero { padding: 44px 0 36px; }
+  
   body.services .svc-grid,
   body.services .choose-grid,
   body.services .inc-grid,
@@ -886,7 +491,7 @@ body.services .more-card:hover .more-link i { transform: translateX(4px); }
   body.services .feat-grid,
   body.services .proc-grid,
   body.services .more-grid { grid-template-columns: 1fr; }
-  body.services .detail-visual { padding: 32px 24px; }
+  
 }
 
 @media print {

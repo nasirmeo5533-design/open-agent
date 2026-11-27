@@ -63,7 +63,6 @@ body.about .section-head h2 {
   max-width: 24ch;
 }
 /* decorative counters on neutral cards suppressed */
-body.about .principle-num { display: none !important; }
 
 /* --------------------------------------------------------------------------
    Header — airy white bar, gradient underline, notched gradient CTA
@@ -78,7 +77,7 @@ body.about .topbar.scrolled { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); }
 body.about .topbar-inner { max-width: var(--wrap); }
 
 body.about .brand { color: var(--ink); font-weight: 700; }
-body.about .brand .dot { background: var(--accent); border-radius: 8px; }
+
 body.about .brand span { color: var(--ink); }
 
 body.about .nav-desktop > li > a {
@@ -167,18 +166,7 @@ body.about .btn-primary {
   box-shadow: none;
 }
 body.about .btn-primary:hover { background: #0b2030 !important; border-color: #0b2030 !important; }
-body.about .btn-ghost,
-body.about .btn-ghost-dark {
-  background: transparent !important;
-  color: var(--ink) !important;
-  border: 1px solid var(--color-mid, #656c7a) !important;
-}
-body.about .btn-ghost:hover,
-body.about .btn-ghost-dark:hover {
-  background: var(--tint) !important;
-  color: var(--ink) !important;
-  border-color: var(--ink) !important;
-}
+
 /* wa.me buttons carry the WhatsApp-green identity everywhere, matching the float */
 body.about a.btn[href*="wa.me"] {
   background: #48c356;
@@ -209,15 +197,6 @@ body.about .to-top:hover { background: var(--accent); color: #fff; border-color:
 /* --------------------------------------------------------------------------
    Breadcrumb — soft chip on light hero
    -------------------------------------------------------------------------- */
-body.about .page-hero .breadcrumb {
-  background: var(--hero-tint);
-  border-color: var(--line-purple);
-  box-shadow: none;
-}
-body.about .breadcrumb a { color: var(--text-2); }
-body.about .breadcrumb a:hover { color: var(--accent); }
-body.about .breadcrumb i { color: var(--accent); }
-body.about .breadcrumb [aria-current] { color: var(--ink); font-weight: 600; }
 
 /* --------------------------------------------------------------------------
    Hero — lavender tint, gradient keyword, Caveat note
@@ -305,85 +284,6 @@ body.about .about-portrait::after {
 /* --------------------------------------------------------------------------
    Intro — light section now (KDM has no dark sections)
    -------------------------------------------------------------------------- */
-body.about .intro { background: var(--tint); padding: 100px 0 108px; }
-body.about .intro-grid {
-  display: grid;
-  grid-template-columns: 420px 1fr;
-  gap: 72px;
-  align-items: center;
-}
-body.about .portrait-wrap { position: relative; }
-body.about .portrait {
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  background: var(--hero-tint);
-}
-body.about .portrait img {
-  width: 100%;
-  height: 460px;
-  object-fit: cover;
-  display: block;
-}
-body.about .portrait-card {
-  position: absolute;
-  bottom: 16px; left: 16px; right: 16px;
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 14px 18px;
-  box-shadow: var(--shadow-sm);
-}
-body.about .portrait-card strong {
-  display: block;
-  color: var(--ink);
-  font-size: 1rem;
-  font-weight: 700;
-}
-body.about .portrait-card span {
-  display: block;
-  color: var(--accent);
-  font-size: 12.5px;
-  font-weight: 600;
-  margin-top: 2px;
-}
-body.about .portrait-frame { display: none; }
-
-body.about .intro-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  background: transparent;
-  color: var(--accent);
-  font-weight: 700;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0;
-  border: 0;
-  margin-bottom: 14px;
-}
-body.about .intro-eyebrow::before {
-  content: "";
-  width: 26px; height: 3px;
-  border-radius: 999px;
-  background: var(--accent);
-  margin-right: 10px;
-}
-body.about .intro h1 {
-  color: var(--ink);
-  font-weight: 500;
-  letter-spacing: -0.05em;
-  line-height: 1.05;
-  font-size: clamp(1.9rem, 4vw, 3.1rem);
-  margin: 0;
-}
-body.about .intro p.lede {
-  color: var(--text);
-  font-size: clamp(1rem, 1.5vw, 1.12rem);
-  max-width: 620px;
-  margin: 20px 0 0;
-  line-height: 1.8;
-}
 
 /* --------------------------------------------------------------------------
    Sections base
@@ -405,7 +305,6 @@ body.about .section-head .tag-label {
 }
 body.about .section-head h2 { margin: 0; }
 body.about .section-head p { color: var(--text); margin-top: 14px; font-size: 1rem; line-height: 1.75; }
-body.about .section-head p.light { color: var(--text); }
 
 body.about .section.dark h2, body.about .section.dark h3 { color: var(--ink); }
 
@@ -424,153 +323,24 @@ body.about .check-list > div i { color: var(--accent); margin-top: 4px; flex: no
 /* --------------------------------------------------------------------------
    Approach
    -------------------------------------------------------------------------- */
-body.about .approach-copy { max-width: 760px; }
-body.about .approach-copy .lead { font-size: 1.06rem; color: var(--text); margin-top: 18px; }
-body.about .approach-copy p { color: var(--text); margin-top: 16px; }
-body.about .approach-goals { margin-top: 30px; display: grid; gap: 14px; }
-body.about .approach-goals li {
-  display: flex; align-items: center; gap: 14px;
-  font-weight: 600; color: var(--ink);
-}
-body.about .approach-goals .goal-dot {
-  width: 10px; height: 10px;
-  border-radius: 50%;
-  background: var(--accent);
-  flex: none;
-}
 
 /* --------------------------------------------------------------------------
    Capabilities — pastel bento cards, KDM icon chips
    -------------------------------------------------------------------------- */
-body.about .cap-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-body.about .cap-card {
-  background: var(--ground);
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  padding: 34px 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
-}
-body.about .cap-card:nth-child(even) { background: var(--why-purple); border-color: transparent; }
-body.about .cap-card:nth-child(3n) { background: var(--peach); border-color: transparent; }
-body.about .cap-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+
 /* accent cap pair */
-body.about .cap-card::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 26px;
-  width: 3px; height: 46px;
-  border-radius: 0 999px 999px 0;
-  background: var(--accent);
-}
-body.about .cap-card:nth-child(3n)::before { background: var(--accent); }
-body.about .cap-ic {
-  width: 48px; height: 48px;
-  border-radius: 12px;
-  flex: none;
-  background: var(--ground);
-  border: 2px solid var(--accent);
-  color: var(--accent);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 19px;
-  transition: transform 0.35s var(--ease);
-}
-body.about .cap-card:hover .cap-ic { transform: translateY(-3px) rotate(-4deg); }
-body.about .cap-card h3 { font-size: 1.14rem; letter-spacing: -0.035em; }
-body.about .cap-card p { font-size: 14.5px; color: var(--text); margin: 0; line-height: 1.7; }
 
 /* --------------------------------------------------------------------------
    How I work — white cards, pill number chips
    -------------------------------------------------------------------------- */
-body.about .how-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-body.about .how-card {
-  background: var(--ground);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 32px 26px;
-  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
-}
-body.about .how-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
-body.about .how-num {
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 1;
-  color: var(--accent);
-  display: inline-flex;
-  align-items: center;
-  margin-bottom: 18px;
-  padding: 8px 14px;
-  background: var(--hero-tint);
-  border: 1px solid var(--line-purple);
-  border-radius: 999px;
-  letter-spacing: 0.06em;
-}
-body.about .how-card h3 { color: var(--ink); font-size: 1.05rem; margin-bottom: 10px; }
-body.about .how-card p { color: var(--text); font-size: 14.5px; margin: 0; line-height: 1.65; }
 
 /* --------------------------------------------------------------------------
    Principles — pastel 2×2 (real sequence numbers suppressed)
    -------------------------------------------------------------------------- */
-body.about .principle-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-body.about .principle-item {
-  background: var(--why-purple);
-  border: 0;
-  border-radius: 24px;
-  padding: 32px 30px;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
-}
-body.about .principle-item:nth-child(even) { background: var(--peach); }
-body.about .principle-item::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 26px;
-  width: 3px; height: 46px;
-  border-radius: 0 999px 999px 0;
-  background: var(--accent);
-}
-body.about .principle-item:nth-child(even)::before { background: var(--accent); }
-body.about .principle-item:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-body.about .principle-item h3 { font-size: 1.14rem; margin-bottom: 10px; }
-body.about .principle-item p { font-size: 14.5px; color: var(--text); margin: 0; line-height: 1.7; }
 
 /* --------------------------------------------------------------------------
    Why OpenAgent
    -------------------------------------------------------------------------- */
-body.about .why-copy { max-width: 820px; margin: 0 auto; }
-body.about .why-copy p { color: var(--text); font-size: 1.02rem; margin-top: 18px; }
-body.about .why-copy .em {
-  color: var(--ink);
-  font-weight: 600;
-  padding-top: 24px;
-  margin-top: 28px;
-  position: relative;
-}
-body.about .why-copy .em::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 0;
-  width: 34px; height: 3px;
-  border-radius: 999px;
-  background: var(--accent);
-}
 
 /* --------------------------------------------------------------------------
    Final CTA — purple gradient banner, white pill
@@ -607,10 +377,7 @@ body.about .final-cta p {
   max-width: 640px; margin: 14px auto 0;
   font-size: 1rem;
 }
-body.about .final-cta .btn-row {
-  position: relative; z-index: 1;
-  display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 32px;
-}
+
 body.about .final-cta .btn-primary {
   background: #ffffff !important;
   color: var(--accent) !important;
@@ -618,12 +385,6 @@ body.about .final-cta .btn-primary {
   border: 0 !important;
 }
 body.about .final-cta .btn-primary:hover { background: #f2f2f2 !important; transform: translateY(-2px); opacity: 1; }
-body.about .final-cta .btn-ghost {
-  background: transparent !important;
-  color: #fff !important;
-  border-color: rgba(255, 255, 255, 0.55) !important;
-}
-body.about .final-cta .btn-ghost:hover { background: rgba(255, 255, 255, 0.14) !important; color: #fff !important; }
 
 /* --------------------------------------------------------------------------
    Footer — homepage dark band
@@ -648,13 +409,7 @@ body.about .footer-about > p { color: rgba(243, 243, 243, 0.68); font-size: 14px
 body.about .footer ul a { color: rgba(243, 243, 243, 0.82); font-size: 14px; }
 body.about .footer ul a:hover { color: #ffffff; }
 body.about .footer ul li { border-bottom: 0; padding-bottom: 0; }
-body.about .footer .socials a {
-  border-color: rgba(243, 243, 243, 0.22);
-  color: #f3f3f3;
-  border-radius: 40px;
-  transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
-}
-body.about .footer .socials a:hover { background: transparent; border-color: #ffffff; color: #ffffff; }
+
 body.about .footer .contact-list i { color: #f3f3f3; }
 body.about .footer-bottom { border-color: rgba(243, 243, 243, 0.18); color: rgba(243, 243, 243, 0.62); }
 body.about .footer-bottom p strong { color: #f3f3f3; }
@@ -662,21 +417,13 @@ body.about .footer-bottom p strong { color: #f3f3f3; }
 /* --------------------------------------------------------------------------
    Responsive
    -------------------------------------------------------------------------- */
-@media (max-width: 1080px) {
-  body.about .intro-grid { grid-template-columns: 1fr; gap: 52px; }
-  body.about .portrait { max-width: 520px; }
-  body.about .cap-grid { grid-template-columns: repeat(2, 1fr); }
-  body.about .how-grid { grid-template-columns: repeat(2, 1fr); }
-}
 
 @media (max-width: 640px) {
   body.about .section { padding: 68px 0; }
-  body.about .intro { padding: 80px 0 84px; }
-  body.about .cap-grid,
-  body.about .how-grid,
-  body.about .principle-grid { grid-template-columns: 1fr; }
-  body.about .form-grid { grid-template-columns: 1fr; }
-  body.about .portrait img { height: 400px; }
+  
+  
+  
+  
 }
 
 @media print {

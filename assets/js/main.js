@@ -3,10 +3,8 @@
 
   var SITE = {
     name: 'OpenAgent',
-    whatsapp: '923703159642',
-    email: 'abeerinfo5566@gmail.com'
+    whatsapp: '923703159642'
   };
-  window.SITE = SITE;
 
   /* ---------- Sticky header ---------- */
   var topbar = document.querySelector('.topbar');
@@ -150,22 +148,6 @@
         a.style.maxHeight = a.scrollHeight + 'px';
         q.setAttribute('aria-expanded', 'true');
       }
-    });
-  });
-
-  /* ---------- Portfolio filters ---------- */
-  document.querySelectorAll('[data-filter-group]').forEach(function (bar) {
-    var btns = bar.querySelectorAll('[data-filter]');
-    btns.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        btns.forEach(function (b) { b.classList.remove('on'); });
-        btn.classList.add('on');
-        var f = btn.getAttribute('data-filter');
-        document.querySelectorAll('[data-cat]').forEach(function (card) {
-          var cats = card.getAttribute('data-cat').split(/\s+/);
-          card.style.display = (f === 'all' || cats.indexOf(f) !== -1) ? '' : 'none';
-        });
-      });
     });
   });
 

@@ -1,43 +1,70 @@
 # OpenAgent — open-agent.agency
 
-Official website for OpenAgent, a focused social media and paid-growth studio serving U.S. clients, run by Abeer Nasir.
+Website for **OpenAgent**, a digital marketing service for U.S. businesses run by Abeer Nasir.
+Static HTML, CSS and vanilla JavaScript, deployed with GitHub Pages.
 
-## What is inside
-
-- Static HTML, CSS and vanilla JavaScript
-- GitHub Pages deployment from `main`
-- No build step or package installation required
-- Services: Social Media Management, Social Media Marketing, Digital Marketing, Meta Ads and Google Ads
-- Portfolio work and approved portfolio assets are preserved
-- One paid-growth insight is retained under `blog/meta-vs-google-ads.html`; it is not linked from the main site navigation
-
-## Local preview
+## Quick start
 
 ```bash
 python -m http.server 8080
 ```
 
-Open `http://localhost:8080`.
+Open <http://localhost:8080>. There is no install or build step for the site itself.
 
-## Structure
+## Pages
 
-| Page | Stylesheet |
+| Path | What it is |
 |---|---|
-| `index.html` | `assets/css/home.css` |
-| `about.html` | `assets/css/about.css` |
-| `services.html` and five detail pages in `services/` | `assets/css/services.css` |
-| Homepage portfolio section (`index.html#portfolio`) | Included in `assets/css/home.css` |
-| `contact.html` | `assets/css/contact.css` |
-| `blogs.html` and the retained paid-growth article | `assets/css/blogs.css` |
-| `404.html`, `privacy.html`, `terms.html` | `assets/css/style.css` |
+| `index.html` | Homepage |
+| `about.html` | About Abeer Nasir |
+| `services.html` | Overview of all 13 services |
+| `services/<slug>.html` | 13 service pages (generated, see below) |
+| `portfolio.html` | Real campaign screenshots |
+| `blogs.html`, `blog/*.html` | Insights listing and 2 articles |
+| `contact.html` | Contact page with a WhatsApp hand-off form |
+| `404.html`, `privacy.html`, `terms.html` | Error and legal pages |
 
-All active pages share `assets/css/style.css` and `assets/js/main.js`. Pages under `services/` and `blog/` use `../` for root-relative paths.
+Seven old service URLs in `services/` (for example `performance-marketing.html`) are tiny
+`noindex` redirect pages so links from Google and other sites keep working. Keep them.
+
+## Styling
+
+Every page loads a page stylesheet plus `assets/css/theme.css` **last**. `theme.css` holds the
+purple `#2E0061` / yellow `#F3C90D` design system and overrides the older layers.
+
+| Page | Stylesheets (in load order) |
+|---|---|
+| `index.html` | `tokens.css`, `base.css`, `home.css`, `theme.css` |
+| `about.html` | `style.css`, `monochrome.css`, `about.css`, `theme.css` |
+| `services.html`, `services/*.html` | `style.css`, `monochrome.css`, `services.css`, `theme.css` |
+| `portfolio.html` | `style.css`, `monochrome.css`, `portfolio.css`, `theme.css` |
+| `contact.html` | `style.css`, `monochrome.css`, `contact.css`, `theme.css` |
+| `blogs.html`, `blog/*.html` | `style.css`, `monochrome.css`, `blogs.css`, `theme.css` |
+| `404.html`, `privacy.html`, `terms.html` | `style.css`, `monochrome.css`, `mono.css`, `theme.css` |
+
+All pages share `assets/js/main.js` (menu, dropdown, FAQ, reveal-on-scroll, WhatsApp form hand-off).
+
+## Editing the service pages
+
+The 13 service pages, the services lists in every menu and footer, the redirect pages and the
+service URLs in `sitemap.xml` are generated:
+
+1. Edit the copy in `tools/services_data.py`.
+2. Run `python tools/build_services.py` from the repo root.
+
+Do not edit `services/<slug>.html` by hand; the next build overwrites it.
+
+## Cache busting
+
+CSS and JS links carry `?v=YYYYMMDD`. After changing a stylesheet or `main.js`, bump its version
+on every page that loads it (and `CSS_VER` in `tools/build_services.py` for `theme.css`).
+
+## Deployment
+
+Push to `main`. GitHub Pages publishes the repo root to `open-agent.agency` (`CNAME`).
+`.nojekyll` must stay. Everything committed is public, so never commit drafts, backups or secrets.
 
 ## Contact
 
 - WhatsApp: [+92 370 3159642](https://wa.me/923703159642)
 - Email: [abeerinfo5566@gmail.com](mailto:abeerinfo5566@gmail.com)
-
-## Deployment
-
-Push to `main` for GitHub Pages deployment. `CNAME` points to `open-agent.agency`; `.nojekyll` is required.

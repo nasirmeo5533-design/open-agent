@@ -105,10 +105,6 @@ body.portfolio .btn-primary {
   box-shadow: none;
 }
 body.portfolio .btn-primary:hover { background: #0b2030; border-color: #0b2030; }
-body.portfolio .btn-ghost,
-body.portfolio .btn-ghost-orange { background: transparent; color: var(--ink); border: 1px solid var(--color-mid); }
-body.portfolio .btn-ghost:hover,
-body.portfolio .btn-ghost-orange:hover { background: var(--tint); border-color: var(--ink); }
 
 /* wa.me buttons carry the WhatsApp-green identity everywhere, matching the float */
 body.portfolio a.btn[href*="wa.me"] {
@@ -130,10 +126,6 @@ body.portfolio .fwa {
 }
 body.portfolio .fwa:hover { transform: translateY(-3px); }
 body.portfolio .fwa i { color: #fff; font-size: 27px; }
-body.portfolio .to-top {
-  background: var(--card); color: var(--ink); border: 1px solid var(--line);
-}
-body.portfolio .to-top:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
 
 /* -------------------------------------------------------------------------- */
 /* Hero — the numbers speak first                                            */

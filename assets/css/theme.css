@@ -327,8 +327,6 @@
 :root:root body .share-link { border-radius: var(--oa-radius) !important; color: var(--oa-purple) !important; border-color: #DDD3EC !important; }
 
 /* filters */
-:root:root body [data-filter] { border-radius: 999px !important; border-color: #DDD3EC !important; color: var(--oa-purple) !important; background: #fff !important; }
-:root:root body [data-filter].on { background: var(--oa-purple) !important; color: #fff !important; border-color: var(--oa-purple) !important; }
 
 /* ---------- Footer: deep purple ---------- */
 :root:root body :is(.footer, .site-footer) {
@@ -368,7 +366,6 @@
   transform: none !important;
 }
 :root:root body :is(.svc-card, .feat-card, .cap-card, .steps-card) { position: relative; }
-:root:root body .svc-good li::before { background: var(--oa-purple) !important; }
 
 /* ---------- Labels inside purple sections ---------- */
 :root:root body :is(.band--dark, .section.dark, section.dark, .final-cta, .cta, .proc-card, .steps-card) :is(.tag-label, .eyebrow, .cat-tag) {

@@ -22,7 +22,7 @@ WA = "https://wa.me/923703159642"
 TOOLS = [("meta.webp", "Meta"), ("google-ads.webp", "Google Ads"), ("google-analytics.webp", "Google Analytics"),
          ("search-console.webp", "Google Search Console"), ("semrush.webp", "SEMrush"), ("chatgpt.webp", "ChatGPT"),
          ("claude.webp", "Claude"), ("gemini.webp", "Google Gemini"), ("n8n.webp", "n8n"), ("zapier.webp", "Zapier")]
-CSS_VER = "20261127j"
+CSS_VER = "20261127k"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -104,7 +104,7 @@ def page(s):
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="website"><meta property="og:url" content="{url}"><meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:image" content="{SITE}/assets/images/og/og-image.png"><meta property="og:site_name" content="OpenAgent"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{title}"><meta name="twitter:description" content="{desc}"><meta name="twitter:image" content="{SITE}/assets/images/og/twitter-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<link rel="stylesheet" href="../assets/css/style.css?v=20261127"><link rel="stylesheet" href="../assets/css/monochrome.css?v=20261121"><link rel="stylesheet" href="../assets/css/services.css?v=20261124">
+<link rel="stylesheet" href="../assets/css/style.css?v=20261127k"><link rel="stylesheet" href="../assets/css/monochrome.css?v=20261127k"><link rel="stylesheet" href="../assets/css/services.css?v=20261127k">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYQHFB4QNL"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','G-MYQHFB4QNL')</script>
 {ld(svc_ld)}
 {ld(faq_ld)}

@@ -207,7 +207,6 @@ h4 { font-size: 1.08rem; }
 
 .hero h1 em { font-style: normal; color: transparent; background: linear-gradient(90deg, var(--indigo), var(--pink)); -webkit-background-clip: text; background-clip: text; }
 .hero p.lede { max-width: 620px; margin: 20px auto 0; font-size: clamp(1rem, 1.6vw, 1.15rem); }
-.hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 34px; }
 
 /* --------------------------------------------------------------------------
    Sections & headings
@@ -228,15 +227,7 @@ h4 { font-size: 1.08rem; }
   font-weight: 600; font-size: 14.5px; color: var(--indigo);
 }
 .card-link i { transition: transform .25s; }
-.step-card { background: #fff; border: 1px solid var(--line); border-radius: var(--r-lg); padding: 34px 28px; position: relative; transition: transform .3s, box-shadow .3s; }
-.step-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
-.step-num {
-  font-size: 3rem; font-weight: 800; line-height: 1;
-  color: transparent; -webkit-text-stroke: 1.5px var(--purple-lilac);
-  margin-bottom: 16px; display: block;
-}
-.step-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
-.step-card p { font-size: 14.5px; }
+
 @keyframes fade-up { from { opacity: 0; transform: translateY(18px);} to { opacity: 1; transform: none;} }
 
 /* --------------------------------------------------------------------------
@@ -331,7 +322,6 @@ body a.btn[href*="wa.me"]:hover { background: #3bab4e !important; border-color: 
 /* --------------------------------------------------------------------------
    Portfolio
    -------------------------------------------------------------------------- */
-.filter-bar { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 44px; }
 
 /* --------------------------------------------------------------------------
    FAQ accordion
@@ -415,12 +405,9 @@ body a.btn[href*="wa.me"]:hover { background: #3bab4e !important; border-color: 
   .header-actions .btn { display: none; }
   .hamburger { display: inline-flex; }
   .services-grid, .why-grid, .blog-grid, .work-grid, .team-grid { grid-template-columns: repeat(2, 1fr); }
-  .process-grid 
-  .stats-band 
-  .client-wall 
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+  
   .split, .contact-grid { grid-template-columns: 1fr; gap: 44px; }
-  .split.rev .split-media { order: 0; }
+  
   .plan-grid 
   .gallery-strip 
 }
