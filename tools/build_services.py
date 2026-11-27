@@ -52,6 +52,9 @@ def footer_items(prefix):
 
 
 def prefix_for(page):
+    # 404.html is served for missing URLs at any depth, so it must use root-absolute links
+    if os.path.basename(page) == "404.html":
+        return "/services/"
     d = os.path.dirname(page).replace("\\", "/")
     if d == "services":
         return ""

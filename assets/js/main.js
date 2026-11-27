@@ -19,6 +19,27 @@
   /* ---------- Desktop dropdowns (hover + click/keyboard) ---------- */
   document.querySelectorAll('.nav-desktop > li.has-drop').forEach(function (li) {
     var trigger = li.querySelector('a');
+    var dropdown = li.querySelector('.dropdown');
+    trigger.setAttribute('aria-haspopup', 'true');
+    trigger.setAttribute('aria-expanded', 'false');
+    if (dropdown) {
+      if (!dropdown.id) dropdown.id = 'services-menu';
+      trigger.setAttribute('aria-controls', dropdown.id);
+    }
+    // Keep aria-expanded in sync with every way the menu opens or closes.
+    new MutationObserver(function () {
+      trigger.setAttribute('aria-expanded', li.classList.contains('open') ? 'true' : 'false');
+    }).observe(li, { attributes: true, attributeFilter: ['class'] });
+    // Keyboard users: tabbing onto "Services" (or into the menu) opens it, so Tab
+    // walks through every service. Mouse clicks don't trigger :focus-visible,
+    // so clicking "Services" still never leaves the menu stuck open.
+    li.addEventListener('focusin', function (e) {
+      // Escape hands focus back to "Services" on purpose; don't reopen the menu then.
+      if (li.dataset.closing === '1') { delete li.dataset.closing; return; }
+      var t = e.target;
+      var keyboard = t.matches && (function () { try { return t.matches(':focus-visible'); } catch (err) { return false; } })();
+      if (keyboard || (dropdown && dropdown.contains(t))) li.classList.add('open');
+    });
     li.addEventListener('mouseenter', function () { li.classList.add('open'); });
     li.addEventListener('mouseleave', function () { li.classList.remove('open'); });
     trigger.addEventListener('click', function (e) {
@@ -30,7 +51,10 @@
       li.classList.add('open');
     });
     trigger.addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowDown') {
+      if (e.key === ' ') {
+        e.preventDefault();
+        li.classList.toggle('open');
+      } else if (e.key === 'ArrowDown') {
         e.preventDefault();
         li.classList.add('open');
         var first = li.querySelector('.dropdown a');
@@ -45,7 +69,14 @@
   });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
-      document.querySelectorAll('.nav-desktop > li.open').forEach(function (li) { li.classList.remove('open'); });
+      document.querySelectorAll('.nav-desktop > li.open').forEach(function (li) {
+        var hadFocus = li.contains(document.activeElement);
+        li.classList.remove('open');
+        if (hadFocus) {
+          li.dataset.closing = '1';
+          li.querySelector('a').focus();
+        }
+      });
     }
   });
   document.addEventListener('click', function (e) {
@@ -172,10 +203,19 @@
         if (val) lines.push(key + ': ' + val);
       });
       var msg = encodeURIComponent(lines.join('\n'));
+      var url = 'https://wa.me/' + SITE.whatsapp + '?text=' + msg;
       var status = form.querySelector('.form-status');
-      window.open('https://wa.me/' + SITE.whatsapp + '?text=' + msg, '_blank', 'noopener');
-      if (status) status.classList.add('show');
-      form.reset();
+      // Open WhatsApp in a new tab. If a popup blocker stops it, go there in this tab
+      // instead, so the visitor's message is never lost. Only clear the form once
+      // WhatsApp has actually opened.
+      var win = window.open(url, '_blank');
+      if (win) {
+        try { win.opener = null; } catch (err) { /* cross-origin: nothing to clear */ }
+        if (status) status.classList.add('show');
+        form.reset();
+      } else {
+        window.location.href = url;
+      }
     });
   });
 
