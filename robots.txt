@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /versions/
+Disallow: /tools/
 Disallow: /pricing/
 Disallow: /faq/
 Disallow: /blog/index.html

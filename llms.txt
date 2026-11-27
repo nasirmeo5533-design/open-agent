@@ -1,8 +1,8 @@
 # OpenAgent
 
-> AI content, images and videos, social media management, and Meta Ads & Google Ads for U.S. businesses. Run by Abeer Nasir.
+> Digital marketing for U.S. businesses: websites, apps, SEO, social media, Meta, Google, TikTok and ChatGPT ads, lead generation, SaaS marketing and GoHighLevel automation. Run by Abeer Nasir.
 
-OpenAgent helps U.S. brands, e-commerce businesses, B2B companies and small businesses produce human-reviewed AI-assisted content, publish consistently on social media, and run paid campaigns against one clear objective. Work is scoped in writing before it starts.
+OpenAgent helps U.S. brands, e-commerce businesses, B2B companies and small businesses get found, generate leads and grow online with websites, SEO, social media, paid advertising and marketing automation. Work is scoped in writing before it starts.
 
 ## Contact
 
@@ -13,9 +13,19 @@ OpenAgent helps U.S. brands, e-commerce businesses, B2B companies and small busi
 
 ## Services
 
-- AI Content, Images & Videos: https://open-agent.agency/services/ai-content-images-videos.html
-- Social Media Management: https://open-agent.agency/services/social-media-management.html
-- Meta Ads & Google Ads: https://open-agent.agency/services/performance-marketing.html
+- Website Development & Optimization: https://open-agent.agency/services/website-development.html
+- App Development: https://open-agent.agency/services/app-development.html
+- Search Engine Optimization: https://open-agent.agency/services/search-engine-optimization.html
+- Social Media Marketing: https://open-agent.agency/services/social-media-marketing.html
+- Google Ads Services: https://open-agent.agency/services/google-ads.html
+- Ecommerce SEO Services: https://open-agent.agency/services/ecommerce-seo.html
+- Meta Ads Management: https://open-agent.agency/services/meta-ads.html
+- TikTok Marketing: https://open-agent.agency/services/tiktok-marketing.html
+- ChatGPT Ads Management: https://open-agent.agency/services/chatgpt-ads.html
+- SaaS Digital Marketing: https://open-agent.agency/services/saas-marketing.html
+- SaaS SEO: https://open-agent.agency/services/saas-seo.html
+- Lead Generation: https://open-agent.agency/services/lead-generation.html
+- GoHighLevel Setup & Automation: https://open-agent.agency/services/gohighlevel.html
 
 OpenAgent does not guarantee advertising performance, rankings, revenue or specific outcomes. Scope and expectations are discussed before work begins.
 
@@ -24,7 +34,7 @@ OpenAgent does not guarantee advertising performance, rankings, revenue or speci
 - Home: https://open-agent.agency/
 - About: https://open-agent.agency/about.html
 - Services: https://open-agent.agency/services.html
-- Portfolio: https://open-agent.agency/index.html#portfolio
+- Portfolio: https://open-agent.agency/portfolio.html
 - Contact: https://open-agent.agency/contact.html
 - Privacy policy: https://open-agent.agency/privacy.html
 - Terms of service: https://open-agent.agency/terms.html
