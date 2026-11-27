@@ -616,3 +616,16 @@
 :root:root body .band-points li { display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; border-radius: 12px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.14); color: rgba(255, 255, 255, 0.88); line-height: 1.55; }
 :root:root body .band-points i { flex: 0 0 auto; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 10px; background: #F3C90D; color: #000; font-size: 15px; margin-top: 2px; }
 :root:root body .band-points b { color: #fff; font-weight: 600; }
+
+/* Photos in the service-page slots (sv-media--photo) and on the 13 service cards. */
+:root:root body .sv-media--photo { background: #EEE8F6; }
+:root:root body .sv-media--photo::after { content: none; }
+:root:root body .sv-media--photo > img { display: block; transition: transform .6s ease; }
+:root:root body .sv-media--photo:hover > img { transform: scale(1.03); }
+:root:root body .svc13-img { display: block; margin: -26px -24px 0; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 17px 17px 0 0; background: #EEE8F6; }
+:root:root body .svc13-img img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+:root:root body .svc13-card:hover .svc13-img img { transform: scale(1.05); }
+:root:root body .svc13-card:has(.svc13-img) .svc13-ic { margin-top: -28px; position: relative; border: 3px solid #fff; box-shadow: 0 8px 20px rgba(46, 0, 97, .25); }
+@media (prefers-reduced-motion: reduce) {
+  :root:root body :is(.sv-media--photo, .svc13-card) img { transition: none; transform: none !important; }
+}

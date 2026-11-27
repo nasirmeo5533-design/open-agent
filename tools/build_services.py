@@ -15,14 +15,14 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
-from services_data import SERVICES, REDIRECTS, GENERIC_WHY  # noqa: E402
+from services_data import SERVICES, REDIRECTS, GENERIC_WHY, IMAGES  # noqa: E402
 
 SITE = "https://open-agent.agency"
 WA = "https://wa.me/923703159642"
 TOOLS = [("meta.webp", "Meta"), ("google-ads.webp", "Google Ads"), ("google-analytics.webp", "Google Analytics"),
          ("search-console.webp", "Google Search Console"), ("semrush.webp", "SEMrush"), ("chatgpt.webp", "ChatGPT"),
          ("claude.webp", "Claude"), ("gemini.webp", "Google Gemini"), ("n8n.webp", "n8n"), ("zapier.webp", "Zapier")]
-CSS_VER = "20261128a"
+CSS_VER = "20261128d"
 PORTFOLIO_SLUGS = {"meta-ads", "social-media-marketing"}
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -74,8 +74,15 @@ def refresh_lists(src, prefix):
     return src
 
 
-def media(icon, label, extra=""):
-    # Decorative placeholder; replace the inner <i> with an <img> when real images arrive.
+def media(icon, label, extra="", slug=None):
+    # Photo from IMAGES when there is one; otherwise an icon placeholder.
+    img = IMAGES.get(slug, {}).get(label) if slug else None
+    if img:
+        load = 'loading="eager" fetchpriority="high"' if label == "hero" else 'loading="lazy"'
+        pos = f' style="object-position:{img["pos"]}"' if img.get("pos") else ""
+        return (f'<figure class="sv-media sv-media--photo {extra}" data-img-slot="{esc(label)}">'
+                f'<img src="../assets/images/services/{slug}-{label}.webp" alt="{esc(img["alt"])}" '
+                f'width="{img["w"]}" height="{img["h"]}"{pos} {load} decoding="async"></figure>')
     return (f'<figure class="sv-media {extra}" data-img-slot="{esc(label)}">'
             f'<i class="{icon}" aria-hidden="true"></i></figure>')
 
@@ -154,7 +161,7 @@ def page(s):
         <li><i class="fa-solid fa-check" aria-hidden="true"></i> U.S. businesses</li>
       </ul>
     </div>
-    {media(s["icon"], "hero", "sv-media--hero")}
+    {media(s["icon"], "hero", "sv-media--hero", slug)}
   </div>
 </section>
 
@@ -173,7 +180,7 @@ def page(s):
       <ul class="sv-issues">{issues}</ul>
     </div>
     <div class="sv-promise-wrap rv" data-delay="1">
-      {media(s["icon"], "problem")}
+      {media(s["icon"], "problem", "", slug)}
       <div class="sv-promise"><h3>My Promise:</h3><p>{text(s["promise"])}</p></div>
     </div>
   </div>
@@ -182,7 +189,7 @@ def page(s):
 <section class="sv-core">
   <div class="wrap sv-core-grid">
     <div class="rv">
-      {media(s["icon"], "core", "sv-media--wide")}
+      {media(s["icon"], "core", "sv-media--wide", slug)}
       <h2>{text(s["core_h"])}</h2>
       <p>{text(s["core_p"])}</p>
     </div>

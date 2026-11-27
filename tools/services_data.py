@@ -490,3 +490,233 @@ REDIRECTS = {
     "full-stack-development": "website-development",
     "meta-google-ads": "meta-ads",
 }
+
+# --- Photos ---
+# assets/images/services/<slug>-<slot>.webp. Stock photos from Unsplash (Unsplash License:
+# free for commercial use, no attribution required). Replace a file with your own photo
+# (same name) and update the alt text and size here, then rebuild. Optional "pos" sets
+# the CSS object-position when the frame crops the photo.
+IMAGES = {
+    "website-development": {
+        "hero": {
+            "alt": "Laptop showing code on a bright desk",
+            "w": 1200,
+            "h": 799
+        },
+        "problem": {
+            "alt": "Hands typing on a laptop",
+            "w": 1200,
+            "h": 799
+        },
+        "core": {
+            "alt": "Laptop with a glowing screen on a dark desk",
+            "w": 1200,
+            "h": 849
+        }
+    },
+    "app-development": {
+        "hero": {
+            "alt": "Phone showing an app dashboard next to a desktop screen",
+            "w": 1200,
+            "h": 900
+        },
+        "problem": {
+            "alt": "Hand-drawn app screen wireframes on paper",
+            "w": 1200,
+            "h": 900
+        },
+        "core": {
+            "alt": "Person testing an app on a phone and a laptop",
+            "w": 1200,
+            "h": 1500
+        }
+    },
+    "search-engine-optimization": {
+        "hero": {
+            "alt": "Analytics graphs on a laptop screen",
+            "w": 1200,
+            "h": 855
+        },
+        "problem": {
+            "alt": "Performance dashboard on a laptop",
+            "w": 1200,
+            "h": 800
+        },
+        "core": {
+            "alt": "Person reviewing a search report on a laptop",
+            "w": 1200,
+            "h": 904
+        }
+    },
+    "social-media-marketing": {
+        "hero": {
+            "alt": "Person using a laptop and a phone together",
+            "w": 1200,
+            "h": 800
+        },
+        "problem": {
+            "alt": "Hands holding a phone with a social media feed",
+            "w": 1200,
+            "h": 1800
+        },
+        "core": {
+            "alt": "Person working on a laptop at a desk",
+            "w": 1200,
+            "h": 800
+        }
+    },
+    "google-ads": {
+        "hero": {
+            "alt": "Person reviewing an analytics dashboard on a laptop",
+            "w": 1200,
+            "h": 800
+        },
+        "problem": {
+            "alt": "Close-up of campaign performance charts on a screen",
+            "w": 1200,
+            "h": 864
+        },
+        "core": {
+            "alt": "Laptop on a table outdoors",
+            "w": 1200,
+            "h": 822
+        }
+    },
+    "ecommerce-seo": {
+        "hero": {
+            "alt": "Online seller checking an order with boxes beside her",
+            "w": 1200,
+            "h": 800
+        },
+        "problem": {
+            "alt": "Keyboard with a Buy key",
+            "w": 1200,
+            "h": 797
+        },
+        "core": {
+            "alt": "Search performance report on a monitor",
+            "w": 1200,
+            "h": 732
+        }
+    },
+    "meta-ads": {
+        "hero": {
+            "alt": "Hand holding a phone under a large like icon",
+            "pos": "50% 32%",
+            "w": 1200,
+            "h": 1797
+        },
+        "problem": {
+            "alt": "Person scrolling a social profile on a phone",
+            "w": 1200,
+            "h": 1500
+        },
+        "core": {
+            "alt": "Laptop with code on a desk among plants",
+            "w": 1200,
+            "h": 800
+        }
+    },
+    "tiktok-marketing": {
+        "hero": {
+            "alt": "Phone mounted on a tripod, ready to film",
+            "w": 1200,
+            "h": 1800
+        },
+        "problem": {
+            "alt": "Creator filming himself on a phone",
+            "w": 1200,
+            "h": 679
+        },
+        "core": {
+            "alt": "Woman photographing food with her phone",
+            "w": 1200,
+            "h": 1800
+        }
+    },
+    "chatgpt-ads": {
+        "hero": {
+            "alt": "Robot and human hands reaching toward the letters AI",
+            "w": 1200,
+            "h": 675
+        },
+        "problem": {
+            "alt": "Chat bubbles on a translucent screen",
+            "w": 1200,
+            "h": 675
+        },
+        "core": {
+            "alt": "3D letters AI on a dark digital background",
+            "w": 1200,
+            "h": 675
+        }
+    },
+    "saas-marketing": {
+        "hero": {
+            "alt": "Team working together on laptops",
+            "w": 1200,
+            "h": 801
+        },
+        "problem": {
+            "alt": "Team meeting around a table with laptops",
+            "w": 1200,
+            "h": 822
+        },
+        "core": {
+            "alt": "Team discussing a plan in a meeting room",
+            "w": 1200,
+            "h": 1799
+        }
+    },
+    "saas-seo": {
+        "hero": {
+            "alt": "Analytics data on a computer screen",
+            "w": 1200,
+            "h": 800
+        },
+        "problem": {
+            "alt": "Open-plan software company office",
+            "w": 1200,
+            "h": 900
+        },
+        "core": {
+            "alt": "Rising line chart on a screen",
+            "w": 1200,
+            "h": 800
+        }
+    },
+    "lead-generation": {
+        "hero": {
+            "alt": "Smiling support agent wearing a headset",
+            "w": 1200,
+            "h": 801
+        },
+        "problem": {
+            "alt": "Man on a phone call at his desk",
+            "w": 1200,
+            "h": 675
+        },
+        "core": {
+            "alt": "Headset next to a laptop",
+            "w": 1200,
+            "h": 800
+        }
+    },
+    "gohighlevel": {
+        "hero": {
+            "alt": "Person mapping a workflow on a board",
+            "w": 1200,
+            "h": 800
+        },
+        "problem": {
+            "alt": "Person drawing a diagram on a glass whiteboard",
+            "w": 1200,
+            "h": 900
+        },
+        "core": {
+            "alt": "Team working on laptops in a shared office",
+            "w": 1200,
+            "h": 900
+        }
+    }
+}

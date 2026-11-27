@@ -54,6 +54,14 @@ service URLs in `sitemap.xml` are generated:
 
 Do not edit `services/<slug>.html` by hand; the next build overwrites it.
 
+### Photos
+
+Each service page has three photos, `assets/images/services/<slug>-{hero,problem,core}.webp`.
+The hero photo is also the thumbnail on the service cards (home, about, services). The current
+photos are stock photos from [Unsplash](https://unsplash.com/license) (free for commercial use,
+no attribution required). To use your own photo, save it under the same name (WebP, about
+1200px wide), update its `alt`, `w` and `h` in `IMAGES` in `tools/services_data.py`, and rebuild.
+
 ## Cache busting
 
 CSS and JS links carry `?v=YYYYMMDD`. After changing a stylesheet or `main.js`, bump its version
