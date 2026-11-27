@@ -11,6 +11,7 @@ import glob
 import html
 import json
 import os
+from datetime import date
 import re
 import sys
 
@@ -90,6 +91,7 @@ def media(icon, label, extra="", slug=None):
 def page(s):
     slug, name = s["slug"], s["name"]
     url = f"{SITE}/services/{slug}.html"
+    og_img = f"{SITE}/assets/images/og/services/{slug}.jpg"
     why = [(ic, t, d.format(short=s["short"])) for ic, t, d in GENERIC_WHY]
     # Only services the portfolio actually shows results for link to it.
     if s["slug"] in PORTFOLIO_SLUGS:
@@ -118,7 +120,7 @@ def page(s):
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title}</title><meta name="description" content="{desc}">
 <link rel="canonical" href="{url}">
-<meta property="og:type" content="website"><meta property="og:url" content="{url}"><meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:image" content="{SITE}/assets/images/og/og-image.png"><meta property="og:site_name" content="OpenAgent"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{title}"><meta name="twitter:description" content="{desc}"><meta name="twitter:image" content="{SITE}/assets/images/og/twitter-image.png">
+<meta property="og:type" content="website"><meta property="og:url" content="{url}"><meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:image" content="{og_img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:site_name" content="OpenAgent"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{title}"><meta name="twitter:description" content="{desc}"><meta name="twitter:image" content="{og_img}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"></noscript><link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
 <link rel="stylesheet" href="../assets/css/style.css?v={CSS_VER}"><link rel="stylesheet" href="../assets/css/monochrome.css?v={CSS_VER}"><link rel="stylesheet" href="../assets/css/services.css?v={CSS_VER}">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYQHFB4QNL"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','G-MYQHFB4QNL')</script>
@@ -275,11 +277,25 @@ def write(path, content):
         f.write(content)
 
 
+def main_text(html):
+    # The part that is about this page: <main> without shared nav/footer markup.
+    m = re.search(r"<main\b.*?</main>", html, re.S)
+    return re.sub(r"\s+", " ", m.group(0) if m else html)
+
+
 def main():
     os.chdir(ROOT)
     slugs = {s["slug"] for s in SERVICES}
+    sm_old = open("sitemap.xml", encoding="utf-8").read()
+    lastmod = {}
     for s in SERVICES:
-        write(f"services/{s['slug']}.html", page(s))
+        path = f"services/{s['slug']}.html"
+        html = page(s)
+        old = open(path, encoding="utf-8").read() if os.path.exists(path) else ""
+        prev = re.search(rf"<loc>{re.escape(SITE)}/services/{s['slug']}\.html</loc><lastmod>([^<]+)</lastmod>", sm_old)
+        # Keep the old date unless what the page says changed (nav/footer edits don't count).
+        lastmod[s["slug"]] = prev.group(1) if prev and old and main_text(old) == main_text(html) else date.today().isoformat()
+        write(path, html)
     for old, new in REDIRECTS.items():
         assert old not in slugs and new in slugs, (old, new)
         write(f"services/{old}.html", stub(new))
@@ -297,7 +313,7 @@ def main():
     # sitemap: replace all service detail URLs
     sm = open("sitemap.xml", encoding="utf-8", newline="").read()
     sm = re.sub(r"\s*<url><loc>https://open-agent\.agency/services/[^<]+</loc>.*?</url>", "", sm)
-    entries = "".join(f'\n  <url><loc>{SITE}/services/{s["slug"]}.html</loc><lastmod>2026-11-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>' for s in SERVICES)
+    entries = "".join(f'\n  <url><loc>{SITE}/services/{s["slug"]}.html</loc><lastmod>{lastmod[s['slug']]}</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>' for s in SERVICES)
     sm = sm.replace(f"<url><loc>{SITE}/services.html</loc>", "<url><loc>" + SITE + "/services.html</loc>", 1)
     i = sm.index("</url>", sm.index(f"{SITE}/services.html")) + len("</url>")
     sm = sm[:i] + entries + sm[i:]

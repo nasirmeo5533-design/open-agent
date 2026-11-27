@@ -62,6 +62,11 @@ photos are stock photos from [Unsplash](https://unsplash.com/license) (free for 
 no attribution required). To use your own photo, save it under the same name (WebP, about
 1200px wide), update its `alt`, `w` and `h` in `IMAGES` in `tools/services_data.py`, and rebuild.
 
+Link previews (Facebook, LinkedIn, X, WhatsApp) use a 1200x630 JPEG per page in
+`assets/images/og/services/` and `assets/images/og/blog/`; regenerate it when you replace a hero photo.
+The builder only moves a service page's `<lastmod>` in `sitemap.xml` when the page's `<main>`
+content changes; for hand-edited pages, update `<lastmod>` yourself when the content changes.
+
 ## Cache busting
 
 CSS and JS links carry `?v=YYYYMMDD`. After changing a stylesheet or `main.js`, bump its version
