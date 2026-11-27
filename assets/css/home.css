@@ -137,6 +137,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-left: auto;
 }
 
 .hamburger {
@@ -1266,6 +1267,11 @@
 }
 
 @media (max-width: 640px) {
+  /* header WhatsApp button pushed the hamburger off-screen at 375px; the floating WhatsApp button covers it */
+  .header-actions .btn {
+    display: none;
+  }
+
   .hero h1 {
     max-width: none;
   }

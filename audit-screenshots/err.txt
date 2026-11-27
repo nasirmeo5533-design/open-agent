@@ -1,3 +1,0 @@
-54403 bytes written to file C:\Users\PC\Downloads\open-agent-site\audit-screenshots\404_375x812.png
-[16820:4680:1119/015202.192:ERROR:chrome\browser\web_applications\os_integration\os_integration_manager.cc:270] Can't perform OS integration while the browser is shutting down.
-[16820:4680:1119/015202.217:ERROR:chrome\browser\web_applications\externally_managed_app_manager.cc:680] https://www.youtube.com/s/notifications/manifest/cr_install.html from install source 1 failed to install with reason 21
