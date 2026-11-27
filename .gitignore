@@ -44,12 +44,12 @@ next-env.d.ts
 
 # internal files — never deploy
 AGENTS.md
+CLAUDE.md
 .opencode/
 _backup/
 assets/SKILL.md
 
 # local agent tooling (do not deploy)
-AGENTS.md
 .opencode/
 .impeccable/
 PRODUCT.md
