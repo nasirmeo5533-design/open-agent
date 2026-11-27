@@ -291,7 +291,7 @@
 :root:root body .post :is(h1, h2, h3) { color: var(--oa-purple) !important; }
 :root:root body .post a:not(.btn) { color: var(--oa-purple-3) !important; text-decoration-color: var(--oa-yellow); }
 :root:root body .post blockquote { border-left-color: var(--oa-yellow) !important; background: var(--oa-purple-soft) !important; border-radius: 0 var(--oa-radius) var(--oa-radius) 0; }
-:root:root body .post-note { background: var(--oa-purple-soft) !important; border: 0 !important; border-left: 4px solid var(--oa-yellow) !important; border-radius: var(--oa-radius) !important; }
+:root:root body .post-note { background: var(--oa-purple-soft) !important; border: 1px solid #E4D9F2 !important; border-radius: var(--oa-radius) !important; }
 :root:root body .post-hero img { border-radius: var(--oa-radius-lg) !important; }
 :root:root body .share-link { border-radius: var(--oa-radius) !important; color: var(--oa-purple) !important; border-color: #DDD3EC !important; }
 
