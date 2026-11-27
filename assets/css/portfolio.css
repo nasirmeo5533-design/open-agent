@@ -206,12 +206,22 @@ body.portfolio .res-num {
 }
 body.portfolio .res-num b { color: var(--accent); font-weight: 700; }
 body.portfolio .res-body { color: var(--text); font-size: 14.5px; line-height: 1.7; margin: 0 0 20px; flex: 1; }
+/* Screenshots are shown whole (never cropped): each sits centred in a same-size
+   white frame, and clicking opens the full-size image. */
 body.portfolio .res-fig {
-  margin: 0; border: 1px solid var(--line); border-radius: 24px; overflow: hidden; background: var(--tint);
+  margin: 0; border: 1px solid var(--line); border-radius: 24px; overflow: hidden; background: #fff;
+}
+body.portfolio .res-fig a {
+  display: flex; align-items: center; justify-content: center; aspect-ratio: 16 / 10;
+  padding: 14px; cursor: zoom-in;
 }
 body.portfolio .res-fig img {
-  display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: top left;
+  display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain;
+  border-radius: 8px;
 }
+/* A very wide strip would float tiny in a 16:10 frame; let the frame hug it. */
+body.portfolio .res-fig--strip a { aspect-ratio: auto; }
+@media (max-width: 640px) { body.portfolio .res-fig a { padding: 6px; } }
 
 /* -------------------------------------------------------------------------- */
 /* Honesty panel — what the numbers do and don't claim                       */
