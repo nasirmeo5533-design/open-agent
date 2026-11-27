@@ -42,7 +42,15 @@ purple `#2E0061` / yellow `#F3C90D` design system and overrides the older layers
 | `blogs.html`, `blog/*.html` | `style.css`, `monochrome.css`, `blogs.css`, `theme.css` |
 | `404.html`, `privacy.html`, `terms.html` | `style.css`, `monochrome.css`, `mono.css`, `theme.css` |
 
-All pages share `assets/js/main.js` (menu, dropdown, FAQ, reveal-on-scroll, WhatsApp form hand-off).
+All pages share `assets/js/main.js` (menu, dropdown, FAQ, reveal-on-scroll, WhatsApp form hand-off,
+cookie banner, enquiry tracking).
+
+## Analytics and consent
+
+Every page's `<head>` loads GA4 with Google Consent Mode v2 set to "denied" for the EEA, the UK and
+Switzerland. `main.js` shows a cookie banner to visitors in European time zones and saves the choice in
+`localStorage` (`oa-consent`); the privacy page has a "Change cookie choice" button. WhatsApp clicks,
+email clicks and form sends are sent to GA4 as `generate_lead` with `method` = whatsapp / email / form.
 
 ## Editing the service pages
 

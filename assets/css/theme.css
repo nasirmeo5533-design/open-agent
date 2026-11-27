@@ -629,3 +629,23 @@
 @media (prefers-reduced-motion: reduce) {
   :root:root body :is(.sv-media--photo, .svc13-card) img { transition: none; transform: none !important; }
 }
+
+/* Cookie choice banner (shown by main.js to visitors in European time zones). */
+:root:root body .cookie-bar {
+  position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 9999; max-width: 720px; margin: 0 auto;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; padding: 18px 20px;
+  background: #1F0042; color: #fff; border-radius: 12px; box-shadow: 0 18px 50px rgba(20, 0, 50, .35);
+  font-size: .92rem; line-height: 1.55;
+}
+:root:root body .cookie-bar p { margin: 0; flex: 1 1 320px; color: rgba(255, 255, 255, .9) !important; }
+:root:root body .cookie-bar a { color: #F3C90D !important; text-decoration: underline; }
+:root:root body .cookie-actions { display: flex; gap: 10px; }
+:root:root body .cookie-btn { font: inherit; font-weight: 600; padding: 10px 18px; border-radius: 12px; border: 0; cursor: pointer; }
+:root:root body .cookie-btn--yes { background: #F3C90D; color: #000; }
+:root:root body .cookie-btn--yes:hover { background: #E0B700; }
+:root:root body .cookie-btn--no { background: #E3E3E3; color: #000; }
+:root:root body .cookie-btn:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+:root:root body .cookie-reopen { font: inherit; font-weight: 600; padding: 10px 18px; border-radius: 12px; border: 1px solid #2E0061; background: #fff; color: #2E0061; cursor: pointer; }
+:root:root body .sv-reading { margin: 24px 0 0; text-align: center; color: var(--oa-text); font-size: .95rem; }
+:root:root body .sv-reading i { color: var(--oa-purple); margin-right: 6px; }
+:root:root body .sv-reading a { color: var(--oa-purple) !important; font-weight: 600; text-decoration: underline; }

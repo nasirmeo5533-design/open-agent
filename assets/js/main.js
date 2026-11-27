@@ -225,6 +225,9 @@
       // Open WhatsApp in a new tab. If a popup blocker stops it, go there in this tab
       // instead, so the visitor's message is never lost. Only clear the form once
       // WhatsApp has actually opened.
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'generate_lead', { method: 'form', page_path: window.location.pathname });
+      }
       var win = window.open(url, '_blank');
       if (win) {
         try { win.opener = null; } catch (err) { /* cross-origin: nothing to clear */ }
@@ -248,6 +251,68 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
+
+  /* ---------- Cookie choice (EU / UK visitors) ----------
+     Each page's <head> sets Google Consent Mode v2 to "denied" for the EEA, the UK and
+     Switzerland. Here visitors whose time zone is in Europe get a banner to choose;
+     everyone else never sees it. The choice is saved in localStorage ("oa-consent"). */
+  (function () {
+    var KEY = 'oa-consent';
+
+    function save(choice) {
+      try { localStorage.setItem(KEY, choice); } catch (err) { /* private mode: ask again next visit */ }
+      if (typeof window.gtag === 'function') {
+        var v = choice === 'granted' ? 'granted' : 'denied';
+        window.gtag('consent', 'update', { ad_storage: v, ad_user_data: v, ad_personalization: v, analytics_storage: v });
+      }
+    }
+
+    function show() {
+      if (document.querySelector('.cookie-bar')) return;
+      var bar = document.createElement('div');
+      bar.className = 'cookie-bar';
+      bar.setAttribute('role', 'region');
+      bar.setAttribute('aria-label', 'Cookie choice');
+      bar.innerHTML =
+        '<p>I use Google Analytics cookies to see which pages are useful. They are only set if you agree. ' +
+        '<a href="/privacy.html#cookies">Privacy policy</a></p>' +
+        '<div class="cookie-actions">' +
+        '<button type="button" class="cookie-btn cookie-btn--no" data-choice="denied">Decline</button>' +
+        '<button type="button" class="cookie-btn cookie-btn--yes" data-choice="granted">Accept</button>' +
+        '</div>';
+      bar.addEventListener('click', function (e) {
+        var btn = e.target.closest('[data-choice]');
+        if (!btn) return;
+        save(btn.getAttribute('data-choice'));
+        bar.remove();
+      });
+      document.body.appendChild(bar);
+    }
+
+    document.querySelectorAll('[data-cookie-settings]').forEach(function (el) {
+      el.addEventListener('click', function (e) { e.preventDefault(); show(); });
+    });
+
+    var stored = null;
+    try { stored = localStorage.getItem(KEY); } catch (err) { /* no storage */ }
+    if (stored) return;
+    var tz = '';
+    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (err) { /* old browser */ }
+    if (/^Europe\//.test(tz) || /^Atlantic\/(Reykjavik|Canary|Madeira|Azores|Faroe)$/.test(tz)) show();
+  })();
+
+  /* ---------- Enquiry tracking ----------
+     WhatsApp and email clicks are the site's conversions. Send them to GA4 as
+     "generate_lead" so Search Console traffic can be tied to enquiries. Respects the
+     consent state set above (no cookies for EU/UK visitors who declined). */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a || typeof window.gtag !== 'function') return;
+    var href = a.getAttribute('href');
+    var method = /wa\.me\//.test(href) ? 'whatsapp' : /^mailto:/.test(href) ? 'email' : null;
+    if (!method || /sharer|share-offsite|intent\/tweet/.test(href) || a.classList.contains('share-link')) return;
+    window.gtag('event', 'generate_lead', { method: method, page_path: window.location.pathname });
+  });
 
   /* ---------- Year stamp ---------- */
   document.querySelectorAll('[data-year]').forEach(function (el) {

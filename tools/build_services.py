@@ -23,8 +23,13 @@ WA = "https://wa.me/923703159642"
 TOOLS = [("meta.webp", "Meta"), ("google-ads.webp", "Google Ads"), ("google-analytics.webp", "Google Analytics"),
          ("search-console.webp", "Google Search Console"), ("semrush.webp", "SEMrush"), ("chatgpt.webp", "ChatGPT"),
          ("claude.webp", "Claude"), ("gemini.webp", "Google Gemini"), ("n8n.webp", "n8n"), ("zapier.webp", "Zapier")]
-CSS_VER = "20261128d"
+CSS_VER = "20261128e"
 PORTFOLIO_SLUGS = {"meta-ads", "social-media-marketing"}
+READING = {
+    "meta-ads": [("Meta Ads vs Google Ads: How to Choose for Your Business", "meta-vs-google-ads.html")],
+    "google-ads": [("Meta Ads vs Google Ads: How to Choose for Your Business", "meta-vs-google-ads.html")],
+    "social-media-marketing": [("How Often Should a Business Post on Social Media?", "social-media-posting-frequency.html")],
+}
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -98,13 +103,18 @@ def page(s):
         second_cta = '<a href="../portfolio.html" class="btn btn-ghost btn-lg">See My Work</a>'
     else:
         second_cta = '<a href="#faq" class="btn btn-ghost btn-lg">Read the FAQ</a>'
+    # Articles that answer questions buyers of this service ask (internal links both ways).
+    reading = ""
+    if READING.get(slug):
+        links = " ".join(f'<a href="../blog/{u}">{text(t)}</a>' for t, u in READING[slug])
+        reading = f'    <p class="sv-reading"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Related reading: {links}</p>\n'
     faq_ld = {"@context": "https://schema.org", "@type": "FAQPage",
               "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in s["faq"]]}
     svc_ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "Organization", "@id": f"{SITE}/#organization", "name": "OpenAgent", "url": f"{SITE}/",
          "logo": f"{SITE}/assets/images/branding/favicons/android-chrome-192x192.png"},
         {"@type": "Service", "name": name, "serviceType": name, "url": url, "provider": {"@id": f"{SITE}/#organization"},
-         "areaServed": [{"@type": "Country", "name": "United States"}], "description": s["desc"]}]}
+         "areaServed": [{"@type": "Country", "name": "United States"}, {"@type": "Country", "name": "United Kingdom"}, {"@type": "Place", "name": "Europe"}], "description": s["desc"]}]}
     bc_ld = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE}/"},
         {"@type": "ListItem", "position": 2, "name": "Services", "item": f"{SITE}/services.html"},
@@ -115,7 +125,7 @@ def page(s):
     desc = esc(s["desc"])
 
     head = f"""<!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title}</title><meta name="description" content="{desc}">
@@ -123,7 +133,7 @@ def page(s):
 <meta property="og:type" content="website"><meta property="og:url" content="{url}"><meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:image" content="{og_img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:site_name" content="OpenAgent"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{title}"><meta name="twitter:description" content="{desc}"><meta name="twitter:image" content="{og_img}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"></noscript><link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
 <link rel="stylesheet" href="../assets/css/style.css?v={CSS_VER}"><link rel="stylesheet" href="../assets/css/monochrome.css?v={CSS_VER}"><link rel="stylesheet" href="../assets/css/services.css?v={CSS_VER}">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MYQHFB4QNL"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','G-MYQHFB4QNL')</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MYQHFB4QNL"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('consent','default',{{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500,region:['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'CH']}});try{{if(localStorage.getItem('oa-consent')==='granted')gtag('consent','update',{{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'}})}}catch(e){{}}gtag('js',new Date());gtag('config','G-MYQHFB4QNL')</script>
 {ld(svc_ld)}
 {ld(faq_ld)}
 {ld(bc_ld)}
@@ -160,7 +170,7 @@ def page(s):
       <ul class="sv-trust">
         <li><i class="fa-solid fa-check" aria-hidden="true"></i> Direct with Abeer Nasir</li>
         <li><i class="fa-solid fa-check" aria-hidden="true"></i> Written scope first</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> U.S. businesses</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i> US &amp; European clients</li>
       </ul>
     </div>
     {media(s["icon"], "hero", "sv-media--hero", slug)}
@@ -235,7 +245,7 @@ def page(s):
   <div class="wrap narrow">
     <div class="section-head rv"><h2>Frequently Asked Questions</h2></div>
     <div class="faq-wrap">{faqs}</div>
-  </div>
+{reading}  </div>
 </section>
 
 <section class="section sv-more">
@@ -259,7 +269,7 @@ def stub(target):
 <head>
 <meta charset="UTF-8">
 <meta name="robots" content="noindex, follow">
-<title>Moved — OpenAgent</title>
+<title>Page moved | OpenAgent</title>
 <link rel="canonical" href="{SITE}/services/{target}.html">
 <meta http-equiv="refresh" content="0; url=../services/{target}.html">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/branding/favicons/favicon-32x32.png">
