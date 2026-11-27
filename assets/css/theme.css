@@ -1,0 +1,365 @@
+/* ==========================================================================
+   OpenAgent theme layer (2026-11-27)
+   Deep purple + yellow agency look, loaded LAST on every page so it sits on
+   top of home.css / style.css / monochrome.css / page CSS.
+   Selectors start with :root:root body so they outrank the older layers,
+   including their !important rules.
+   ========================================================================== */
+:root {
+  --oa-purple: #2E0061;
+  --oa-purple-2: #370073;
+  --oa-purple-3: #4A0E8F;
+  --oa-purple-soft: #F3EEFA;
+  --oa-yellow: #F3C90D;
+  --oa-yellow-hover: #E0B700;
+  --oa-grey-btn: #E3E3E3;
+  --oa-band: #F5F5F5;
+  --oa-ink: #1E1E1E;
+  --oa-text: #334155;
+  --oa-radius: 12px;
+  --oa-radius-lg: 18px;
+  --oa-shadow: 0 10px 30px rgba(46, 0, 97, 0.08);
+  --oa-shadow-hover: 0 18px 40px rgba(46, 0, 97, 0.16);
+  --oa-hero: linear-gradient(135deg, #2E0061 0%, #370073 55%, #4A0E8F 100%);
+
+  /* re-point the older token sets */
+  --color-ink: var(--oa-purple);
+  --color-accent: var(--oa-purple);
+  --color-dark: var(--oa-purple);
+  --color-band: var(--oa-band);
+  --color-focus: var(--oa-yellow);
+  --ink: var(--oa-purple);
+  --body: var(--oa-text);
+  --indigo: var(--oa-purple);
+  --indigo-hover: var(--oa-purple-2);
+  --indigo-deep: var(--oa-purple);
+  --indigo-light: var(--oa-purple-soft);
+  --indigo-soft: var(--oa-band);
+  --radius-btn: var(--oa-radius);
+  --ff-heading: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ---------- Base type ---------- */
+:root:root body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--oa-text); background: #fff; }
+:root:root body p { color: inherit; }
+:root:root body :is(h1, h2, h3, h4) { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--oa-purple); letter-spacing: -0.02em; }
+:root:root body h1 { font-weight: 700; }
+:root:root body :is(h2, h3) { font-weight: 600; }
+:root:root body a:focus-visible,
+:root:root body button:focus-visible,
+:root:root body :is(input, select, textarea):focus-visible { outline: 3px solid var(--oa-yellow); outline-offset: 2px; }
+
+/* ---------- Header ---------- */
+:root:root body :is(.topbar, .site-header) { background: #fff !important; border-bottom: 1px solid #ECE6F5 !important; }
+:root:root body .brand,
+:root:root body .brand span { color: var(--oa-purple) !important; font-weight: 700; }
+:root:root body .brand span { color: var(--oa-purple-3) !important; }
+:root:root body .nav-desktop > li > a { color: var(--oa-purple) !important; font-weight: 600; }
+:root:root body .nav-desktop > li > a:hover,
+:root:root body .nav-desktop > li.active > a { color: var(--oa-purple-3) !important; box-shadow: inset 0 -3px 0 var(--oa-yellow); }
+:root:root body .dropdown { border-radius: var(--oa-radius) !important; box-shadow: var(--oa-shadow-hover) !important; border: 0 !important; }
+:root:root body .dropdown a { color: var(--oa-purple) !important; border-radius: 8px; }
+:root:root body .dropdown a:hover { background: var(--oa-purple-soft) !important; }
+:root:root body .dropdown a i { color: var(--oa-purple-3) !important; }
+:root:root body .hamburger { border-color: var(--oa-purple) !important; color: var(--oa-purple) !important; background: #fff !important; }
+:root:root body .offcanvas { background: #fff !important; }
+:root:root body .offcanvas :is(.oc-link, .oc-sub a) { color: var(--oa-purple) !important; }
+
+/* ---------- Buttons ---------- */
+:root:root body .btn {
+  border-radius: var(--oa-radius) !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  box-shadow: none !important;
+  transition: background .2s ease, transform .2s ease, color .2s ease !important;
+}
+:root:root body .btn:hover { transform: translateY(-2px); }
+:root:root body :is(.btn--lg, .btn-lg) { padding: 15px 30px !important; font-size: 1rem !important; }
+
+/* primary = yellow with black text */
+:root:root body :is(.btn--primary, .btn-primary, .btn-pink, .btn-white, .btn-inquiry, .header-actions .btn) {
+  background: var(--oa-yellow) !important;
+  border: 1px solid var(--oa-yellow) !important;
+  color: #000 !important;
+}
+:root:root body :is(.btn--primary, .btn-primary, .btn-pink, .btn-white, .btn-inquiry, .header-actions .btn):hover {
+  background: var(--oa-yellow-hover) !important;
+  border-color: var(--oa-yellow-hover) !important;
+  color: #000 !important;
+}
+:root:root body :is(.btn--primary, .btn-primary, .btn-pink, .btn-white, .btn-inquiry, .header-actions .btn) i { color: #000 !important; }
+
+/* secondary = light grey with black text (WhatsApp keeps a green icon) */
+:root:root body :is(.btn--wa, .btn-ghost, .btn-ghost-dark, .btn-outline-white, .btn-ghost-orange, .btn--ghost, .btn--secondary):not(.header-actions .btn) {
+  background: var(--oa-grey-btn) !important;
+  border: 1px solid var(--oa-grey-btn) !important;
+  color: #000 !important;
+}
+:root:root body :is(.btn--wa, .btn-ghost, .btn-ghost-dark, .btn-outline-white, .btn-ghost-orange, .btn--ghost, .btn--secondary):not(.header-actions .btn):hover {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: #000 !important;
+}
+:root:root body :is(.btn--wa, .btn-ghost, .btn-ghost-dark, .btn-outline-white, .btn-ghost-orange) .fa-whatsapp { color: #25D366 !important; }
+/* on light backgrounds the white hover would vanish */
+:root:root body :is(.section, .section--surface, .tint, .post, .home-form, .form-card) :is(.btn--wa, .btn-ghost, .btn-ghost-dark, .btn-ghost-orange):hover { background: #D6D6D6 !important; border-color: #D6D6D6 !important; }
+
+/* floating WhatsApp stays green */
+:root:root body .fwa { background: #25D366 !important; box-shadow: 0 10px 24px rgba(37, 211, 102, .35) !important; }
+:root:root body .fwa i { color: #fff !important; }
+:root:root body .to-top { background: var(--oa-purple) !important; color: #fff !important; border-radius: var(--oa-radius) !important; }
+
+/* ---------- Heroes: deep purple ---------- */
+:root:root body :is(.hero, .page-hero, .about-hero) {
+  background: var(--oa-hero) !important;
+  color: #fff !important;
+  position: relative;
+  overflow: hidden;
+}
+:root:root body :is(.hero, .page-hero, .about-hero)::before {
+  content: "";
+  position: absolute; inset: auto -120px -160px auto;
+  width: 420px; height: 420px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(243, 201, 13, .18) 0%, rgba(243, 201, 13, 0) 70%);
+  pointer-events: none;
+}
+:root:root body :is(.hero, .page-hero, .about-hero) > * { position: relative; z-index: 1; }
+:root:root body :is(.hero, .page-hero, .about-hero) :is(h1, h2, h3, h4, strong, b) { color: #fff !important; }
+:root:root body :is(.hero, .page-hero, .about-hero) h1 strong { color: var(--oa-yellow) !important; }
+:root:root body :is(.hero, .page-hero, .about-hero) :is(p, li, span, figcaption, .lede, .hero-sub, small) { color: rgba(255, 255, 255, .88) !important; }
+:root:root body :is(.hero, .page-hero, .about-hero) :is(.btn, .btn *) { color: #000 !important; }
+:root:root body :is(.hero, .page-hero, .about-hero) .btn .fa-whatsapp { color: #25D366 !important; }
+:root:root body :is(.hero, .page-hero, .about-hero) a:not(.btn) { color: var(--oa-yellow) !important; }
+:root:root body :is(.hero, .page-hero, .about-hero) :is(.eyebrow, .tag-label, .breadcrumb) {
+  background: rgba(255, 255, 255, .12) !important;
+  color: var(--oa-yellow) !important;
+  border: 1px solid rgba(243, 201, 13, .35) !important;
+  border-radius: 999px !important;
+}
+:root:root body :is(.hero, .page-hero, .about-hero) :is(.eyebrow, .tag-label, .breadcrumb) i { color: var(--oa-yellow) !important; }
+:root:root body :is(.hero, .page-hero, .about-hero) img { border-radius: var(--oa-radius-lg) !important; }
+/* the page-hero had a decorative grey ring; hide it on purple */
+:root:root body .page-hero::after { display: none !important; }
+
+/* homepage hero proof block -> glass cards on purple */
+:root:root body .hero .case-ledger { gap: 16px; }
+:root:root body .hero .case-entry {
+  background: rgba(255, 255, 255, .08) !important;
+  border: 1px solid rgba(255, 255, 255, .14) !important;
+  border-radius: var(--oa-radius) !important;
+  padding: 20px 22px !important;
+}
+:root:root body .hero .case-context { color: var(--oa-yellow) !important; }
+:root:root body .hero .case-context::before { background: var(--oa-yellow) !important; }
+:root:root body .hero .case-figure { color: #fff !important; }
+:root:root body .hero :is(.case-snapshot, .case-ledger) { border-color: rgba(255, 255, 255, .16) !important; }
+
+/* ---------- Section backgrounds & spacing ---------- */
+:root:root body :is(.section, .band, .logos) { padding-top: clamp(56px, 7vw, 90px); padding-bottom: clamp(56px, 7vw, 90px); }
+:root:root body :is(.section--surface, .section.tint, .tint) { background: var(--oa-band) !important; }
+:root:root body :is(.band--dark, .section.dark, section.dark, .dark-band) {
+  background: var(--oa-hero) !important;
+  color: rgba(255, 255, 255, .88) !important;
+}
+:root:root body :is(.band--dark, .section.dark, section.dark) :is(h1, h2, h3, h4) { color: #fff !important; }
+:root:root body :is(.band--dark, .section.dark, section.dark) :is(p, li, span, small, .light) { color: rgba(255, 255, 255, .86) !important; }
+:root:root body :is(.band--dark, .section.dark, section.dark) a:not(.btn) { color: var(--oa-yellow) !important; }
+:root:root body :is(.band--dark, .section.dark, section.dark) img { border-radius: var(--oa-radius-lg) !important; }
+
+/* section heads: purple heading, small yellow underline accent */
+:root:root body .section-head h2 { position: relative; }
+:root:root body .section-head:not(.left):not(.section-head--row) h2::after {
+  content: ""; display: block; width: 64px; height: 4px; border-radius: 4px;
+  background: var(--oa-yellow); margin: 16px auto 0;
+}
+:root:root body :is(.section-head.left, .section-head--row) h2::after {
+  content: ""; display: block; width: 64px; height: 4px; border-radius: 4px;
+  background: var(--oa-yellow); margin: 16px 0 0;
+}
+:root:root body .section-head:not(.left):not(.section-head--row) { text-align: center; margin-left: auto; margin-right: auto; }
+:root:root body .section-head p { color: var(--oa-text) !important; }
+:root:root body :is(.band--dark, .section.dark) .section-head p { color: rgba(255, 255, 255, .86) !important; }
+:root:root body :is(.tag-label, .eyebrow, .cat-tag, .pf-cat) {
+  display: inline-block;
+  background: var(--oa-purple-soft) !important;
+  color: var(--oa-purple) !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  padding: 6px 14px !important;
+  font-weight: 600 !important;
+  font-size: .8rem !important;
+  letter-spacing: .02em !important;
+}
+
+/* ---------- Cards ---------- */
+:root:root body :is(.card, .service-card, .shot-card, .svc-card, .feat-card, .proc-card, .cap-card, .res-card, .steps-card, .help-card, .blog-card, .form-card, .home-form, .stat, .principle-card, .who-card, .pf-card, .step-card, .pillar-card) {
+  background: #fff !important;
+  border: 1px solid #EEE8F6 !important;
+  border-radius: var(--oa-radius-lg) !important;
+  box-shadow: var(--oa-shadow) !important;
+  transition: transform .25s ease, box-shadow .25s ease !important;
+}
+:root:root body :is(.card, .service-card, .svc-card, .feat-card, .cap-card, .res-card, .blog-card, .help-card):hover {
+  transform: translateY(-4px);
+  box-shadow: var(--oa-shadow-hover) !important;
+}
+:root:root body :is(.card, .service-card, .svc-card, .feat-card, .proc-card, .cap-card, .res-card, .steps-card, .blog-card, .help-card) :is(h3, h2) { color: var(--oa-purple) !important; }
+:root:root body :is(.card, .service-card, .svc-card, .feat-card, .proc-card, .cap-card, .res-card, .steps-card, .blog-card, .help-card) p { color: var(--oa-text) !important; }
+:root:root body :is(.service-card, .blog-card, .res-card, .shot-card) { overflow: hidden; }
+
+/* icon tiles: purple square, white icon */
+:root:root body :is(.card-icon, .feat-icon, .svc-ic, .cap-icon, .help-icon, .steps-icon) {
+  background: var(--oa-purple) !important;
+  color: #fff !important;
+  border-radius: var(--oa-radius) !important;
+  border: 0 !important;
+}
+:root:root body :is(.card-icon, .feat-icon, .svc-ic, .cap-icon, .help-icon, .steps-icon) i { color: #fff !important; }
+
+/* numbers: yellow badges */
+:root:root body :is(.card-index, .proc-num, .step-num, .svc-num, .pillar-num, .principle-num, .steps-num) {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 44px; height: 44px; padding: 0 10px;
+  width: fit-content !important; align-self: flex-start; justify-self: start;
+  background: var(--oa-yellow) !important;
+  color: #000 !important;
+  border-radius: var(--oa-radius) !important;
+  font-weight: 700 !important;
+  font-size: .95rem !important;
+}
+
+/* signature purple feature cards (homepage problem cards, process cards) */
+:root:root body :is(.card:has(> .card-index), .proc-card, .steps-card) {
+  background: var(--oa-hero) !important;
+  border: 0 !important;
+}
+:root:root body :is(.card:has(> .card-index), .proc-card, .steps-card) :is(h3, h2, h4) { color: #fff !important; }
+:root:root body :is(.card:has(> .card-index), .proc-card, .steps-card) :is(p, li, span:not(.card-index):not(.proc-num):not(.steps-num)) { color: rgba(255, 255, 255, .86) !important; }
+
+/* stats */
+:root:root body .stat :is(b, strong, .stat-num, .stat-value) { color: var(--oa-purple) !important; }
+
+/* links with arrows */
+:root:root body :is(.link-arrow, .svc-link, .card-link, .post-back) { color: var(--oa-purple-3) !important; font-weight: 600 !important; }
+:root:root body :is(.link-arrow, .svc-link, .card-link, .post-back):hover { color: var(--oa-purple) !important; text-decoration: underline; text-decoration-color: var(--oa-yellow); text-decoration-thickness: 3px; text-underline-offset: 5px; }
+
+/* check lists */
+:root:root body .check-list i { color: var(--oa-purple) !important; background: var(--oa-yellow) !important; border-radius: 50%; }
+
+/* logos strip */
+:root:root body .logos { background: #fff !important; }
+:root:root body .logos-label { color: var(--oa-purple) !important; font-weight: 600 !important; }
+
+/* ---------- FAQ ---------- */
+:root:root body .faq-item {
+  background: #fff !important;
+  border: 1px solid #EEE8F6 !important;
+  border-radius: var(--oa-radius) !important;
+  box-shadow: var(--oa-shadow) !important;
+  margin-bottom: 12px !important;
+  overflow: hidden;
+}
+:root:root body .faq-q { color: var(--oa-purple) !important; font-weight: 600 !important; }
+:root:root body .faq-item.open { border-color: var(--oa-yellow) !important; }
+:root:root body .faq-item .chev { background: var(--oa-purple-soft) !important; color: var(--oa-purple) !important; border-radius: 50% !important; }
+:root:root body .faq-item.open .chev { background: var(--oa-yellow) !important; color: #000 !important; }
+:root:root body .faq-a p { color: var(--oa-text) !important; }
+
+/* ---------- Forms ---------- */
+:root:root body :is(input, select, textarea) {
+  border-radius: var(--oa-radius) !important;
+  border: 1px solid #DDD3EC !important;
+  background: #fff !important;
+}
+:root:root body :is(input, select, textarea):focus { border-color: var(--oa-purple) !important; box-shadow: 0 0 0 3px rgba(46, 0, 97, .12) !important; }
+:root:root body label { color: var(--oa-purple) !important; font-weight: 500; }
+:root:root body .req { color: #C2410C !important; }
+
+/* ---------- Final CTA blocks ---------- */
+:root:root body :is(.final-cta, .cta-box, .cta) {
+  background: var(--oa-hero) !important;
+  border-radius: 24px !important;
+  border: 0 !important;
+  color: rgba(255, 255, 255, .88) !important;
+}
+:root:root body :is(.final-cta, .cta-box, .cta) :is(h2, h3) { color: #fff !important; }
+:root:root body :is(.final-cta, .cta-box, .cta) :is(p, small) { color: rgba(255, 255, 255, .86) !important; }
+/* about/services use section.final-cta as the wrapper itself */
+:root:root body section.final-cta { border-radius: 0 !important; }
+
+/* ---------- Blog article ---------- */
+:root:root body .post :is(h1, h2, h3) { color: var(--oa-purple) !important; }
+:root:root body .post a:not(.btn) { color: var(--oa-purple-3) !important; text-decoration-color: var(--oa-yellow); }
+:root:root body .post blockquote { border-left-color: var(--oa-yellow) !important; background: var(--oa-purple-soft) !important; border-radius: 0 var(--oa-radius) var(--oa-radius) 0; }
+:root:root body .post-note { background: var(--oa-purple-soft) !important; border: 0 !important; border-left: 4px solid var(--oa-yellow) !important; border-radius: var(--oa-radius) !important; }
+:root:root body .post-hero img { border-radius: var(--oa-radius-lg) !important; }
+:root:root body .share-link { border-radius: var(--oa-radius) !important; color: var(--oa-purple) !important; border-color: #DDD3EC !important; }
+
+/* filters */
+:root:root body [data-filter] { border-radius: 999px !important; border-color: #DDD3EC !important; color: var(--oa-purple) !important; background: #fff !important; }
+:root:root body [data-filter].on { background: var(--oa-purple) !important; color: #fff !important; border-color: var(--oa-purple) !important; }
+
+/* ---------- Footer: deep purple ---------- */
+:root:root body :is(.footer, .site-footer) {
+  background: #1F0042 !important;
+  color: rgba(255, 255, 255, .78) !important;
+  border-top: 4px solid var(--oa-yellow) !important;
+}
+:root:root body :is(.footer, .site-footer) :is(h4, h3, .footer-title, strong, .brand, .brand span) { color: #fff !important; }
+:root:root body :is(.footer, .site-footer) .brand span { color: var(--oa-yellow) !important; }
+:root:root body :is(.footer, .site-footer) :is(p, li, span) { color: rgba(255, 255, 255, .78) !important; }
+:root:root body :is(.footer, .site-footer) a { color: rgba(255, 255, 255, .86) !important; }
+:root:root body :is(.footer, .site-footer) a:hover { color: var(--oa-yellow) !important; }
+:root:root body :is(.footer, .site-footer) .contact-list i { color: var(--oa-yellow) !important; }
+:root:root body :is(.footer, .site-footer) .socials a {
+  background: rgba(255, 255, 255, .08) !important;
+  border: 1px solid rgba(255, 255, 255, .18) !important;
+  color: #fff !important;
+  border-radius: var(--oa-radius) !important;
+}
+:root:root body :is(.footer, .site-footer) .socials a:hover { background: var(--oa-yellow) !important; border-color: var(--oa-yellow) !important; }
+:root:root body :is(.footer, .site-footer) .socials a:hover i { color: #000 !important; }
+:root:root body :is(.footer-bottom) { border-top-color: rgba(255, 255, 255, .12) !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  :root:root body :is(.btn, .card, .service-card, .svc-card, .feat-card, .cap-card, .res-card, .blog-card) { transition: none !important; transform: none !important; }
+}
+
+/* ---------- Old accent bars on cards -> yellow top strip ---------- */
+:root:root body :is(.svc-card, .feat-card, .cap-card)::after { display: none !important; }
+:root:root body :is(.svc-card, .feat-card, .cap-card, .steps-card)::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important; left: 24px !important; right: auto !important; bottom: auto !important;
+  width: 56px !important; height: 4px !important;
+  border-radius: 0 0 4px 4px !important;
+  background: var(--oa-yellow) !important;
+  transform: none !important;
+}
+:root:root body :is(.svc-card, .feat-card, .cap-card, .steps-card) { position: relative; }
+:root:root body .svc-good li::before { background: var(--oa-purple) !important; }
+
+/* ---------- Labels inside purple sections ---------- */
+:root:root body :is(.band--dark, .section.dark, section.dark, .final-cta, .cta, .proc-card, .steps-card) :is(.tag-label, .eyebrow, .cat-tag) {
+  background: rgba(255, 255, 255, .12) !important;
+  color: var(--oa-yellow) !important;
+  border: 1px solid rgba(243, 201, 13, .35) !important;
+}
+/* purple cards on a purple section need an edge */
+:root:root body :is(.band--dark, .section.dark, section.dark) :is(.proc-card, .card, .principle-card) {
+  background: rgba(255, 255, 255, .07) !important;
+  border: 1px solid rgba(255, 255, 255, .16) !important;
+  box-shadow: none !important;
+}
+:root:root body :is(.band--dark, .section.dark, section.dark) :is(.proc-card, .card, .principle-card) :is(h3, h4) { color: #fff !important; }
+:root:root body :is(.band--dark, .section.dark, section.dark) :is(.proc-card, .card, .principle-card) p { color: rgba(255, 255, 255, .84) !important; }
+
+/* ---------- Portfolio hero stat strip: white card, purple numbers ---------- */
+:root:root body .hero .stat-strip :is(.stat-num, .stat-num b) { color: var(--oa-purple) !important; }
+:root:root body .hero .stat-strip .stat-lab { color: var(--oa-text) !important; }
+:root:root body .hero .stat-strip { border-radius: var(--oa-radius-lg) !important; }
+:root:root body .hero .stat-strip .stat-cell { border-color: #EEE8F6 !important; }
+
+/* 404 logo mark */
+:root:root body .brand .dot { background: var(--oa-purple) !important; color: var(--oa-yellow) !important; }
+:root:root body .brand .dot i { color: var(--oa-yellow) !important; }
