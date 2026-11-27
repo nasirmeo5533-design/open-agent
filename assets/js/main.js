@@ -181,16 +181,33 @@
       }
     });
   });
+  // An open answer's height was measured once; re-measure when the layout width
+  // changes (rotation, resize) so text that rewraps onto more lines isn't cut off.
+  var faqTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(faqTimer);
+    faqTimer = setTimeout(function () {
+      document.querySelectorAll('.faq-item.open .faq-a').forEach(function (a) {
+        a.style.maxHeight = a.scrollHeight + 'px';
+      });
+    }, 150);
+  });
 
   /* ---------- Active nav highlighting ---------- */
-  var path = (window.location.pathname.split('/').pop() || 'index.html');
-  if (path === '' || path === '/') path = 'index.html';
+  // Compare resolved paths, so "../blogs.html" on /blog/post.html still matches.
+  // Blog posts count as Insights and service pages as Services.
+  // GitHub Pages also serves /about for about.html, so drop ".html" before comparing.
+  function norm(p) { return p.replace(/\/index(\.html)?$/, '/').replace(/\.html$/, ''); }
+  var here = norm(window.location.pathname);
+  var section = /^\/blog\//.test(here) ? '/blogs' : /^\/services\//.test(here) ? '/services' : here;
   document.querySelectorAll('.nav-desktop > li').forEach(function (li) {
-    li.querySelectorAll('a[href]').forEach(function (a) {
-      var href = a.getAttribute('href').split('#')[0];
-      if (href === '/' && path === 'index.html') li.classList.add('active');
-      else if (href && href === path) li.classList.add('active');
-    });
+    var a = li.querySelector('a[href]');
+    if (!a) return;
+    var target = norm(new URL(a.getAttribute('href'), window.location.href).pathname);
+    if (target === here || target === section) {
+      li.classList.add('active');
+      if (!a.hasAttribute('aria-current')) a.setAttribute('aria-current', target === here ? 'page' : 'true');
+    }
   });
 
   /* ---------- Lead form -> WhatsApp handoff ---------- */
