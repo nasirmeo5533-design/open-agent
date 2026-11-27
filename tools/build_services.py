@@ -22,7 +22,7 @@ WA = "https://wa.me/923703159642"
 TOOLS = [("meta.webp", "Meta"), ("google-ads.webp", "Google Ads"), ("google-analytics.webp", "Google Analytics"),
          ("search-console.webp", "Google Search Console"), ("semrush.webp", "SEMrush"), ("chatgpt.webp", "ChatGPT"),
          ("claude.webp", "Claude"), ("gemini.webp", "Google Gemini"), ("n8n.webp", "n8n"), ("zapier.webp", "Zapier")]
-CSS_VER = "20261127e"
+CSS_VER = "20261127i"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
