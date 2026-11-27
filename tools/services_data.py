@@ -47,39 +47,39 @@ SERVICES = [
         ],
     },
     {
-        "slug": "app-development",
-        "name": "App Development",
-        "short": "your app",
-        "nav": "App Development",
-        "icon": "fa-solid fa-mobile-screen-button",
-        "title": "App Development for U.S. Businesses | OpenAgent",
-        "desc": "Practical web and mobile app development for U.S. businesses: from a clear first version to launch, with a scope agreed in writing.",
-        "h1": "App Development <strong>That Starts With a Clear First Version.</strong>",
-        "kicker": "Web apps, mobile apps and internal tools",
-        "lede": "Good apps start small and solve one real problem well. I help U.S. businesses plan, design and build web and mobile apps with a focused first version, then improve them based on how people actually use them.",
-        "problem_h": "Have an App Idea That Never Gets Built?",
-        "problem_sub": "Most app projects stall because the scope is too big and too vague.",
-        "problem_p": "Businesses often start with a long feature list, a big budget estimate and no clear launch date. Projects drag on, costs grow and the app launches late or not at all. I start by defining the smallest version that delivers real value, then build it properly.",
-        "issues": ["Unclear scope and growing costs", "Ideas stuck in planning for months", "Manual work that should be automated", "Clunky internal tools nobody likes", "No plan for after launch"],
-        "promise": "You get a written scope, a realistic timeline and a working first version you can put in front of real users, not a never-ending project.",
-        "core_h": "From Idea to a Working App",
-        "core_p": "Each project is scoped around the problem you're solving, the people who will use the app and the budget you're comfortable with.",
+        "slug": "shopify-development",
+        "name": "Shopify Development",
+        "short": "your Shopify store",
+        "nav": "Shopify Development",
+        "icon": "fa-brands fa-shopify",
+        "title": "Shopify Development for U.S. Stores | OpenAgent",
+        "desc": "Shopify store setup, theme customization, speed fixes and app cleanup for U.S. brands, so shoppers find products fast and finish checkout.",
+        "h1": "Shopify Development <strong>That Makes Buying Easy.</strong>",
+        "kicker": "Store setup, themes, speed and apps",
+        "lede": "A Shopify store earns money when shoppers find the right product and get through checkout without friction. I set up, customize and fix Shopify stores for U.S. brands, from a first launch to a store that already sells and needs to sell better.",
+        "problem_h": "Getting Visits but Not Enough Sales?",
+        "problem_sub": "Small problems in a store add up to abandoned carts.",
+        "problem_p": "Many Shopify stores run on a theme that was never fully set up. Product pages load slowly, collections are hard to browse, apps conflict with each other and nobody is sure the tracking is right. I fix the store's foundations first, then improve the pages that lead to a sale.",
+        "issues": ["Slow product and collection pages", "Too many apps slowing the store down", "A theme that breaks when you change it", "Shipping and checkout settings that confuse buyers", "No reliable tracking from add-to-cart to purchase"],
+        "promise": "Every change is judged by one test: does it make it easier for a shopper to find a product and buy it?",
+        "core_h": "From Store Setup to a Store That Sells",
+        "core_p": "Whether you're launching a new store, moving from another platform or fixing one that already runs, the work is scoped around your products and the way your customers shop.",
         "core": [
-            ("Discovery & Scoping", "Turn the idea into a clear feature list and a realistic first release."),
-            ("UI/UX Design", "Simple, usable screens designed before development starts."),
-            ("Web Applications", "Browser-based apps and customer portals."),
-            ("Mobile Apps", "Cross-platform apps for iOS and Android."),
-            ("Internal Tools & Dashboards", "Replace spreadsheets and manual work with simple tools."),
-            ("Integrations & APIs", "Connect your app to payments, CRMs and other systems."),
-            ("AI Features", "Add AI-powered search, chat or automation where it genuinely helps."),
-            ("Launch & Maintenance", "App store release, fixes and improvements after launch."),
+            ("New Store Setup", "Theme, products, collections, payments, shipping and taxes set up properly."),
+            ("Theme Customization", "Sections and templates shaped to your brand, without hacks that break on updates."),
+            ("Product & Collection Pages", "Layouts, filters and content that help shoppers choose."),
+            ("Speed Optimization", "Image, app and theme fixes so pages load fast on phones."),
+            ("App Setup & Cleanup", "The apps you need set up correctly, and the ones you don't removed."),
+            ("Store Migration", "Products, customers and orders moved from WooCommerce or other platforms."),
+            ("Tracking & Pixels", "GA4, Meta pixel and purchase events checked from product view to order."),
+            ("Ongoing Support", "Monthly fixes, updates and small improvements when you need them."),
         ],
-        "industries": ["Startups & MVPs", "Service Businesses", "E-commerce & Retail", "Health & Wellness", "Education & Training", "Internal Operations Teams"],
+        "industries": ["Fashion & Apparel", "Beauty & Skincare", "Home & Lifestyle", "Health & Supplements", "Food & Beverage", "New Brand Launches"],
         "faq": [
-            ("How much does an app cost?", "It depends entirely on scope. After a short conversation you get a written estimate for a focused first version, not an open-ended quote."),
-            ("Do you build for iOS and Android?", "Yes, usually with a cross-platform approach so one codebase serves both, which keeps cost and timelines down."),
-            ("Can you build an MVP first?", "That's the recommended way. A smaller first version gets real feedback faster and avoids paying for features nobody uses."),
-            ("Who owns the code?", "You do. Code, accounts and assets are handed over and owned by your business."),
+            ("Do I need a Shopify plan before we start?", "Yes. The store and its subscription stay in your name, so you own everything. I can help you choose a plan that fits your size."),
+            ("Can you work on my existing theme?", "Yes. Improving the theme you already have is often better than starting over. I'll tell you honestly if a new theme makes more sense."),
+            ("Can you move my store from WooCommerce?", "Yes. Products, collections, customers and order history can usually be moved, and old URLs redirected so you keep your search traffic."),
+            ("Do you guarantee more sales?", "No. Sales depend on your products, prices and traffic. What I do is remove what gets in the shopper's way and track results properly."),
         ],
     },
     {
@@ -438,44 +438,8 @@ SERVICES = [
         "faq": [
             ("How many leads will I get?", "It depends on your market, offer and budget. I'll give you a realistic estimate after reviewing your situation, not a promised number."),
             ("Which channels do you use?", "Usually Meta Ads, Google Ads or LinkedIn, chosen based on where your customers are and how they buy."),
-            ("Can you connect leads to my CRM?", "Yes. Leads can be sent to most CRMs, including GoHighLevel, HubSpot and others."),
+            ("Can you connect leads to my CRM?", "Yes. Leads can be sent to most CRMs, such as HubSpot, Zoho or Pipedrive."),
             ("What makes a lead 'qualified'?", "We define it together, based on budget, location, need and timing, so you only pay attention to the right enquiries."),
-        ],
-    },
-    {
-        "slug": "gohighlevel",
-        "name": "GoHighLevel Setup & Automation",
-        "short": "your GoHighLevel",
-        "nav": "GoHighLevel Setup",
-        "icon": "fa-solid fa-gears",
-        "title": "GoHighLevel Setup & Automation | OpenAgent",
-        "desc": "GoHighLevel setup and automation for U.S. businesses: CRM pipelines, funnels, booking calendars, SMS, email and WhatsApp follow-up workflows.",
-        "h1": "GoHighLevel Setup <strong>That Automates Your Follow-Up.</strong>",
-        "kicker": "CRM, funnels, calendars and automations",
-        "lede": "GoHighLevel can replace a stack of separate tools, but only if it's set up properly. I build your CRM, funnels, calendars and automations so leads are captured, followed up and booked without manual chasing.",
-        "problem_h": "Paying for GoHighLevel but Not Using It?",
-        "problem_sub": "A powerful CRM set up badly just creates more work.",
-        "problem_p": "Many businesses sign up for GoHighLevel, build a couple of pages and stop. Pipelines are messy, automations don't fire and leads still fall through the cracks. A clean setup turns it into the system that runs your follow-up.",
-        "issues": ["Messy pipelines and contacts", "Automations that don't work", "Leads not followed up fast", "Too many disconnected tools", "No visibility on booked appointments"],
-        "promise": "You get a documented setup that your team understands, with automations tested end to end before they go live.",
-        "core_h": "Everything Set Up, Connected and Tested",
-        "core_p": "From a fresh account to cleaning up an existing one, each setup is built around how your business actually sells.",
-        "core": [
-            ("Account & CRM Setup", "Contacts, custom fields, tags and pipelines organized properly."),
-            ("Funnels & Landing Pages", "Lead capture pages built inside GoHighLevel."),
-            ("Booking Calendars", "Appointment scheduling with reminders and confirmations."),
-            ("SMS, Email & WhatsApp Automations", "Instant replies and follow-up sequences."),
-            ("Missed-Call Text Back", "Reply automatically when you can't pick up."),
-            ("Review Requests", "Automated requests for Google reviews after a job."),
-            ("Integrations", "Connect Meta Ads, Google, forms and payment tools."),
-            ("Training & Handover", "Clear documentation and a walkthrough for your team."),
-        ],
-        "industries": ["Home Services & Trades", "Clinics, Med Spas & Dental", "Coaches & Consultants", "Real Estate Agents", "Fitness Studios & Gyms", "Marketing Agencies"],
-        "faq": [
-            ("Do I need my own GoHighLevel account?", "Yes, the account and subscription stay in your name so you own your data. I can help you choose the right plan."),
-            ("Can you fix an existing setup?", "Yes. Cleaning up and rebuilding broken automations is a common starting point."),
-            ("Can it connect to my ads?", "Yes. Leads from Meta and Google Ads can flow straight into GoHighLevel with automatic follow-up."),
-            ("Will my team know how to use it?", "Every setup includes documentation and a walkthrough so your team can run it day to day."),
         ],
     },
 ]
@@ -489,6 +453,8 @@ REDIRECTS = {
     "ai-automation": "social-media-marketing",
     "full-stack-development": "website-development",
     "meta-google-ads": "meta-ads",
+    "app-development": "website-development",
+    "gohighlevel": "lead-generation",
 }
 
 # --- Photos ---
@@ -514,21 +480,21 @@ IMAGES = {
             "h": 849
         }
     },
-    "app-development": {
+    "shopify-development": {
         "hero": {
-            "alt": "Phone showing an app dashboard next to a desktop screen",
+            "alt": "Store owner working on a laptop among clothing racks",
             "w": 1200,
-            "h": 900
+            "h": 675
         },
         "problem": {
-            "alt": "Hand-drawn app screen wireframes on paper",
+            "alt": "Shopper holding a card while buying on a laptop",
             "w": 1200,
-            "h": 900
+            "h": 675
         },
         "core": {
-            "alt": "Person testing an app on a phone and a laptop",
+            "alt": "Laptop showing an online store on a white table",
             "w": 1200,
-            "h": 1500
+            "h": 793
         }
     },
     "search-engine-optimization": {
@@ -700,23 +666,6 @@ IMAGES = {
             "alt": "Headset next to a laptop",
             "w": 1200,
             "h": 800
-        }
-    },
-    "gohighlevel": {
-        "hero": {
-            "alt": "Person mapping a workflow on a board",
-            "w": 1200,
-            "h": 800
-        },
-        "problem": {
-            "alt": "Person drawing a diagram on a glass whiteboard",
-            "w": 1200,
-            "h": 900
-        },
-        "core": {
-            "alt": "Team working on laptops in a shared office",
-            "w": 1200,
-            "h": 900
         }
     }
 }

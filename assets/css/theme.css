@@ -393,7 +393,7 @@
 :root:root body .brand .dot i { color: var(--oa-yellow) !important; }
 
 /* ==========================================================================
-   Mega dropdown (13 services)
+   Mega dropdown (12 services)
    ========================================================================== */
 @media (min-width: 1081px) {
   :root:root body .dropdown.dropdown--mega {
@@ -532,7 +532,7 @@
 :root:root body .sv-more-arrow { margin-left: auto; color: var(--oa-yellow-hover); }
 :root:root body .sv-more-all { text-align: center; margin-top: 26px; }
 
-/* overview + homepage service grid (13 cards) */
+/* overview + homepage service grid (12 cards) */
 :root:root body .svc13-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
 :root:root body .svc13-card { display: flex; flex-direction: column; background: #fff; border: 1px solid #EEE8F6; border-radius: 18px; padding: 26px 24px; box-shadow: var(--oa-shadow); transition: transform .25s, box-shadow .25s; text-decoration: none; }
 :root:root body .svc13-card:hover { transform: translateY(-4px); box-shadow: var(--oa-shadow-hover); }
@@ -558,7 +558,7 @@
   :root:root body .sv-core-box { padding: 22px 20px; }
 }
 
-/* mobile menu: room for all 13 services */
+/* mobile menu: room for all 12 services */
 :root:root body .oc-item.open .oc-sub { max-height: 1200px !important; }
 
 /* ---------- Header: identical box on every page ---------- */
@@ -617,7 +617,7 @@
 :root:root body .band-points i { flex: 0 0 auto; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 10px; background: #F3C90D; color: #000; font-size: 15px; margin-top: 2px; }
 :root:root body .band-points b { color: #fff; font-weight: 600; }
 
-/* Photos in the service-page slots (sv-media--photo) and on the 13 service cards. */
+/* Photos in the service-page slots (sv-media--photo) and on the 12 service cards. */
 :root:root body .sv-media--photo { background: #EEE8F6; }
 :root:root body .sv-media--photo::after { content: none; }
 :root:root body .sv-media--photo > img { display: block; transition: transform .6s ease; }

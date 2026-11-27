@@ -17,14 +17,14 @@ Open <http://localhost:8080>. There is no install or build step for the site its
 |---|---|
 | `index.html` | Homepage |
 | `about.html` | About Abeer Nasir |
-| `services.html` | Overview of all 13 services |
-| `services/<slug>.html` | 13 service pages (generated, see below) |
+| `services.html` | Overview of all 12 services |
+| `services/<slug>.html` | 12 service pages (generated, see below) |
 | `portfolio.html` | Real campaign screenshots |
 | `blogs.html`, `blog/*.html` | Insights listing and 2 articles |
 | `contact.html` | Contact page with a WhatsApp hand-off form |
 | `404.html`, `privacy.html`, `terms.html` | Error and legal pages |
 
-Seven old service URLs in `services/` (for example `performance-marketing.html`) are tiny
+Nine old service URLs in `services/` (for example `performance-marketing.html`) are tiny
 `noindex` redirect pages so links from Google and other sites keep working. Keep them.
 
 ## Styling
@@ -46,7 +46,7 @@ All pages share `assets/js/main.js` (menu, dropdown, FAQ, reveal-on-scroll, What
 
 ## Editing the service pages
 
-The 13 service pages, the services lists in every menu and footer, the redirect pages and the
+The 12 service pages, the services lists in every menu and footer, the redirect pages and the
 service URLs in `sitemap.xml` are generated:
 
 1. Edit the copy in `tools/services_data.py`.
