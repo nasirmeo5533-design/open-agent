@@ -24,9 +24,19 @@
     li.addEventListener('mouseenter', function () { li.classList.add('open'); });
     li.addEventListener('mouseleave', function () { li.classList.remove('open'); });
     trigger.addEventListener('click', function (e) {
-      if (li.classList.contains('has-drop') && !li.contains(document.activeElement && document.activeElement.closest('.dropdown'))) {
+      // Mouse users: the menu already opened on hover, so a click goes to services.html.
+      // Touch / no-hover devices: first tap opens the menu, second tap follows the link.
+      var canHover = window.matchMedia && window.matchMedia('(hover: hover)').matches;
+      if (canHover || li.classList.contains('open')) return;
+      e.preventDefault();
+      li.classList.add('open');
+    });
+    trigger.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown') {
         e.preventDefault();
-        li.classList.toggle('open');
+        li.classList.add('open');
+        var first = li.querySelector('.dropdown a');
+        if (first) first.focus();
       }
     });
     li.addEventListener('focusout', function () {
@@ -34,6 +44,11 @@
         if (!li.contains(document.activeElement)) li.classList.remove('open');
       }, 10);
     });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.nav-desktop > li.open').forEach(function (li) { li.classList.remove('open'); });
+    }
   });
   document.addEventListener('click', function (e) {
     if (!e.target.closest('.nav-desktop')) {

@@ -407,8 +407,8 @@
     min-width: 560px !important;
     padding: 14px !important;
   }
-  /* open only on hover / keyboard focus / JS .open (main.js) */
-  :root:root body .has-drop:is(.open, :hover, :focus-within) > .dropdown.dropdown--mega { display: grid !important; }
+  /* open only on hover or JS .open (main.js); never on lingering focus */
+  :root:root body .has-drop:is(.open, :hover) > .dropdown.dropdown--mega { display: grid !important; }
   /* invisible bridge over the gap so the menu stays open while the mouse moves down */
   :root:root body .dropdown.dropdown--mega::after { content: ""; position: absolute; left: 0; right: 0; top: -16px; height: 16px; }
   :root:root body .dropdown.dropdown--mega a { display: flex; align-items: center; gap: 10px; padding: 10px 12px !important; font-size: .9rem; white-space: nowrap; }
@@ -583,3 +583,30 @@
 /* same spacing between menu links on every page */
 :root:root body .nav-desktop { display: flex !important; gap: 24px !important; }
 :root:root body .nav-desktop > li { margin: 0 !important; }
+
+/* ---------- Tool logos: real colours in equal rounded tiles (homepage + service pages) ---------- */
+:root:root body :is(.logos-row, .sv-logos-row) {
+  display: flex !important; flex-wrap: wrap !important; justify-content: center !important; align-items: center !important;
+  gap: 14px !important;
+}
+:root:root body :is(.logos-row, .sv-logos-row) img {
+  filter: none !important;
+  opacity: 1 !important;
+  height: 64px !important;
+  width: auto !important;
+  max-width: 120px !important;
+  object-fit: contain !important;
+  padding: 0 !important;
+  background: #fff !important;
+  border-radius: 14px !important;
+  box-shadow: 0 6px 18px rgba(46, 0, 97, .08), 0 0 0 1px #EEE8F6 !important;
+  transition: transform .2s ease, box-shadow .2s ease !important;
+}
+:root:root body :is(.logos-row, .sv-logos-row) img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(46, 0, 97, .14), 0 0 0 1px #E0D4F2 !important;
+}
+:root:root body .logos-label { color: var(--oa-purple) !important; }
+@media (max-width: 640px) {
+  :root:root body :is(.logos-row, .sv-logos-row) img { height: 52px !important; }
+}
