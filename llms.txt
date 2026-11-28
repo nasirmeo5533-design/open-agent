@@ -41,7 +41,7 @@ OpenAgent does not guarantee advertising performance, rankings, revenue or speci
 ## Insights
 
 - How Much Does a Small Business Website Cost? What You Are Actually Paying For: https://open-agent.agency/blog/small-business-website-cost.html
-- Why Your Shopify Store Is Slow (and What Actually Fixes It): https://open-agent.agency/blog/shopify-store-speed.html
+- Shopify Speed Optimization: Why Your Store Is Slow and What Fixes It: https://open-agent.agency/blog/shopify-store-speed.html
 - How Long Does SEO Take to Work? A Realistic Timeline: https://open-agent.agency/blog/how-long-does-seo-take.html
 - Should You Outsource Social Media Management? What to Keep In-House: https://open-agent.agency/blog/outsource-social-media-management.html
 - How Much Should a Small Business Spend on Google Ads?: https://open-agent.agency/blog/google-ads-budget-small-business.html

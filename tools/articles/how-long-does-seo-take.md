@@ -5,7 +5,7 @@ description: How long SEO takes to show results, what happens in the first month
 keyword: how long does SEO take
 service: search-engine-optimization
 category: SEO
-image_alt: Search results analytics chart showing organic traffic growth over several months
+image_alt: Laptop showing traffic charts used to track how long SEO takes to work
 ---
 "How long does SEO take?" is the question every business owner asks before paying for it, and the most common answer is "it depends". That is true, but it is not useful. This guide gives a realistic timeline, explains what actually happens in each phase, and shows which factors make SEO faster or slower for your site.
 
@@ -24,7 +24,7 @@ Google's Martin Splitt has explained that simple on-page changes can be reflecte
 
 In other words, anyone promising first-page rankings by a fixed date is guessing.
 
-## A realistic SEO timeline, month by month
+## How long SEO takes: a month-by-month timeline
 
 This is what a typical engagement looks like for a small business website. Your timeline will differ, but the order of work rarely does.
 
@@ -64,6 +64,12 @@ Links from relevant, trusted sites remain one of the strongest signals for compe
 
 Sites that publish and improve regularly usually outperform sites that do a big push and then stop. SEO compounds: each good page supports the others through internal links and topical relevance.
 
+## Local SEO vs national SEO timelines
+
+Local searches such as "electrician near me" usually have fewer competitors than national ones. A complete Google Business Profile, consistent contact details across directories, real reviews and a clear service page for each service can bring visible local results within a few months.
+
+National or international terms are different. You compete with every business and publisher targeting the same phrase, so the timeline stretches towards the longer end of the range. Many businesses start with local and specific searches, then widen their targets as the site builds authority.
+
 ## What you should see in the first 90 days
 
 Even before traffic grows, a good SEO programme should show progress you can verify:
@@ -92,7 +98,7 @@ For most businesses that sell to people who search before buying, yes. Paid ads 
 
 ## Conclusion
 
-Expect early signs within three months, meaningful results within six to twelve, and compounding returns after that. The speed depends on your site's history, your competition, technical health and how consistently the work continues.
+So, how long does SEO take? Expect early signs within three months, meaningful results within six to twelve, and compounding returns after that. The speed depends on your site's history, your competition, technical health and how consistently the work continues.
 
 If you want a realistic plan for your site and market, our [SEO service](../services/search-engine-optimization.html) starts with an audit and a written scope. For online stores, see our guide to [ecommerce category page SEO](ecommerce-category-page-seo.html).
 
@@ -110,9 +116,9 @@ Common reasons are strong competition for the chosen keywords, technical problem
 
 It varies from a few hours to several weeks. Sites that are crawled often, have good internal linking and an up-to-date sitemap tend to get new pages indexed faster. You can request indexing for important URLs in Google Search Console, but there is no guaranteed time.
 
-### Is local SEO faster than regular SEO?
+### Does updating old content help SEO faster?
 
-Often, yes. Local searches have fewer competitors, and a complete Google Business Profile with reviews can produce visible results within a few months. Ranking for broad, national terms usually takes much longer because many more sites compete for them.
+Often, yes. Improving pages that already rank on page two or three, or that have lost traffic, usually produces results faster than publishing new pages, because Google already knows them. Update the facts, answer the search more completely and strengthen internal links before writing something new.
 
 ### How do I know if my SEO is working?
 

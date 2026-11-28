@@ -5,7 +5,7 @@ description: What a small business website costs, what drives the price up or do
 keyword: small business website cost
 service: website-development
 category: Website Development
-image_alt: Designer working on a small business website layout on a laptop
+image_alt: Laptop showing website code on a desk while building a small business website
 ---
 Ask five web designers what a small business website costs and you will get five answers that differ by thousands. That is not always because someone is overcharging. The quotes usually describe different websites. The real **small business website cost** depends on how many pages you need, who writes the content, what the site has to do, and who looks after it once it is live.
 
@@ -22,7 +22,7 @@ A website price is mostly time. The more decisions, pages, content and testing i
 
 Both are honest quotes. They are simply not the same product. Before comparing prices, ask each provider to list what is included, page by page.
 
-## The main factors that drive website cost
+## What drives small business website cost
 
 ### Number and type of pages
 
@@ -42,9 +42,9 @@ Contact forms are standard. Booking systems, quote calculators, payment, member 
 
 ### SEO and performance basics
 
-A site that loads quickly and has proper titles, headings and structured data starts in a much better position on Google. Google's own guidance on [Core Web Vitals](https://developers.google.com/search/docs/appearance/core-web-vitals) explains the loading, responsiveness and layout-stability measures it looks at. Some quotes include this groundwork; cheap ones often do not.
+A site that loads quickly and has proper titles, headings and structured data starts in a much better position on Google. Google's [SEO starter guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide) covers these basics, and its guidance on [Core Web Vitals](https://developers.google.com/search/docs/appearance/core-web-vitals) explains the loading, responsiveness and layout-stability measures it looks at. Some quotes include this groundwork; cheap ones often do not.
 
-## Typical website price ranges by type
+## Small business website cost by type
 
 These are rough market ranges for freelancers and small agencies, not fixed prices. Large agencies charge more, and DIY builders cost less in money but more in your time.
 
@@ -57,6 +57,14 @@ These are rough market ranges for freelancers and small agencies, not fixed pric
 | Custom web application | Logins, dashboards, custom functionality | Usually $10,000+ |
 
 Treat any figure on the internet, including ours, as a starting point for a conversation. Your quote should be based on your actual pages and features.
+
+## Freelancer, agency or DIY: which fits?
+
+- **DIY** suits a new business testing an idea, with simple needs and more time than budget.
+- **A freelancer** suits a clear, modest scope: a brochure site or a small store, with one person to talk to.
+- **An agency or small team** suits projects that need several skills at once, such as design, copywriting, SEO, development and ongoing support.
+
+Whichever you choose, make sure you own the domain and have full admin access from day one.
 
 ## Running costs: the part most quotes leave out
 
@@ -98,7 +106,7 @@ Spending less makes sense when you are testing a new business idea, when most cu
 
 ## Conclusion
 
-The honest answer to "how much does a website cost" is: it depends on what the website has to do. Start from the job (more enquiries, online sales, bookings), list the pages and features that support it, and budget for running costs as well as the build.
+The honest answer to the small business website cost question is: it depends on what the website has to do. Start from the job (more enquiries, online sales, bookings), list the pages and features that support it, and budget for running costs as well as the build.
 
 If you want a quote based on your actual pages and goals, our [website development service](../services/website-development.html) starts with a written scope so you know exactly what is included before anything is built. You can also [send us your brief](../contact.html) and we will tell you what we would do and what it would cost.
 

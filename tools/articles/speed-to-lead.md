@@ -1,11 +1,11 @@
 ---
 title: Speed to Lead: Why Response Time Decides Whether a Lead Buys
 meta_title: Speed to Lead: Why Fast Response Wins Sales | OpenAgent
-description: What speed to lead means, what research says about response time, why most businesses reply too slowly, and how to set up fast follow-up on forms and WhatsApp.
+description: What speed to lead means, what research says about response time, and how to set up fast follow-up on forms and WhatsApp so fewer leads go cold.
 keyword: speed to lead
 service: lead-generation
 category: Lead Generation
-image_alt: Salesperson replying to a new website enquiry on a phone and laptop
+image_alt: Sales team with headsets responding to new leads at their desks
 ---
 Businesses spend heavily to get an enquiry: ads, SEO, landing pages, content. Then the lead sits in an inbox for a day. By the time someone replies, the prospect has spoken to a competitor or forgotten why they asked. **Speed to lead**, the time between an enquiry arriving and your first real response, is one of the cheapest ways to get more sales from the leads you already pay for.
 
@@ -115,4 +115,4 @@ Use the channel the lead chose. Someone who messaged on WhatsApp usually prefers
 
 ### How many times should I follow up with a lead?
 
-More than once. Many leads don't respond to the first attempt because they're busy, not uninterested. A short sequence of three or four attempts over a week, across the lead's preferred channel, recovers many enquiries without becoming pushy.
+More than once. Many leads don't respond to the first attempt because they're busy, not uninterested. A short sequence of three or four attempts over a week, across the lead's preferred channel, recovers many enquiries without becoming pushy. Stop when the lead says no, and log each attempt so nobody contacts them twice in one day.

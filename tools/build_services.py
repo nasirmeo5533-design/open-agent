@@ -27,7 +27,7 @@ CSS_VER = "20261128g"
 PORTFOLIO_SLUGS = {"meta-ads", "social-media-marketing"}
 READING = {
     "website-development": [('How Much Does a Small Business Website Cost? What You Are Actually Paying For', 'small-business-website-cost.html')],
-    "shopify-development": [('Why Your Shopify Store Is Slow (and What Actually Fixes It)', 'shopify-store-speed.html')],
+    "shopify-development": [('Shopify Speed Optimization: Why Your Store Is Slow and What Fixes It', 'shopify-store-speed.html')],
     "search-engine-optimization": [('How Long Does SEO Take to Work? A Realistic Timeline', 'how-long-does-seo-take.html')],
     "social-media-marketing": [('Should You Outsource Social Media Management? What to Keep In-House', 'outsource-social-media-management.html'), ('How Often Should a Business Post on Social Media?', 'social-media-posting-frequency.html')],
     "google-ads": [('How Much Should a Small Business Spend on Google Ads?', 'google-ads-budget-small-business.html'), ('Meta Ads vs Google Ads: How to Choose for Your Business', 'meta-vs-google-ads.html')],

@@ -5,23 +5,23 @@ description: How to set a Google Ads budget for a small business: the maths from
 keyword: google ads budget for small business
 service: google-ads
 category: Google Ads
-image_alt: Google Ads dashboard showing campaign budget, clicks and conversions
+image_alt: Laptop showing a marketing analytics dashboard used to plan a Google Ads budget
 ---
 There is no magic number for a Google Ads budget. A plumber in a small town and a law firm in a big city can spend the same amount and get completely different results, because the cost of a click in their markets is completely different. What you can do is work out a budget from your own numbers, so you know what to expect before spending anything.
 
-This guide shows how to calculate a starting **Google Ads budget for a small business**, what a sensible test period looks like, and how to tell whether to scale up or stop.
+This guide shows how to work out a **Google Ads budget for small business** campaigns, what a sensible test period looks like, and how to tell whether to scale up or stop.
 
 **Short answer:** start from what a customer is worth to you and what clicks cost in your industry. Your budget needs to buy enough clicks to produce several conversions a month, otherwise Google's bidding has nothing to learn from and you can't judge the results. For many small businesses that means a test budget in the range of a few hundred to a couple of thousand dollars a month, run for at least two to three months.
 
-## What Google Ads actually costs
+## What Google Ads costs a small business
 
-You pay per click on Search campaigns. The price of a click is set by an auction, so it depends on how many businesses compete for the same searches and how much they are willing to pay.
+You pay per click on Search campaigns. Google's own guide to [how much Google Ads costs](https://business.google.com/us/resources/articles/how-much-google-ads-cost/) explains that there is no fixed price: you set budgets and bids, and the price of a click is set by an auction, so it depends on how many businesses compete for the same searches and how much they are willing to pay.
 
 According to the LocaliQ/WordStream 2025 benchmark report, the average cost per click across industries was about $5.26, up roughly 13% on the previous year, with CPCs rising in most industries. Legal services had the highest average CPC (around $8.58) and arts and entertainment the lowest (around $1.60) ([WordStream](https://www.wordstream.com/blog/2025-google-ads-benchmarks)). Averages hide big differences between specific keywords, so use them as a rough guide only.
 
 To see real estimates for your own keywords, use Google's free [Keyword Planner](https://ads.google.com/home/tools/keyword-planner/) inside a Google Ads account.
 
-## How to calculate your starting budget
+## How to calculate your Google Ads budget for a small business
 
 Work backwards from the result you want.
 
@@ -53,6 +53,12 @@ A small budget can work if you concentrate it:
 
 If the maths shows your budget can only buy a handful of clicks a month, Google Ads may not be the right first channel. Local SEO, a Google Business Profile or [Meta Ads](../services/meta-ads.html) might be better starting points. We compared those options in [Meta Ads vs Google Ads](meta-vs-google-ads.html).
 
+## A quick check: clicks per day
+
+Some PPC specialists use a simple rule of thumb: if your daily budget can't buy roughly 10 clicks a day on your main keywords, the account will learn very slowly. It is a rough guide, not a rule from Google, but it quickly shows when a campaign is underfunded.
+
+To check yours, divide your daily budget by your expected cost per click. At $30 a day and a $4 CPC, you get about 7 or 8 clicks a day. That might be enough for a very focused local campaign, but too little to test several services at once.
+
 ## How long to test before judging results
 
 Give a new account at least two to three months. The first weeks are for collecting data: which search terms trigger your ads, which ones convert, and what a realistic cost per lead looks like. Automated bid strategies also need conversion data before they can optimise well.
@@ -75,7 +81,7 @@ At OpenAgent, ad spend is always paid directly by the client to Google on their 
 
 ## Conclusion
 
-Your Google Ads budget should come from your numbers: cost per click in your market, your conversion rate, and what a customer is worth. Budget for enough clicks to learn from, give the test two to three months, and judge it on cost per lead.
+A Google Ads budget for small business campaigns should come from your own numbers: cost per click in your market, your conversion rate, and what a customer is worth. Budget for enough clicks to learn from, give the test two to three months, and judge it on cost per lead.
 
 If you want help setting up a test that is sized properly from day one, our [Google Ads management service](../services/google-ads.html) starts with keyword research and the budget maths before any money is spent. To bring more of those clicks back for free over time, pair it with [SEO](how-long-does-seo-take.html).
 

@@ -5,9 +5,9 @@ description: Which social media tasks to outsource and which to keep in-house, w
 keyword: outsource social media management
 service: social-media-marketing
 category: Social Media Marketing
-image_alt: Social media content calendar on a laptop beside a smartphone showing an Instagram feed
+image_alt: Social media manager editing a Facebook page on a laptop while checking a phone
 ---
-Most business owners don't decide to outsource social media because they dislike it. They decide because it keeps slipping. A busy month arrives, posting stops, and the account goes quiet for weeks. The question is rarely "agency or no agency". It is which parts of the work to hand over, and which parts only you can do well.
+Most business owners don't decide to outsource social media management because they dislike it. They decide because it keeps slipping. A busy month arrives, posting stops, and the account goes quiet for weeks. The question is rarely "agency or no agency". It is which parts of the work to hand over, and which parts only you can do well.
 
 This guide breaks social media management into its real tasks, shows which ones are usually worth outsourcing, and explains how to set up the handover so your brand still sounds like your business.
 
@@ -27,7 +27,7 @@ This guide breaks social media management into its real tasks, shows which ones 
 
 When owners say "social media takes too much time", they usually mean production and publishing. Those are exactly the tasks that are easiest to outsource.
 
-## What to outsource
+## Which social media management tasks to outsource
 
 ### Content planning and the calendar
 
@@ -77,6 +77,12 @@ You should approve the tone and the calendar, at least in the first months. Afte
 5. **Share access properly.** Use Meta Business Suite roles and each platform's team access rather than sharing passwords. Keep ownership of your pages and ad accounts.
 6. **Review monthly.** Look at what was published, what drew real enquiries and what to change.
 
+## Start small: partial outsourcing
+
+You don't have to hand over everything at once. Many businesses start with one platform or one part of the work, such as design and scheduling, and keep replies in-house. Others agree a short first period, for example one or two months, before committing to a longer contract.
+
+Starting small lets you judge the quality of the content, and how well the team learns your business, before widening the scope. When you compare quotes, compare the scope rather than the headline price: platforms, posts per month, video, community management, reporting and whether ads are included. Two quotes with the same price can cover very different amounts of work.
+
 ## Questions to ask before you outsource
 
 - Who will actually create our content, and will we speak to them?
@@ -94,7 +100,7 @@ How often you post matters less than whether you keep going. We covered that in 
 
 ## Conclusion
 
-Outsource the production line, keep the knowledge. A good partner takes planning, design, video, publishing and reporting off your plate, and uses a short regular session to capture the stories and expertise that only your business has.
+When you outsource social media management, hand over the production line and keep the knowledge. A good partner takes planning, design, video, publishing and reporting off your plate, and uses a short regular session to capture the stories and expertise that only your business has.
 
 If you want that system set up for your brand, our [social media marketing service](../services/social-media-marketing.html) covers the calendar, content and publishing on an agreed cadence. When you are ready to add paid reach, [Meta Ads](../services/meta-ads.html) can put your best posts in front of new customers.
 
@@ -114,7 +120,7 @@ At minimum: plan the content calendar, produce and publish the agreed posts, mon
 
 ### Should the agency reply to comments and DMs?
 
-They can handle routine replies, spam and simple questions, which keeps the account responsive. Complaints, refunds, pricing negotiations and sensitive topics should be forwarded to someone in the business. Agree these rules in writing before handing over access.
+They can handle routine replies, spam and simple questions, which keeps the account responsive. Complaints, refunds, pricing negotiations and sensitive topics should be forwarded to someone in the business. Agree these rules in writing before handing over access. A shared inbox or tagging system makes it clear who has answered what.
 
 ### Will outsourced content sound generic?
 

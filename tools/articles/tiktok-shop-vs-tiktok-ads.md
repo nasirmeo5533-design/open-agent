@@ -5,7 +5,7 @@ description: TikTok Shop and TikTok Ads solve different problems. Compare costs,
 keyword: tiktok shop vs tiktok ads
 service: tiktok-marketing
 category: TikTok Marketing
-image_alt: Smartphone showing a TikTok product video with a shopping link
+image_alt: Smartphone on a tripod set up to film TikTok videos
 ---
 TikTok has become a place where people discover products and, increasingly, buy them without leaving the app. For brands, that raises a practical question: should you open a TikTok Shop, run TikTok Ads to your own website, or both? This guide compares **TikTok Shop vs TikTok Ads**, what each costs, and which one makes sense to start with.
 
@@ -68,6 +68,13 @@ Neither TikTok Shop nor TikTok Ads works with polished TV-style commercials. Wha
 3. **Work with creators** whose audience matches the customer, through affiliate commissions or paid partnerships.
 4. **Test many short variations** instead of one expensive video.
 
+## How to measure results on each
+
+- **TikTok Shop:** orders, revenue, the share of sales coming from creators, return rate, and margin after referral fees, commissions and fulfilment.
+- **TikTok Ads:** cost per purchase or lead tracked with the TikTok pixel and Events API, plus what those customers do on your site afterwards.
+
+Be careful when comparing the two. Shop revenue looks large before fees and returns, and ad results depend on the attribution window you choose. Compare profit per order, not just sales.
+
 ## Which should you start with?
 
 - **Start with TikTok Shop** if you sell low-to-mid priced physical products that demonstrate well, can fulfil orders quickly, and are ready to work with creators.
@@ -94,7 +101,7 @@ TikTok charges a referral fee on each sale rather than a listing fee. Many 2026 
 
 ### Can I run TikTok Ads without TikTok Shop?
 
-Yes. TikTok Ads can send people to your own website, app or a lead form. Many brands, especially service businesses and higher-priced products, run TikTok Ads to their own site and never open a TikTok Shop.
+Yes. TikTok Ads can send people to your own website, app or a lead form. Many brands, especially service businesses and higher-priced products, run TikTok Ads to their own site and never open a TikTok Shop. Install the TikTok pixel and Events API on your site first so campaigns can optimise for real conversions.
 
 ### What are Spark Ads on TikTok?
 

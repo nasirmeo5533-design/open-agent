@@ -1,11 +1,11 @@
 ---
-title: Why Your Shopify Store Is Slow (and What Actually Fixes It)
+title: Shopify Speed Optimization: Why Your Store Is Slow and What Fixes It
 meta_title: Shopify Speed Optimization: What Fixes It | OpenAgent
 description: Why Shopify stores slow down, how to read Shopify's speed report, and the fixes that matter most: apps, images, theme code and third-party scripts.
 keyword: shopify speed optimization
 service: shopify-development
 category: Shopify Development
-image_alt: Shopify store dashboard open on a laptop next to product packaging
+image_alt: Clothing store owner working on her Shopify store on a laptop in her shop
 ---
 Shopify hosts your store on a fast global network, so a slow Shopify store is rarely a server problem. It is almost always something added on top: apps, oversized images, heavy theme features and third-party scripts. The good news is that **Shopify speed optimization** usually means removing and tidying, not rebuilding.
 
@@ -51,7 +51,7 @@ Analytics, ad pixels, heatmaps, chat widgets and review carousels all add reques
 
 Shopify's current themes (Online Store 2.0) are built with performance in mind. A theme bought years ago, or one with many custom edits, may load features the store no longer uses.
 
-## The fixes that matter most, in order
+## Shopify speed optimization fixes, in order
 
 | Fix | Effort | Typical impact |
 |---|---|---|
@@ -83,6 +83,8 @@ Upload images at sensible dimensions (very large originals are rarely needed), u
 
 ## What not to worry about
 
+- **Every suggestion from a speed-test tool.** Shopify already compresses images and serves modern formats where browsers support them, and its help center notes that many third-party recommendations are already handled by the platform or don't apply to Shopify stores ([Shopify Help Center](https://help.shopify.com/en/manual/online-store/web-performance/improving-web-performance)).
+- **"Speed booster" apps.** An app that promises a faster store still loads its own code. Removing what you don't need usually beats adding another app.
 - **Chasing 100/100 in PageSpeed Insights.** A store with real visitors in the "good" range for Core Web Vitals is in a strong position. A perfect lab score is not a sales metric.
 - **Shopify's own checkout scripts.** These are part of the platform and are not something you can or should remove.
 - **One bad test run.** Lab scores vary. Look at trends in real-user data over weeks.
@@ -93,7 +95,7 @@ A faster store reduces the number of visitors who give up before the page loads,
 
 ## Conclusion
 
-Most Shopify speed problems come from things added over time. Measure with real-user data, remove apps and scripts that do not earn their place, simplify the first screen, and keep images under control. Then measure again.
+Most Shopify speed problems come from things added over time, so Shopify speed optimization is mostly careful removal. Measure with real-user data, remove apps and scripts that do not earn their place, simplify the first screen, and keep images under control. Then measure again.
 
 If you would rather have someone do the audit and the cleanup, our [Shopify development service](../services/shopify-development.html) covers speed fixes, app cleanup and theme work. If your product pages also need to rank, see our guide to [ecommerce category page SEO](ecommerce-category-page-seo.html).
 
@@ -121,4 +123,4 @@ Page experience, including Core Web Vitals, is one of many signals Google uses. 
 
 ### How often should I check my store's speed?
 
-Check after every new app, theme change or major campaign, and review the Web Performance report monthly. Speed problems usually creep in gradually as features are added, so regular checks are easier than a big cleanup once a year.
+Check after every new app, theme change or major campaign, and review the Web Performance report monthly. Speed problems usually creep in gradually as features are added, so regular checks are easier than a big cleanup once a year. Keep a simple log of changes so you can link a slowdown to its cause.

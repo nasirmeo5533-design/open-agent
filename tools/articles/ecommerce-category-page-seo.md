@@ -1,11 +1,11 @@
 ---
 title: Ecommerce Category Page SEO: Why Collection Pages Often Outrank Products
 meta_title: Ecommerce Category Page SEO: A Practical Guide | OpenAgent
-description: Why category pages are the biggest SEO opportunity for most online stores, how to optimise them, and how to handle filters without wasting crawl.
+description: Ecommerce category page SEO: why collection pages often outrank products, how to optimise them, and how to handle filters without wasting crawl.
 keyword: ecommerce category page SEO
 service: ecommerce-seo
 category: Ecommerce SEO
-image_alt: Online store category page showing a grid of products with filters
+image_alt: Ecommerce store owner checking an order on her phone beside packed parcels
 ---
 When store owners think about SEO, they usually think about product pages. But for many searches, the page Google ranks is a category page: "women's running shoes", "oak dining tables", "vegan protein powder". Shoppers searching broad terms want to compare options, and a category page shows them options. That is why **ecommerce category page SEO** is often the biggest opportunity an online store has.
 
@@ -29,7 +29,7 @@ Products sell out, get discontinued or change names. Categories stay. A category
 
 Product pages still matter: they rank for specific searches like a model name plus "price" or "review". A healthy store needs both.
 
-## How to optimise a category page
+## How to optimise ecommerce category pages for SEO
 
 ### 1. Choose one main keyword per category
 
@@ -57,7 +57,15 @@ Clear links to subcategories ("Extendable oak dining tables", "Round oak dining 
 
 ### 7. Use structured data and breadcrumbs
 
-Breadcrumb navigation with BreadcrumbList structured data helps Google understand where the category sits in your store. Product pages should carry Product structured data with price and availability.
+Breadcrumb navigation with BreadcrumbList structured data ([Google's breadcrumb documentation](https://developers.google.com/search/docs/appearance/structured-data/breadcrumb)) helps Google understand where the category sits in your store. Product pages should carry Product structured data with price and availability.
+
+## Site structure: keep products close to the home page
+
+Category pages only work if shoppers and crawlers can reach them easily. A common guideline is to keep any product within three or four clicks of the home page: home, category, subcategory, product. Deeper structures hide products from shoppers and make them harder for Google to discover.
+
+- Link your main categories from the top menu.
+- Use breadcrumbs on category and product pages.
+- Don't paste the same introduction or FAQ block across many categories. Each page should say something specific about its own products.
 
 ## Filters and faceted navigation: the hidden SEO problem
 
@@ -91,7 +99,7 @@ In Google Search Console, filter the Performance report to your /collections/ or
 
 ## Conclusion
 
-For most online stores, category pages are where SEO effort pays off fastest. Give each category one clear target, a useful introduction, real buying guidance, good internal links and controlled filters.
+For most online stores, ecommerce category page SEO is where effort pays off fastest. Give each category one clear target, a useful introduction, real buying guidance, good internal links and controlled filters.
 
 If you want an audit of your store's categories and filters, our [ecommerce SEO service](../services/ecommerce-seo.html) covers Shopify and WooCommerce. If your store also feels slow, start with [why Shopify stores slow down](shopify-store-speed.html).
 
@@ -111,11 +119,11 @@ Only when a filter combination matches real search demand and has enough product
 
 ### What is the difference between a collection and a category?
 
-They are the same idea with different names. Shopify calls product groupings "collections"; WooCommerce and most other platforms call them "categories". The SEO approach is the same for both.
+They are the same idea with different names. Shopify calls product groupings "collections"; WooCommerce and most other platforms call them "categories". The SEO approach is the same for both. Whichever name your platform uses, give each one a clear keyword target, a useful introduction and a stable URL.
 
 ### Should I delete out-of-stock categories?
 
-Usually not. If a category is seasonal or temporarily empty, keep the URL live, explain availability and link to related categories. Deleting and recreating it each year throws away its history and any links it earned.
+Usually not. If a category is seasonal or temporarily empty, keep the URL live, explain availability and link to related categories. Deleting and recreating it each year throws away its history and any links it earned. If a category is gone for good, redirect it to the closest relevant category instead of leaving a broken page.
 
 ### How do I find keywords for category pages?
 

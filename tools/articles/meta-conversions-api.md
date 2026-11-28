@@ -1,11 +1,11 @@
 ---
 title: Meta Conversions API: What It Is and Why Your Facebook Ads Need It
 meta_title: Meta Conversions API Explained for Advertisers | OpenAgent
-description: What the Meta Conversions API does, why the pixel alone misses conversions, how deduplication and Event Match Quality work, and the easiest ways to set it up.
+description: What the Meta Conversions API does, why the pixel alone misses conversions, how deduplication and Event Match Quality work, and how to set it up.
 keyword: meta conversions api
 service: meta-ads
 category: Meta Ads
-image_alt: Facebook and Instagram ads performance dashboard with conversion tracking events
+image_alt: Hand holding a phone below a large social media like notification, representing ad conversions
 ---
 If your Facebook and Instagram ads report fewer sales than your store actually made, you are not alone. Browser privacy settings, ad blockers and app tracking rules all stop some conversions from reaching Meta through the pixel. The **Meta Conversions API** (often called CAPI) closes much of that gap by sending conversion events from your server as well.
 
@@ -65,6 +65,14 @@ For Shopify, the Facebook and Instagram sales channel app offers a data-sharing 
 
 If your sales happen after a lead form, on WhatsApp or over the phone, the website pixel never sees the sale. You can send those later outcomes (qualified lead, booked call, closed sale) back to Meta through the Conversions API from your CRM. That teaches Meta to find people who become customers, not just people who fill in forms.
 
+## Common Conversions API setup mistakes
+
+- **Two integrations sending the same events.** For example a platform app and a tag manager both sending Purchase, which doubles counts.
+- **Event names that don't match.** The pixel sends one name and the server another, so deduplication fails.
+- **Missing value and currency** on purchase events, which weakens value-based optimisation and reporting.
+- **Ignoring consent.** Sending personal data for visitors who declined tracking where consent is required.
+- **Leaving test events on** after setup, which adds noise to live data.
+
 ## How to check your setup is working
 
 1. Open **Events Manager** and select your dataset.
@@ -84,11 +92,11 @@ Our [Meta Ads management service](../services/meta-ads.html) includes Conversion
 
 ### Do I still need the Meta pixel if I use the Conversions API?
 
-Yes. Meta recommends using both. The pixel captures browser events and on-site behaviour, while the Conversions API sends events from your server that the browser might miss. With matching event IDs, Meta combines them and removes duplicates.
+Yes. Meta recommends using both. The pixel captures browser events and on-site behaviour, while the Conversions API sends events from your server that the browser might miss. With matching event IDs, Meta combines them and removes duplicates. Running both also gives you a backup if one of the two connections stops working.
 
 ### Is the Conversions API free?
 
-The API itself is free to use. Costs come from setup and hosting: platform integrations are usually free, while the Conversions API Gateway, server-side tag managers or custom integrations may involve cloud hosting fees and developer time.
+The API itself is free to use. Costs come from setup and hosting: platform integrations are usually free, while the Conversions API Gateway, server-side tag managers or custom integrations may involve cloud hosting fees and developer time. Most small stores on Shopify or WooCommerce can start with the free platform integration.
 
 ### What is a good Event Match Quality score?
 
@@ -100,7 +108,7 @@ Usually because the pixel and the Conversions API send the same event without ma
 
 ### Does the Conversions API work with consent rules in Europe?
 
-It can, but you must respect consent. Only send personal data for visitors who have agreed where consent is required, and make sure your privacy policy explains server-side tracking. Server-side sending is not a way around consent requirements.
+It can, but you must respect consent. Only send personal data for visitors who have agreed where consent is required, and make sure your privacy policy explains server-side tracking. Server-side sending is not a way around consent requirements. Many platform integrations let you connect your consent settings so events follow each visitor's choice.
 
 ### Can I send WhatsApp or phone sales to Meta?
 

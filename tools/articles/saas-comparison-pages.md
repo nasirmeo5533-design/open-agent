@@ -5,7 +5,7 @@ description: How to write SaaS "vs" and "alternatives" pages that rank on Google
 keyword: saas comparison pages
 service: saas-seo
 category: SaaS SEO
-image_alt: Side-by-side comparison of two software products on a laptop screen
+image_alt: Analytics dashboard with charts and metrics used to compare SaaS products
 ---
 Some of the highest-intent searches in software are comparisons: "Asana vs Monday", "HubSpot alternatives", "best Calendly alternative for teams". The people typing them already know the category and are close to choosing. That is why **SaaS comparison pages** (your product versus a competitor) and alternatives pages (your product as an option to a known tool) often bring more trials and demos per visit than any blog post.
 
@@ -13,7 +13,7 @@ They are also easy to get wrong. Thin, one-sided pages rarely rank and rarely co
 
 **Short answer:** a good SaaS comparison page answers the buyer's real question (which tool fits me?) honestly, with a clear summary, a fair feature comparison, specific differences, proof, and guidance on who should choose each option. Keep it accurate and updated, link it into your site, and give it a clear next step.
 
-## Why comparison searches matter for SaaS
+## Why SaaS comparison pages matter
 
 - **High intent:** the searcher is evaluating, not just learning.
 - **Specific:** they tell you exactly which competitor you are being compared with.
@@ -97,6 +97,15 @@ A trial or demo button, ideally with a message that matches the page ("Moving fr
 3. **Look at your won and lost deals:** where you win often, a comparison page can repeat that argument at scale.
 4. **Start with three to five pages,** measure trials and demos from each, then expand.
 
+## Where comparison pages belong on your site
+
+A comparison page that nobody can find from your own site works only through search. Give these pages a home:
+
+- A "Compare" or "Alternatives" section in the footer or resources menu.
+- Links from the pricing page, where buyers are already weighing options.
+- Links from relevant feature pages and blog posts.
+- Sales emails: a fair comparison page is a useful follow-up after a demo where a competitor came up.
+
 ## Measuring comparison page performance
 
 Track signups or demo requests from each page, not just traffic. A comparison page with a few hundred visits a month can outperform a blog post with ten thousand if it converts well. Watch Search Console for the queries each page ranks for, and update pages whose rankings drop.
@@ -123,11 +132,11 @@ Yes, where it is true. Explaining who the competitor suits makes the page more c
 
 ### How many comparison pages should a SaaS company create?
 
-Start with the three to five competitors your sales team hears about most and that people actually search for. Measure trials and demos from each page, then expand. Ten accurate, maintained pages are better than fifty templated ones.
+Start with the three to five competitors your sales team hears about most and that people actually search for. Measure trials and demos from each page, then expand. Ten accurate, maintained pages are better than fifty templated ones. Retire or merge pages for competitors buyers no longer mention.
 
 ### How often should comparison pages be updated?
 
-Review them at least every quarter, and whenever you or the competitor change pricing or key features. Outdated information hurts trust and conversions. Show a "last updated" date so readers know the page is current.
+Review them at least every quarter, and whenever you or the competitor change pricing or key features. Outdated information hurts trust and conversions. Show a "last updated" date so readers know the page is current. Assign an owner for each page so the reviews actually happen.
 
 ### What's the difference between "vs" and "alternatives" pages?
 
