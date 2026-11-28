@@ -23,12 +23,21 @@ WA = "https://wa.me/923703159642"
 TOOLS = [("meta.webp", "Meta"), ("google-ads.webp", "Google Ads"), ("google-analytics.webp", "Google Analytics"),
          ("search-console.webp", "Google Search Console"), ("semrush.webp", "SEMrush"), ("chatgpt.webp", "ChatGPT"),
          ("claude.webp", "Claude"), ("gemini.webp", "Google Gemini"), ("n8n.webp", "n8n"), ("zapier.webp", "Zapier")]
-CSS_VER = "20261128f"
+CSS_VER = "20261128g"
 PORTFOLIO_SLUGS = {"meta-ads", "social-media-marketing"}
 READING = {
-    "meta-ads": [("Meta Ads vs Google Ads: How to Choose for Your Business", "meta-vs-google-ads.html")],
-    "google-ads": [("Meta Ads vs Google Ads: How to Choose for Your Business", "meta-vs-google-ads.html")],
-    "social-media-marketing": [("How Often Should a Business Post on Social Media?", "social-media-posting-frequency.html")],
+    "website-development": [('How Much Does a Small Business Website Cost? What You Are Actually Paying For', 'small-business-website-cost.html')],
+    "shopify-development": [('Why Your Shopify Store Is Slow (and What Actually Fixes It)', 'shopify-store-speed.html')],
+    "search-engine-optimization": [('How Long Does SEO Take to Work? A Realistic Timeline', 'how-long-does-seo-take.html')],
+    "social-media-marketing": [('Should You Outsource Social Media Management? What to Keep In-House', 'outsource-social-media-management.html'), ('How Often Should a Business Post on Social Media?', 'social-media-posting-frequency.html')],
+    "google-ads": [('How Much Should a Small Business Spend on Google Ads?', 'google-ads-budget-small-business.html'), ('Meta Ads vs Google Ads: How to Choose for Your Business', 'meta-vs-google-ads.html')],
+    "ecommerce-seo": [('Ecommerce Category Page SEO: Why Collection Pages Often Outrank Products', 'ecommerce-category-page-seo.html')],
+    "meta-ads": [('Meta Conversions API: What It Is and Why Your Facebook Ads Need It', 'meta-conversions-api.html'), ('Meta Ads vs Google Ads: How to Choose for Your Business', 'meta-vs-google-ads.html')],
+    "tiktok-marketing": [('TikTok Shop vs TikTok Ads: Which Should Your Brand Start With?', 'tiktok-shop-vs-tiktok-ads.html')],
+    "chatgpt-ads": [('ChatGPT Ads Explained: How Advertising in ChatGPT Works', 'chatgpt-ads-explained.html')],
+    "saas-marketing": [('Free Trial or Demo? How to Choose the Right SaaS Funnel', 'saas-free-trial-vs-demo.html')],
+    "saas-seo": [('SaaS Comparison and Alternative Pages That Rank and Convert', 'saas-comparison-pages.html')],
+    "lead-generation": [('Speed to Lead: Why Response Time Decides Whether a Lead Buys', 'speed-to-lead.html')],
 }
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 

@@ -1,0 +1,98 @@
+[
+ {
+  "slug": "chatgpt-ads-explained",
+  "title": "ChatGPT Ads Explained: How Advertising in ChatGPT Works",
+  "description": "How ChatGPT ads work: where they appear, who sees them, CPM and CPC buying, what advertisers can and can't see, and which businesses should test them now.",
+  "service": "chatgpt-ads",
+  "category": "ChatGPT Ads",
+  "image_alt": "Person typing a question into an AI chat assistant on a laptop"
+ },
+ {
+  "slug": "ecommerce-category-page-seo",
+  "title": "Ecommerce Category Page SEO: Why Collection Pages Often Outrank Products",
+  "description": "Why category pages are the biggest SEO opportunity for most online stores, how to optimise them, and how to handle filters without wasting crawl.",
+  "service": "ecommerce-seo",
+  "category": "Ecommerce SEO",
+  "image_alt": "Online store category page showing a grid of products with filters"
+ },
+ {
+  "slug": "google-ads-budget-small-business",
+  "title": "How Much Should a Small Business Spend on Google Ads?",
+  "description": "How to set a Google Ads budget for a small business: the maths from cost per click and conversion rate, a sensible test, and when to scale or stop.",
+  "service": "google-ads",
+  "category": "Google Ads",
+  "image_alt": "Google Ads dashboard showing campaign budget, clicks and conversions"
+ },
+ {
+  "slug": "how-long-does-seo-take",
+  "title": "How Long Does SEO Take to Work? A Realistic Timeline",
+  "description": "How long SEO takes to show results, what happens in the first months, and the factors that make it faster or slower, explained without the usual promises.",
+  "service": "search-engine-optimization",
+  "category": "SEO",
+  "image_alt": "Search results analytics chart showing organic traffic growth over several months"
+ },
+ {
+  "slug": "meta-conversions-api",
+  "title": "Meta Conversions API: What It Is and Why Your Facebook Ads Need It",
+  "description": "What the Meta Conversions API does, why the pixel alone misses conversions, how deduplication and Event Match Quality work, and the easiest ways to set it up.",
+  "service": "meta-ads",
+  "category": "Meta Ads",
+  "image_alt": "Facebook and Instagram ads performance dashboard with conversion tracking events"
+ },
+ {
+  "slug": "outsource-social-media-management",
+  "title": "Should You Outsource Social Media Management? What to Keep In-House",
+  "description": "Which social media tasks to outsource and which to keep in-house, what a good agency handles, and how to hand over so your brand still sounds like you.",
+  "service": "social-media-marketing",
+  "category": "Social Media Marketing",
+  "image_alt": "Social media content calendar on a laptop beside a smartphone showing an Instagram feed"
+ },
+ {
+  "slug": "saas-comparison-pages",
+  "title": "SaaS Comparison and Alternative Pages That Rank and Convert",
+  "description": "How to write SaaS \"vs\" and \"alternatives\" pages that rank on Google and convert buyers: structure, honesty, proof, updates and common mistakes.",
+  "service": "saas-seo",
+  "category": "SaaS SEO",
+  "image_alt": "Side-by-side comparison of two software products on a laptop screen"
+ },
+ {
+  "slug": "saas-free-trial-vs-demo",
+  "title": "Free Trial or Demo? How to Choose the Right SaaS Funnel",
+  "description": "How to choose between a free trial, freemium and a demo for your SaaS: price point, product complexity, buyer type, and how each choice changes your marketing.",
+  "service": "saas-marketing",
+  "category": "SaaS Marketing",
+  "image_alt": "SaaS product dashboard on a laptop during an online product demo call"
+ },
+ {
+  "slug": "shopify-store-speed",
+  "title": "Why Your Shopify Store Is Slow (and What Actually Fixes It)",
+  "description": "Why Shopify stores slow down, how to read Shopify's speed report, and the fixes that matter most: apps, images, theme code and third-party scripts.",
+  "service": "shopify-development",
+  "category": "Shopify Development",
+  "image_alt": "Shopify store dashboard open on a laptop next to product packaging"
+ },
+ {
+  "slug": "small-business-website-cost",
+  "title": "How Much Does a Small Business Website Cost? What You Are Actually Paying For",
+  "description": "What a small business website costs, what drives the price up or down, and the yearly running costs most quotes leave out. A plain guide before you hire.",
+  "service": "website-development",
+  "category": "Website Development",
+  "image_alt": "Designer working on a small business website layout on a laptop"
+ },
+ {
+  "slug": "speed-to-lead",
+  "title": "Speed to Lead: Why Response Time Decides Whether a Lead Buys",
+  "description": "What speed to lead means, what research says about response time, why most businesses reply too slowly, and how to set up fast follow-up on forms and WhatsApp.",
+  "service": "lead-generation",
+  "category": "Lead Generation",
+  "image_alt": "Salesperson replying to a new website enquiry on a phone and laptop"
+ },
+ {
+  "slug": "tiktok-shop-vs-tiktok-ads",
+  "title": "TikTok Shop vs TikTok Ads: Which Should Your Brand Start With?",
+  "description": "TikTok Shop and TikTok Ads solve different problems. Compare costs, fees, who each suits, and how brands use organic video, creators and ads together.",
+  "service": "tiktok-marketing",
+  "category": "TikTok Marketing",
+  "image_alt": "Smartphone showing a TikTok product video with a shopping link"
+ }
+]

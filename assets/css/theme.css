@@ -661,3 +661,11 @@
 :root:root body .team-card h3 { font-size: 1.05rem; margin: 0 0 6px; }
 :root:root body .team-card p { margin: 0; font-size: .95rem; line-height: 1.55; }
 :root:root body .team-note { margin: 20px 0 0; text-align: center; font-size: .92rem; opacity: .8; }
+
+/* Blog articles: tables and FAQ */
+:root:root body .post .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 26px 0; }
+:root:root body .post .table-wrap table { margin: 0; }
+:root:root body .post-faq { margin-top: 44px; padding-top: 8px; }
+:root:root body .post-faq-item { border: 1px solid #E3E3E3; border-radius: var(--oa-radius, 12px); padding: 18px 20px; margin: 0 0 14px; background: #fff; }
+:root:root body .post-faq-item h3 { margin: 0 0 8px; font-size: 1.05rem; }
+:root:root body .post-faq-item p { margin: 0; }

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopify Speed Optimization: What Fixes It | OpenAgent</title>
+<meta name="description" content="Why Shopify stores slow down, how to read Shopify&#x27;s speed report, and the fixes that matter most: apps, images, theme code and third-party scripts.">
+<link rel="canonical" href="https://open-agent.agency/blog/shopify-store-speed.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://open-agent.agency/blog/shopify-store-speed.html">
+<meta property="og:title" content="Why Your Shopify Store Is Slow (and What Actually Fixes It)">
+<meta property="og:description" content="Why Shopify stores slow down, how to read Shopify&#x27;s speed report, and the fixes that matter most: apps, images, theme code and third-party scripts.">
+<meta property="og:image" content="https://open-agent.agency/assets/images/og/blog/shopify-store-speed.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="OpenAgent">
+<meta property="article:published_time" content="2026-11-28">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why Your Shopify Store Is Slow (and What Actually Fixes It)">
+<meta name="twitter:description" content="Why Shopify stores slow down, how to read Shopify&#x27;s speed report, and the fixes that matter most: apps, images, theme code and third-party scripts.">
+<meta name="twitter:image" content="https://open-agent.agency/assets/images/og/blog/shopify-store-speed.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"></noscript>
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../assets/css/style.css?v=20261128g">
+
+<link rel="stylesheet" href="../assets/css/monochrome.css?v=20261128g">
+<link rel="stylesheet" href="../assets/css/blogs.css?v=20261128g">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MYQHFB4QNL"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500,region:['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'CH']});try{if(localStorage.getItem('oa-consent')==='granted')gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'})}catch(e){}gtag('js',new Date());gtag('config','G-MYQHFB4QNL')</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://open-agent.agency/#organization", "name": "OpenAgent", "url": "https://open-agent.agency/", "logo": "https://open-agent.agency/assets/images/branding/favicons/android-chrome-192x192.png"}, {"@type": "Article", "@id": "https://open-agent.agency/blog/shopify-store-speed.html#article", "headline": "Why Your Shopify Store Is Slow (and What Actually Fixes It)", "description": "Why Shopify stores slow down, how to read Shopify's speed report, and the fixes that matter most: apps, images, theme code and third-party scripts.", "image": ["https://open-agent.agency/assets/images/og/blog/shopify-store-speed.jpg"], "author": {"@id": "https://open-agent.agency/#organization"}, "publisher": {"@id": "https://open-agent.agency/#organization"}, "mainEntityOfPage": "https://open-agent.agency/blog/shopify-store-speed.html", "keywords": "shopify speed optimization", "about": "Shopify Development", "datePublished": "2026-11-28", "dateModified": "2026-11-28"}, {"@type": "FAQPage", "@id": "https://open-agent.agency/blog/shopify-store-speed.html#faq", "mainEntity": [{"@type": "Question", "name": "Why is my Shopify store so slow?", "acceptedAnswer": {"@type": "Answer", "text": "Usually because of what has been added to it: apps that load scripts on every page, leftover code from removed apps, large images, sliders or video in the first screen, and tracking scripts. Shopify's hosting itself is fast. Start by removing apps you don't use and simplifying the home page hero."}}, {"@type": "Question", "name": "Do Shopify apps slow down my store?", "acceptedAnswer": {"@type": "Answer", "text": "Many do, because storefront apps usually add their own JavaScript and CSS, often on every page. The effect depends on how well each app is built. Apps that only work in the admin (for example, accounting or inventory tools) usually have no effect on storefront speed."}}, {"@type": "Question", "name": "What is a good speed score for a Shopify store?", "acceptedAnswer": {"@type": "Answer", "text": "Focus on Core Web Vitals rather than a single score. Google's \"good\" thresholds are LCP of 2.5 seconds or less, INP of 200 milliseconds or less, and CLS of 0.1 or less. Shopify's Web Performance report shows these from real visitors, which is more reliable than one lab test."}}, {"@type": "Question", "name": "Does changing my Shopify theme improve speed?", "acceptedAnswer": {"@type": "Answer", "text": "It can, especially if your current theme is old or heavily customised. Shopify's current themes are built with performance in mind. But a new theme loaded with the same apps and scripts will be slow again, so do the app and script audit at the same time."}}, {"@type": "Question", "name": "Does store speed affect Google rankings?", "acceptedAnswer": {"@type": "Answer", "text": "Page experience, including Core Web Vitals, is one of many signals Google uses. It rarely outweighs relevance and content quality, but a slow store can hold back pages that are otherwise competitive, and it lowers conversion from every traffic source."}}, {"@type": "Question", "name": "How often should I check my store's speed?", "acceptedAnswer": {"@type": "Answer", "text": "Check after every new app, theme change or major campaign, and review the Web Performance report monthly. Speed problems usually creep in gradually as features are added, so regular checks are easier than a big cleanup once a year."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://open-agent.agency/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://open-agent.agency/blogs.html"}, {"@type": "ListItem", "position": 3, "name": "Why Your Shopify Store Is Slow (and What Actually Fixes It)"}]}]}</script>
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/branding/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../assets/images/branding/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../assets/images/branding/favicons/android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/images/branding/favicons/apple-touch-icon.png">
+<link rel="shortcut icon" href="../assets/images/branding/favicons/favicon.ico">
+<link rel="stylesheet" href="../assets/css/theme.css?v=20261128g">
+</head>
+<body class="blogs">
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="topbar" role="banner">
+  <div class="wrap topbar-inner">
+    <a href="/" class="brand" aria-label="OpenAgent, Home">Open<span>Agent</span></a>
+    <nav aria-label="Primary">
+      <ul class="nav-desktop">
+        <li><a href="/">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li class="has-drop">
+          <a href="../services.html">Services <i class="fa-solid fa-chevron-down"></i></a>
+          <div class="dropdown dropdown--mega"><a href="../services/website-development.html"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i> Website Development</a><a href="../services/shopify-development.html"><i class="fa-brands fa-shopify" aria-hidden="true"></i> Shopify Development</a><a href="../services/search-engine-optimization.html"><i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i> Search Engine Optimization</a><a href="../services/social-media-marketing.html"><i class="fa-solid fa-share-nodes" aria-hidden="true"></i> Social Media Marketing</a><a href="../services/google-ads.html"><i class="fa-brands fa-google" aria-hidden="true"></i> Google Ads Services</a><a href="../services/ecommerce-seo.html"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Ecommerce SEO</a><a href="../services/meta-ads.html"><i class="fa-brands fa-meta" aria-hidden="true"></i> Meta Ads Management</a><a href="../services/tiktok-marketing.html"><i class="fa-brands fa-tiktok" aria-hidden="true"></i> TikTok Marketing</a><a href="../services/chatgpt-ads.html"><i class="fa-solid fa-robot" aria-hidden="true"></i> ChatGPT Ads Management</a><a href="../services/saas-marketing.html"><i class="fa-solid fa-cloud" aria-hidden="true"></i> SaaS Digital Marketing</a><a href="../services/saas-seo.html"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> SaaS SEO</a><a href="../services/lead-generation.html"><i class="fa-solid fa-filter" aria-hidden="true"></i> Lead Generation</a></div>
+        </li>
+        <li><a href="../portfolio.html">Portfolio</a></li>
+        <li><a href="../blogs.html">Insights</a></li><li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a href="https://wa.me/923703159642?text=Hi%20Abeer%2C%20I%20have%20a%20question%20about%20my%20digital%20growth.%20Can%20we%20talk%3F" class="btn btn-pink btn-sm" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+      <button id="hamburger" class="hamburger" aria-label="Open menu" aria-controls="offcanvas" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+<aside class="offcanvas" id="offcanvas" aria-label="Mobile menu">
+  <div class="oc-head">
+    <a href="/" class="brand">Open<span>Agent</span></a>
+    <button id="ocClose" class="oc-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav aria-label="Mobile">
+    <ul class="oc-nav">
+      <li><a class="oc-link" href="/">Home</a></li>
+      <li><a class="oc-link" href="../about.html">About</a></li>
+      <li class="oc-item">
+        <button class="oc-link" type="button">Services <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="oc-sub"><a href="../services/website-development.html">Website Development</a><a href="../services/shopify-development.html">Shopify Development</a><a href="../services/search-engine-optimization.html">Search Engine Optimization</a><a href="../services/social-media-marketing.html">Social Media Marketing</a><a href="../services/google-ads.html">Google Ads Services</a><a href="../services/ecommerce-seo.html">Ecommerce SEO</a><a href="../services/meta-ads.html">Meta Ads Management</a><a href="../services/tiktok-marketing.html">TikTok Marketing</a><a href="../services/chatgpt-ads.html">ChatGPT Ads Management</a><a href="../services/saas-marketing.html">SaaS Digital Marketing</a><a href="../services/saas-seo.html">SaaS SEO</a><a href="../services/lead-generation.html">Lead Generation</a></div>
+      </li>
+      <li><a class="oc-link" href="../portfolio.html">Portfolio</a></li>
+      <li><a class="oc-link" href="../blogs.html">Insights</a></li><li><a class="oc-link" href="../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <a href="https://wa.me/923703159642?text=Hi%20Abeer%2C%20I%20have%20a%20question%20about%20my%20digital%20growth.%20Can%20we%20talk%3F" class="btn btn-pink" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us <i class="fa-solid fa-arrow-right"></i></a>
+</aside>
+
+<main id="main-content" role="main">
+<article class="post">
+  <div class="wrap post-inner">
+    <a class="post-back" href="../blogs.html"><i class="fa-solid fa-arrow-left"></i> Back to Blog</a>
+    <div class="post-meta"><span><i class="fa-solid fa-calendar" aria-hidden="true"></i> <time datetime="2026-11-28">November 28, 2026</time></span><span class="cat-tag">Shopify Development</span></div>
+    <h1>Why Your Shopify Store Is Slow (and What Actually Fixes It)</h1>
+    <p class="post-byline">By the OpenAgent team</p>
+
+    <figure class="post-hero"><img src="../assets/images/services/shopify-development-hero.webp" alt="Shopify store dashboard open on a laptop next to product packaging" loading="eager" width="1200" height="675"></figure>
+
+    <p>Shopify hosts your store on a fast global network, so a slow Shopify store is rarely a server problem. It is almost always something added on top: apps, oversized images, heavy theme features and third-party scripts. The good news is that <strong>Shopify speed optimization</strong> usually means removing and tidying, not rebuilding.</p>
+    <p>This guide explains how to measure your store's speed properly, what typically slows stores down, and which fixes are worth your time first.</p>
+    <p><strong>Short answer:</strong> most slow Shopify stores are slowed by app scripts that load on every page, large uncompressed images, sliders and video in the first screen, and leftover code from apps you already uninstalled. Fix those, then check real-user data in Shopify's Web Performance report rather than chasing a single test score.</p>
+    <h2>How to measure Shopify speed properly</h2>
+    <p>Shopify's admin includes a Web Performance dashboard (under Online Store) based on <strong>Core Web Vitals</strong>, the measures Google uses for page experience:</p>
+    <ul><li><strong>Largest Contentful Paint (LCP):</strong> how quickly the main content appears. Google's "good" threshold is 2.5 seconds or less.</li><li><strong>Interaction to Next Paint (INP):</strong> how quickly the page responds when someone taps or clicks. Good is 200 milliseconds or less.</li><li><strong>Cumulative Layout Shift (CLS):</strong> how much the layout jumps while loading. Good is 0.1 or less.</li></ul>
+    <p>These thresholds come from Google's <a href="https://web.dev/articles/vitals" target="_blank" rel="noopener">Core Web Vitals documentation</a>. The important point: Shopify's report uses data from real visitors, so it reflects actual phones and networks. A lab test like PageSpeed Insights is useful for finding causes, but its score changes from run to run and is not what customers experience.</p>
+    <p>Measure your product pages and collection pages too, not just the home page. They often carry more apps and more images.</p>
+    <h2>The usual causes of a slow Shopify store</h2>
+    <h3>1. Too many apps loading on every page</h3>
+    <p>Each app that adds a feature to your storefront (reviews, upsells, pop-ups, chat, wishlists, currency converters) usually loads its own JavaScript and CSS. Many load on every page, even where the feature is not used. Ten apps can mean dozens of extra files before the page becomes usable.</p>
+    <h3>2. Leftover code from uninstalled apps</h3>
+    <p>Older apps often inserted code snippets directly into theme files. Uninstalling the app does not always remove them. The store keeps loading scripts for features that no longer exist.</p>
+    <h3>3. Oversized images and the first screen</h3>
+    <p>Product photos uploaded straight from a camera can be several megabytes each. Shopify serves resized versions when the theme uses its image filters correctly, but older or customised themes sometimes load full-size images, or lazy-load the hero image (which delays LCP instead of helping it).</p>
+    <h3>4. Sliders, autoplay video and heavy hero sections</h3>
+    <p>A rotating slider with five large images, or a background video in the first screen, is one of the most common reasons for a poor LCP on the home page. It also rarely helps conversion: most visitors never see slide three.</p>
+    <h3>5. Third-party tracking and marketing scripts</h3>
+    <p>Analytics, ad pixels, heatmaps, chat widgets and review carousels all add requests. Some are essential. Others were added for a test two years ago and never removed.</p>
+    <h3>6. An outdated or heavily customised theme</h3>
+    <p>Shopify's current themes (Online Store 2.0) are built with performance in mind. A theme bought years ago, or one with many custom edits, may load features the store no longer uses.</p>
+    <h2>The fixes that matter most, in order</h2>
+    <div class="table-wrap"><table><thead><tr><th>Fix</th><th>Effort</th><th>Typical impact</th></tr></thead><tbody><tr><td>Remove apps you don't need</td><td>Low</td><td>Often the biggest single gain</td></tr><tr><td>Clean leftover app code from the theme</td><td>Medium</td><td>Removes hidden scripts</td></tr><tr><td>Replace slider or video hero with one static image</td><td>Low</td><td>Faster main content on home page</td></tr><tr><td>Don't lazy-load the first-screen image</td><td>Low</td><td>Better LCP</td></tr><tr><td>Compress and correctly size images</td><td>Low to medium</td><td>Faster pages everywhere</td></tr><tr><td>Audit third-party scripts and pixels</td><td>Medium</td><td>Faster and more responsive pages</td></tr><tr><td>Move to a current, well-built theme</td><td>High</td><td>Large, lasting improvement</td></tr></tbody></table></div>
+    <h3>Start with an app audit</h3>
+    <p>List every app in your admin and ask three questions: Do we use it? Does it make money or save real time? Could the theme or Shopify do this natively? Many features that once needed an app (product reviews display options, basic upsells, filters, metafield content) can now be handled by the theme or Shopify itself.</p>
+    <p>Duplicate the theme before removing anything, test the copy, then publish it.</p>
+    <h3>Clean the theme code</h3>
+    <p>After removing apps, check the theme files for snippets that still reference them. This needs care: deleting the wrong file can break a page. If you are not comfortable editing Liquid files, this is the step to hand to a developer.</p>
+    <h3>Fix the first screen</h3>
+    <p>The first screen decides LCP on most pages. Use one well-compressed image, sized for the device, loaded eagerly. Keep the message, the product and the call to action visible without waiting for scripts.</p>
+    <h3>Treat images as a system</h3>
+    <p>Upload images at sensible dimensions (very large originals are rarely needed), use the theme's responsive image settings, and keep file sizes small. Consistent product photo dimensions also prevent layout jumps, which helps CLS.</p>
+    <h2>What not to worry about</h2>
+    <ul><li><strong>Chasing 100/100 in PageSpeed Insights.</strong> A store with real visitors in the "good" range for Core Web Vitals is in a strong position. A perfect lab score is not a sales metric.</li><li><strong>Shopify's own checkout scripts.</strong> These are part of the platform and are not something you can or should remove.</li><li><strong>One bad test run.</strong> Lab scores vary. Look at trends in real-user data over weeks.</li></ul>
+    <h2>Why speed matters for sales and SEO</h2>
+    <p>A faster store reduces the number of visitors who give up before the page loads, especially on mobile data. It also helps ads: you pay for every click from Meta or Google, whether the page loads in two seconds or eight. Google uses page experience signals as part of its ranking systems, though relevance and content still matter more. Speed is rarely the only reason a store ranks or converts, but a slow store makes every other channel work harder.</p>
+    <h2>Conclusion</h2>
+    <p>Most Shopify speed problems come from things added over time. Measure with real-user data, remove apps and scripts that do not earn their place, simplify the first screen, and keep images under control. Then measure again.</p>
+    <p>If you would rather have someone do the audit and the cleanup, our <a href="../services/shopify-development.html">Shopify development service</a> covers speed fixes, app cleanup and theme work. If your product pages also need to rank, see our guide to <a href="ecommerce-category-page-seo.html">ecommerce category page SEO</a>.</p>
+
+    <section class="post-faq" id="faq">
+      <h2>Frequently asked questions</h2>
+      <div class="post-faq-item"><h3>Why is my Shopify store so slow?</h3><p>Usually because of what has been added to it: apps that load scripts on every page, leftover code from removed apps, large images, sliders or video in the first screen, and tracking scripts. Shopify's hosting itself is fast. Start by removing apps you don't use and simplifying the home page hero.</p></div>
+      <div class="post-faq-item"><h3>Do Shopify apps slow down my store?</h3><p>Many do, because storefront apps usually add their own JavaScript and CSS, often on every page. The effect depends on how well each app is built. Apps that only work in the admin (for example, accounting or inventory tools) usually have no effect on storefront speed.</p></div>
+      <div class="post-faq-item"><h3>What is a good speed score for a Shopify store?</h3><p>Focus on Core Web Vitals rather than a single score. Google's "good" thresholds are LCP of 2.5 seconds or less, INP of 200 milliseconds or less, and CLS of 0.1 or less. Shopify's Web Performance report shows these from real visitors, which is more reliable than one lab test.</p></div>
+      <div class="post-faq-item"><h3>Does changing my Shopify theme improve speed?</h3><p>It can, especially if your current theme is old or heavily customised. Shopify's current themes are built with performance in mind. But a new theme loaded with the same apps and scripts will be slow again, so do the app and script audit at the same time.</p></div>
+      <div class="post-faq-item"><h3>Does store speed affect Google rankings?</h3><p>Page experience, including Core Web Vitals, is one of many signals Google uses. It rarely outweighs relevance and content quality, but a slow store can hold back pages that are otherwise competitive, and it lowers conversion from every traffic source.</p></div>
+      <div class="post-faq-item"><h3>How often should I check my store's speed?</h3><p>Check after every new app, theme change or major campaign, and review the Web Performance report monthly. Speed problems usually creep in gradually as features are added, so regular checks are easier than a big cleanup once a year.</p></div>
+    </section>
+
+    <div class="post-note">
+      <p>Want help with this? Our Shopify Development service starts with a written scope, so you know what is included before any work begins. Talk to us on WhatsApp or by email.</p>
+      <p><a href="../services/shopify-development.html">See the Shopify Development service</a> or <a href="../contact.html">send us your project details</a>.</p>
+    </div>
+  </div>
+
+  <div class="wrap post-inner">
+    <div style="border-top:1px solid #ece8e2;margin-top:44px;padding-top:26px;">
+      <p class="share-label">Share this article:</p>
+      <div class="share-row">
+        <a class="share-link" href="https://twitter.com/intent/tweet?url=https://open-agent.agency/blog/shopify-store-speed.html&text=Why%20Your%20Shopify%20Store%20Is%20Slow%20%28and%20What%20Actually%20Fixes%20It%29" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i> X</a>
+        <a class="share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://open-agent.agency/blog/shopify-store-speed.html" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+        <a class="share-link" href="https://www.linkedin.com/sharing/share-offsite/?url=https://open-agent.agency/blog/shopify-store-speed.html" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+        <a class="share-link" href="https://wa.me/923703159642?text=Why%20Your%20Shopify%20Store%20Is%20Slow%20%28and%20What%20Actually%20Fixes%20It%29%20https://open-agent.agency/blog/shopify-store-speed.html" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+    <div class="post-foot">
+      <a href="../services/shopify-development.html" class="btn btn-ghost-dark">Explore Shopify Development</a>
+      <a href="../contact.html" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Start A Conversation</a>
+    </div>
+  </div>
+</article>
+</main>
+
+
+<footer class="footer" role="contentinfo">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="/" class="brand">Open<span>Agent</span></a>
+        <p>Digital marketing, ads, SEO and web services for global clients.</p>
+        <div class="socials">
+          <a href="https://x.com/Abeergrowth" target="_blank" rel="noopener noreferrer" aria-label="Follow on X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61572143246804" target="_blank" rel="noopener noreferrer" aria-label="Follow on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/growthbot_02/" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/abeer-nasir-3052b628a/" target="_blank" rel="noopener noreferrer" aria-label="Follow on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../services.html">Services</a></li>
+          <li><a href="../portfolio.html">Portfolio</a></li>
+          <li><a href="../blogs.html">Insights</a></li><li><a href="../contact.html">Contact</a></li>
+          <li><a href="../privacy.html">Privacy Policy</a></li>
+          <li><a href="../terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul><li><a href="../services/website-development.html">Website Development</a></li><li><a href="../services/shopify-development.html">Shopify Development</a></li><li><a href="../services/search-engine-optimization.html">Search Engine Optimization</a></li><li><a href="../services/social-media-marketing.html">Social Media Marketing</a></li><li><a href="../services/google-ads.html">Google Ads Services</a></li><li><a href="../services/ecommerce-seo.html">Ecommerce SEO</a></li><li><a href="../services/meta-ads.html">Meta Ads Management</a></li><li><a href="../services/tiktok-marketing.html">TikTok Marketing</a></li><li><a href="../services/chatgpt-ads.html">ChatGPT Ads Management</a></li><li><a href="../services/saas-marketing.html">SaaS Digital Marketing</a></li><li><a href="../services/saas-seo.html">SaaS SEO</a></li><li><a href="../services/lead-generation.html">Lead Generation</a></li></ul>
+      </div>
+      <div>
+        <h4>Get In Touch</h4>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-phone"></i><a href="tel:+923703159642">+92 370 3159642</a></li>
+          <li><i class="fa-solid fa-envelope"></i><a href="mailto:abeerinfo5566@gmail.com">abeerinfo5566@gmail.com</a></li>
+          <li><i class="fa-solid fa-location-dot"></i><span>Working with global clients, including the US and UK</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; <span data-year>2026</span> OpenAgent. All Rights Reserved.</p>
+      <p>Run by <strong>Abeer Nasir</strong></p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/923703159642?text=Hi%20Abeer%2C%20I%20have%20a%20question%20about%20my%20digital%20growth.%20Can%20we%20talk%3F" class="fwa" target="_blank" rel="noopener noreferrer" aria-label="Chat with OpenAgent on WhatsApp">
+  <i class="fa-brands fa-whatsapp" style="font-size:28px;color:#fff"></i>
+</a>
+<script src="../assets/js/main.js?v=20261128c" defer></script>
+</body>
+</html>
