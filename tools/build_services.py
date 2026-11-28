@@ -170,7 +170,7 @@ def page(s):
       <ul class="sv-trust">
         <li><i class="fa-solid fa-check" aria-hidden="true"></i> Direct with Abeer Nasir</li>
         <li><i class="fa-solid fa-check" aria-hidden="true"></i> Written scope first</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> US, UK, CA, AU &amp; EU clients</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i> Global clients</li>
       </ul>
     </div>
     {media(s["icon"], "hero", "sv-media--hero", slug)}
