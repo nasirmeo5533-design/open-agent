@@ -649,3 +649,15 @@
 :root:root body .sv-reading { margin: 24px 0 0; text-align: center; color: var(--oa-text); font-size: .95rem; }
 :root:root body .sv-reading i { color: var(--oa-purple); margin-right: 6px; }
 :root:root body .sv-reading a { color: var(--oa-purple) !important; font-weight: 600; text-decoration: underline; }
+
+/* About: team cards */
+:root:root body .team-grid { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 28px; }
+@media (min-width: 560px) { :root:root body .team-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) { :root:root body .team-grid { grid-template-columns: repeat(4, 1fr); } }
+:root:root body .team-card--lead { grid-column: 1 / -1; }
+:root:root body .team-card { background: #fff; border: 1px solid #E3E3E3; border-radius: 12px; padding: 22px; }
+:root:root body .team-card--lead { border-color: var(--oa-purple); box-shadow: 0 0 0 1px var(--oa-purple) inset; }
+:root:root body .team-ic { width: 44px; height: 44px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; background: var(--oa-purple); color: var(--oa-yellow); font-size: 18px; margin-bottom: 14px; }
+:root:root body .team-card h3 { font-size: 1.05rem; margin: 0 0 6px; }
+:root:root body .team-card p { margin: 0; font-size: .95rem; line-height: 1.55; }
+:root:root body .team-note { margin: 20px 0 0; text-align: center; font-size: .92rem; opacity: .8; }

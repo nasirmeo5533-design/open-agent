@@ -3,7 +3,7 @@
 # Copy is original (written for OpenAgent). Do not paste competitor text here.
 
 GENERIC_WHY = [
-    ("fa-user-check", "You talk to the person doing the work", "No account managers in between. The person who plans {short} is the person who answers your messages."),
+    ("fa-user-check", "You talk to the people doing the work", "No account managers in between. Your messages go to me, the founder, or to the specialist running {short}."),
     ("fa-file-signature", "Scope in writing before anything starts", "Deliverables, timeline, price and reporting are agreed in writing first, so there are no surprises later."),
     ("fa-chart-simple", "Plain-language reporting", "You get the numbers that matter for {short}, what they mean, and what changes next. No vanity metrics."),
     ("fa-shield-halved", "Honest about what's realistic", "No guaranteed rankings, sales or overnight results. You get a clear plan and real effort, not empty promises."),

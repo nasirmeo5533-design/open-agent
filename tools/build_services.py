@@ -23,7 +23,7 @@ WA = "https://wa.me/923703159642"
 TOOLS = [("meta.webp", "Meta"), ("google-ads.webp", "Google Ads"), ("google-analytics.webp", "Google Analytics"),
          ("search-console.webp", "Google Search Console"), ("semrush.webp", "SEMrush"), ("chatgpt.webp", "ChatGPT"),
          ("claude.webp", "Claude"), ("gemini.webp", "Google Gemini"), ("n8n.webp", "n8n"), ("zapier.webp", "Zapier")]
-CSS_VER = "20261128e"
+CSS_VER = "20261128f"
 PORTFOLIO_SLUGS = {"meta-ads", "social-media-marketing"}
 READING = {
     "meta-ads": [("Meta Ads vs Google Ads: How to Choose for Your Business", "meta-vs-google-ads.html")],
