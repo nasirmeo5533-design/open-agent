@@ -114,7 +114,7 @@ def page(s):
         {"@type": "Organization", "@id": f"{SITE}/#organization", "name": "OpenAgent", "url": f"{SITE}/",
          "logo": f"{SITE}/assets/images/branding/favicons/android-chrome-192x192.png"},
         {"@type": "Service", "name": name, "serviceType": name, "url": url, "provider": {"@id": f"{SITE}/#organization"},
-         "areaServed": [{"@type": "Country", "name": "United States"}, {"@type": "Country", "name": "United Kingdom"}, {"@type": "Place", "name": "Europe"}], "description": s["desc"]}]}
+         "areaServed": [{"@type": "Country", "name": "United States"}, {"@type": "Country", "name": "United Kingdom"}, {"@type": "Country", "name": "Canada"}, {"@type": "Country", "name": "Australia"}, {"@type": "Place", "name": "Europe"}], "description": s["desc"]}]}
     bc_ld = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE}/"},
         {"@type": "ListItem", "position": 2, "name": "Services", "item": f"{SITE}/services.html"},
@@ -170,7 +170,7 @@ def page(s):
       <ul class="sv-trust">
         <li><i class="fa-solid fa-check" aria-hidden="true"></i> Direct with Abeer Nasir</li>
         <li><i class="fa-solid fa-check" aria-hidden="true"></i> Written scope first</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i> US &amp; European clients</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i> US, UK, CA, AU &amp; EU clients</li>
       </ul>
     </div>
     {media(s["icon"], "hero", "sv-media--hero", slug)}
